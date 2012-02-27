@@ -55,22 +55,45 @@ PRODUCTIONS
 //   Empty = "BEGIN" { Statement } "END".
 //   Statement = ident "=" number { "+" number } .
 
-LobLang=                                                        (.Machine = new StackMachine();.)
+LobLang=                                                        (.
+                                                                 Machine = new StackMachine();
+                                                                 SymTabFunction func;
+                                                                 .)
     ModuleHeader
     {Import}
-    FunctionDeclaration {FunctionDeclaration}
+    FunctionDeclaration<.out func.>                               (.Machine.DefineNewFunction(func);.)
+     {
+     FunctionDeclaration<out func>
+     }
     .
 
-ModuleHeader=
-    "module" ident "."
+ModuleHeader= 
+    "module" 
+    ident                                                       (.Machine.SetModuleName(t.val);.)
+    "."
     .
 
 Import=
     "import" ident "."
     .
 
-FunctionDeclaration =
-    ident "(" ArgList ")" "{" (Statement {Statement}) "}"
+FunctionDeclaration<.out SymTabFunction func.> 
+                                (.
+                                SymTabFunction tmp = new SymTabFunction();
+                                .)
+    =
+    ident                       (.tmp.Name = t.val;.)                       
+    "(" 
+    ArgList 
+    ")" 
+    "{" 
+    (
+        Statement 
+        {
+        Statement
+        }
+    ) 
+    "}"                         (.func = tmp;.)
     .
 
 FunctionInvocation =
@@ -87,6 +110,7 @@ ArgList=
 Statement =
     //Binding
     Expression
+    ";"
     .
 
 VariableReference=

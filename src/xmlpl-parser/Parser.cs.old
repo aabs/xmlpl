@@ -95,20 +95,24 @@ public StackMachine Machine { get; set; }
 
 	
 	void LobLang() {
-		Machine = new LobLangMachine();
+		Machine = new StackMachine();
+		SymTabFunction func;
+		
 		ModuleHeader();
 		while (la.kind == 6) {
 			Import();
 		}
-		FunctionDeclaration();
+		FunctionDeclaration(out func);
+		Machine.DefineNewFunction(func);
 		while (la.kind == 1) {
-			FunctionDeclaration();
+			FunctionDeclaration(out func);
 		}
 	}
 
 	void ModuleHeader() {
 		Expect(4);
 		Expect(1);
+		Machine.SetModuleName(t.val);
 		Expect(5);
 	}
 
@@ -118,8 +122,11 @@ public StackMachine Machine { get; set; }
 		Expect(5);
 	}
 
-	void FunctionDeclaration() {
+	void FunctionDeclaration(out SymTabFunction func) {
+		SymTabFunction tmp = new SymTabFunction();
+		
 		Expect(1);
+		tmp.Name = t.val;
 		Expect(7);
 		ArgList();
 		Expect(8);
@@ -129,6 +136,7 @@ public StackMachine Machine { get; set; }
 			Statement();
 		}
 		Expect(10);
+		func = tmp;
 	}
 
 	void ArgList() {

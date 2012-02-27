@@ -233,16 +233,16 @@ public class Scanner {
 		start[123] = 8; 
 		start[125] = 9; 
 		start[44] = 10; 
+		start[59] = 11; 
 		start[61] = 27; 
 		start[45] = 28; 
-		start[33] = 17; 
-		start[36] = 19; 
+		start[33] = 18; 
+		start[36] = 20; 
 		start[47] = 29; 
 		start[63] = 30; 
 		start[60] = 31; 
-		start[62] = 22; 
+		start[62] = 23; 
 		start[38] = 32; 
-		start[59] = 25; 
 		start[Buffer.EOF] = -1;
 
 	}
@@ -410,7 +410,7 @@ public class Scanner {
 			case 10:
 				{t.kind = 11; break;}
 			case 11:
-				{t.kind = 13; break;}
+				{t.kind = 12; break;}
 			case 12:
 				{t.kind = 14; break;}
 			case 13:
@@ -418,62 +418,62 @@ public class Scanner {
 			case 14:
 				{t.kind = 16; break;}
 			case 15:
-				{t.kind = 18; break;}
+				{t.kind = 17; break;}
 			case 16:
 				{t.kind = 19; break;}
 			case 17:
-				if (ch == '=') {AddCh(); goto case 18;}
-				else {goto case 0;}
-			case 18:
 				{t.kind = 20; break;}
+			case 18:
+				if (ch == '=') {AddCh(); goto case 19;}
+				else {goto case 0;}
 			case 19:
 				{t.kind = 21; break;}
 			case 20:
-				{t.kind = 24; break;}
+				{t.kind = 22; break;}
 			case 21:
 				{t.kind = 25; break;}
 			case 22:
-				{t.kind = 27; break;}
+				{t.kind = 26; break;}
 			case 23:
 				{t.kind = 28; break;}
 			case 24:
 				{t.kind = 29; break;}
 			case 25:
-				{t.kind = 31; break;}
+				{t.kind = 30; break;}
 			case 26:
 				{t.kind = 32; break;}
 			case 27:
-				recEnd = pos; recKind = 12;
-				if (ch == '=') {AddCh(); goto case 11;}
-				else if (ch == '>') {AddCh(); goto case 12;}
-				else if (ch == '<') {AddCh(); goto case 13;}
-				else if (ch == '?') {AddCh(); goto case 14;}
-				else {t.kind = 12; break;}
+				recEnd = pos; recKind = 13;
+				if (ch == '=') {AddCh(); goto case 12;}
+				else if (ch == '>') {AddCh(); goto case 13;}
+				else if (ch == '<') {AddCh(); goto case 14;}
+				else if (ch == '?') {AddCh(); goto case 15;}
+				else {t.kind = 13; break;}
 			case 28:
 				if (ch == '>') {AddCh(); goto case 33;}
 				else {goto case 0;}
 			case 29:
-				recEnd = pos; recKind = 22;
-				if (ch == '>') {AddCh(); goto case 24;}
-				else {t.kind = 22; break;}
-			case 30:
 				recEnd = pos; recKind = 23;
-				if (ch == '>') {AddCh(); goto case 21;}
+				if (ch == '>') {AddCh(); goto case 25;}
 				else {t.kind = 23; break;}
+			case 30:
+				recEnd = pos; recKind = 24;
+				if (ch == '>') {AddCh(); goto case 22;}
+				else {t.kind = 24; break;}
 			case 31:
-				recEnd = pos; recKind = 26;
-				if (ch == '?') {AddCh(); goto case 20;}
-				else if (ch == '/') {AddCh(); goto case 23;}
-				else {t.kind = 26; break;}
+				recEnd = pos; recKind = 27;
+				if (ch == '?') {AddCh(); goto case 21;}
+				else if (ch == '/') {AddCh(); goto case 24;}
+				else {t.kind = 27; break;}
 			case 32:
-				recEnd = pos; recKind = 30;
+				recEnd = pos; recKind = 31;
 				if (ch == '#') {AddCh(); goto case 26;}
-				else {t.kind = 30; break;}
+				else {t.kind = 31; break;}
 			case 33:
-				recEnd = pos; recKind = 17;
-				if (ch == '<') {AddCh(); goto case 15;}
-				else if (ch == '>') {AddCh(); goto case 16;}
-				else {t.kind = 17; break;}
+				recEnd = pos; recKind = 18;
+				if (ch == '<') {AddCh(); goto case 16;}
+				else if (ch == '>') {AddCh(); goto case 17;}
+				else {t.kind = 18; break;}
 
 		}
 		t.val = new String(tval, 0, tlen);

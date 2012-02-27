@@ -96,19 +96,23 @@ public StackMachine Machine { get; set; }
 	
 	void LobLang() {
 		Machine = new StackMachine();
+		SymTabFunction func;
+		
 		ModuleHeader();
 		while (la.kind == 6) {
 			Import();
 		}
-		FunctionDeclaration();
+		FunctionDeclaration(out func);
+		Machine.DefineNewFunction(func);
 		while (la.kind == 1) {
-			FunctionDeclaration();
+			FunctionDeclaration(out func);
 		}
 	}
 
 	void ModuleHeader() {
 		Expect(4);
 		Expect(1);
+		Machine.SetModuleName(t.val);
 		Expect(5);
 	}
 
@@ -118,8 +122,11 @@ public StackMachine Machine { get; set; }
 		Expect(5);
 	}
 
-	void FunctionDeclaration() {
+	void FunctionDeclaration(out SymTabFunction func) {
+		SymTabFunction tmp = new SymTabFunction();
+		
 		Expect(1);
+		tmp.Name = t.val;
 		Expect(7);
 		ArgList();
 		Expect(8);
@@ -129,6 +136,7 @@ public StackMachine Machine { get; set; }
 			Statement();
 		}
 		Expect(10);
+		func = tmp;
 	}
 
 	void ArgList() {
@@ -141,6 +149,7 @@ public StackMachine Machine { get; set; }
 
 	void Statement() {
 		Expression();
+		Expect(12);
 	}
 
 	void FunctionInvocation() {
@@ -151,17 +160,17 @@ public StackMachine Machine { get; set; }
 	}
 
 	void Expression() {
-		if (la.kind == 21) {
+		if (la.kind == 22) {
 			XmlModifyingExpression();
-		} else if (la.kind == 23) {
+		} else if (la.kind == 24) {
 			XmlPattern();
-		} else if (la.kind == 26) {
+		} else if (la.kind == 27) {
 			XmlFragment();
 		} else if (la.kind == 1) {
 			VariableReference();
 		} else if (la.kind == 1) {
 			FunctionInvocation();
-		} else if (la.kind == 24) {
+		} else if (la.kind == 25) {
 			XmlDocument();
 		} else if (la.kind == 1) {
 			Binding();
@@ -174,18 +183,13 @@ public StackMachine Machine { get; set; }
 
 	void Binding() {
 		VariableReference();
-		Expect(12);
+		Expect(13);
 		Expression();
 	}
 
 	void XmlModifyingExpression() {
 		PathExpression();
 		switch (la.kind) {
-		case 13: {
-			Get();
-			Value();
-			break;
-		}
 		case 14: {
 			Get();
 			Value();
@@ -198,12 +202,12 @@ public StackMachine Machine { get; set; }
 		}
 		case 16: {
 			Get();
-			XmlFragment();
+			Value();
 			break;
 		}
 		case 17: {
 			Get();
-			PathExpression();
+			XmlFragment();
 			break;
 		}
 		case 18: {
@@ -218,6 +222,11 @@ public StackMachine Machine { get; set; }
 		}
 		case 20: {
 			Get();
+			PathExpression();
+			break;
+		}
+		case 21: {
+			Get();
 			Expect(1);
 			break;
 		}
@@ -226,7 +235,7 @@ public StackMachine Machine { get; set; }
 	}
 
 	void XmlPattern() {
-		Expect(23);
+		Expect(24);
 		XmlFragment();
 	}
 
@@ -235,17 +244,17 @@ public StackMachine Machine { get; set; }
 	}
 
 	void XmlDocument() {
-		Expect(24);
+		Expect(25);
 		Expect(1);
 		while (la.kind == 1) {
 			XmlAttribute();
 		}
-		Expect(25);
+		Expect(26);
 		XmlObject();
 	}
 
 	void PathExpression() {
-		Expect(21);
+		Expect(22);
 		Path();
 	}
 
@@ -256,23 +265,23 @@ public StackMachine Machine { get; set; }
 			Get();
 			Expression();
 			Expect(8);
-		} else if (la.kind == 21) {
+		} else if (la.kind == 22) {
 			PathExpression();
-		} else if (la.kind == 26) {
+		} else if (la.kind == 27) {
 			XmlFragment();
 		} else SynErr(36);
 	}
 
 	void Path() {
 		Expect(1);
-		while (la.kind == 22) {
+		while (la.kind == 23) {
 			Get();
 			Expect(1);
 		}
 	}
 
 	void Pattern() {
-		Expect(23);
+		Expect(24);
 		Expect(1);
 	}
 
@@ -285,38 +294,38 @@ public StackMachine Machine { get; set; }
 	void XmlAttribute() {
 		Expect(1);
 		Machine.CreatePusherFunction(t.val); Machine.EnqueueBuiltinFunction("XmlAttrName"); 
-		Expect(12);
+		Expect(13);
 		XmlAttributeValue();
 	}
 
 	void XmlObject() {
-		if (la.kind == 26) {
+		if (la.kind == 27) {
 			XmlStartTag();
 			while (StartOf(2)) {
 				XmlContent();
 			}
 			XmlEndTag();
-		} else if (la.kind == 26) {
+		} else if (la.kind == 27) {
 			XmlUnaryTag();
 		} else SynErr(37);
 	}
 
 	void XmlStartTag() {
-		Expect(26);
+		Expect(27);
 		Machine.EnqueueBuiltinFunction("XmlStartElement");
 		Expect(1);
 		Machine.CreatePusherFunction(t.val);Machine.EnqueueBuiltinFunction("XmlIdent");
-		if (la.kind == 1 || la.kind == 9 || la.kind == 23) {
+		if (la.kind == 1 || la.kind == 9 || la.kind == 24) {
 			XmlAttributesOrPattern();
 		}
-		Expect(27);
+		Expect(28);
 		Machine.EnqueueBuiltinFunction("XmlEndBrace");
 	}
 
 	void XmlContent() {
-		if (la.kind == 26) {
+		if (la.kind == 27) {
 			XmlObject();
-			while (la.kind == 26) {
+			while (la.kind == 27) {
 				XmlObject();
 			}
 		} else if (StartOf(3)) {
@@ -325,22 +334,22 @@ public StackMachine Machine { get; set; }
 	}
 
 	void XmlEndTag() {
-		Expect(28);
+		Expect(29);
 		Expect(1);
-		Expect(27);
+		Expect(28);
 	}
 
 	void XmlUnaryTag() {
-		Expect(26);
+		Expect(27);
 		Expect(1);
-		if (la.kind == 1 || la.kind == 9 || la.kind == 23) {
+		if (la.kind == 1 || la.kind == 9 || la.kind == 24) {
 			XmlAttributesOrPattern();
 		}
-		Expect(29);
+		Expect(30);
 	}
 
 	void XmlAttributesOrPattern() {
-		if (la.kind == 23) {
+		if (la.kind == 24) {
 			Pattern();
 		} else if (la.kind == 9) {
 			ValueOf();
@@ -370,9 +379,9 @@ public StackMachine Machine { get; set; }
 		if (la.kind == 1) {
 			Get();
 			Machine.CreatePusherFunction(t.val); Machine.EnqueueBuiltinFunction("XmlAttrVal");  
-		} else if (la.kind == 12) {
+		} else if (la.kind == 13) {
 			Get();
-		} else if (la.kind == 30) {
+		} else if (la.kind == 31) {
 			XmlCharName();
 		} else if (la.kind == 32) {
 			XmlCharNumber();
@@ -380,15 +389,15 @@ public StackMachine Machine { get; set; }
 	}
 
 	void XmlCharName() {
-		Expect(30);
-		Expect(1);
 		Expect(31);
+		Expect(1);
+		Expect(12);
 	}
 
 	void XmlCharNumber() {
 		Expect(32);
 		Expect(2);
-		Expect(31);
+		Expect(12);
 	}
 
 
@@ -404,9 +413,9 @@ public StackMachine Machine { get; set; }
 	
 	static readonly bool[,] set = {
 		{T,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x},
-		{x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,T,x,T, T,x,T,x, x,x,x,x, x,x,x},
-		{x,T,x,x, x,x,x,x, x,x,x,x, T,x,x,x, x,x,x,x, x,x,x,x, x,x,T,x, x,x,T,x, T,x,x},
-		{x,T,x,x, x,x,x,x, x,x,x,x, T,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,T,x, T,x,x}
+		{x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,T,x, T,T,x,T, x,x,x,x, x,x,x},
+		{x,T,x,x, x,x,x,x, x,x,x,x, x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,T, x,x,x,T, T,x,x},
+		{x,T,x,x, x,x,x,x, x,x,x,x, x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,T, T,x,x}
 
 	};
 } // end Parser
@@ -432,26 +441,26 @@ public class Errors {
 			case 9: s = "\"{\" expected"; break;
 			case 10: s = "\"}\" expected"; break;
 			case 11: s = "\",\" expected"; break;
-			case 12: s = "\"=\" expected"; break;
-			case 13: s = "\"==\" expected"; break;
-			case 14: s = "\"=>\" expected"; break;
-			case 15: s = "\"=<\" expected"; break;
-			case 16: s = "\"=?\" expected"; break;
-			case 17: s = "\"->\" expected"; break;
-			case 18: s = "\"-><\" expected"; break;
-			case 19: s = "\"->>\" expected"; break;
-			case 20: s = "\"!=\" expected"; break;
-			case 21: s = "\"$\" expected"; break;
-			case 22: s = "\"/\" expected"; break;
-			case 23: s = "\"?\" expected"; break;
-			case 24: s = "\"<?\" expected"; break;
-			case 25: s = "\"?>\" expected"; break;
-			case 26: s = "\"<\" expected"; break;
-			case 27: s = "\">\" expected"; break;
-			case 28: s = "\"</\" expected"; break;
-			case 29: s = "\"/>\" expected"; break;
-			case 30: s = "\"&\" expected"; break;
-			case 31: s = "\";\" expected"; break;
+			case 12: s = "\";\" expected"; break;
+			case 13: s = "\"=\" expected"; break;
+			case 14: s = "\"==\" expected"; break;
+			case 15: s = "\"=>\" expected"; break;
+			case 16: s = "\"=<\" expected"; break;
+			case 17: s = "\"=?\" expected"; break;
+			case 18: s = "\"->\" expected"; break;
+			case 19: s = "\"-><\" expected"; break;
+			case 20: s = "\"->>\" expected"; break;
+			case 21: s = "\"!=\" expected"; break;
+			case 22: s = "\"$\" expected"; break;
+			case 23: s = "\"/\" expected"; break;
+			case 24: s = "\"?\" expected"; break;
+			case 25: s = "\"<?\" expected"; break;
+			case 26: s = "\"?>\" expected"; break;
+			case 27: s = "\"<\" expected"; break;
+			case 28: s = "\">\" expected"; break;
+			case 29: s = "\"</\" expected"; break;
+			case 30: s = "\"/>\" expected"; break;
+			case 31: s = "\"&\" expected"; break;
 			case 32: s = "\"&#\" expected"; break;
 			case 33: s = "??? expected"; break;
 			case 34: s = "invalid Expression"; break;

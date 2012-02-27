@@ -60,6 +60,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="IOperationProvider.cs" />
     <Compile Include="OperationProvider.cs" />
+    <Compile Include="ParseContext.cs" />
     <Compile Include="Parser.cs">
       <DependentUpon>loblang.atg</DependentUpon>
     </Compile>
@@ -68,6 +69,10 @@
       <DependentUpon>loblang.atg</DependentUpon>
     </Compile>
     <Compile Include="StackMachine.cs" />
+    <Compile Include="SymTabEntry.cs" />
+    <Compile Include="SymTabFunction.cs" />
+    <Compile Include="SymTabPlaceholder.cs" />
+    <Compile Include="SymTabVariable.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="XmlBuilder.cs" />
     <Compile Include="XmlCloser.cs" />

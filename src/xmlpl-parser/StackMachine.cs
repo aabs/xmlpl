@@ -19,9 +19,12 @@ namespace xmlpl_parser
 
         public StackMachine()
         {
+            ParseContext = new ParseContext(); 
             InstructionPipeline = new Queue<Func<Stack, Stack>>();
             Stack = new Stack();
         }
+
+        protected ParseContext ParseContext { get; set; }
 
         public Queue<Func<Stack, Stack>> InstructionPipeline { get; set; }
         public Stack Stack { get; set; }
@@ -30,8 +33,6 @@ namespace xmlpl_parser
         {
             get { return string.Join(", ", Stack.ToArray().Select(x => x.GetType().Name).ToArray()); }
         }
-
-        // TODO: reactive extensions?
 
         protected static IContainer Container { get; set; }
 
@@ -88,11 +89,31 @@ namespace xmlpl_parser
 
         public void EnqueueBuiltinFunction(string functionName)
         {
+            if (string.IsNullOrEmpty(functionName))
+                throw new ArgumentException("functionName");
+    
             Func<Stack, Stack> op = Lookup(functionName);
             if (op == null)
                 throw new ArgumentException(functionName + " was not recognised");
 
             InstructionPipeline.Enqueue(op);
+        }
+
+        public void SetModuleName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentException("name");
+
+            if (!string.IsNullOrEmpty(ParseContext.ModuleName))
+            {
+               throw new ApplicationException("Module name has already been defined"); 
+            }
+            ParseContext.ModuleName = name;
+        }
+
+        public void DefineNewFunction(SymTabFunction func)
+        {
+            ParseContext.SymTab.Add(func.Name, func);
         }
     }
 }
