@@ -10,6 +10,13 @@ namespace xmlpl_parser
     [DebuggerDisplay("[{StackView}]")]
     public class StackMachine
     {
+        static StackMachine()
+        {
+            var cb = new ContainerBuilder();
+            cb.RegisterType<OperationProvider>().As<IOperationProvider>();
+            Container = cb.Build();
+        }
+
         public StackMachine()
         {
             InstructionPipeline = new Queue<Func<Stack, Stack>>();
@@ -21,13 +28,13 @@ namespace xmlpl_parser
 
         public string StackView
         {
-            get
-            {
-                return string.Join(", ", Stack.ToArray().Select(x => x.GetType().Name).ToArray());
-            }
+            get { return string.Join(", ", Stack.ToArray().Select(x => x.GetType().Name).ToArray()); }
         }
 
         // TODO: reactive extensions?
+
+        protected static IContainer Container { get; set; }
+
         public void Run()
         {
             while (InstructionPipeline.Count > 0)
@@ -36,23 +43,6 @@ namespace xmlpl_parser
                 Stack = instruction(Stack);
             }
         }
-
-        static StackMachine()
-        {
-            var cb = new ContainerBuilder();
-            cb.RegisterType<OperationProvider>().As<IOperationProvider>();
-            Container = cb.Build();
-            BuiltinFunctions = new[]
-                                   {
-                                       "identity", "+", "*", "XmlStartElement", "XmlIdent", "XmlAttrName", "XmlAttrVal",
-                                       "XmlText", "XmlUniEnd", "XmlStartEndTag", "XmlEndBrace"
-                                   };
-        }
-
-        protected static string[] BuiltinFunctions { get; set; }
-
-        protected static IContainer Container { get; set; }
-
 
         public void CreatePusherFunction<T>(T i)
         {
@@ -67,47 +57,42 @@ namespace xmlpl_parser
         public static Func<Stack, Stack> Lookup(string name)
         {
             var op = Container.Resolve<IOperationProvider>();
-            if (BuiltinFunctions.Contains(name))
+            switch (name)
             {
-                switch (name)
-                {
-                    case "identity":
-                        return op.NoOp;
-                    case "+":
-                        return op.IntAdd;
-                    case "*":
-                        return op.IntMult;
-                    case "XmlStartElement":
-                        return op.XmlStartElement;
-                    case "XmlIdent":
-                        return op.XmlIdent;
-                    case "XmlAttrName":
-                        return op.XmlAttrName;
-                    case "XmlAttrVal":
-                        return op.XmlAttrVal;
-                    case "XmlText":
-                        return op.XmlText;
-                    case "XmlUniEnd":
-                        return op.XmlUniEnd;
-                    case "XmlStartEndTag":
-                        return op.XmlStartEndTag;
-                    case "XmlEndBrace":
-                        return op.XmlEndBrace;
-                    default:
-                        return null;
-                }
+                case "identity":
+                    return op.NoOp;
+                case "+":
+                    return op.IntAdd;
+                case "*":
+                    return op.IntMult;
+                case "XmlStartElement":
+                    return op.XmlStartElement;
+                case "XmlIdent":
+                    return op.XmlIdent;
+                case "XmlAttrName":
+                    return op.XmlAttrName;
+                case "XmlAttrVal":
+                    return op.XmlAttrVal;
+                case "XmlText":
+                    return op.XmlText;
+                case "XmlUniEnd":
+                    return op.XmlUniEnd;
+                case "XmlStartEndTag":
+                    return op.XmlStartEndTag;
+                case "XmlEndBrace":
+                    return op.XmlEndBrace;
+                default:
+                    return null;
             }
-            return op.NoOp;
         }
 
         public void EnqueueBuiltinFunction(string functionName)
         {
-            var op = Lookup(functionName);
+            Func<Stack, Stack> op = Lookup(functionName);
             if (op == null)
                 throw new ArgumentException(functionName + " was not recognised");
 
             InstructionPipeline.Enqueue(op);
-    
         }
     }
 }
