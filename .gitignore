@@ -1,0 +1,10 @@
+bin
+obj
+.svn
+TestResults
+*.user
+*.txt~
+_ReSharper*
+*~
+
+/PNML/standard test nets/PIPE.lnk

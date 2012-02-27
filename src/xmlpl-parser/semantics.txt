@@ -1,0 +1,73 @@
+﻿The runtime stack based language is defined independently of the syntax of the language, and to a certain extent the semantics also. This document defines the operations that are defined on the VM. They define how the VM operations affect the stack and the symtab.
+
+String
+--------------------
+[] => [string]
+--------------------
+
+OpNoOp
+--------------------
+[] => []
+--------------------
+
+OpIntAdd
+--------------------
+[int, int] => [int]
+--------------------
+
+OpIntMul
+--------------------
+[int, int] => [int]
+--------------------
+
+XmlStartElement
+--------------------
+[] => [XmlBuilder]
+--------------------
+
+XmlIdent
+--------------------
+[XmlBuilder, string] => [XmlBuilder]
+[XmlCloser, string]  => [XmlCloser]
+--------------------
+
+XmlAttrName
+--------------------
+[string] => [AttrBuilder]
+--------------------
+
+XmlAttrVal
+--------------------
+[XmlBuilder, AttrBuilder, string] => [XmlBuilder]
+--------------------
+
+XmlText
+--------------------
+[XmlBuilder, string] ==> [XmlBuilder]         // add a #text to the XmlBuilder
+--------------------
+
+XmlUniEnd
+--------------------
+insert it into enclosing element if there is one
+[XmlBuilder, XmlBuilder] => [XmlBuilder]
+
+otherwise construct a finished XmlElement on the stack
+[XmlBuilder] => [XmlElement]                 
+--------------------
+
+XmlStartEndTag
+--------------------
+[XmlBuilder] => [XmlCloser]
+--------------------
+
+XmlEndBrace
+--------------------
+[XmlBuilder] ==> [XmlBuilder]
+
+insert a finished XmlElement into the enclosing element builder
+[XmlBuilder, XmlCloser] ==> [XElement]      
+
+otherwise create the finished XmlElement
+[XmlCloser] ==> [XElement]                  
+
+--------------------
