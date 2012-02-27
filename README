@@ -1,6 +1,6 @@
 This is very definitely pre-alpha code. An experiment in creating a concatenative language. 
-Feel free to join in, its been fun so far and there's still lots to do. I'm using COCO/R
-for the parsing bits, and have a simple little stack with an instruction pipeline.
+
+Feel free to join in, its been fun so far and there's still lots to do. I'm using COCO/R for the parsing bits, and have a simple little stack with an instruction pipeline.
 
 
 The runtime stack based language is defined independently of the syntax of the language, and to a certain extent the semantics also. This document defines the operations that are defined on the VM. They define how the VM operations affect the stack and the symtab.
