@@ -1,0 +1,264 @@
+grammar xmlpl;
+tokens {}
+
+ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+    ;
+
+INT :	'0'..'9'+
+    ;
+
+FLOAT
+    :   ('0'..'9')+ '.' ('0'..'9')* EXPONENT?
+    |   '.' ('0'..'9')+ EXPONENT?
+    |   ('0'..'9')+ EXPONENT
+    ;
+
+COMMENT
+    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
+    ;
+
+WS  :   ( ' '
+        | '\t'
+        | '\r'
+        | '\n'
+        ) {$channel=HIDDEN;}
+    ;
+
+STRING
+    :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
+    ;
+
+CHAR:  '\'' ( ESC_SEQ | ~('\''|'\\') ) '\''
+    ;
+
+fragment
+EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
+
+fragment
+HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
+
+fragment
+ESC_SEQ
+    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
+    |   UNICODE_ESC
+    |   OCTAL_ESC
+    ;
+
+fragment
+OCTAL_ESC
+    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7')
+    ;
+
+fragment
+UNICODE_ESC
+    :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+    ;
+
+moduleDef
+	: 'module' ID '.'
+	;
+
+importDef	: 'import' ID '.'
+	;
+
+functionDefinition
+	: ID '(' argList ')' '{'
+	statementList
+	'}'
+	;
+
+statementList
+	: (statement)*
+	;
+
+statement
+	: ( ID ('=' expression)? 
+		| expression) ';'
+	;
+expression
+	: xmlModifyingExpression
+	| xmlPattern                            //(only makes sense in a binding with a bound var)
+	| xmlFragment
+	| functionInvocation
+	| xmlDocument
+	;
+	
+functionInvocation :
+    ID '(' argList ')'
+    ;
+
+referenceOrBinding 
+	:	 
+    ID ('=' expression)?
+    ;
+    
+xmlModifyingExpression
+	: pathExpression 
+	(
+		  replaceOperation
+		| appendOperation
+		| prependOperation
+		| matchOperation
+		| moveOperation
+		| moveFrontOperation
+		| moveBackOperation
+		| deleteOperation
+	)
+	;
+
+pathExpression
+	: '$' path  
+	;
+
+path	: ID ('/' ID)*
+	;
+
+replaceOperation
+	: '==' value
+	;
+
+value	: ID
+	| '(' expression ')'
+	| pathExpression
+   	| xmlFragment
+	;
+
+appendOperation
+	:  '=>' value
+	;
+
+prependOperation
+	: '=<' value
+	;
+
+matchOperation
+	: '=?' xmlFragment
+	;
+
+moveOperation
+	: '->' pathExpression
+	;
+
+moveFrontOperation
+	: '-><' pathExpression
+	;
+
+moveBackOperation
+	: '->>' pathExpression
+	;
+
+deleteOperation
+	: '!=' ID
+	;
+
+binding	: variableReference '=' expression
+	;
+
+variableReference
+	: ID
+	;
+
+argList	: variableReference ('=' expression)? (',' variableReference ('=' expression)? )*
+	;
+	
+pattern :	'?' ID
+    ;
+
+
+xmlPattern 
+	:	 '?' xmlFragment
+    ;
+valueOf :	
+	 '{' ID '}'
+    ;
+
+/* XML STUFF ==========================================================*/
+xmlDocument 
+	:	 '<?' ID xmlAttribute '?>' xmlObject 
+    ;
+
+
+xmlFragment 
+	:	  xmlObject
+    ;
+
+
+xmlObject    
+	:	 xmlStartTag xmlContent xmlEndTag
+              | xmlUnaryTag
+    ;
+
+xmlStartTag 
+	:	
+    '<'                                                     
+    ID                                                  
+    (xmlAttributesOrPattern)* 
+    '>'                                                     
+    ;
+
+xmlEndTag   
+	:	 '</' ID '>' 
+    ;
+
+xmlContent  
+	:
+	(xmlObject)+
+        | xmlText
+   ;
+xmlUnaryTag 
+	:	 '<' ID (xmlAttributesOrPattern)? '/>'
+    ;
+
+
+xmlAttributesOrPattern 
+		:	  
+		 pattern
+               | valueOf
+               | (xmlAttribute)+
+   ;
+               
+
+xmlAttribute 
+	:	 
+    ID                                                   
+        '=' 
+    xmlAttributeValue                                       
+    ;
+
+xmlAttributeValue
+	:	
+    STRING                                                 
+    ;
+
+xmlText :	 xmlWord*
+    ;
+
+xmlWord	:ID
+         | '='
+         | xmlCharName
+         | xmlCharNumber
+	;
+
+
+
+xmlCharName
+	:	
+    '&' ID ';'
+    ;
+
+xmlCharNumber
+	:	
+    '&#' INT ';'
+    ;
+
+
+
+module
+	: 
+	moduleDef
+	(importDef)*
+	(functionDefinition)*
+	;

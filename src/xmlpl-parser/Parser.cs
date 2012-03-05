@@ -16,7 +16,7 @@ public partial class Parser {
 	public const int _ident = 1;
 	public const int _number = 2;
 	public const int _string = 3;
-	public const int maxT = 33;
+	public const int maxT = 34;
 
 	const bool T = true;
 	const bool x = false;
@@ -104,7 +104,7 @@ public StackMachine Machine { get; set; }
 		}
 		FunctionDeclaration(out func);
 		Machine.DefineNewFunction(func);
-		while (la.kind == 1) {
+		while (la.kind == 7) {
 			FunctionDeclaration(out func);
 		}
 	}
@@ -125,23 +125,24 @@ public StackMachine Machine { get; set; }
 	void FunctionDeclaration(out SymTabFunction func) {
 		SymTabFunction tmp = new SymTabFunction();
 		
+		Expect(7);
 		Expect(1);
 		tmp.Name = t.val;
-		Expect(7);
-		ArgList();
 		Expect(8);
+		ArgList();
 		Expect(9);
+		Expect(10);
 		Statement();
 		while (StartOf(1)) {
 			Statement();
 		}
-		Expect(10);
+		Expect(11);
 		func = tmp;
 	}
 
 	void ArgList() {
 		Expression();
-		while (la.kind == 11) {
+		while (la.kind == 12) {
 			Get();
 			Expression();
 		}
@@ -149,52 +150,43 @@ public StackMachine Machine { get; set; }
 
 	void Statement() {
 		Expression();
-		Expect(12);
+		Expect(13);
 	}
 
 	void FunctionInvocation() {
 		Expect(1);
-		Expect(7);
-		ArgList();
 		Expect(8);
+		ArgList();
+		Expect(9);
 	}
 
 	void Expression() {
-		if (la.kind == 22) {
+		if (la.kind == 23) {
 			XmlModifyingExpression();
-		} else if (la.kind == 24) {
+		} else if (la.kind == 25) {
 			XmlPattern();
-		} else if (la.kind == 27) {
+		} else if (la.kind == 28) {
 			XmlFragment();
 		} else if (la.kind == 1) {
-			VariableReference();
-		} else if (la.kind == 1) {
 			FunctionInvocation();
-		} else if (la.kind == 25) {
+		} else if (la.kind == 26) {
 			XmlDocument();
 		} else if (la.kind == 1) {
-			Binding();
-		} else SynErr(34);
+			ReferenceOrBinding();
+		} else SynErr(35);
 	}
 
-	void VariableReference() {
+	void ReferenceOrBinding() {
 		Expect(1);
-	}
-
-	void Binding() {
-		VariableReference();
-		Expect(13);
-		Expression();
+		while (la.kind == 14) {
+			Get();
+			Expression();
+		}
 	}
 
 	void XmlModifyingExpression() {
 		PathExpression();
 		switch (la.kind) {
-		case 14: {
-			Get();
-			Value();
-			break;
-		}
 		case 15: {
 			Get();
 			Value();
@@ -207,12 +199,12 @@ public StackMachine Machine { get; set; }
 		}
 		case 17: {
 			Get();
-			XmlFragment();
+			Value();
 			break;
 		}
 		case 18: {
 			Get();
-			PathExpression();
+			XmlFragment();
 			break;
 		}
 		case 19: {
@@ -227,15 +219,20 @@ public StackMachine Machine { get; set; }
 		}
 		case 21: {
 			Get();
+			PathExpression();
+			break;
+		}
+		case 22: {
+			Get();
 			Expect(1);
 			break;
 		}
-		default: SynErr(35); break;
+		default: SynErr(36); break;
 		}
 	}
 
 	void XmlPattern() {
-		Expect(24);
+		Expect(25);
 		XmlFragment();
 	}
 
@@ -244,121 +241,121 @@ public StackMachine Machine { get; set; }
 	}
 
 	void XmlDocument() {
-		Expect(25);
+		Expect(26);
 		Expect(1);
 		while (la.kind == 1) {
 			XmlAttribute();
 		}
-		Expect(26);
+		Expect(27);
 		XmlObject();
 	}
 
 	void PathExpression() {
-		Expect(22);
+		Expect(23);
 		Path();
 	}
 
 	void Value() {
 		if (la.kind == 1) {
 			Get();
-		} else if (la.kind == 7) {
+		} else if (la.kind == 8) {
 			Get();
 			Expression();
-			Expect(8);
-		} else if (la.kind == 22) {
+			Expect(9);
+		} else if (la.kind == 23) {
 			PathExpression();
-		} else if (la.kind == 27) {
+		} else if (la.kind == 28) {
 			XmlFragment();
-		} else SynErr(36);
+		} else SynErr(37);
 	}
 
 	void Path() {
 		Expect(1);
-		while (la.kind == 23) {
+		while (la.kind == 24) {
 			Get();
 			Expect(1);
 		}
 	}
 
 	void Pattern() {
-		Expect(24);
+		Expect(25);
 		Expect(1);
 	}
 
 	void ValueOf() {
-		Expect(9);
-		Expect(1);
 		Expect(10);
+		Expect(1);
+		Expect(11);
 	}
 
 	void XmlAttribute() {
 		Expect(1);
 		Machine.CreatePusherFunction(t.val); Machine.EnqueueBuiltinFunction("XmlAttrName"); 
-		Expect(13);
+		Expect(14);
 		XmlAttributeValue();
 	}
 
 	void XmlObject() {
-		if (la.kind == 27) {
+		if (la.kind == 28) {
 			XmlStartTag();
 			while (StartOf(2)) {
 				XmlContent();
 			}
 			XmlEndTag();
-		} else if (la.kind == 27) {
+		} else if (la.kind == 28) {
 			XmlUnaryTag();
-		} else SynErr(37);
+		} else SynErr(38);
 	}
 
 	void XmlStartTag() {
-		Expect(27);
+		Expect(28);
 		Machine.EnqueueBuiltinFunction("XmlStartElement");
 		Expect(1);
 		Machine.CreatePusherFunction(t.val);Machine.EnqueueBuiltinFunction("XmlIdent");
-		if (la.kind == 1 || la.kind == 9 || la.kind == 24) {
+		if (la.kind == 1 || la.kind == 10 || la.kind == 25) {
 			XmlAttributesOrPattern();
 		}
-		Expect(28);
+		Expect(29);
 		Machine.EnqueueBuiltinFunction("XmlEndBrace");
 	}
 
 	void XmlContent() {
-		if (la.kind == 27) {
+		if (la.kind == 28) {
 			XmlObject();
-			while (la.kind == 27) {
+			while (la.kind == 28) {
 				XmlObject();
 			}
 		} else if (StartOf(3)) {
 			XmlText();
-		} else SynErr(38);
+		} else SynErr(39);
 	}
 
 	void XmlEndTag() {
-		Expect(29);
+		Expect(30);
 		Expect(1);
-		Expect(28);
+		Expect(29);
 	}
 
 	void XmlUnaryTag() {
-		Expect(27);
+		Expect(28);
 		Expect(1);
-		if (la.kind == 1 || la.kind == 9 || la.kind == 24) {
+		if (la.kind == 1 || la.kind == 10 || la.kind == 25) {
 			XmlAttributesOrPattern();
 		}
-		Expect(30);
+		Expect(31);
 	}
 
 	void XmlAttributesOrPattern() {
-		if (la.kind == 24) {
+		if (la.kind == 25) {
 			Pattern();
-		} else if (la.kind == 9) {
+		} else if (la.kind == 10) {
 			ValueOf();
 		} else if (la.kind == 1) {
 			XmlAttribute();
 			while (la.kind == 1) {
 				XmlAttribute();
 			}
-		} else SynErr(39);
+		} else SynErr(40);
 	}
 
 	void XmlText() {
@@ -367,7 +364,7 @@ public StackMachine Machine { get; set; }
 			XmlWord();
 		} else if (StartOf(3)) {
 			XmlWord();
-		} else SynErr(40);
+		} else SynErr(41);
 	}
 
 	void XmlAttributeValue() {
@@ -379,25 +376,25 @@ public StackMachine Machine { get; set; }
 		if (la.kind == 1) {
 			Get();
 			Machine.CreatePusherFunction(t.val); Machine.EnqueueBuiltinFunction("XmlAttrVal");  
-		} else if (la.kind == 13) {
+		} else if (la.kind == 14) {
 			Get();
-		} else if (la.kind == 31) {
-			XmlCharName();
 		} else if (la.kind == 32) {
+			XmlCharName();
+		} else if (la.kind == 33) {
 			XmlCharNumber();
-		} else SynErr(41);
+		} else SynErr(42);
 	}
 
 	void XmlCharName() {
-		Expect(31);
+		Expect(32);
 		Expect(1);
-		Expect(12);
+		Expect(13);
 	}
 
 	void XmlCharNumber() {
-		Expect(32);
+		Expect(33);
 		Expect(2);
-		Expect(12);
+		Expect(13);
 	}
 
 
@@ -412,10 +409,10 @@ public StackMachine Machine { get; set; }
 	}
 	
 	static readonly bool[,] set = {
-		{T,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x},
-		{x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,T,x, T,T,x,T, x,x,x,x, x,x,x},
-		{x,T,x,x, x,x,x,x, x,x,x,x, x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,T, x,x,x,T, T,x,x},
-		{x,T,x,x, x,x,x,x, x,x,x,x, x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,T, T,x,x}
+		{T,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x},
+		{x,T,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,T, x,T,T,x, T,x,x,x, x,x,x,x},
+		{x,T,x,x, x,x,x,x, x,x,x,x, x,x,T,x, x,x,x,x, x,x,x,x, x,x,x,x, T,x,x,x, T,T,x,x},
+		{x,T,x,x, x,x,x,x, x,x,x,x, x,x,T,x, x,x,x,x, x,x,x,x, x,x,x,x, x,x,x,x, T,T,x,x}
 
 	};
 } // end Parser
@@ -436,41 +433,42 @@ public class Errors {
 			case 4: s = "\"module\" expected"; break;
 			case 5: s = "\".\" expected"; break;
 			case 6: s = "\"import\" expected"; break;
-			case 7: s = "\"(\" expected"; break;
-			case 8: s = "\")\" expected"; break;
-			case 9: s = "\"{\" expected"; break;
-			case 10: s = "\"}\" expected"; break;
-			case 11: s = "\",\" expected"; break;
-			case 12: s = "\";\" expected"; break;
-			case 13: s = "\"=\" expected"; break;
-			case 14: s = "\"==\" expected"; break;
-			case 15: s = "\"=>\" expected"; break;
-			case 16: s = "\"=<\" expected"; break;
-			case 17: s = "\"=?\" expected"; break;
-			case 18: s = "\"->\" expected"; break;
-			case 19: s = "\"-><\" expected"; break;
-			case 20: s = "\"->>\" expected"; break;
-			case 21: s = "\"!=\" expected"; break;
-			case 22: s = "\"$\" expected"; break;
-			case 23: s = "\"/\" expected"; break;
-			case 24: s = "\"?\" expected"; break;
-			case 25: s = "\"<?\" expected"; break;
-			case 26: s = "\"?>\" expected"; break;
-			case 27: s = "\"<\" expected"; break;
-			case 28: s = "\">\" expected"; break;
-			case 29: s = "\"</\" expected"; break;
-			case 30: s = "\"/>\" expected"; break;
-			case 31: s = "\"&\" expected"; break;
-			case 32: s = "\"&#\" expected"; break;
-			case 33: s = "??? expected"; break;
-			case 34: s = "invalid Expression"; break;
-			case 35: s = "invalid XmlModifyingExpression"; break;
-			case 36: s = "invalid Value"; break;
-			case 37: s = "invalid XmlObject"; break;
-			case 38: s = "invalid XmlContent"; break;
-			case 39: s = "invalid XmlAttributesOrPattern"; break;
-			case 40: s = "invalid XmlText"; break;
-			case 41: s = "invalid XmlWord"; break;
+			case 7: s = "\"function\" expected"; break;
+			case 8: s = "\"(\" expected"; break;
+			case 9: s = "\")\" expected"; break;
+			case 10: s = "\"{\" expected"; break;
+			case 11: s = "\"}\" expected"; break;
+			case 12: s = "\",\" expected"; break;
+			case 13: s = "\";\" expected"; break;
+			case 14: s = "\"=\" expected"; break;
+			case 15: s = "\"==\" expected"; break;
+			case 16: s = "\"=>\" expected"; break;
+			case 17: s = "\"=<\" expected"; break;
+			case 18: s = "\"=?\" expected"; break;
+			case 19: s = "\"->\" expected"; break;
+			case 20: s = "\"-><\" expected"; break;
+			case 21: s = "\"->>\" expected"; break;
+			case 22: s = "\"!=\" expected"; break;
+			case 23: s = "\"$\" expected"; break;
+			case 24: s = "\"/\" expected"; break;
+			case 25: s = "\"?\" expected"; break;
+			case 26: s = "\"<?\" expected"; break;
+			case 27: s = "\"?>\" expected"; break;
+			case 28: s = "\"<\" expected"; break;
+			case 29: s = "\">\" expected"; break;
+			case 30: s = "\"</\" expected"; break;
+			case 31: s = "\"/>\" expected"; break;
+			case 32: s = "\"&\" expected"; break;
+			case 33: s = "\"&#\" expected"; break;
+			case 34: s = "??? expected"; break;
+			case 35: s = "invalid Expression"; break;
+			case 36: s = "invalid XmlModifyingExpression"; break;
+			case 37: s = "invalid Value"; break;
+			case 38: s = "invalid XmlObject"; break;
+			case 39: s = "invalid XmlContent"; break;
+			case 40: s = "invalid XmlAttributesOrPattern"; break;
+			case 41: s = "invalid XmlText"; break;
+			case 42: s = "invalid XmlWord"; break;
 
 			default: s = "error " + n; break;
 		}

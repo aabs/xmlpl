@@ -82,7 +82,7 @@ FunctionDeclaration<.out SymTabFunction func.>
                                 SymTabFunction tmp = new SymTabFunction();
                                 .)
     =
-    ident                       (.tmp.Name = t.val;.)                       
+    "function" ident                       (.tmp.Name = t.val;.)                       
     "(" 
     ArgList 
     ")" 
@@ -113,21 +113,20 @@ Statement =
     ";"
     .
 
-VariableReference=
-    ident
-    .
+//VariableReference=
+    //ident
+    //.
 
-Binding = 
-    VariableReference "=" Expression
+ReferenceOrBinding = 
+    ident {"=" Expression}
     .
            
 Expression  = XmlModifyingExpression
     |  XmlPattern                            //(only makes sense in a binding with a bound var)
     |  XmlFragment
-    |  VariableReference
     |  FunctionInvocation
     |  XmlDocument
-    | Binding
+    | ReferenceOrBinding
     .
 
 XmlModifyingExpression =

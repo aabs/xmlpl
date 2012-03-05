@@ -34,7 +34,7 @@ namespace Tests
         public void TestCreate()
         {
             var spec = @"module blah .
-Main(A, B) {
+function Main(A, B) {
     A = <something>blah</something>;
 }
 ";

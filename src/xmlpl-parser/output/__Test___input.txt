@@ -1,0 +1,4 @@
+module blah .
+Main(A, B) {
+    A = <something>blah</something>;
+}
