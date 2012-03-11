@@ -48,5 +48,18 @@ function Main(A, B) {
             
         }
   
+
+        [Test, Category("Regression")]
+        public void TestParseCOA()
+        {
+            Parser parser = new Parser(new Scanner(File.OpenRead(@"F:\backup - fluorine\20120306\shared.datastore\repository\personal\dev\misc\dev\xmlpl\test-documents\1. change_of_address.txt")));
+            parser.errors.errorStream = new DebugRepeater();
+            parser.Parse();
+            if (parser.errors.count > 0)
+            {
+                Assert.Fail();
+            }
+            
+        }
     }
 }

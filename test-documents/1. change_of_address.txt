@@ -1,0 +1,20 @@
+/* 
+ * built in data types are used to provide static type checking.
+ * Document is a fully formed XML document
+ * Element is an XML fragment
+ */
+module change_of_address .
+
+/*
+ * Summary: Change current address to be B, move existing address to previous area
+ */
+function ChangeCurrentAddress(Document lifeObject, Element newAddress) {
+    // first validate the format of the incoming new address
+    newAddress ?= <Address addr1={a} addr2={b} town={c} region={d} postcode={e} country={f}  />; // we don't care what the attrs are, but they should be present in all but the last case
+
+    // move the old address to the end of the list of previous addresses
+    $lifeObject/Accomodation/Current/Address ->> $lifeObject/Accomodation/Previous;
+
+    // place the newAddress in the current address
+    $lifeObject/Accomodation/Current/Address == newAddress;
+}

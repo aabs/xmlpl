@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g 2012-03-05 22:29:38
+// $ANTLR 3.4 F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g 2012-03-11 14:55:20
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -63,15 +63,15 @@ public class xmlplLexer extends Lexer {
     public xmlplLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g"; }
+    public String getGrammarFileName() { return "F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g"; }
 
     // $ANTLR start "T__16"
     public final void mT__16() throws RecognitionException {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:2:7: ( '!=' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:2:9: '!='
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:2:7: ( '!=' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:2:9: '!='
             {
             match("!="); 
 
@@ -93,8 +93,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:3:7: ( '$' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:3:9: '$'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:3:7: ( '$' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:3:9: '$'
             {
             match('$'); 
 
@@ -114,8 +114,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:7: ( '&#' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:9: '&#'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:7: ( '&#' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:9: '&#'
             {
             match("&#"); 
 
@@ -137,8 +137,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:5:7: ( '&' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:5:9: '&'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:5:7: ( '&' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:5:9: '&'
             {
             match('&'); 
 
@@ -158,8 +158,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:6:7: ( '(' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:6:9: '('
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:6:7: ( '(' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:6:9: '('
             {
             match('('); 
 
@@ -179,8 +179,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:7: ( ')' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:9: ')'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:7: ( ')' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:9: ')'
             {
             match(')'); 
 
@@ -200,8 +200,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:8:7: ( ',' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:8:9: ','
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:8:7: ( ',' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:8:9: ','
             {
             match(','); 
 
@@ -221,8 +221,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:9:7: ( '->' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:9:9: '->'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:9:7: ( '->' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:9:9: '->'
             {
             match("->"); 
 
@@ -244,8 +244,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:10:7: ( '-><' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:10:9: '-><'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:10:7: ( '-><' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:10:9: '-><'
             {
             match("-><"); 
 
@@ -267,8 +267,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:7: ( '->>' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:9: '->>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:7: ( '->>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:9: '->>'
             {
             match("->>"); 
 
@@ -290,8 +290,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:7: ( '.' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:9: '.'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:7: ( '.' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:9: '.'
             {
             match('.'); 
 
@@ -311,8 +311,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:7: ( '/' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:9: '/'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:7: ( '/' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:9: '/'
             {
             match('/'); 
 
@@ -332,8 +332,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:14:7: ( '/>' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:14:9: '/>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:14:7: ( '/>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:14:9: '/>'
             {
             match("/>"); 
 
@@ -355,8 +355,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:15:7: ( ';' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:15:9: ';'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:15:7: ( ';' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:15:9: ';'
             {
             match(';'); 
 
@@ -376,8 +376,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:16:7: ( '<' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:16:9: '<'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:16:7: ( '<' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:16:9: '<'
             {
             match('<'); 
 
@@ -397,8 +397,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:7: ( '</' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:9: '</'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:7: ( '</' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:9: '</'
             {
             match("</"); 
 
@@ -420,8 +420,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:7: ( '<?' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:9: '<?'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:7: ( '<?' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:9: '<?'
             {
             match("<?"); 
 
@@ -443,8 +443,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:19:7: ( '=' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:19:9: '='
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:19:7: ( '=' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:19:9: '='
             {
             match('='); 
 
@@ -464,8 +464,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:20:7: ( '=<' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:20:9: '=<'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:20:7: ( '=<' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:20:9: '=<'
             {
             match("=<"); 
 
@@ -487,8 +487,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:7: ( '==' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:9: '=='
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:7: ( '==' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:9: '=='
             {
             match("=="); 
 
@@ -510,8 +510,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:22:7: ( '=>' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:22:9: '=>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:22:7: ( '=>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:22:9: '=>'
             {
             match("=>"); 
 
@@ -533,8 +533,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:23:7: ( '=?' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:23:9: '=?'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:23:7: ( '=?' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:23:9: '=?'
             {
             match("=?"); 
 
@@ -556,8 +556,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:24:7: ( '>' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:24:9: '>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:24:7: ( '>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:24:9: '>'
             {
             match('>'); 
 
@@ -577,8 +577,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:25:7: ( '?' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:25:9: '?'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:25:7: ( '?' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:25:9: '?'
             {
             match('?'); 
 
@@ -598,8 +598,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:26:7: ( '?>' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:26:9: '?>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:26:7: ( '?>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:26:9: '?>'
             {
             match("?>"); 
 
@@ -621,8 +621,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:27:7: ( 'import' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:27:9: 'import'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:27:7: ( 'import' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:27:9: 'import'
             {
             match("import"); 
 
@@ -644,8 +644,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:28:7: ( 'module' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:28:9: 'module'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:28:7: ( 'module' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:28:9: 'module'
             {
             match("module"); 
 
@@ -667,8 +667,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:7: ( '{' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:9: '{'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:7: ( '{' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:9: '{'
             {
             match('{'); 
 
@@ -688,8 +688,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:30:7: ( '}' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:30:9: '}'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:30:7: ( '}' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:30:9: '}'
             {
             match('}'); 
 
@@ -709,8 +709,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -722,7 +722,7 @@ public class xmlplLexer extends Lexer {
             }
 
 
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:4:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
@@ -735,7 +735,7 @@ public class xmlplLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -772,10 +772,10 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:5: ( ( '0' .. '9' )+ )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:7: ( '0' .. '9' )+
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:5: ( ( '0' .. '9' )+ )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:7: ( '0' .. '9' )+
             {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:7: ( '0' .. '9' )+
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:7:7: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -789,7 +789,7 @@ public class xmlplLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -830,14 +830,14 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
             int alt9=3;
             alt9 = dfa9.predict(input);
             switch (alt9) {
                 case 1 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
                     {
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:9: ( '0' .. '9' )+
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:9: ( '0' .. '9' )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -851,7 +851,7 @@ public class xmlplLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
                     	    {
                     	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                     	        input.consume();
@@ -878,7 +878,7 @@ public class xmlplLexer extends Lexer {
 
                     match('.'); 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:25: ( '0' .. '9' )*
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:25: ( '0' .. '9' )*
                     loop4:
                     do {
                         int alt4=2;
@@ -891,7 +891,7 @@ public class xmlplLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
                     	    {
                     	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                     	        input.consume();
@@ -912,7 +912,7 @@ public class xmlplLexer extends Lexer {
                     } while (true);
 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:37: ( EXPONENT )?
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:37: ( EXPONENT )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -921,7 +921,7 @@ public class xmlplLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:37: EXPONENT
+                            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:11:37: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -935,11 +935,11 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
                     {
                     match('.'); 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:13: ( '0' .. '9' )+
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:13: ( '0' .. '9' )+
                     int cnt6=0;
                     loop6:
                     do {
@@ -953,7 +953,7 @@ public class xmlplLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
                     	    {
                     	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                     	        input.consume();
@@ -978,7 +978,7 @@ public class xmlplLexer extends Lexer {
                     } while (true);
 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:25: ( EXPONENT )?
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:25: ( EXPONENT )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -987,7 +987,7 @@ public class xmlplLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:25: EXPONENT
+                            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:12:25: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -1001,9 +1001,9 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:9: ( '0' .. '9' )+ EXPONENT
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:9: ( '0' .. '9' )+ EXPONENT
                     {
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:9: ( '0' .. '9' )+
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:13:9: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -1017,7 +1017,7 @@ public class xmlplLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
                     	    {
                     	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                     	        input.consume();
@@ -1063,7 +1063,7 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1093,13 +1093,13 @@ public class xmlplLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:14: (~ ( '\\n' | '\\r' ) )*
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:14: (~ ( '\\n' | '\\r' ) )*
                     loop10:
                     do {
                         int alt10=2;
@@ -1112,7 +1112,7 @@ public class xmlplLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
                     	    {
                     	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
                     	        input.consume();
@@ -1133,7 +1133,7 @@ public class xmlplLexer extends Lexer {
                     } while (true);
 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:28: ( '\\r' )?
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:28: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1142,7 +1142,7 @@ public class xmlplLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:28: '\\r'
+                            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:17:28: '\\r'
                             {
                             match('\r'); 
 
@@ -1159,13 +1159,13 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:9: '/*' ( options {greedy=false; } : . )* '*/'
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:9: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:14: ( options {greedy=false; } : . )*
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:14: ( options {greedy=false; } : . )*
                     loop12:
                     do {
                         int alt12=2;
@@ -1190,7 +1190,7 @@ public class xmlplLexer extends Lexer {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:42: .
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:18:42: .
                     	    {
                     	    matchAny(); 
 
@@ -1227,8 +1227,8 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:21:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1258,12 +1258,12 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop14:
             do {
                 int alt14=3;
@@ -1279,7 +1279,7 @@ public class xmlplLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:14: ESC_SEQ
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:14: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -1287,7 +1287,7 @@ public class xmlplLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:24: ~ ( '\\\\' | '\"' )
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:29:24: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -1326,12 +1326,12 @@ public class xmlplLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
 
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1350,7 +1350,7 @@ public class xmlplLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:15: ESC_SEQ
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:15: ESC_SEQ
                     {
                     mESC_SEQ(); 
 
@@ -1358,7 +1358,7 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:25: ~ ( '\\'' | '\\\\' )
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:32:25: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
                         input.consume();
@@ -1392,8 +1392,8 @@ public class xmlplLexer extends Lexer {
     // $ANTLR start "EXPONENT"
     public final void mEXPONENT() throws RecognitionException {
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -1405,7 +1405,7 @@ public class xmlplLexer extends Lexer {
             }
 
 
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:22: ( '+' | '-' )?
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:22: ( '+' | '-' )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1414,7 +1414,7 @@ public class xmlplLexer extends Lexer {
             }
             switch (alt16) {
                 case 1 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
                     {
                     if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                         input.consume();
@@ -1432,7 +1432,7 @@ public class xmlplLexer extends Lexer {
             }
 
 
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:33: ( '0' .. '9' )+
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:37:33: ( '0' .. '9' )+
             int cnt17=0;
             loop17:
             do {
@@ -1446,7 +1446,7 @@ public class xmlplLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1484,8 +1484,8 @@ public class xmlplLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:40:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:40:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
                 input.consume();
@@ -1510,7 +1510,7 @@ public class xmlplLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:44:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:44:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
             int alt18=3;
             int LA18_0 = input.LA(1);
 
@@ -1563,7 +1563,7 @@ public class xmlplLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:44:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:44:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
 
@@ -1580,7 +1580,7 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:45:9: UNICODE_ESC
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:45:9: UNICODE_ESC
                     {
                     mUNICODE_ESC(); 
 
@@ -1588,7 +1588,7 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:46:9: OCTAL_ESC
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:46:9: OCTAL_ESC
                     {
                     mOCTAL_ESC(); 
 
@@ -1608,7 +1608,7 @@ public class xmlplLexer extends Lexer {
     // $ANTLR start "OCTAL_ESC"
     public final void mOCTAL_ESC() throws RecognitionException {
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:51:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:51:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt19=3;
             int LA19_0 = input.LA(1);
 
@@ -1659,7 +1659,7 @@ public class xmlplLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:51:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:51:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
 
@@ -1696,7 +1696,7 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:52:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:52:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
 
@@ -1723,7 +1723,7 @@ public class xmlplLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:53:9: '\\\\' ( '0' .. '7' )
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:53:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
 
@@ -1752,8 +1752,8 @@ public class xmlplLexer extends Lexer {
     // $ANTLR start "UNICODE_ESC"
     public final void mUNICODE_ESC() throws RecognitionException {
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:58:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:58:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:58:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:58:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
 
@@ -1782,12 +1782,12 @@ public class xmlplLexer extends Lexer {
     // $ANTLR end "UNICODE_ESC"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:8: ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR )
+        // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:8: ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR )
         int alt20=36;
         alt20 = dfa20.predict(input);
         switch (alt20) {
             case 1 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:10: T__16
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:10: T__16
                 {
                 mT__16(); 
 
@@ -1795,7 +1795,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:16: T__17
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:16: T__17
                 {
                 mT__17(); 
 
@@ -1803,7 +1803,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:22: T__18
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:22: T__18
                 {
                 mT__18(); 
 
@@ -1811,7 +1811,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:28: T__19
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:28: T__19
                 {
                 mT__19(); 
 
@@ -1819,7 +1819,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:34: T__20
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:34: T__20
                 {
                 mT__20(); 
 
@@ -1827,7 +1827,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:40: T__21
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:40: T__21
                 {
                 mT__21(); 
 
@@ -1835,7 +1835,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:46: T__22
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:46: T__22
                 {
                 mT__22(); 
 
@@ -1843,7 +1843,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:52: T__23
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:52: T__23
                 {
                 mT__23(); 
 
@@ -1851,7 +1851,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:58: T__24
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:58: T__24
                 {
                 mT__24(); 
 
@@ -1859,7 +1859,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:64: T__25
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:64: T__25
                 {
                 mT__25(); 
 
@@ -1867,7 +1867,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:70: T__26
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:70: T__26
                 {
                 mT__26(); 
 
@@ -1875,7 +1875,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:76: T__27
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:76: T__27
                 {
                 mT__27(); 
 
@@ -1883,7 +1883,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:82: T__28
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:82: T__28
                 {
                 mT__28(); 
 
@@ -1891,7 +1891,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:88: T__29
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:88: T__29
                 {
                 mT__29(); 
 
@@ -1899,7 +1899,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:94: T__30
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:94: T__30
                 {
                 mT__30(); 
 
@@ -1907,7 +1907,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:100: T__31
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:100: T__31
                 {
                 mT__31(); 
 
@@ -1915,7 +1915,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:106: T__32
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:106: T__32
                 {
                 mT__32(); 
 
@@ -1923,7 +1923,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:112: T__33
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:112: T__33
                 {
                 mT__33(); 
 
@@ -1931,7 +1931,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:118: T__34
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:118: T__34
                 {
                 mT__34(); 
 
@@ -1939,7 +1939,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:124: T__35
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:124: T__35
                 {
                 mT__35(); 
 
@@ -1947,7 +1947,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:130: T__36
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:130: T__36
                 {
                 mT__36(); 
 
@@ -1955,7 +1955,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:136: T__37
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:136: T__37
                 {
                 mT__37(); 
 
@@ -1963,7 +1963,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:142: T__38
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:142: T__38
                 {
                 mT__38(); 
 
@@ -1971,7 +1971,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:148: T__39
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:148: T__39
                 {
                 mT__39(); 
 
@@ -1979,7 +1979,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:154: T__40
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:154: T__40
                 {
                 mT__40(); 
 
@@ -1987,7 +1987,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:160: T__41
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:160: T__41
                 {
                 mT__41(); 
 
@@ -1995,7 +1995,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:166: T__42
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:166: T__42
                 {
                 mT__42(); 
 
@@ -2003,7 +2003,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:172: T__43
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:172: T__43
                 {
                 mT__43(); 
 
@@ -2011,7 +2011,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:178: T__44
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:178: T__44
                 {
                 mT__44(); 
 
@@ -2019,7 +2019,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:184: ID
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:184: ID
                 {
                 mID(); 
 
@@ -2027,7 +2027,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:187: INT
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:187: INT
                 {
                 mINT(); 
 
@@ -2035,7 +2035,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:191: FLOAT
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:191: FLOAT
                 {
                 mFLOAT(); 
 
@@ -2043,7 +2043,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:197: COMMENT
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:197: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -2051,7 +2051,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:205: WS
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:205: WS
                 {
                 mWS(); 
 
@@ -2059,7 +2059,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:208: STRING
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:208: STRING
                 {
                 mSTRING(); 
 
@@ -2067,7 +2067,7 @@ public class xmlplLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:215: CHAR
+                // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:1:215: CHAR
                 {
                 mCHAR(); 
 

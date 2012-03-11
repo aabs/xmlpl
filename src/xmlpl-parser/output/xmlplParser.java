@@ -1,14 +1,12 @@
-// $ANTLR 3.4 C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g 2012-03-05 22:29:38
+// $ANTLR 3.4 F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g 2012-03-11 14:55:19
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.antlr.runtime.debug.*;
-import java.io.IOException;
 @SuppressWarnings({"all", "warnings", "unchecked"})
-public class xmlplParser extends DebugParser {
+public class xmlplParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHAR", "COMMENT", "ESC_SEQ", "EXPONENT", "FLOAT", "HEX_DIGIT", "ID", "INT", "OCTAL_ESC", "STRING", "UNICODE_ESC", "WS", "'!='", "'$'", "'&#'", "'&'", "'('", "')'", "','", "'->'", "'-><'", "'->>'", "'.'", "'/'", "'/>'", "';'", "'<'", "'</'", "'<?'", "'='", "'=<'", "'=='", "'=>'", "'=?'", "'>'", "'?'", "'?>'", "'import'", "'module'", "'{'", "'}'"
     };
@@ -64,79 +62,29 @@ public class xmlplParser extends DebugParser {
     // delegators
 
 
-public static final String[] ruleNames = new String[] {
-    "invalidRule", "referenceOrBinding", "xmlCharNumber", "xmlContent", 
-    "importDef", "xmlStartTag", "statementList", "matchOperation", "xmlAttribute", 
-    "variableReference", "appendOperation", "value", "xmlAttributesOrPattern", 
-    "moveBackOperation", "xmlAttributeValue", "argList", "prependOperation", 
-    "xmlModifyingExpression", "xmlUnaryTag", "pattern", "path", "xmlWord", 
-    "valueOf", "replaceOperation", "moveFrontOperation", "pathExpression", 
-    "statement", "functionInvocation", "binding", "xmlDocument", "xmlFragment", 
-    "functionDefinition", "xmlText", "xmlObject", "xmlEndTag", "moveOperation", 
-    "moduleDef", "module", "xmlCharName", "expression", "xmlPattern", "deleteOperation"
-};
-
-public static final boolean[] decisionCanBacktrack = new boolean[] {
-    false, // invalid decision
-    false, false, false, false, false, false, false, false, false, false, 
-        false, false, false, false, false, false, false, false, false, false
-};
-
- 
-    public int ruleLevel = 0;
-    public int getRuleLevel() { return ruleLevel; }
-    public void incRuleLevel() { ruleLevel++; }
-    public void decRuleLevel() { ruleLevel--; }
     public xmlplParser(TokenStream input) {
-        this(input, DebugEventSocketProxy.DEFAULT_DEBUGGER_PORT, new RecognizerSharedState());
+        this(input, new RecognizerSharedState());
     }
-    public xmlplParser(TokenStream input, int port, RecognizerSharedState state) {
+    public xmlplParser(TokenStream input, RecognizerSharedState state) {
         super(input, state);
-        DebugEventSocketProxy proxy =
-            new DebugEventSocketProxy(this, port, null);
-
-        setDebugListener(proxy);
-        try {
-            proxy.handshake();
-        }
-        catch (IOException ioe) {
-            reportError(ioe);
-        }
     }
-
-public xmlplParser(TokenStream input, DebugEventListener dbg) {
-    super(input, dbg, new RecognizerSharedState());
-}
-
-protected boolean evalPredicate(boolean result, String predicate) {
-    dbg.semanticPredicate(result, predicate);
-    return result;
-}
 
     public String[] getTokenNames() { return xmlplParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g"; }
+    public String getGrammarFileName() { return "F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g"; }
 
 
 
     // $ANTLR start "moduleDef"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:60:1: moduleDef : 'module' ID '.' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:60:1: moduleDef : 'module' ID '.' ;
     public final void moduleDef() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "moduleDef");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(60, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:61:2: ( 'module' ID '.' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:61:4: 'module' ID '.'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:61:2: ( 'module' ID '.' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:61:4: 'module' ID '.'
             {
-            dbg.location(61,4);
             match(input,42,FOLLOW_42_in_moduleDef559); 
-            dbg.location(61,13);
+
             match(input,ID,FOLLOW_ID_in_moduleDef561); 
-            dbg.location(61,16);
+
             match(input,26,FOLLOW_26_in_moduleDef563); 
 
             }
@@ -150,15 +98,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(62, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "moduleDef");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "moduleDef"
@@ -166,24 +105,16 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "importDef"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:64:1: importDef : 'import' ID '.' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:64:1: importDef : 'import' ID '.' ;
     public final void importDef() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "importDef");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(64, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:64:11: ( 'import' ID '.' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:64:13: 'import' ID '.'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:64:11: ( 'import' ID '.' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:64:13: 'import' ID '.'
             {
-            dbg.location(64,13);
             match(input,41,FOLLOW_41_in_importDef573); 
-            dbg.location(64,22);
+
             match(input,ID,FOLLOW_ID_in_importDef575); 
-            dbg.location(64,25);
+
             match(input,26,FOLLOW_26_in_importDef577); 
 
             }
@@ -197,15 +128,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(65, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "importDef");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "importDef"
@@ -213,40 +135,32 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "functionDefinition"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:67:1: functionDefinition : ID '(' argList ')' '{' statementList '}' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:67:1: functionDefinition : ID '(' argList ')' '{' statementList '}' ;
     public final void functionDefinition() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "functionDefinition");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(67, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:68:2: ( ID '(' argList ')' '{' statementList '}' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:68:4: ID '(' argList ')' '{' statementList '}'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:68:2: ( ID '(' argList ')' '{' statementList '}' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:68:4: ID '(' argList ')' '{' statementList '}'
             {
-            dbg.location(68,4);
             match(input,ID,FOLLOW_ID_in_functionDefinition588); 
-            dbg.location(68,7);
+
             match(input,20,FOLLOW_20_in_functionDefinition590); 
-            dbg.location(68,11);
+
             pushFollow(FOLLOW_argList_in_functionDefinition592);
             argList();
 
             state._fsp--;
 
-            dbg.location(68,19);
+
             match(input,21,FOLLOW_21_in_functionDefinition594); 
-            dbg.location(68,23);
+
             match(input,43,FOLLOW_43_in_functionDefinition596); 
-            dbg.location(69,2);
+
             pushFollow(FOLLOW_statementList_in_functionDefinition599);
             statementList();
 
             state._fsp--;
 
-            dbg.location(70,2);
+
             match(input,44,FOLLOW_44_in_functionDefinition602); 
 
             }
@@ -260,15 +174,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(71, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "functionDefinition");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "functionDefinition"
@@ -276,28 +181,16 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "statementList"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:73:1: statementList : ( statement )* ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:73:1: statementList : ( statement )* ;
     public final void statementList() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "statementList");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(73, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:2: ( ( statement )* )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:4: ( statement )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:2: ( ( statement )* )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:4: ( statement )*
             {
-            dbg.location(74,4);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:4: ( statement )*
-            try { dbg.enterSubRule(1);
-
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:4: ( statement )*
             loop1:
             do {
                 int alt1=2;
-                try { dbg.enterDecision(1, decisionCanBacktrack[1]);
-
                 int LA1_0 = input.LA(1);
 
                 if ( (LA1_0==ID||LA1_0==17||LA1_0==30||LA1_0==32||LA1_0==39) ) {
@@ -305,15 +198,10 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 }
 
 
-                } finally {dbg.exitDecision(1);}
-
                 switch (alt1) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:5: statement
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:74:5: statement
             	    {
-            	    dbg.location(74,5);
             	    pushFollow(FOLLOW_statement_in_statementList614);
             	    statement();
 
@@ -327,7 +215,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    break loop1;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(1);}
 
 
             }
@@ -341,15 +228,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(75, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "statementList");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "statementList"
@@ -357,25 +235,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "statement"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:77:1: statement : ( ID ( '=' expression )? | expression ) ';' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:77:1: statement : ( ID ( '=' expression )? | expression ) ';' ;
     public final void statement() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "statement");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(77, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:2: ( ( ID ( '=' expression )? | expression ) ';' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:4: ( ID ( '=' expression )? | expression ) ';'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:2: ( ( ID ( '=' expression )? | expression ) ';' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:4: ( ID ( '=' expression )? | expression ) ';'
             {
-            dbg.location(78,4);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:4: ( ID ( '=' expression )? | expression )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:4: ( ID ( '=' expression )? | expression )
             int alt3=2;
-            try { dbg.enterSubRule(3);
-            try { dbg.enterDecision(3, decisionCanBacktrack[3]);
-
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==ID) ) {
@@ -391,7 +258,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     NoViableAltException nvae =
                         new NoViableAltException("", 3, 1, input);
 
-                    dbg.recognitionException(nvae);
                     throw nvae;
 
                 }
@@ -403,42 +269,28 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 NoViableAltException nvae =
                     new NoViableAltException("", 3, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
-            } finally {dbg.exitDecision(3);}
-
             switch (alt3) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:6: ID ( '=' expression )?
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:6: ID ( '=' expression )?
                     {
-                    dbg.location(78,6);
                     match(input,ID,FOLLOW_ID_in_statement629); 
-                    dbg.location(78,9);
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:9: ( '=' expression )?
-                    int alt2=2;
-                    try { dbg.enterSubRule(2);
-                    try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:9: ( '=' expression )?
+                    int alt2=2;
                     int LA2_0 = input.LA(1);
 
                     if ( (LA2_0==33) ) {
                         alt2=1;
                     }
-                    } finally {dbg.exitDecision(2);}
-
                     switch (alt2) {
                         case 1 :
-                            dbg.enterAlt(1);
-
-                            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:10: '=' expression
+                            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:78:10: '=' expression
                             {
-                            dbg.location(78,10);
                             match(input,33,FOLLOW_33_in_statement632); 
-                            dbg.location(78,14);
+
                             pushFollow(FOLLOW_expression_in_statement634);
                             expression();
 
@@ -449,17 +301,13 @@ protected boolean evalPredicate(boolean result, String predicate) {
                             break;
 
                     }
-                    } finally {dbg.exitSubRule(2);}
 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:79:5: expression
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:79:5: expression
                     {
-                    dbg.location(79,5);
                     pushFollow(FOLLOW_expression_in_statement643);
                     expression();
 
@@ -470,9 +318,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     break;
 
             }
-            } finally {dbg.exitSubRule(3);}
 
-            dbg.location(79,17);
+
             match(input,29,FOLLOW_29_in_statement646); 
 
             }
@@ -486,15 +333,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(80, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "statement");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "statement"
@@ -502,18 +340,11 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "expression"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:81:1: expression : ( xmlModifyingExpression | xmlPattern | xmlFragment | functionInvocation | xmlDocument );
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:81:1: expression : ( xmlModifyingExpression | xmlPattern | xmlFragment | functionInvocation | xmlDocument );
     public final void expression() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "expression");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(81, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:82:2: ( xmlModifyingExpression | xmlPattern | xmlFragment | functionInvocation | xmlDocument )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:82:2: ( xmlModifyingExpression | xmlPattern | xmlFragment | functionInvocation | xmlDocument )
             int alt4=5;
-            try { dbg.enterDecision(4, decisionCanBacktrack[4]);
-
             switch ( input.LA(1) ) {
             case 17:
                 {
@@ -544,20 +375,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
 
-            } finally {dbg.exitDecision(4);}
-
             switch (alt4) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:82:4: xmlModifyingExpression
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:82:4: xmlModifyingExpression
                     {
-                    dbg.location(82,4);
                     pushFollow(FOLLOW_xmlModifyingExpression_in_expression656);
                     xmlModifyingExpression();
 
@@ -567,11 +392,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:83:4: xmlPattern
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:83:4: xmlPattern
                     {
-                    dbg.location(83,4);
                     pushFollow(FOLLOW_xmlPattern_in_expression661);
                     xmlPattern();
 
@@ -581,11 +403,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:84:4: xmlFragment
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:84:4: xmlFragment
                     {
-                    dbg.location(84,4);
                     pushFollow(FOLLOW_xmlFragment_in_expression694);
                     xmlFragment();
 
@@ -595,11 +414,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:85:4: functionInvocation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:85:4: functionInvocation
                     {
-                    dbg.location(85,4);
                     pushFollow(FOLLOW_functionInvocation_in_expression699);
                     functionInvocation();
 
@@ -609,11 +425,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 5 :
-                    dbg.enterAlt(5);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:86:4: xmlDocument
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:86:4: xmlDocument
                     {
-                    dbg.location(86,4);
                     pushFollow(FOLLOW_xmlDocument_in_expression704);
                     xmlDocument();
 
@@ -633,15 +446,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(87, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "expression");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "expression"
@@ -649,30 +453,22 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "functionInvocation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:89:1: functionInvocation : ID '(' argList ')' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:89:1: functionInvocation : ID '(' argList ')' ;
     public final void functionInvocation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "functionInvocation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(89, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:89:20: ( ID '(' argList ')' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:90:5: ID '(' argList ')'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:89:20: ( ID '(' argList ')' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:90:5: ID '(' argList ')'
             {
-            dbg.location(90,5);
             match(input,ID,FOLLOW_ID_in_functionInvocation719); 
-            dbg.location(90,8);
+
             match(input,20,FOLLOW_20_in_functionInvocation721); 
-            dbg.location(90,12);
+
             pushFollow(FOLLOW_argList_in_functionInvocation723);
             argList();
 
             state._fsp--;
 
-            dbg.location(90,20);
+
             match(input,21,FOLLOW_21_in_functionInvocation725); 
 
             }
@@ -686,15 +482,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(91, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "functionInvocation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "functionInvocation"
@@ -702,43 +489,27 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "referenceOrBinding"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:93:1: referenceOrBinding : ID ( '=' expression )? ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:93:1: referenceOrBinding : ID ( '=' expression )? ;
     public final void referenceOrBinding() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "referenceOrBinding");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(93, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:94:2: ( ID ( '=' expression )? )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:95:5: ID ( '=' expression )?
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:94:2: ( ID ( '=' expression )? )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:95:5: ID ( '=' expression )?
             {
-            dbg.location(95,5);
             match(input,ID,FOLLOW_ID_in_referenceOrBinding746); 
-            dbg.location(95,8);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:95:8: ( '=' expression )?
-            int alt5=2;
-            try { dbg.enterSubRule(5);
-            try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:95:8: ( '=' expression )?
+            int alt5=2;
             int LA5_0 = input.LA(1);
 
             if ( (LA5_0==33) ) {
                 alt5=1;
             }
-            } finally {dbg.exitDecision(5);}
-
             switch (alt5) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:95:9: '=' expression
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:95:9: '=' expression
                     {
-                    dbg.location(95,9);
                     match(input,33,FOLLOW_33_in_referenceOrBinding749); 
-                    dbg.location(95,13);
+
                     pushFollow(FOLLOW_expression_in_referenceOrBinding751);
                     expression();
 
@@ -749,7 +520,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     break;
 
             }
-            } finally {dbg.exitSubRule(5);}
 
 
             }
@@ -763,15 +533,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(96, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "referenceOrBinding");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "referenceOrBinding"
@@ -779,31 +540,20 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlModifyingExpression"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:98:1: xmlModifyingExpression : pathExpression ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation ) ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:98:1: xmlModifyingExpression : pathExpression ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation ) ;
     public final void xmlModifyingExpression() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlModifyingExpression");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(98, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:99:2: ( pathExpression ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation ) )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:99:4: pathExpression ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:99:2: ( pathExpression ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation ) )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:99:4: pathExpression ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
             {
-            dbg.location(99,4);
             pushFollow(FOLLOW_pathExpression_in_xmlModifyingExpression771);
             pathExpression();
 
             state._fsp--;
 
-            dbg.location(100,2);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:100:2: ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
-            int alt6=8;
-            try { dbg.enterSubRule(6);
-            try { dbg.enterDecision(6, decisionCanBacktrack[6]);
 
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:100:2: ( replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
+            int alt6=8;
             switch ( input.LA(1) ) {
             case 35:
                 {
@@ -849,20 +599,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 NoViableAltException nvae =
                     new NoViableAltException("", 6, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
 
-            } finally {dbg.exitDecision(6);}
-
             switch (alt6) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:101:5: replaceOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:101:5: replaceOperation
                     {
-                    dbg.location(101,5);
                     pushFollow(FOLLOW_replaceOperation_in_xmlModifyingExpression781);
                     replaceOperation();
 
@@ -872,11 +616,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:102:5: appendOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:102:5: appendOperation
                     {
-                    dbg.location(102,5);
                     pushFollow(FOLLOW_appendOperation_in_xmlModifyingExpression787);
                     appendOperation();
 
@@ -886,11 +627,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:103:5: prependOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:103:5: prependOperation
                     {
-                    dbg.location(103,5);
                     pushFollow(FOLLOW_prependOperation_in_xmlModifyingExpression793);
                     prependOperation();
 
@@ -900,11 +638,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:104:5: matchOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:104:5: matchOperation
                     {
-                    dbg.location(104,5);
                     pushFollow(FOLLOW_matchOperation_in_xmlModifyingExpression799);
                     matchOperation();
 
@@ -914,11 +649,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 5 :
-                    dbg.enterAlt(5);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:105:5: moveOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:105:5: moveOperation
                     {
-                    dbg.location(105,5);
                     pushFollow(FOLLOW_moveOperation_in_xmlModifyingExpression805);
                     moveOperation();
 
@@ -928,11 +660,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 6 :
-                    dbg.enterAlt(6);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:106:5: moveFrontOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:106:5: moveFrontOperation
                     {
-                    dbg.location(106,5);
                     pushFollow(FOLLOW_moveFrontOperation_in_xmlModifyingExpression811);
                     moveFrontOperation();
 
@@ -942,11 +671,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 7 :
-                    dbg.enterAlt(7);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:107:5: moveBackOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:107:5: moveBackOperation
                     {
-                    dbg.location(107,5);
                     pushFollow(FOLLOW_moveBackOperation_in_xmlModifyingExpression817);
                     moveBackOperation();
 
@@ -956,11 +682,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 8 :
-                    dbg.enterAlt(8);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:108:5: deleteOperation
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:108:5: deleteOperation
                     {
-                    dbg.location(108,5);
                     pushFollow(FOLLOW_deleteOperation_in_xmlModifyingExpression823);
                     deleteOperation();
 
@@ -971,7 +694,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     break;
 
             }
-            } finally {dbg.exitSubRule(6);}
 
 
             }
@@ -985,15 +707,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(110, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlModifyingExpression");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlModifyingExpression"
@@ -1001,22 +714,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "pathExpression"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:112:1: pathExpression : '$' path ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:112:1: pathExpression : '$' path ;
     public final void pathExpression() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "pathExpression");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(112, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:113:2: ( '$' path )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:113:4: '$' path
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:113:2: ( '$' path )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:113:4: '$' path
             {
-            dbg.location(113,4);
             match(input,17,FOLLOW_17_in_pathExpression837); 
-            dbg.location(113,8);
+
             pushFollow(FOLLOW_path_in_pathExpression839);
             path();
 
@@ -1034,15 +739,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(114, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "pathExpression");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "pathExpression"
@@ -1050,30 +746,18 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "path"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:1: path : ID ( '/' ID )* ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:1: path : ID ( '/' ID )* ;
     public final void path() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "path");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(116, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:6: ( ID ( '/' ID )* )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:8: ID ( '/' ID )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:6: ( ID ( '/' ID )* )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:8: ID ( '/' ID )*
             {
-            dbg.location(116,8);
             match(input,ID,FOLLOW_ID_in_path851); 
-            dbg.location(116,11);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:11: ( '/' ID )*
-            try { dbg.enterSubRule(7);
 
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:11: ( '/' ID )*
             loop7:
             do {
                 int alt7=2;
-                try { dbg.enterDecision(7, decisionCanBacktrack[7]);
-
                 int LA7_0 = input.LA(1);
 
                 if ( (LA7_0==27) ) {
@@ -1081,17 +765,12 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 }
 
 
-                } finally {dbg.exitDecision(7);}
-
                 switch (alt7) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:12: '/' ID
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:116:12: '/' ID
             	    {
-            	    dbg.location(116,12);
             	    match(input,27,FOLLOW_27_in_path854); 
-            	    dbg.location(116,16);
+
             	    match(input,ID,FOLLOW_ID_in_path856); 
 
             	    }
@@ -1101,7 +780,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    break loop7;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(7);}
 
 
             }
@@ -1115,15 +793,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(117, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "path");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "path"
@@ -1131,22 +800,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "replaceOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:119:1: replaceOperation : '==' value ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:119:1: replaceOperation : '==' value ;
     public final void replaceOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "replaceOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(119, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:120:2: ( '==' value )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:120:4: '==' value
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:120:2: ( '==' value )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:120:4: '==' value
             {
-            dbg.location(120,4);
             match(input,35,FOLLOW_35_in_replaceOperation869); 
-            dbg.location(120,9);
+
             pushFollow(FOLLOW_value_in_replaceOperation871);
             value();
 
@@ -1164,15 +825,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(121, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "replaceOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "replaceOperation"
@@ -1180,18 +832,11 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "value"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:123:1: value : ( ID | '(' expression ')' | pathExpression | xmlFragment );
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:123:1: value : ( ID | '(' expression ')' | pathExpression | xmlFragment );
     public final void value() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "value");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(123, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:123:7: ( ID | '(' expression ')' | pathExpression | xmlFragment )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:123:7: ( ID | '(' expression ')' | pathExpression | xmlFragment )
             int alt8=4;
-            try { dbg.enterDecision(8, decisionCanBacktrack[8]);
-
             switch ( input.LA(1) ) {
             case ID:
                 {
@@ -1217,48 +862,36 @@ protected boolean evalPredicate(boolean result, String predicate) {
                 NoViableAltException nvae =
                     new NoViableAltException("", 8, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
 
-            } finally {dbg.exitDecision(8);}
-
             switch (alt8) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:123:9: ID
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:123:9: ID
                     {
-                    dbg.location(123,9);
                     match(input,ID,FOLLOW_ID_in_value881); 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:124:4: '(' expression ')'
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:124:4: '(' expression ')'
                     {
-                    dbg.location(124,4);
                     match(input,20,FOLLOW_20_in_value886); 
-                    dbg.location(124,8);
+
                     pushFollow(FOLLOW_expression_in_value888);
                     expression();
 
                     state._fsp--;
 
-                    dbg.location(124,19);
+
                     match(input,21,FOLLOW_21_in_value890); 
 
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:125:4: pathExpression
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:125:4: pathExpression
                     {
-                    dbg.location(125,4);
                     pushFollow(FOLLOW_pathExpression_in_value895);
                     pathExpression();
 
@@ -1268,11 +901,8 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:126:7: xmlFragment
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:126:7: xmlFragment
                     {
-                    dbg.location(126,7);
                     pushFollow(FOLLOW_xmlFragment_in_value903);
                     xmlFragment();
 
@@ -1292,15 +922,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(127, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "value");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "value"
@@ -1308,22 +929,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "appendOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:129:1: appendOperation : '=>' value ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:129:1: appendOperation : '=>' value ;
     public final void appendOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "appendOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(129, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:130:2: ( '=>' value )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:130:5: '=>' value
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:130:2: ( '=>' value )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:130:5: '=>' value
             {
-            dbg.location(130,5);
             match(input,36,FOLLOW_36_in_appendOperation915); 
-            dbg.location(130,10);
+
             pushFollow(FOLLOW_value_in_appendOperation917);
             value();
 
@@ -1341,15 +954,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(131, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "appendOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "appendOperation"
@@ -1357,22 +961,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "prependOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:133:1: prependOperation : '=<' value ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:133:1: prependOperation : '=<' value ;
     public final void prependOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "prependOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(133, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:134:2: ( '=<' value )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:134:4: '=<' value
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:134:2: ( '=<' value )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:134:4: '=<' value
             {
-            dbg.location(134,4);
             match(input,34,FOLLOW_34_in_prependOperation928); 
-            dbg.location(134,9);
+
             pushFollow(FOLLOW_value_in_prependOperation930);
             value();
 
@@ -1390,15 +986,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(135, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "prependOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "prependOperation"
@@ -1406,22 +993,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "matchOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:137:1: matchOperation : '=?' xmlFragment ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:137:1: matchOperation : '=?' xmlFragment ;
     public final void matchOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "matchOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(137, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:138:2: ( '=?' xmlFragment )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:138:4: '=?' xmlFragment
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:138:2: ( '=?' xmlFragment )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:138:4: '=?' xmlFragment
             {
-            dbg.location(138,4);
             match(input,37,FOLLOW_37_in_matchOperation941); 
-            dbg.location(138,9);
+
             pushFollow(FOLLOW_xmlFragment_in_matchOperation943);
             xmlFragment();
 
@@ -1439,15 +1018,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(139, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "matchOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "matchOperation"
@@ -1455,22 +1025,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "moveOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:141:1: moveOperation : '->' pathExpression ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:141:1: moveOperation : '->' pathExpression ;
     public final void moveOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "moveOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(141, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:142:2: ( '->' pathExpression )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:142:4: '->' pathExpression
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:142:2: ( '->' pathExpression )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:142:4: '->' pathExpression
             {
-            dbg.location(142,4);
             match(input,23,FOLLOW_23_in_moveOperation954); 
-            dbg.location(142,9);
+
             pushFollow(FOLLOW_pathExpression_in_moveOperation956);
             pathExpression();
 
@@ -1488,15 +1050,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(143, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "moveOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "moveOperation"
@@ -1504,22 +1057,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "moveFrontOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:145:1: moveFrontOperation : '-><' pathExpression ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:145:1: moveFrontOperation : '-><' pathExpression ;
     public final void moveFrontOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "moveFrontOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(145, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:146:2: ( '-><' pathExpression )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:146:4: '-><' pathExpression
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:146:2: ( '-><' pathExpression )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:146:4: '-><' pathExpression
             {
-            dbg.location(146,4);
             match(input,24,FOLLOW_24_in_moveFrontOperation967); 
-            dbg.location(146,10);
+
             pushFollow(FOLLOW_pathExpression_in_moveFrontOperation969);
             pathExpression();
 
@@ -1537,15 +1082,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(147, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "moveFrontOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "moveFrontOperation"
@@ -1553,22 +1089,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "moveBackOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:149:1: moveBackOperation : '->>' pathExpression ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:149:1: moveBackOperation : '->>' pathExpression ;
     public final void moveBackOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "moveBackOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(149, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:150:2: ( '->>' pathExpression )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:150:4: '->>' pathExpression
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:150:2: ( '->>' pathExpression )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:150:4: '->>' pathExpression
             {
-            dbg.location(150,4);
             match(input,25,FOLLOW_25_in_moveBackOperation980); 
-            dbg.location(150,10);
+
             pushFollow(FOLLOW_pathExpression_in_moveBackOperation982);
             pathExpression();
 
@@ -1586,15 +1114,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(151, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "moveBackOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "moveBackOperation"
@@ -1602,22 +1121,14 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "deleteOperation"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:153:1: deleteOperation : '!=' ID ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:153:1: deleteOperation : '!=' ID ;
     public final void deleteOperation() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "deleteOperation");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(153, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:154:2: ( '!=' ID )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:154:4: '!=' ID
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:154:2: ( '!=' ID )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:154:4: '!=' ID
             {
-            dbg.location(154,4);
             match(input,16,FOLLOW_16_in_deleteOperation993); 
-            dbg.location(154,9);
+
             match(input,ID,FOLLOW_ID_in_deleteOperation995); 
 
             }
@@ -1631,15 +1142,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(155, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "deleteOperation");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "deleteOperation"
@@ -1647,28 +1149,20 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "binding"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:157:1: binding : variableReference '=' expression ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:157:1: binding : variableReference '=' expression ;
     public final void binding() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "binding");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(157, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:157:9: ( variableReference '=' expression )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:157:11: variableReference '=' expression
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:157:9: ( variableReference '=' expression )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:157:11: variableReference '=' expression
             {
-            dbg.location(157,11);
             pushFollow(FOLLOW_variableReference_in_binding1005);
             variableReference();
 
             state._fsp--;
 
-            dbg.location(157,29);
+
             match(input,33,FOLLOW_33_in_binding1007); 
-            dbg.location(157,33);
+
             pushFollow(FOLLOW_expression_in_binding1009);
             expression();
 
@@ -1686,15 +1180,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(158, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "binding");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "binding"
@@ -1702,20 +1187,12 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "variableReference"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:160:1: variableReference : ID ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:160:1: variableReference : ID ;
     public final void variableReference() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "variableReference");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(160, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:161:2: ( ID )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:161:4: ID
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:161:2: ( ID )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:161:4: ID
             {
-            dbg.location(161,4);
             match(input,ID,FOLLOW_ID_in_variableReference1020); 
 
             }
@@ -1729,15 +1206,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(162, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "variableReference");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "variableReference"
@@ -1745,66 +1213,98 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "argList"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:1: argList : expression ( ',' expression )* ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:1: argList : variableReference ( '=' expression )? ( ',' variableReference ( '=' expression )? )* ;
     public final void argList() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "argList");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(164, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:9: ( expression ( ',' expression )* )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:11: expression ( ',' expression )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:9: ( variableReference ( '=' expression )? ( ',' variableReference ( '=' expression )? )* )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:11: variableReference ( '=' expression )? ( ',' variableReference ( '=' expression )? )*
             {
-            dbg.location(164,11);
-            pushFollow(FOLLOW_expression_in_argList1030);
-            expression();
+            pushFollow(FOLLOW_variableReference_in_argList1030);
+            variableReference();
 
             state._fsp--;
 
-            dbg.location(164,22);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:22: ( ',' expression )*
-            try { dbg.enterSubRule(9);
 
-            loop9:
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:29: ( '=' expression )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==33) ) {
+                alt9=1;
+            }
+            switch (alt9) {
+                case 1 :
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:30: '=' expression
+                    {
+                    match(input,33,FOLLOW_33_in_argList1033); 
+
+                    pushFollow(FOLLOW_expression_in_argList1035);
+                    expression();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:47: ( ',' variableReference ( '=' expression )? )*
+            loop11:
             do {
-                int alt9=2;
-                try { dbg.enterDecision(9, decisionCanBacktrack[9]);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                int LA9_0 = input.LA(1);
-
-                if ( (LA9_0==22) ) {
-                    alt9=1;
+                if ( (LA11_0==22) ) {
+                    alt11=1;
                 }
 
 
-                } finally {dbg.exitDecision(9);}
-
-                switch (alt9) {
+                switch (alt11) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:23: ',' expression
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:48: ',' variableReference ( '=' expression )?
             	    {
-            	    dbg.location(164,23);
-            	    match(input,22,FOLLOW_22_in_argList1033); 
-            	    dbg.location(164,27);
-            	    pushFollow(FOLLOW_expression_in_argList1035);
-            	    expression();
+            	    match(input,22,FOLLOW_22_in_argList1040); 
+
+            	    pushFollow(FOLLOW_variableReference_in_argList1042);
+            	    variableReference();
 
             	    state._fsp--;
+
+
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:70: ( '=' expression )?
+            	    int alt10=2;
+            	    int LA10_0 = input.LA(1);
+
+            	    if ( (LA10_0==33) ) {
+            	        alt10=1;
+            	    }
+            	    switch (alt10) {
+            	        case 1 :
+            	            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:164:71: '=' expression
+            	            {
+            	            match(input,33,FOLLOW_33_in_argList1045); 
+
+            	            pushFollow(FOLLOW_expression_in_argList1047);
+            	            expression();
+
+            	            state._fsp--;
+
+
+            	            }
+            	            break;
+
+            	    }
 
 
             	    }
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop11;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(9);}
 
 
             }
@@ -1818,15 +1318,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(165, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "argList");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "argList"
@@ -1834,23 +1325,15 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "pattern"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:167:1: pattern : '?' ID ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:167:1: pattern : '?' ID ;
     public final void pattern() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "pattern");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(167, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:167:9: ( '?' ID )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:167:11: '?' ID
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:167:9: ( '?' ID )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:167:11: '?' ID
             {
-            dbg.location(167,11);
-            match(input,39,FOLLOW_39_in_pattern1049); 
-            dbg.location(167,15);
-            match(input,ID,FOLLOW_ID_in_pattern1051); 
+            match(input,39,FOLLOW_39_in_pattern1063); 
+
+            match(input,ID,FOLLOW_ID_in_pattern1065); 
 
             }
 
@@ -1863,15 +1346,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(168, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "pattern");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "pattern"
@@ -1879,23 +1353,15 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlPattern"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:171:1: xmlPattern : '?' xmlFragment ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:171:1: xmlPattern : '?' xmlFragment ;
     public final void xmlPattern() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlPattern");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(171, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:172:2: ( '?' xmlFragment )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:172:5: '?' xmlFragment
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:172:2: ( '?' xmlFragment )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:172:5: '?' xmlFragment
             {
-            dbg.location(172,5);
-            match(input,39,FOLLOW_39_in_xmlPattern1068); 
-            dbg.location(172,9);
-            pushFollow(FOLLOW_xmlFragment_in_xmlPattern1070);
+            match(input,39,FOLLOW_39_in_xmlPattern1082); 
+
+            pushFollow(FOLLOW_xmlFragment_in_xmlPattern1084);
             xmlFragment();
 
             state._fsp--;
@@ -1912,15 +1378,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(173, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlPattern");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlPattern"
@@ -1928,25 +1385,17 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "valueOf"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:174:1: valueOf : '{' ID '}' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:174:1: valueOf : '{' ID '}' ;
     public final void valueOf() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "valueOf");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(174, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:174:9: ( '{' ID '}' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:175:3: '{' ID '}'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:174:9: ( '{' ID '}' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:175:3: '{' ID '}'
             {
-            dbg.location(175,3);
-            match(input,43,FOLLOW_43_in_valueOf1085); 
-            dbg.location(175,7);
-            match(input,ID,FOLLOW_ID_in_valueOf1087); 
-            dbg.location(175,10);
-            match(input,44,FOLLOW_44_in_valueOf1089); 
+            match(input,43,FOLLOW_43_in_valueOf1099); 
+
+            match(input,ID,FOLLOW_ID_in_valueOf1101); 
+
+            match(input,44,FOLLOW_44_in_valueOf1103); 
 
             }
 
@@ -1959,15 +1408,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(176, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "valueOf");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "valueOf"
@@ -1975,33 +1415,25 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlDocument"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:179:1: xmlDocument : '<?' ID xmlAttribute '?>' xmlObject ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:179:1: xmlDocument : '<?' ID xmlAttribute '?>' xmlObject ;
     public final void xmlDocument() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlDocument");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(179, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:180:2: ( '<?' ID xmlAttribute '?>' xmlObject )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:180:5: '<?' ID xmlAttribute '?>' xmlObject
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:180:2: ( '<?' ID xmlAttribute '?>' xmlObject )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:180:5: '<?' ID xmlAttribute '?>' xmlObject
             {
-            dbg.location(180,5);
-            match(input,32,FOLLOW_32_in_xmlDocument1107); 
-            dbg.location(180,10);
-            match(input,ID,FOLLOW_ID_in_xmlDocument1109); 
-            dbg.location(180,13);
-            pushFollow(FOLLOW_xmlAttribute_in_xmlDocument1111);
+            match(input,32,FOLLOW_32_in_xmlDocument1121); 
+
+            match(input,ID,FOLLOW_ID_in_xmlDocument1123); 
+
+            pushFollow(FOLLOW_xmlAttribute_in_xmlDocument1125);
             xmlAttribute();
 
             state._fsp--;
 
-            dbg.location(180,26);
-            match(input,40,FOLLOW_40_in_xmlDocument1113); 
-            dbg.location(180,31);
-            pushFollow(FOLLOW_xmlObject_in_xmlDocument1115);
+
+            match(input,40,FOLLOW_40_in_xmlDocument1127); 
+
+            pushFollow(FOLLOW_xmlObject_in_xmlDocument1129);
             xmlObject();
 
             state._fsp--;
@@ -2018,15 +1450,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(181, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlDocument");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlDocument"
@@ -2034,21 +1457,13 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlFragment"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:184:1: xmlFragment : xmlObject ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:184:1: xmlFragment : xmlObject ;
     public final void xmlFragment() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlFragment");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(184, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:185:2: ( xmlObject )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:185:6: xmlObject
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:185:2: ( xmlObject )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:185:6: xmlObject
             {
-            dbg.location(185,6);
-            pushFollow(FOLLOW_xmlObject_in_xmlFragment1134);
+            pushFollow(FOLLOW_xmlObject_in_xmlFragment1148);
             xmlObject();
 
             state._fsp--;
@@ -2065,15 +1480,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(186, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlFragment");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlFragment"
@@ -2081,48 +1487,29 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlObject"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:189:1: xmlObject : ( xmlStartTag xmlContent xmlEndTag | xmlUnaryTag );
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:189:1: xmlObject : ( xmlStartTag xmlContent xmlEndTag | xmlUnaryTag );
     public final void xmlObject() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlObject");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(189, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:190:2: ( xmlStartTag xmlContent xmlEndTag | xmlUnaryTag )
-            int alt10=2;
-            try { dbg.enterDecision(10, decisionCanBacktrack[10]);
-
-            try {
-                isCyclicDecision = true;
-                alt10 = dfa10.predict(input);
-            }
-            catch (NoViableAltException nvae) {
-                dbg.recognitionException(nvae);
-                throw nvae;
-            }
-            } finally {dbg.exitDecision(10);}
-
-            switch (alt10) {
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:190:2: ( xmlStartTag xmlContent xmlEndTag | xmlUnaryTag )
+            int alt12=2;
+            alt12 = dfa12.predict(input);
+            switch (alt12) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:190:5: xmlStartTag xmlContent xmlEndTag
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:190:5: xmlStartTag xmlContent xmlEndTag
                     {
-                    dbg.location(190,5);
-                    pushFollow(FOLLOW_xmlStartTag_in_xmlObject1154);
+                    pushFollow(FOLLOW_xmlStartTag_in_xmlObject1168);
                     xmlStartTag();
 
                     state._fsp--;
 
-                    dbg.location(190,17);
-                    pushFollow(FOLLOW_xmlContent_in_xmlObject1156);
+
+                    pushFollow(FOLLOW_xmlContent_in_xmlObject1170);
                     xmlContent();
 
                     state._fsp--;
 
-                    dbg.location(190,28);
-                    pushFollow(FOLLOW_xmlEndTag_in_xmlObject1158);
+
+                    pushFollow(FOLLOW_xmlEndTag_in_xmlObject1172);
                     xmlEndTag();
 
                     state._fsp--;
@@ -2131,12 +1518,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:191:17: xmlUnaryTag
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:191:17: xmlUnaryTag
                     {
-                    dbg.location(191,17);
-                    pushFollow(FOLLOW_xmlUnaryTag_in_xmlObject1176);
+                    pushFollow(FOLLOW_xmlUnaryTag_in_xmlObject1190);
                     xmlUnaryTag();
 
                     state._fsp--;
@@ -2155,15 +1539,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(192, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlObject");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlObject"
@@ -2171,49 +1546,32 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlStartTag"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:194:1: xmlStartTag : '<' ID ( xmlAttributesOrPattern )* '>' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:194:1: xmlStartTag : '<' ID ( xmlAttributesOrPattern )* '>' ;
     public final void xmlStartTag() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlStartTag");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(194, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:195:2: ( '<' ID ( xmlAttributesOrPattern )* '>' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:196:5: '<' ID ( xmlAttributesOrPattern )* '>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:195:2: ( '<' ID ( xmlAttributesOrPattern )* '>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:196:5: '<' ID ( xmlAttributesOrPattern )* '>'
             {
-            dbg.location(196,5);
-            match(input,30,FOLLOW_30_in_xmlStartTag1196); 
-            dbg.location(197,5);
-            match(input,ID,FOLLOW_ID_in_xmlStartTag1255); 
-            dbg.location(198,5);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:198:5: ( xmlAttributesOrPattern )*
-            try { dbg.enterSubRule(11);
+            match(input,30,FOLLOW_30_in_xmlStartTag1210); 
 
-            loop11:
+            match(input,ID,FOLLOW_ID_in_xmlStartTag1269); 
+
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:198:5: ( xmlAttributesOrPattern )*
+            loop13:
             do {
-                int alt11=2;
-                try { dbg.enterDecision(11, decisionCanBacktrack[11]);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                int LA11_0 = input.LA(1);
-
-                if ( (LA11_0==ID||LA11_0==39||LA11_0==43) ) {
-                    alt11=1;
+                if ( (LA13_0==ID||LA13_0==39||LA13_0==43) ) {
+                    alt13=1;
                 }
 
 
-                } finally {dbg.exitDecision(11);}
-
-                switch (alt11) {
+                switch (alt13) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:198:6: xmlAttributesOrPattern
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:198:6: xmlAttributesOrPattern
             	    {
-            	    dbg.location(198,6);
-            	    pushFollow(FOLLOW_xmlAttributesOrPattern_in_xmlStartTag1312);
+            	    pushFollow(FOLLOW_xmlAttributesOrPattern_in_xmlStartTag1326);
             	    xmlAttributesOrPattern();
 
             	    state._fsp--;
@@ -2223,13 +1581,12 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop13;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(11);}
 
-            dbg.location(199,5);
-            match(input,38,FOLLOW_38_in_xmlStartTag1321); 
+
+            match(input,38,FOLLOW_38_in_xmlStartTag1335); 
 
             }
 
@@ -2242,15 +1599,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(200, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlStartTag");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlStartTag"
@@ -2258,25 +1606,17 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlEndTag"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:202:1: xmlEndTag : '</' ID '>' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:202:1: xmlEndTag : '</' ID '>' ;
     public final void xmlEndTag() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlEndTag");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(202, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:203:2: ( '</' ID '>' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:203:5: '</' ID '>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:203:2: ( '</' ID '>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:203:5: '</' ID '>'
             {
-            dbg.location(203,5);
-            match(input,31,FOLLOW_31_in_xmlEndTag1392); 
-            dbg.location(203,10);
-            match(input,ID,FOLLOW_ID_in_xmlEndTag1394); 
-            dbg.location(203,13);
-            match(input,38,FOLLOW_38_in_xmlEndTag1396); 
+            match(input,31,FOLLOW_31_in_xmlEndTag1406); 
+
+            match(input,ID,FOLLOW_ID_in_xmlEndTag1408); 
+
+            match(input,38,FOLLOW_38_in_xmlEndTag1410); 
 
             }
 
@@ -2289,15 +1629,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(204, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlEndTag");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlEndTag"
@@ -2305,69 +1636,47 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlContent"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:206:1: xmlContent : ( ( xmlObject )+ | xmlText );
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:206:1: xmlContent : ( ( xmlObject )+ | xmlText );
     public final void xmlContent() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlContent");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(206, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:207:2: ( ( xmlObject )+ | xmlText )
-            int alt13=2;
-            try { dbg.enterDecision(13, decisionCanBacktrack[13]);
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:207:2: ( ( xmlObject )+ | xmlText )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            int LA13_0 = input.LA(1);
-
-            if ( (LA13_0==30) ) {
-                alt13=1;
+            if ( (LA15_0==30) ) {
+                alt15=1;
             }
-            else if ( (LA13_0==ID||(LA13_0 >= 18 && LA13_0 <= 19)||LA13_0==31||LA13_0==33) ) {
-                alt13=2;
+            else if ( (LA15_0==ID||(LA15_0 >= 18 && LA15_0 <= 19)||LA15_0==31||LA15_0==33) ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
-            } finally {dbg.exitDecision(13);}
-
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:208:2: ( xmlObject )+
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:208:2: ( xmlObject )+
                     {
-                    dbg.location(208,2);
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:208:2: ( xmlObject )+
-                    int cnt12=0;
-                    try { dbg.enterSubRule(12);
-
-                    loop12:
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:208:2: ( xmlObject )+
+                    int cnt14=0;
+                    loop14:
                     do {
-                        int alt12=2;
-                        try { dbg.enterDecision(12, decisionCanBacktrack[12]);
+                        int alt14=2;
+                        int LA14_0 = input.LA(1);
 
-                        int LA12_0 = input.LA(1);
-
-                        if ( (LA12_0==30) ) {
-                            alt12=1;
+                        if ( (LA14_0==30) ) {
+                            alt14=1;
                         }
 
 
-                        } finally {dbg.exitDecision(12);}
-
-                        switch (alt12) {
+                        switch (alt14) {
                     	case 1 :
-                    	    dbg.enterAlt(1);
-
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:208:3: xmlObject
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:208:3: xmlObject
                     	    {
-                    	    dbg.location(208,3);
-                    	    pushFollow(FOLLOW_xmlObject_in_xmlContent1415);
+                    	    pushFollow(FOLLOW_xmlObject_in_xmlContent1429);
                     	    xmlObject();
 
                     	    state._fsp--;
@@ -2377,27 +1686,21 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     	    break;
 
                     	default :
-                    	    if ( cnt12 >= 1 ) break loop12;
+                    	    if ( cnt14 >= 1 ) break loop14;
                                 EarlyExitException eee =
-                                    new EarlyExitException(12, input);
-                                dbg.recognitionException(eee);
-
+                                    new EarlyExitException(14, input);
                                 throw eee;
                         }
-                        cnt12++;
+                        cnt14++;
                     } while (true);
-                    } finally {dbg.exitSubRule(12);}
 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:209:11: xmlText
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:209:11: xmlText
                     {
-                    dbg.location(209,11);
-                    pushFollow(FOLLOW_xmlText_in_xmlContent1429);
+                    pushFollow(FOLLOW_xmlText_in_xmlContent1443);
                     xmlText();
 
                     state._fsp--;
@@ -2416,15 +1719,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(210, 3);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlContent");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlContent"
@@ -2432,44 +1726,28 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlUnaryTag"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:211:1: xmlUnaryTag : '<' ID ( xmlAttributesOrPattern )? '/>' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:211:1: xmlUnaryTag : '<' ID ( xmlAttributesOrPattern )? '/>' ;
     public final void xmlUnaryTag() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlUnaryTag");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(211, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:2: ( '<' ID ( xmlAttributesOrPattern )? '/>' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:5: '<' ID ( xmlAttributesOrPattern )? '/>'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:2: ( '<' ID ( xmlAttributesOrPattern )? '/>' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:5: '<' ID ( xmlAttributesOrPattern )? '/>'
             {
-            dbg.location(212,5);
-            match(input,30,FOLLOW_30_in_xmlUnaryTag1443); 
-            dbg.location(212,9);
-            match(input,ID,FOLLOW_ID_in_xmlUnaryTag1445); 
-            dbg.location(212,12);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:12: ( xmlAttributesOrPattern )?
-            int alt14=2;
-            try { dbg.enterSubRule(14);
-            try { dbg.enterDecision(14, decisionCanBacktrack[14]);
+            match(input,30,FOLLOW_30_in_xmlUnaryTag1457); 
 
-            int LA14_0 = input.LA(1);
+            match(input,ID,FOLLOW_ID_in_xmlUnaryTag1459); 
 
-            if ( (LA14_0==ID||LA14_0==39||LA14_0==43) ) {
-                alt14=1;
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:12: ( xmlAttributesOrPattern )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
+
+            if ( (LA16_0==ID||LA16_0==39||LA16_0==43) ) {
+                alt16=1;
             }
-            } finally {dbg.exitDecision(14);}
-
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:13: xmlAttributesOrPattern
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:212:13: xmlAttributesOrPattern
                     {
-                    dbg.location(212,13);
-                    pushFollow(FOLLOW_xmlAttributesOrPattern_in_xmlUnaryTag1448);
+                    pushFollow(FOLLOW_xmlAttributesOrPattern_in_xmlUnaryTag1462);
                     xmlAttributesOrPattern();
 
                     state._fsp--;
@@ -2479,10 +1757,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     break;
 
             }
-            } finally {dbg.exitSubRule(14);}
 
-            dbg.location(212,38);
-            match(input,28,FOLLOW_28_in_xmlUnaryTag1452); 
+
+            match(input,28,FOLLOW_28_in_xmlUnaryTag1466); 
 
             }
 
@@ -2495,15 +1772,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(213, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlUnaryTag");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlUnaryTag"
@@ -2511,53 +1779,40 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlAttributesOrPattern"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:216:1: xmlAttributesOrPattern : ( pattern | valueOf | ( xmlAttribute )+ );
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:216:1: xmlAttributesOrPattern : ( pattern | valueOf | ( xmlAttribute )+ );
     public final void xmlAttributesOrPattern() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlAttributesOrPattern");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(216, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:217:2: ( pattern | valueOf | ( xmlAttribute )+ )
-            int alt16=3;
-            try { dbg.enterDecision(16, decisionCanBacktrack[16]);
-
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:217:3: ( pattern | valueOf | ( xmlAttribute )+ )
+            int alt18=3;
             switch ( input.LA(1) ) {
             case 39:
                 {
-                alt16=1;
+                alt18=1;
                 }
                 break;
             case 43:
                 {
-                alt16=2;
+                alt18=2;
                 }
                 break;
             case ID:
                 {
-                alt16=3;
+                alt18=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
 
-            } finally {dbg.exitDecision(16);}
-
-            switch (alt16) {
+            switch (alt18) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:217:6: pattern
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:218:4: pattern
                     {
-                    dbg.location(217,6);
-                    pushFollow(FOLLOW_pattern_in_xmlAttributesOrPattern1470);
+                    pushFollow(FOLLOW_pattern_in_xmlAttributesOrPattern1489);
                     pattern();
 
                     state._fsp--;
@@ -2566,12 +1821,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:218:18: valueOf
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:219:18: valueOf
                     {
-                    dbg.location(218,18);
-                    pushFollow(FOLLOW_valueOf_in_xmlAttributesOrPattern1489);
+                    pushFollow(FOLLOW_valueOf_in_xmlAttributesOrPattern1508);
                     valueOf();
 
                     state._fsp--;
@@ -2580,37 +1832,25 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:219:18: ( xmlAttribute )+
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:220:18: ( xmlAttribute )+
                     {
-                    dbg.location(219,18);
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:219:18: ( xmlAttribute )+
-                    int cnt15=0;
-                    try { dbg.enterSubRule(15);
-
-                    loop15:
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:220:18: ( xmlAttribute )+
+                    int cnt17=0;
+                    loop17:
                     do {
-                        int alt15=2;
-                        try { dbg.enterDecision(15, decisionCanBacktrack[15]);
+                        int alt17=2;
+                        int LA17_0 = input.LA(1);
 
-                        int LA15_0 = input.LA(1);
-
-                        if ( (LA15_0==ID) ) {
-                            alt15=1;
+                        if ( (LA17_0==ID) ) {
+                            alt17=1;
                         }
 
 
-                        } finally {dbg.exitDecision(15);}
-
-                        switch (alt15) {
+                        switch (alt17) {
                     	case 1 :
-                    	    dbg.enterAlt(1);
-
-                    	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:219:19: xmlAttribute
+                    	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:220:19: xmlAttribute
                     	    {
-                    	    dbg.location(219,19);
-                    	    pushFollow(FOLLOW_xmlAttribute_in_xmlAttributesOrPattern1509);
+                    	    pushFollow(FOLLOW_xmlAttribute_in_xmlAttributesOrPattern1528);
                     	    xmlAttribute();
 
                     	    state._fsp--;
@@ -2620,16 +1860,13 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     	    break;
 
                     	default :
-                    	    if ( cnt15 >= 1 ) break loop15;
+                    	    if ( cnt17 >= 1 ) break loop17;
                                 EarlyExitException eee =
-                                    new EarlyExitException(15, input);
-                                dbg.recognitionException(eee);
-
+                                    new EarlyExitException(17, input);
                                 throw eee;
                         }
-                        cnt15++;
+                        cnt17++;
                     } while (true);
-                    } finally {dbg.exitSubRule(15);}
 
 
                     }
@@ -2645,15 +1882,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(220, 3);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlAttributesOrPattern");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlAttributesOrPattern"
@@ -2661,25 +1889,17 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlAttribute"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:223:1: xmlAttribute : ID '=' xmlAttributeValue ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:224:1: xmlAttribute : ID '=' xmlAttributeValue ;
     public final void xmlAttribute() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlAttribute");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(223, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:224:2: ( ID '=' xmlAttributeValue )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:225:5: ID '=' xmlAttributeValue
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:225:2: ( ID '=' xmlAttributeValue )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:226:5: ID '=' xmlAttributeValue
             {
-            dbg.location(225,5);
-            match(input,ID,FOLLOW_ID_in_xmlAttribute1547); 
-            dbg.location(226,9);
-            match(input,33,FOLLOW_33_in_xmlAttribute1608); 
-            dbg.location(227,5);
-            pushFollow(FOLLOW_xmlAttributeValue_in_xmlAttribute1615);
+            match(input,ID,FOLLOW_ID_in_xmlAttribute1566); 
+
+            match(input,33,FOLLOW_33_in_xmlAttribute1627); 
+
+            pushFollow(FOLLOW_xmlAttributeValue_in_xmlAttribute1634);
             xmlAttributeValue();
 
             state._fsp--;
@@ -2696,15 +1916,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(228, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlAttribute");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlAttribute"
@@ -2712,21 +1923,13 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlAttributeValue"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:230:1: xmlAttributeValue : STRING ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:231:1: xmlAttributeValue : STRING ;
     public final void xmlAttributeValue() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlAttributeValue");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(230, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:231:2: ( STRING )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:232:5: STRING
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:232:2: ( STRING )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:233:5: STRING
             {
-            dbg.location(232,5);
-            match(input,STRING,FOLLOW_STRING_in_xmlAttributeValue1673); 
+            match(input,STRING,FOLLOW_STRING_in_xmlAttributeValue1692); 
 
             }
 
@@ -2739,15 +1942,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(233, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlAttributeValue");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlAttributeValue"
@@ -2755,45 +1949,28 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlText"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:235:1: xmlText : ( xmlWord )* ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:236:1: xmlText : ( xmlWord )* ;
     public final void xmlText() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlText");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(235, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:235:9: ( ( xmlWord )* )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:235:12: ( xmlWord )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:236:9: ( ( xmlWord )* )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:236:12: ( xmlWord )*
             {
-            dbg.location(235,12);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:235:12: ( xmlWord )*
-            try { dbg.enterSubRule(17);
-
-            loop17:
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:236:12: ( xmlWord )*
+            loop19:
             do {
-                int alt17=2;
-                try { dbg.enterDecision(17, decisionCanBacktrack[17]);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                int LA17_0 = input.LA(1);
-
-                if ( (LA17_0==ID||(LA17_0 >= 18 && LA17_0 <= 19)||LA17_0==33) ) {
-                    alt17=1;
+                if ( (LA19_0==ID||(LA19_0 >= 18 && LA19_0 <= 19)||LA19_0==33) ) {
+                    alt19=1;
                 }
 
 
-                } finally {dbg.exitDecision(17);}
-
-                switch (alt17) {
+                switch (alt19) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:235:12: xmlWord
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:236:12: xmlWord
             	    {
-            	    dbg.location(235,12);
-            	    pushFollow(FOLLOW_xmlWord_in_xmlText1736);
+            	    pushFollow(FOLLOW_xmlWord_in_xmlText1755);
             	    xmlWord();
 
             	    state._fsp--;
@@ -2803,10 +1980,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop19;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(17);}
 
 
             }
@@ -2820,15 +1996,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(236, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlText");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlText"
@@ -2836,78 +2003,59 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlWord"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:238:1: xmlWord : ( ID | '=' | xmlCharName | xmlCharNumber );
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:239:1: xmlWord : ( ID | '=' | xmlCharName | xmlCharNumber );
     public final void xmlWord() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlWord");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(238, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:238:9: ( ID | '=' | xmlCharName | xmlCharNumber )
-            int alt18=4;
-            try { dbg.enterDecision(18, decisionCanBacktrack[18]);
-
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:239:9: ( ID | '=' | xmlCharName | xmlCharNumber )
+            int alt20=4;
             switch ( input.LA(1) ) {
             case ID:
                 {
-                alt18=1;
+                alt20=1;
                 }
                 break;
             case 33:
                 {
-                alt18=2;
+                alt20=2;
                 }
                 break;
             case 19:
                 {
-                alt18=3;
+                alt20=3;
                 }
                 break;
             case 18:
                 {
-                alt18=4;
+                alt20=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
-                dbg.recognitionException(nvae);
                 throw nvae;
 
             }
 
-            } finally {dbg.exitDecision(18);}
-
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    dbg.enterAlt(1);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:238:10: ID
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:239:10: ID
                     {
-                    dbg.location(238,10);
-                    match(input,ID,FOLLOW_ID_in_xmlWord1749); 
+                    match(input,ID,FOLLOW_ID_in_xmlWord1768); 
 
                     }
                     break;
                 case 2 :
-                    dbg.enterAlt(2);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:239:12: '='
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:240:12: '='
                     {
-                    dbg.location(239,12);
-                    match(input,33,FOLLOW_33_in_xmlWord1762); 
+                    match(input,33,FOLLOW_33_in_xmlWord1781); 
 
                     }
                     break;
                 case 3 :
-                    dbg.enterAlt(3);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:240:12: xmlCharName
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:241:12: xmlCharName
                     {
-                    dbg.location(240,12);
-                    pushFollow(FOLLOW_xmlCharName_in_xmlWord1775);
+                    pushFollow(FOLLOW_xmlCharName_in_xmlWord1794);
                     xmlCharName();
 
                     state._fsp--;
@@ -2916,12 +2064,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
                     }
                     break;
                 case 4 :
-                    dbg.enterAlt(4);
-
-                    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:241:12: xmlCharNumber
+                    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:242:12: xmlCharNumber
                     {
-                    dbg.location(241,12);
-                    pushFollow(FOLLOW_xmlCharNumber_in_xmlWord1788);
+                    pushFollow(FOLLOW_xmlCharNumber_in_xmlWord1807);
                     xmlCharNumber();
 
                     state._fsp--;
@@ -2940,15 +2085,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(242, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlWord");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlWord"
@@ -2956,25 +2092,17 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlCharName"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:246:1: xmlCharName : '&' ID ';' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:247:1: xmlCharName : '&' ID ';' ;
     public final void xmlCharName() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlCharName");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(246, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:247:2: ( '&' ID ';' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:248:5: '&' ID ';'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:248:2: ( '&' ID ';' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:249:5: '&' ID ';'
             {
-            dbg.location(248,5);
-            match(input,19,FOLLOW_19_in_xmlCharName1806); 
-            dbg.location(248,9);
-            match(input,ID,FOLLOW_ID_in_xmlCharName1808); 
-            dbg.location(248,12);
-            match(input,29,FOLLOW_29_in_xmlCharName1810); 
+            match(input,19,FOLLOW_19_in_xmlCharName1825); 
+
+            match(input,ID,FOLLOW_ID_in_xmlCharName1827); 
+
+            match(input,29,FOLLOW_29_in_xmlCharName1829); 
 
             }
 
@@ -2987,15 +2115,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(249, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlCharName");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlCharName"
@@ -3003,25 +2122,17 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "xmlCharNumber"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:251:1: xmlCharNumber : '&#' INT ';' ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:252:1: xmlCharNumber : '&#' INT ';' ;
     public final void xmlCharNumber() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "xmlCharNumber");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(251, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:252:2: ( '&#' INT ';' )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:253:5: '&#' INT ';'
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:253:2: ( '&#' INT ';' )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:254:5: '&#' INT ';'
             {
-            dbg.location(253,5);
-            match(input,18,FOLLOW_18_in_xmlCharNumber1829); 
-            dbg.location(253,10);
-            match(input,INT,FOLLOW_INT_in_xmlCharNumber1831); 
-            dbg.location(253,14);
-            match(input,29,FOLLOW_29_in_xmlCharNumber1833); 
+            match(input,18,FOLLOW_18_in_xmlCharNumber1848); 
+
+            match(input,INT,FOLLOW_INT_in_xmlCharNumber1850); 
+
+            match(input,29,FOLLOW_29_in_xmlCharNumber1852); 
 
             }
 
@@ -3034,15 +2145,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(254, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "xmlCharNumber");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "xmlCharNumber"
@@ -3050,51 +2152,34 @@ protected boolean evalPredicate(boolean result, String predicate) {
 
 
     // $ANTLR start "module"
-    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:258:1: module : moduleDef ( importDef )* ( functionDefinition )* ;
+    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:259:1: module : moduleDef ( importDef )* ( functionDefinition )* ;
     public final void module() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "module");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(258, 0);
-
         try {
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:259:2: ( moduleDef ( importDef )* ( functionDefinition )* )
-            dbg.enterAlt(1);
-
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:260:2: moduleDef ( importDef )* ( functionDefinition )*
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:260:2: ( moduleDef ( importDef )* ( functionDefinition )* )
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:261:2: moduleDef ( importDef )* ( functionDefinition )*
             {
-            dbg.location(260,2);
-            pushFollow(FOLLOW_moduleDef_in_module1851);
+            pushFollow(FOLLOW_moduleDef_in_module1870);
             moduleDef();
 
             state._fsp--;
 
-            dbg.location(261,2);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:261:2: ( importDef )*
-            try { dbg.enterSubRule(19);
 
-            loop19:
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:262:2: ( importDef )*
+            loop21:
             do {
-                int alt19=2;
-                try { dbg.enterDecision(19, decisionCanBacktrack[19]);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                int LA19_0 = input.LA(1);
-
-                if ( (LA19_0==41) ) {
-                    alt19=1;
+                if ( (LA21_0==41) ) {
+                    alt21=1;
                 }
 
 
-                } finally {dbg.exitDecision(19);}
-
-                switch (alt19) {
+                switch (alt21) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:261:3: importDef
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:262:3: importDef
             	    {
-            	    dbg.location(261,3);
-            	    pushFollow(FOLLOW_importDef_in_module1855);
+            	    pushFollow(FOLLOW_importDef_in_module1874);
             	    importDef();
 
             	    state._fsp--;
@@ -3104,37 +2189,27 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop21;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(19);}
 
-            dbg.location(262,2);
-            // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:262:2: ( functionDefinition )*
-            try { dbg.enterSubRule(20);
 
-            loop20:
+            // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:263:2: ( functionDefinition )*
+            loop22:
             do {
-                int alt20=2;
-                try { dbg.enterDecision(20, decisionCanBacktrack[20]);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                int LA20_0 = input.LA(1);
-
-                if ( (LA20_0==ID) ) {
-                    alt20=1;
+                if ( (LA22_0==ID) ) {
+                    alt22=1;
                 }
 
 
-                } finally {dbg.exitDecision(20);}
-
-                switch (alt20) {
+                switch (alt22) {
             	case 1 :
-            	    dbg.enterAlt(1);
-
-            	    // C:\\Users\\aabs\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:262:3: functionDefinition
+            	    // F:\\backup - fluorine\\20120306\\shared.datastore\\repository\\personal\\dev\\misc\\dev\\xmlpl\\src\\xmlpl-parser\\xmlpl.g:263:3: functionDefinition
             	    {
-            	    dbg.location(262,3);
-            	    pushFollow(FOLLOW_functionDefinition_in_module1861);
+            	    pushFollow(FOLLOW_functionDefinition_in_module1880);
             	    functionDefinition();
 
             	    state._fsp--;
@@ -3144,10 +2219,9 @@ protected boolean evalPredicate(boolean result, String predicate) {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop22;
                 }
             } while (true);
-            } finally {dbg.exitSubRule(20);}
 
 
             }
@@ -3161,15 +2235,6 @@ protected boolean evalPredicate(boolean result, String predicate) {
         finally {
         	// do for sure before leaving
         }
-        dbg.location(263, 1);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "module");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
         return ;
     }
     // $ANTLR end "module"
@@ -3177,20 +2242,20 @@ protected boolean evalPredicate(boolean result, String predicate) {
     // Delegated rules
 
 
-    protected DFA10 dfa10 = new DFA10(this);
-    static final String DFA10_eotS =
+    protected DFA12 dfa12 = new DFA12(this);
+    static final String DFA12_eotS =
         "\15\uffff";
-    static final String DFA10_eofS =
+    static final String DFA12_eofS =
         "\15\uffff";
-    static final String DFA10_minS =
+    static final String DFA12_minS =
         "\1\36\4\12\1\41\2\uffff\1\12\1\54\1\15\2\12";
-    static final String DFA10_maxS =
+    static final String DFA12_maxS =
         "\1\36\1\12\1\53\2\12\1\41\2\uffff\1\53\1\54\1\15\2\53";
-    static final String DFA10_acceptS =
+    static final String DFA12_acceptS =
         "\6\uffff\1\1\1\2\5\uffff";
-    static final String DFA10_specialS =
+    static final String DFA12_specialS =
         "\15\uffff}>";
-    static final String[] DFA10_transitionS = {
+    static final String[] DFA12_transitionS = {
             "\1\1",
             "\1\2",
             "\1\5\21\uffff\1\7\11\uffff\1\6\1\3\3\uffff\1\4",
@@ -3206,40 +2271,37 @@ protected boolean evalPredicate(boolean result, String predicate) {
             "\1\5\21\uffff\1\7\11\uffff\2\6\3\uffff\1\6"
     };
 
-    static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
-    static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
-    static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
-    static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
-    static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
-    static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
-    static final short[][] DFA10_transition;
+    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
+    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
+    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
+    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
+    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
+    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
+    static final short[][] DFA12_transition;
 
     static {
-        int numStates = DFA10_transitionS.length;
-        DFA10_transition = new short[numStates][];
+        int numStates = DFA12_transitionS.length;
+        DFA12_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
+            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
         }
     }
 
-    class DFA10 extends DFA {
+    class DFA12 extends DFA {
 
-        public DFA10(BaseRecognizer recognizer) {
+        public DFA12(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 10;
-            this.eot = DFA10_eot;
-            this.eof = DFA10_eof;
-            this.min = DFA10_min;
-            this.max = DFA10_max;
-            this.accept = DFA10_accept;
-            this.special = DFA10_special;
-            this.transition = DFA10_transition;
+            this.decisionNumber = 12;
+            this.eot = DFA12_eot;
+            this.eof = DFA12_eof;
+            this.min = DFA12_min;
+            this.max = DFA12_max;
+            this.accept = DFA12_accept;
+            this.special = DFA12_special;
+            this.transition = DFA12_transition;
         }
         public String getDescription() {
             return "189:1: xmlObject : ( xmlStartTag xmlContent xmlEndTag | xmlUnaryTag );";
-        }
-        public void error(NoViableAltException nvae) {
-            dbg.recognitionException(nvae);
         }
     }
  
@@ -3251,7 +2313,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
     public static final BitSet FOLLOW_ID_in_importDef575 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_importDef577 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_functionDefinition588 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_functionDefinition590 = new BitSet(new long[]{0x0000008140020400L});
+    public static final BitSet FOLLOW_20_in_functionDefinition590 = new BitSet(new long[]{0x0000000000000400L});
     public static final BitSet FOLLOW_argList_in_functionDefinition592 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_21_in_functionDefinition594 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_43_in_functionDefinition596 = new BitSet(new long[]{0x0000108140020400L});
@@ -3269,7 +2331,7 @@ protected boolean evalPredicate(boolean result, String predicate) {
     public static final BitSet FOLLOW_functionInvocation_in_expression699 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_xmlDocument_in_expression704 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_functionInvocation719 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_functionInvocation721 = new BitSet(new long[]{0x0000008140020400L});
+    public static final BitSet FOLLOW_20_in_functionInvocation721 = new BitSet(new long[]{0x0000000000000400L});
     public static final BitSet FOLLOW_argList_in_functionInvocation723 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_21_in_functionInvocation725 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_referenceOrBinding746 = new BitSet(new long[]{0x0000000200000002L});
@@ -3315,59 +2377,63 @@ protected boolean evalPredicate(boolean result, String predicate) {
     public static final BitSet FOLLOW_33_in_binding1007 = new BitSet(new long[]{0x0000008140020400L});
     public static final BitSet FOLLOW_expression_in_binding1009 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_variableReference1020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_argList1030 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_argList1033 = new BitSet(new long[]{0x0000008140020400L});
+    public static final BitSet FOLLOW_variableReference_in_argList1030 = new BitSet(new long[]{0x0000000200400002L});
+    public static final BitSet FOLLOW_33_in_argList1033 = new BitSet(new long[]{0x0000008140020400L});
     public static final BitSet FOLLOW_expression_in_argList1035 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_39_in_pattern1049 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_pattern1051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_xmlPattern1068 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_xmlFragment_in_xmlPattern1070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_valueOf1085 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_valueOf1087 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_valueOf1089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_xmlDocument1107 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_xmlDocument1109 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_xmlAttribute_in_xmlDocument1111 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_xmlDocument1113 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_xmlObject_in_xmlDocument1115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlObject_in_xmlFragment1134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlStartTag_in_xmlObject1154 = new BitSet(new long[]{0x00000002400C0400L});
-    public static final BitSet FOLLOW_xmlContent_in_xmlObject1156 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_xmlEndTag_in_xmlObject1158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlUnaryTag_in_xmlObject1176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_xmlStartTag1196 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_xmlStartTag1255 = new BitSet(new long[]{0x000008C000000400L});
-    public static final BitSet FOLLOW_xmlAttributesOrPattern_in_xmlStartTag1312 = new BitSet(new long[]{0x000008C000000400L});
-    public static final BitSet FOLLOW_38_in_xmlStartTag1321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_xmlEndTag1392 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_xmlEndTag1394 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_xmlEndTag1396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlObject_in_xmlContent1415 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_xmlText_in_xmlContent1429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_xmlUnaryTag1443 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_xmlUnaryTag1445 = new BitSet(new long[]{0x0000088010000400L});
-    public static final BitSet FOLLOW_xmlAttributesOrPattern_in_xmlUnaryTag1448 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_xmlUnaryTag1452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_pattern_in_xmlAttributesOrPattern1470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_valueOf_in_xmlAttributesOrPattern1489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlAttribute_in_xmlAttributesOrPattern1509 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_ID_in_xmlAttribute1547 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_xmlAttribute1608 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_xmlAttributeValue_in_xmlAttribute1615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_xmlAttributeValue1673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlWord_in_xmlText1736 = new BitSet(new long[]{0x00000002000C0402L});
-    public static final BitSet FOLLOW_ID_in_xmlWord1749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_xmlWord1762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlCharName_in_xmlWord1775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_xmlCharNumber_in_xmlWord1788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_xmlCharName1806 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_ID_in_xmlCharName1808 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_xmlCharName1810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_xmlCharNumber1829 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_INT_in_xmlCharNumber1831 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_xmlCharNumber1833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_moduleDef_in_module1851 = new BitSet(new long[]{0x0000020000000402L});
-    public static final BitSet FOLLOW_importDef_in_module1855 = new BitSet(new long[]{0x0000020000000402L});
-    public static final BitSet FOLLOW_functionDefinition_in_module1861 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_22_in_argList1040 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_variableReference_in_argList1042 = new BitSet(new long[]{0x0000000200400002L});
+    public static final BitSet FOLLOW_33_in_argList1045 = new BitSet(new long[]{0x0000008140020400L});
+    public static final BitSet FOLLOW_expression_in_argList1047 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_39_in_pattern1063 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_pattern1065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_xmlPattern1082 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_xmlFragment_in_xmlPattern1084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_valueOf1099 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_valueOf1101 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_valueOf1103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_xmlDocument1121 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_xmlDocument1123 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_xmlAttribute_in_xmlDocument1125 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_xmlDocument1127 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_xmlObject_in_xmlDocument1129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlObject_in_xmlFragment1148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlStartTag_in_xmlObject1168 = new BitSet(new long[]{0x00000002400C0400L});
+    public static final BitSet FOLLOW_xmlContent_in_xmlObject1170 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_xmlEndTag_in_xmlObject1172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlUnaryTag_in_xmlObject1190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_xmlStartTag1210 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_xmlStartTag1269 = new BitSet(new long[]{0x000008C000000400L});
+    public static final BitSet FOLLOW_xmlAttributesOrPattern_in_xmlStartTag1326 = new BitSet(new long[]{0x000008C000000400L});
+    public static final BitSet FOLLOW_38_in_xmlStartTag1335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_xmlEndTag1406 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_xmlEndTag1408 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_xmlEndTag1410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlObject_in_xmlContent1429 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_xmlText_in_xmlContent1443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_xmlUnaryTag1457 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_xmlUnaryTag1459 = new BitSet(new long[]{0x0000088010000400L});
+    public static final BitSet FOLLOW_xmlAttributesOrPattern_in_xmlUnaryTag1462 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_xmlUnaryTag1466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_pattern_in_xmlAttributesOrPattern1489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_valueOf_in_xmlAttributesOrPattern1508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlAttribute_in_xmlAttributesOrPattern1528 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_ID_in_xmlAttribute1566 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_xmlAttribute1627 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_xmlAttributeValue_in_xmlAttribute1634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_xmlAttributeValue1692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlWord_in_xmlText1755 = new BitSet(new long[]{0x00000002000C0402L});
+    public static final BitSet FOLLOW_ID_in_xmlWord1768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_xmlWord1781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlCharName_in_xmlWord1794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_xmlCharNumber_in_xmlWord1807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_xmlCharName1825 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ID_in_xmlCharName1827 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_xmlCharName1829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_xmlCharNumber1848 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_INT_in_xmlCharNumber1850 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_xmlCharNumber1852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_moduleDef_in_module1870 = new BitSet(new long[]{0x0000020000000402L});
+    public static final BitSet FOLLOW_importDef_in_module1874 = new BitSet(new long[]{0x0000020000000402L});
+    public static final BitSet FOLLOW_functionDefinition_in_module1880 = new BitSet(new long[]{0x0000000000000402L});
 
 }
