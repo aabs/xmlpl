@@ -1,6 +1,14 @@
-grammar xmlpl;
-options{language=CSharp3; }
-tokens {}
+﻿grammar loblang;
+
+options {
+    language=CSharp3;
+    TokenLabelType=CommonToken;
+    output=AST;
+    ASTLabelType=CommonTree;
+}
+
+@lexer::namespace{xmlpl_parser}
+@parser::namespace{xmlpl_parser}
 
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
     ;
@@ -15,15 +23,15 @@ FLOAT
     ;
 
 COMMENT
-    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
+    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=Hidden;}
+    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=Hidden;}
     ;
 
 WS  :   ( ' '
         | '\t'
         | '\r'
         | '\n'
-        ) {$channel=HIDDEN;}
+        ) {$channel=Hidden;}
     ;
 
 STRING
@@ -257,7 +265,7 @@ xmlCharNumber
 
 
 
-module
+public module
 	: 
 	moduleDef
 	(importDef)*

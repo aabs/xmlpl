@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Antlr.Runtime;
 using NUnit.Framework;
 using xmlpl_parser;
 
@@ -34,16 +35,24 @@ namespace Tests
         public void TestCreate()
         {
             var spec = @"module blah .
-function Main(A, B) {
+Main(A, B) {
     A = <something>blah</something>;
 }
 ";
-            Parser parser = new Parser(new Scanner(new MemoryStream(ASCIIEncoding.Default.GetBytes(spec))));
-            parser.errors.errorStream = new DebugRepeater();
-            parser.Parse();
-            if (parser.errors.count > 0)
+            loblangLexer lex = new loblangLexer(new ANTLRStringStream(spec));
+            CommonTokenStream tokens = new CommonTokenStream(lex);
+
+            loblangParser parser = new loblangParser(tokens);
+
+            try
             {
-                Assert.Fail();
+                parser.module();
+                Assert.False(parser.Failed);
+            }
+            catch (RecognitionException e)
+            {
+                Console.Error.WriteLine(e.StackTrace);
+                Assert.Fail(e.Message);
             }
             
         }
@@ -52,14 +61,22 @@ function Main(A, B) {
         [Test, Category("Regression")]
         public void TestParseCOA()
         {
-            Parser parser = new Parser(new Scanner(File.OpenRead(@"F:\backup - fluorine\20120306\shared.datastore\repository\personal\dev\misc\dev\xmlpl\test-documents\1. change_of_address.txt")));
-            parser.errors.errorStream = new DebugRepeater();
-            parser.Parse();
-            if (parser.errors.count > 0)
+            loblangLexer lex = new loblangLexer(new ANTLRFileStream(@"F:\backup - fluorine\20120306\shared.datastore\repository\personal\dev\misc\dev\xmlpl\test-documents\1. change_of_address.txt"));
+            CommonTokenStream tokens = new CommonTokenStream(lex);
+
+            loblangParser parser = new loblangParser(tokens);
+
+            try
             {
-                Assert.Fail();
+                parser.module();
+                Assert.False(parser.Failed);
             }
-            
+            catch (RecognitionException e)
+            {
+                Console.Error.WriteLine(e.StackTrace);
+                Assert.Fail(e.Message);
+            }
+
         }
     }
 }

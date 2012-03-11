@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\tools\Antlr\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
     </Reference>
@@ -59,15 +62,15 @@
     <Compile Include="AttrBuilder.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="IOperationProvider.cs" />
+    <Compile Include="loblang.g3.lexer.cs" />
+    <Compile Include="loblang.g3.parser.cs" />
+    <Compile Include="mccarthy.g3.lexer.cs" />
+    <Compile Include="mccarthy.g3.parser.cs" />
+    <Compile Include="obj\Debug\loblangLexer.cs" />
+    <Compile Include="obj\Debug\loblangParser.cs" />
     <Compile Include="OperationProvider.cs" />
     <Compile Include="ParseContext.cs" />
-    <Compile Include="Parser.cs">
-      <DependentUpon>loblang.atg</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scanner.cs">
-      <DependentUpon>loblang.atg</DependentUpon>
-    </Compile>
     <Compile Include="StackMachine.cs" />
     <Compile Include="SymTabEntry.cs" />
     <Compile Include="SymTabFunction.cs" />
@@ -78,22 +81,30 @@
     <Compile Include="XmlCloser.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Antlr3 Include="loblang.g3">
+      <Generator>MSBuild:Compile</Generator>
+    </Antlr3>
+    <Antlr3 Include="mccarthy.g3">
+      <Generator>MSBuild:Compile</Generator>
+    </Antlr3>
     <None Include="packages.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="loblang.atg">
-      <Generator>CocoFileGenerator</Generator>
-      <LastGenOutput>loblang.log</LastGenOutput>
-    </None>
-    <None Include="loblang.log">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>loblang.atg</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="semantics.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <!-- Folder containing AntlrBuildTask.dll -->
+    <AntlrBuildTaskPath>$(SolutionDir)..\tools\Antlr</AntlrBuildTaskPath>
+    <!-- Path to the ANTLR Tool itself. -->
+    <AntlrToolPath>$(SolutionDir)..\tools\Antlr\Antlr3.exe</AntlrToolPath>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)..\tools\Antlr\Antlr3.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>rem "$(SolutionDir)..\tools\antlr\Antlr3.exe" "$(ProjectDir)xmlpl.g" -o "$(ProjectDir)output"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
