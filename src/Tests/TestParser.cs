@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Text;
 using Antlr.Runtime;
+using Antlr.Runtime.Tree;
 using NUnit.Framework;
 using xmlpl_parser;
 
@@ -27,44 +26,84 @@ namespace Tests
             Debug.WriteLine(value);
         }
     }
+
     [TestFixture]
     public class TestParser
     {
-
         [Test, Category("Regression")]
         public void TestCreate()
         {
-            var spec = @"module blah .
+            string spec = @"module blah .
 Main(A, B) {
     A = <something>blah</something>;
 }
 ";
-            loblangLexer lex = new loblangLexer(new ANTLRStringStream(spec));
-            CommonTokenStream tokens = new CommonTokenStream(lex);
+            var lex = new loblangLexer(new ANTLRStringStream(spec));
+            var tokens = new CommonTokenStream(lex);
 
-            loblangParser parser = new loblangParser(tokens);
+            var parser = new loblangParser(tokens);
 
             try
             {
-                parser.module();
+                loblangParser.module_return x = parser.module();
                 Assert.False(parser.Failed);
+                Debug.WriteLine(x.Tree.ToStringTree());
             }
             catch (RecognitionException e)
             {
                 Console.Error.WriteLine(e.StackTrace);
                 Assert.Fail(e.Message);
             }
-            
         }
-  
+
+        [Test, Category("Regression")]
+        public void TestCreateDot()
+        {
+            string spec = @"
+module blah ;
+import std ;
+import xml ;
+EntryPoint(doc:Document, addr:Element){
+    x = y;
+    $doc/eric/ernie == x;
+    $a/x/y => b;
+    $e/f/g =< f;
+    x =? <address />;
+    y =? <address>some <b>text</b> here</address>;
+}
+Helper(elem:Element, val:Int){}
+";
+            var lex = new mccarthyLexer(new ANTLRStringStream(spec));
+            var tokens = new CommonTokenStream(lex);
+
+            var parser = new mccarthyParser(tokens);
+
+            try
+            {
+                mccarthyParser.module_return x = parser.module();
+                CommonTree tree = x.Tree;
+                var gen = new DotTreeGenerator();
+                string st = gen.ToDot(tree);
+                File.WriteAllText(@"C:\dat\repository\personal\dev\projects\loblang\test-documents\AST.dot", st);
+            }
+            catch (RecognitionException e)
+            {
+                Console.Error.WriteLine(e.StackTrace);
+                Assert.Fail(e.Message);
+            }
+        }
+
 
         [Test, Category("Regression")]
         public void TestParseCOA()
         {
-            loblangLexer lex = new loblangLexer(new ANTLRFileStream(@"F:\backup - fluorine\20120306\shared.datastore\repository\personal\dev\misc\dev\xmlpl\test-documents\1. change_of_address.txt"));
-            CommonTokenStream tokens = new CommonTokenStream(lex);
+            var lex =
+                new loblangLexer(
+                    new ANTLRFileStream(
+                        @"F:\backup - fluorine\20120306\shared.datastore\repository\personal\dev\misc\dev\xmlpl\test-documents\1. change_of_address.txt"));
+            var tokens = new CommonTokenStream(lex);
 
-            loblangParser parser = new loblangParser(tokens);
+            var parser = new loblangParser(tokens);
 
             try
             {
@@ -76,7 +115,6 @@ Main(A, B) {
                 Console.Error.WriteLine(e.StackTrace);
                 Assert.Fail(e.Message);
             }
-
         }
     }
 }

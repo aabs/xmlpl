@@ -84,8 +84,9 @@ statementList
 	;
 
 statement
-	: ( ID ('=' expression)? 
-		| expression) ';'
+	:
+	ID ('=' expression)?
+	| expression ';'
 	;
 expression
 	: xmlModifyingExpression

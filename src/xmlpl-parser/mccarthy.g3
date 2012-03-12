@@ -1,28 +1,288 @@
-﻿grammar mccarthy;
+grammar mccarthy;
 
 options {
     language=CSharp3;
-    //TokenLabelType=CommonToken;
-    //output=AST;
-    //ASTLabelType=CommonTree;
+    TokenLabelType=CommonToken;
+    output=AST;
+    ASTLabelType=CommonTree;
 }
 
 @lexer::namespace{xmlpl_parser}
 @parser::namespace{xmlpl_parser}
 
 /*
+ * Lexer Rules
+ */
+
+ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+    ;
+
+INT :	'0'..'9'+
+    ;
+
+FLOAT
+    :   ('0'..'9')+ '.' ('0'..'9')* EXPONENT?
+    |   '.' ('0'..'9')+ EXPONENT?
+    |   ('0'..'9')+ EXPONENT
+    ;
+
+COMMENT
+    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=Hidden;}
+    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=Hidden;}
+    ;
+
+WS  :   ( ' '
+        | '\t'
+        | '\r'
+        | '\n'
+        ) {$channel=Hidden;}
+    ;
+
+STRING
+    :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
+    ;
+
+CHAR:  '\'' ( ESC_SEQ | ~('\''|'\\') ) '\''
+    ;
+
+fragment
+EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
+
+fragment
+HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
+
+fragment
+ESC_SEQ
+    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
+    |   UNICODE_ESC
+    |   OCTAL_ESC
+    ;
+
+fragment
+OCTAL_ESC
+    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7')
+    ;
+
+fragment
+UNICODE_ESC
+    :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+    ;
+
+fragment ROOT : 'McCarthy' ;
+fragment Imports : 'imports' ;
+fragment FUNCDEC : 'FunctionDeclaration' ;
+fragment FUNCDECLIST : 'FunctionDeclarations' ;
+fragment ARG : 'arg' ;
+fragment ARGLIST : 'args' ;
+fragment FUNCBODY : 'FUNCBODY' ;
+fragment BLOCK : 'BLOCK' ;
+fragment BINDING : 'BINDING' ;
+fragment VARREF : 'VARREF' ;
+fragment REPLACE : 'REPLACE' ;
+fragment APPEND : 'APPEND' ;
+fragment PREPEND : 'PREPEND' ;
+fragment MATCH : 'MATCH' ;
+
+
+fragment PATH : 'PATH' ;
+fragment PATHCTX : 'PATHCTX' ;
+fragment SEG : 'SEG' ;
+fragment VALINT : 'VALINT' ;
+fragment VALSTR : 'VALSTR' ;
+fragment XMLELEM : 'XMLFRAG' ;
+fragment XMLCHILDREN : 'XMLCHILDREN' ;
+fragment XMLTEXT : 'XMLTEXT' ;
+
+/*
  * Parser Rules
  */
 
 public
-compileUnit
-    :   'hello world' EOF
+module
+    :   md=moduleDeclaration 
+    	id=importDeclarations
+    	fd=functionDeclarations
+    	EOF -> ^(ROOT $md 
+					^(Imports $id)? 
+					^(FUNCDECLIST $fd)?
+				)
+    ;
+importDeclarations
+	: (importDeclaration)*
+	;
+
+importDeclaration
+	: 'import' ID ';' -> ^('import' ID) ;
+
+moduleDeclaration
+	: 'module' ID ';' -> ^('module' ID)
+	;
+
+functionDeclarations
+	: (functionDeclaration)*
+	;
+
+functionDeclaration
+	: functionName=ID '(' al=argList ')' '{' sl=statements '}'
+		-> ^(FUNCDEC $functionName ^(ARGLIST $al)? ^(FUNCBODY $sl)?)
+	;
+
+argList
+	: arg (',' arg)*
+		-> arg+
+	;
+
+arg
+	: argName=ID ':' type=ID
+		-> ^(ARG $argName $type)
+	;	
+statements
+	:
+	(statement ';')* -> ^(BLOCK statement*)
+	;
+
+statement
+	: assignment
+	| replaceOperation
+	| appendOperation
+	| prependOperation
+	| matchOperation
+	| moveOperation
+	| moveFrontOperation
+	| moveBackOperation
+	| deleteOperation
+	;
+value
+	:
+	  x=INT -> ^(VALINT $x)
+	| x=ID	-> ^(VARREF $x)
+	| x=STRING -> ^(VALSTR $x)
+	;
+
+assignment
+	:
+	var=ID '=' val=value
+		-> ^(BINDING ^(VARREF $var) $val)
+	;	
+replaceOperation
+	:
+	pe=pathExpression '==' val=value
+		-> ^(REPLACE $pe $val)
+	;
+pathExpression
+	:
+	'$' ctx=ID segs=xpathSegments
+		-> ^(PATH ^(PATHCTX $ctx) $segs)
+	;
+xpathSegments
+	: ('/' ID)* -> ^(SEG ID)*
+	;
+appendOperation
+	:
+	pe=pathExpression '=>' val=value
+		-> ^(APPEND $pe $val)
+	;
+prependOperation
+	:
+	pe=pathExpression '=<' val=value
+		-> ^(PREPEND $pe $val)
+	;
+matchOperation
+	:
+	// extract values out of a bound variable
+	var=ID '=?' frag=xmlObject
+		-> ^(MATCH ^(VARREF $var) $frag)
+	// extract variables out of a subtree of an XML document
+	| pe=pathExpression '=?' frag=xmlObject
+		-> ^(MATCH $pe $frag)
+	;
+moveOperation
+	:
+	var=ID '->'^ val=ID
+	;
+moveFrontOperation
+	:
+	var=ID '=><'^ val=ID
+	;
+moveBackOperation
+	:
+	var=ID '=>>'^ val=ID
+	;
+deleteOperation
+	:
+	var=ID '!='^ val=ID
+	;
+
+pattern :	'?' ID
+    ;
+valueOf :	
+	 '{' ID '}'
     ;
 
-/*
- * Lexer Rules
- */
-
-WS
-    :   ' '
+xmlDocument 
+	:	 '<?' ID xmlAttribute '?>' xmlObject 
     ;
+
+xmlObject    
+	:	 xmlStartTag xmlContent* xmlEndTag
+              | xmlUnaryTag
+    ;
+
+xmlStartTag 
+	:	
+    '<' ID (xmlAttributesOrPattern)* '>'                                                     
+    ;
+
+xmlEndTag   
+	:	 '</' ID '>' 
+    ;
+
+xmlContent  
+	: xmlObject
+    | xmlText
+   ;
+xmlUnaryTag 
+	:	 '<' ID (xmlAttributesOrPattern)? '/>'
+    ;
+
+
+xmlAttributesOrPattern 
+		: pattern
+        | valueOf
+        | (xmlAttribute)+
+   ;
+               
+
+xmlAttribute 
+	:	 
+    ID                                                   
+        '=' 
+    xmlAttributeValue                                       
+    ;
+
+xmlAttributeValue
+	:	
+    STRING                                                 
+    ;
+
+xmlText :	 xmlWord*
+    ;
+
+xmlWord	: ID
+         | '='
+         | xmlCharName
+         | xmlCharNumber
+	;
+
+xmlCharName
+	:	
+    '&' ID ';'
+    ;
+
+xmlCharNumber
+	:	
+    '&#' INT ';'
+    ;
+

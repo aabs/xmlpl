@@ -68,6 +68,8 @@
     <Compile Include="mccarthy.g3.parser.cs" />
     <Compile Include="obj\Debug\loblangLexer.cs" />
     <Compile Include="obj\Debug\loblangParser.cs" />
+    <Compile Include="obj\Debug\mccarthyLexer.cs" />
+    <Compile Include="obj\Debug\mccarthyParser.cs" />
     <Compile Include="OperationProvider.cs" />
     <Compile Include="ParseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
