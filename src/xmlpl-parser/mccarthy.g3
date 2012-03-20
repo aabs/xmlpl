@@ -128,7 +128,7 @@ arg
 	;	
 statements 
 	:
-	(stat=statement ';')* -> ^(BLOCK $stat*) 
+	(statement ';')* -> ^(BLOCK statement*) 
 	;
 
 public statement

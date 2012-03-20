@@ -31,70 +31,133 @@ digraph {
   n14 [label="FUNCBODY"];
   n15 [label="BLOCK"];
   n15 [label="BLOCK"];
-  n16 [label="MATCH"];
-  n16 [label="MATCH"];
-  n17 [label="VARREF"];
-  n17 [label="VARREF"];
-  n18 [label="y"];
-  n19 [label="XML"];
-  n19 [label="XML"];
-  n20 [label="XMLOPENELEM"];
-  n20 [label="XMLOPENELEM"];
-  n21 [label="address"];
-  n22 [label="XMLATTRS"];
-  n22 [label="XMLATTRS"];
-  n23 [label="XMLATTR"];
-  n23 [label="XMLATTR"];
-  n24 [label="addr1"];
-  n25 [label="VALSTR"];
-  n25 [label="VALSTR"];
-  n26 [label="'blah'"];
-  n27 [label="XMLATTR"];
-  n27 [label="XMLATTR"];
-  n28 [label="addr2"];
-  n29 [label="VALSTR"];
-  n29 [label="VALSTR"];
-  n30 [label="'blah'"];
-  n31 [label="XMLATTR"];
-  n31 [label="XMLATTR"];
-  n32 [label="region"];
-  n33 [label="VALSTR"];
-  n33 [label="VALSTR"];
-  n34 [label="'blah'"];
-  n35 [label="XMLATTR"];
-  n35 [label="XMLATTR"];
-  n36 [label="postcode"];
-  n37 [label="VALSTR"];
-  n37 [label="VALSTR"];
-  n38 [label="'blah'"];
-  n39 [label="XMLATTR"];
-  n39 [label="XMLATTR"];
-  n40 [label="country"];
-  n41 [label="VALSTR"];
-  n41 [label="VALSTR"];
-  n42 [label="'blah'"];
-  n43 [label="<"];
-  n44 [label="landlord"];
-  n45 [label="XMLATTR"];
-  n45 [label="XMLATTR"];
-  n46 [label="name"];
-  n47 [label="VALSTR"];
-  n47 [label="VALSTR"];
-  n48 [label="'joe blow'"];
-  n49 [label="/>"];
-  n50 [label="XMLCLOSEELEM"];
-  n50 [label="XMLCLOSEELEM"];
-  n51 [label="address"];
-  n52 [label="FUNCDEC"];
-  n52 [label="FUNCDEC"];
-  n53 [label="Helper"];
-  n54 [label="ARGLIST"];
-  n54 [label="ARGLIST"];
-  n55 [label="elem:Element"];
-  n56 [label="val:Int"];
-  n57 [label="FUNCBODY"];
-  n57 [label="FUNCBODY"];
-  n58 [label="BLOCK"];
+  n16 [label="x"];
+  n17 [label="="];
+  n18 [label="VARREF"];
+  n18 [label="VARREF"];
+  n19 [label="y"];
+  n20 [label="REPLACE"];
+  n20 [label="REPLACE"];
+  n21 [label="PATH"];
+  n21 [label="PATH"];
+  n22 [label="PATHCTX"];
+  n22 [label="PATHCTX"];
+  n23 [label="doc"];
+  n24 [label="SEG"];
+  n24 [label="SEG"];
+  n25 [label="eric"];
+  n26 [label="SEG"];
+  n26 [label="SEG"];
+  n27 [label="ernie"];
+  n28 [label="VARREF"];
+  n28 [label="VARREF"];
+  n29 [label="x"];
+  n30 [label="APPEND"];
+  n30 [label="APPEND"];
+  n31 [label="PATH"];
+  n31 [label="PATH"];
+  n32 [label="PATHCTX"];
+  n32 [label="PATHCTX"];
+  n33 [label="a"];
+  n34 [label="SEG"];
+  n34 [label="SEG"];
+  n35 [label="x"];
+  n36 [label="SEG"];
+  n36 [label="SEG"];
+  n37 [label="y"];
+  n38 [label="VARREF"];
+  n38 [label="VARREF"];
+  n39 [label="b"];
+  n40 [label="PREPEND"];
+  n40 [label="PREPEND"];
+  n41 [label="PATH"];
+  n41 [label="PATH"];
+  n42 [label="PATHCTX"];
+  n42 [label="PATHCTX"];
+  n43 [label="e"];
+  n44 [label="SEG"];
+  n44 [label="SEG"];
+  n45 [label="f"];
+  n46 [label="SEG"];
+  n46 [label="SEG"];
+  n47 [label="g"];
+  n48 [label="VARREF"];
+  n48 [label="VARREF"];
+  n49 [label="f"];
+  n50 [label="MATCH"];
+  n50 [label="MATCH"];
+  n51 [label="VARREF"];
+  n51 [label="VARREF"];
+  n52 [label="x"];
+  n53 [label="XML"];
+  n53 [label="XML"];
+  n54 [label="<"];
+  n55 [label="address"];
+  n56 [label="/>"];
+  n57 [label="MATCH"];
+  n57 [label="MATCH"];
+  n58 [label="VARREF"];
+  n58 [label="VARREF"];
+  n59 [label="y"];
+  n60 [label="XML"];
+  n60 [label="XML"];
+  n61 [label="XMLOPENELEM"];
+  n61 [label="XMLOPENELEM"];
+  n62 [label="address"];
+  n63 [label="XMLATTRS"];
+  n63 [label="XMLATTRS"];
+  n64 [label="XMLATTR"];
+  n64 [label="XMLATTR"];
+  n65 [label="addr1"];
+  n66 [label="VALSTR"];
+  n66 [label="VALSTR"];
+  n67 [label="'blah'"];
+  n68 [label="XMLATTR"];
+  n68 [label="XMLATTR"];
+  n69 [label="addr2"];
+  n70 [label="VALSTR"];
+  n70 [label="VALSTR"];
+  n71 [label="'blah'"];
+  n72 [label="XMLATTR"];
+  n72 [label="XMLATTR"];
+  n73 [label="region"];
+  n74 [label="VALSTR"];
+  n74 [label="VALSTR"];
+  n75 [label="'blah'"];
+  n76 [label="XMLATTR"];
+  n76 [label="XMLATTR"];
+  n77 [label="postcode"];
+  n78 [label="VALSTR"];
+  n78 [label="VALSTR"];
+  n79 [label="'blah'"];
+  n80 [label="XMLATTR"];
+  n80 [label="XMLATTR"];
+  n81 [label="country"];
+  n82 [label="VALSTR"];
+  n82 [label="VALSTR"];
+  n83 [label="'blah'"];
+  n84 [label="<"];
+  n85 [label="landlord"];
+  n86 [label="XMLATTR"];
+  n86 [label="XMLATTR"];
+  n87 [label="name"];
+  n88 [label="VALSTR"];
+  n88 [label="VALSTR"];
+  n89 [label="'joe blow'"];
+  n90 [label="/>"];
+  n91 [label="XMLCLOSEELEM"];
+  n91 [label="XMLCLOSEELEM"];
+  n92 [label="address"];
+  n93 [label="FUNCDEC"];
+  n93 [label="FUNCDEC"];
+  n94 [label="Helper"];
+  n95 [label="ARGLIST"];
+  n95 [label="ARGLIST"];
+  n96 [label="elem:Element"];
+  n97 [label="val:Int"];
+  n98 [label="FUNCBODY"];
+  n98 [label="FUNCBODY"];
+  n99 [label="BLOCK"];
 
   n0 -> n1 // "ROOT" -> "module"
   n1 -> n2 // "module" -> "blah"
@@ -111,48 +174,89 @@ digraph {
   n11 -> n13 // "ARGLIST" -> "addr:Element"
   n9 -> n14 // "FUNCDEC" -> "FUNCBODY"
   n14 -> n15 // "FUNCBODY" -> "BLOCK"
-  n15 -> n16 // "BLOCK" -> "MATCH"
-  n16 -> n17 // "MATCH" -> "VARREF"
-  n17 -> n18 // "VARREF" -> "y"
-  n16 -> n19 // "MATCH" -> "XML"
-  n19 -> n20 // "XML" -> "XMLOPENELEM"
-  n20 -> n21 // "XMLOPENELEM" -> "address"
-  n20 -> n22 // "XMLOPENELEM" -> "XMLATTRS"
-  n22 -> n23 // "XMLATTRS" -> "XMLATTR"
-  n23 -> n24 // "XMLATTR" -> "addr1"
-  n23 -> n25 // "XMLATTR" -> "VALSTR"
-  n25 -> n26 // "VALSTR" -> "'blah'"
-  n22 -> n27 // "XMLATTRS" -> "XMLATTR"
-  n27 -> n28 // "XMLATTR" -> "addr2"
-  n27 -> n29 // "XMLATTR" -> "VALSTR"
-  n29 -> n30 // "VALSTR" -> "'blah'"
-  n22 -> n31 // "XMLATTRS" -> "XMLATTR"
-  n31 -> n32 // "XMLATTR" -> "region"
-  n31 -> n33 // "XMLATTR" -> "VALSTR"
-  n33 -> n34 // "VALSTR" -> "'blah'"
-  n22 -> n35 // "XMLATTRS" -> "XMLATTR"
-  n35 -> n36 // "XMLATTR" -> "postcode"
-  n35 -> n37 // "XMLATTR" -> "VALSTR"
-  n37 -> n38 // "VALSTR" -> "'blah'"
-  n22 -> n39 // "XMLATTRS" -> "XMLATTR"
-  n39 -> n40 // "XMLATTR" -> "country"
-  n39 -> n41 // "XMLATTR" -> "VALSTR"
-  n41 -> n42 // "VALSTR" -> "'blah'"
-  n19 -> n43 // "XML" -> "<"
-  n19 -> n44 // "XML" -> "landlord"
-  n19 -> n45 // "XML" -> "XMLATTR"
-  n45 -> n46 // "XMLATTR" -> "name"
-  n45 -> n47 // "XMLATTR" -> "VALSTR"
-  n47 -> n48 // "VALSTR" -> "'joe blow'"
-  n19 -> n49 // "XML" -> "/>"
-  n19 -> n50 // "XML" -> "XMLCLOSEELEM"
-  n50 -> n51 // "XMLCLOSEELEM" -> "address"
-  n8 -> n52 // "FUNCDECLIST" -> "FUNCDEC"
-  n52 -> n53 // "FUNCDEC" -> "Helper"
-  n52 -> n54 // "FUNCDEC" -> "ARGLIST"
-  n54 -> n55 // "ARGLIST" -> "elem:Element"
-  n54 -> n56 // "ARGLIST" -> "val:Int"
-  n52 -> n57 // "FUNCDEC" -> "FUNCBODY"
-  n57 -> n58 // "FUNCBODY" -> "BLOCK"
+  n15 -> n16 // "BLOCK" -> "x"
+  n15 -> n17 // "BLOCK" -> "="
+  n15 -> n18 // "BLOCK" -> "VARREF"
+  n18 -> n19 // "VARREF" -> "y"
+  n15 -> n20 // "BLOCK" -> "REPLACE"
+  n20 -> n21 // "REPLACE" -> "PATH"
+  n21 -> n22 // "PATH" -> "PATHCTX"
+  n22 -> n23 // "PATHCTX" -> "doc"
+  n21 -> n24 // "PATH" -> "SEG"
+  n24 -> n25 // "SEG" -> "eric"
+  n21 -> n26 // "PATH" -> "SEG"
+  n26 -> n27 // "SEG" -> "ernie"
+  n20 -> n28 // "REPLACE" -> "VARREF"
+  n28 -> n29 // "VARREF" -> "x"
+  n15 -> n30 // "BLOCK" -> "APPEND"
+  n30 -> n31 // "APPEND" -> "PATH"
+  n31 -> n32 // "PATH" -> "PATHCTX"
+  n32 -> n33 // "PATHCTX" -> "a"
+  n31 -> n34 // "PATH" -> "SEG"
+  n34 -> n35 // "SEG" -> "x"
+  n31 -> n36 // "PATH" -> "SEG"
+  n36 -> n37 // "SEG" -> "y"
+  n30 -> n38 // "APPEND" -> "VARREF"
+  n38 -> n39 // "VARREF" -> "b"
+  n15 -> n40 // "BLOCK" -> "PREPEND"
+  n40 -> n41 // "PREPEND" -> "PATH"
+  n41 -> n42 // "PATH" -> "PATHCTX"
+  n42 -> n43 // "PATHCTX" -> "e"
+  n41 -> n44 // "PATH" -> "SEG"
+  n44 -> n45 // "SEG" -> "f"
+  n41 -> n46 // "PATH" -> "SEG"
+  n46 -> n47 // "SEG" -> "g"
+  n40 -> n48 // "PREPEND" -> "VARREF"
+  n48 -> n49 // "VARREF" -> "f"
+  n15 -> n50 // "BLOCK" -> "MATCH"
+  n50 -> n51 // "MATCH" -> "VARREF"
+  n51 -> n52 // "VARREF" -> "x"
+  n50 -> n53 // "MATCH" -> "XML"
+  n53 -> n54 // "XML" -> "<"
+  n53 -> n55 // "XML" -> "address"
+  n53 -> n56 // "XML" -> "/>"
+  n15 -> n57 // "BLOCK" -> "MATCH"
+  n57 -> n58 // "MATCH" -> "VARREF"
+  n58 -> n59 // "VARREF" -> "y"
+  n57 -> n60 // "MATCH" -> "XML"
+  n60 -> n61 // "XML" -> "XMLOPENELEM"
+  n61 -> n62 // "XMLOPENELEM" -> "address"
+  n61 -> n63 // "XMLOPENELEM" -> "XMLATTRS"
+  n63 -> n64 // "XMLATTRS" -> "XMLATTR"
+  n64 -> n65 // "XMLATTR" -> "addr1"
+  n64 -> n66 // "XMLATTR" -> "VALSTR"
+  n66 -> n67 // "VALSTR" -> "'blah'"
+  n63 -> n68 // "XMLATTRS" -> "XMLATTR"
+  n68 -> n69 // "XMLATTR" -> "addr2"
+  n68 -> n70 // "XMLATTR" -> "VALSTR"
+  n70 -> n71 // "VALSTR" -> "'blah'"
+  n63 -> n72 // "XMLATTRS" -> "XMLATTR"
+  n72 -> n73 // "XMLATTR" -> "region"
+  n72 -> n74 // "XMLATTR" -> "VALSTR"
+  n74 -> n75 // "VALSTR" -> "'blah'"
+  n63 -> n76 // "XMLATTRS" -> "XMLATTR"
+  n76 -> n77 // "XMLATTR" -> "postcode"
+  n76 -> n78 // "XMLATTR" -> "VALSTR"
+  n78 -> n79 // "VALSTR" -> "'blah'"
+  n63 -> n80 // "XMLATTRS" -> "XMLATTR"
+  n80 -> n81 // "XMLATTR" -> "country"
+  n80 -> n82 // "XMLATTR" -> "VALSTR"
+  n82 -> n83 // "VALSTR" -> "'blah'"
+  n60 -> n84 // "XML" -> "<"
+  n60 -> n85 // "XML" -> "landlord"
+  n60 -> n86 // "XML" -> "XMLATTR"
+  n86 -> n87 // "XMLATTR" -> "name"
+  n86 -> n88 // "XMLATTR" -> "VALSTR"
+  n88 -> n89 // "VALSTR" -> "'joe blow'"
+  n60 -> n90 // "XML" -> "/>"
+  n60 -> n91 // "XML" -> "XMLCLOSEELEM"
+  n91 -> n92 // "XMLCLOSEELEM" -> "address"
+  n8 -> n93 // "FUNCDECLIST" -> "FUNCDEC"
+  n93 -> n94 // "FUNCDEC" -> "Helper"
+  n93 -> n95 // "FUNCDEC" -> "ARGLIST"
+  n95 -> n96 // "ARGLIST" -> "elem:Element"
+  n95 -> n97 // "ARGLIST" -> "val:Int"
+  n93 -> n98 // "FUNCDEC" -> "FUNCBODY"
+  n98 -> n99 // "FUNCBODY" -> "BLOCK"
 
 }

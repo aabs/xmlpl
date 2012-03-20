@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 mccarthy.g3 2012-03-20 17:20:37
+// $ANTLR 3.3.1.7705 mccarthy.g3 2012-03-20 21:20:25
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -1887,9 +1887,9 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = TEXT;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:212:6: ()
+			// mccarthy.g3:213:6: ()
 			DebugEnterAlt(1);
-			// mccarthy.g3:212:8: 
+			// mccarthy.g3:213:8: 
 			{
 			}
 
