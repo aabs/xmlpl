@@ -1,5 +1,5 @@
-bin
 obj
+bin
 .svn
 TestResults
 *.user
