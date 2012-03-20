@@ -25,114 +25,27 @@ digraph {
   n10 [label="EntryPoint"];
   n11 [label="ARGLIST"];
   n11 [label="ARGLIST"];
-  n12 [label="ARG"];
-  n12 [label="ARG"];
-  n13 [label="doc"];
-  n14 [label="Document"];
-  n15 [label="ARG"];
-  n15 [label="ARG"];
-  n16 [label="addr"];
-  n17 [label="Element"];
-  n18 [label="FUNCBODY"];
-  n18 [label="FUNCBODY"];
-  n19 [label="BLOCK"];
-  n19 [label="BLOCK"];
-  n20 [label="BINDING"];
-  n20 [label="BINDING"];
-  n21 [label="VARREF"];
-  n21 [label="VARREF"];
-  n22 [label="x"];
-  n23 [label="VARREF"];
-  n23 [label="VARREF"];
-  n24 [label="y"];
-  n25 [label="REPLACE"];
-  n25 [label="REPLACE"];
-  n26 [label="PATH"];
-  n26 [label="PATH"];
-  n27 [label="PATHCTX"];
-  n27 [label="PATHCTX"];
-  n28 [label="doc"];
-  n29 [label="SEG"];
-  n29 [label="SEG"];
-  n30 [label="eric"];
-  n31 [label="SEG"];
-  n31 [label="SEG"];
-  n32 [label="ernie"];
-  n33 [label="VARREF"];
-  n33 [label="VARREF"];
-  n34 [label="x"];
-  n35 [label="APPEND"];
-  n35 [label="APPEND"];
-  n36 [label="PATH"];
-  n36 [label="PATH"];
-  n37 [label="PATHCTX"];
-  n37 [label="PATHCTX"];
-  n38 [label="a"];
-  n39 [label="SEG"];
-  n39 [label="SEG"];
-  n40 [label="x"];
-  n41 [label="SEG"];
-  n41 [label="SEG"];
-  n42 [label="y"];
-  n43 [label="VARREF"];
-  n43 [label="VARREF"];
-  n44 [label="b"];
-  n45 [label="PREPEND"];
-  n45 [label="PREPEND"];
-  n46 [label="PATH"];
-  n46 [label="PATH"];
-  n47 [label="PATHCTX"];
-  n47 [label="PATHCTX"];
-  n48 [label="e"];
-  n49 [label="SEG"];
-  n49 [label="SEG"];
-  n50 [label="f"];
-  n51 [label="SEG"];
-  n51 [label="SEG"];
-  n52 [label="g"];
-  n53 [label="VARREF"];
-  n53 [label="VARREF"];
-  n54 [label="f"];
-  n55 [label="MATCH"];
-  n55 [label="MATCH"];
-  n56 [label="VARREF"];
-  n56 [label="VARREF"];
-  n57 [label="x"];
-  n58 [label="XMLELEM"];
-  n58 [label="XMLELEM"];
-  n59 [label="address"];
-  n60 [label="MATCH"];
-  n60 [label="MATCH"];
-  n61 [label="VARREF"];
-  n61 [label="VARREF"];
-  n62 [label="y"];
-  n63 [label="<address>some <"];
-  n64 [label="b"];
-  n65 [label="b>"];
-  n66 [label="text"];
-  n67 [label="text</"];
-  n68 [label="b"];
-  n69 [label="b>"];
-  n70 [label="here"];
-  n71 [label="here</"];
-  n72 [label="address"];
-  n73 [label="address>"];
-  n74 [label="FUNCDEC"];
-  n74 [label="FUNCDEC"];
-  n75 [label="Helper"];
-  n76 [label="ARGLIST"];
-  n76 [label="ARGLIST"];
-  n77 [label="ARG"];
-  n77 [label="ARG"];
-  n78 [label="elem"];
-  n79 [label="Element"];
-  n80 [label="ARG"];
-  n80 [label="ARG"];
-  n81 [label="val"];
-  n82 [label="Int"];
-  n83 [label="FUNCBODY"];
-  n83 [label="FUNCBODY"];
-  n84 [label="BLOCK"];
+  n12 [label="doc:Document"];
+  n13 [label="addr:Element"];
+  n14 [label="FUNCBODY"];
+  n14 [label="FUNCBODY"];
+  n15 [label="BLOCK"];
+  n15 [label="BLOCK"];
+  n16 [label="ID"];
+  n17 [label="="];
+  n18 [label="VALSTR"];
+  n18 [label="VALSTR"];
+  n19 [label="'4'"];
+  n20 [label="FUNCDEC"];
+  n20 [label="FUNCDEC"];
+  n21 [label="Helper"];
+  n22 [label="ARGLIST"];
+  n22 [label="ARGLIST"];
+  n23 [label="elem:Element"];
+  n24 [label="val:Int"];
+  n25 [label="FUNCBODY"];
+  n25 [label="FUNCBODY"];
+  n26 [label="BLOCK"];
 
   n0 -> n1 // "ROOT" -> "module"
   n1 -> n2 // "module" -> "blah"
@@ -145,78 +58,20 @@ digraph {
   n8 -> n9 // "FUNCDECLIST" -> "FUNCDEC"
   n9 -> n10 // "FUNCDEC" -> "EntryPoint"
   n9 -> n11 // "FUNCDEC" -> "ARGLIST"
-  n11 -> n12 // "ARGLIST" -> "ARG"
-  n12 -> n13 // "ARG" -> "doc"
-  n12 -> n14 // "ARG" -> "Document"
-  n11 -> n15 // "ARGLIST" -> "ARG"
-  n15 -> n16 // "ARG" -> "addr"
-  n15 -> n17 // "ARG" -> "Element"
-  n9 -> n18 // "FUNCDEC" -> "FUNCBODY"
-  n18 -> n19 // "FUNCBODY" -> "BLOCK"
-  n19 -> n20 // "BLOCK" -> "BINDING"
-  n20 -> n21 // "BINDING" -> "VARREF"
-  n21 -> n22 // "VARREF" -> "x"
-  n20 -> n23 // "BINDING" -> "VARREF"
-  n23 -> n24 // "VARREF" -> "y"
-  n19 -> n25 // "BLOCK" -> "REPLACE"
-  n25 -> n26 // "REPLACE" -> "PATH"
-  n26 -> n27 // "PATH" -> "PATHCTX"
-  n27 -> n28 // "PATHCTX" -> "doc"
-  n26 -> n29 // "PATH" -> "SEG"
-  n29 -> n30 // "SEG" -> "eric"
-  n26 -> n31 // "PATH" -> "SEG"
-  n31 -> n32 // "SEG" -> "ernie"
-  n25 -> n33 // "REPLACE" -> "VARREF"
-  n33 -> n34 // "VARREF" -> "x"
-  n19 -> n35 // "BLOCK" -> "APPEND"
-  n35 -> n36 // "APPEND" -> "PATH"
-  n36 -> n37 // "PATH" -> "PATHCTX"
-  n37 -> n38 // "PATHCTX" -> "a"
-  n36 -> n39 // "PATH" -> "SEG"
-  n39 -> n40 // "SEG" -> "x"
-  n36 -> n41 // "PATH" -> "SEG"
-  n41 -> n42 // "SEG" -> "y"
-  n35 -> n43 // "APPEND" -> "VARREF"
-  n43 -> n44 // "VARREF" -> "b"
-  n19 -> n45 // "BLOCK" -> "PREPEND"
-  n45 -> n46 // "PREPEND" -> "PATH"
-  n46 -> n47 // "PATH" -> "PATHCTX"
-  n47 -> n48 // "PATHCTX" -> "e"
-  n46 -> n49 // "PATH" -> "SEG"
-  n49 -> n50 // "SEG" -> "f"
-  n46 -> n51 // "PATH" -> "SEG"
-  n51 -> n52 // "SEG" -> "g"
-  n45 -> n53 // "PREPEND" -> "VARREF"
-  n53 -> n54 // "VARREF" -> "f"
-  n19 -> n55 // "BLOCK" -> "MATCH"
-  n55 -> n56 // "MATCH" -> "VARREF"
-  n56 -> n57 // "VARREF" -> "x"
-  n55 -> n58 // "MATCH" -> "XMLELEM"
-  n58 -> n59 // "XMLELEM" -> "address"
-  n19 -> n60 // "BLOCK" -> "MATCH"
-  n60 -> n61 // "MATCH" -> "VARREF"
-  n61 -> n62 // "VARREF" -> "y"
-  n60 -> n63 // "MATCH" -> "<address>some <"
-  n19 -> n64 // "BLOCK" -> "b"
-  n19 -> n65 // "BLOCK" -> "b>"
-  n19 -> n66 // "BLOCK" -> "text"
-  n19 -> n67 // "BLOCK" -> "text</"
-  n19 -> n68 // "BLOCK" -> "b"
-  n19 -> n69 // "BLOCK" -> "b>"
-  n19 -> n70 // "BLOCK" -> "here"
-  n19 -> n71 // "BLOCK" -> "here</"
-  n19 -> n72 // "BLOCK" -> "address"
-  n19 -> n73 // "BLOCK" -> "address>"
-  n8 -> n74 // "FUNCDECLIST" -> "FUNCDEC"
-  n74 -> n75 // "FUNCDEC" -> "Helper"
-  n74 -> n76 // "FUNCDEC" -> "ARGLIST"
-  n76 -> n77 // "ARGLIST" -> "ARG"
-  n77 -> n78 // "ARG" -> "elem"
-  n77 -> n79 // "ARG" -> "Element"
-  n76 -> n80 // "ARGLIST" -> "ARG"
-  n80 -> n81 // "ARG" -> "val"
-  n80 -> n82 // "ARG" -> "Int"
-  n74 -> n83 // "FUNCDEC" -> "FUNCBODY"
-  n83 -> n84 // "FUNCBODY" -> "BLOCK"
+  n11 -> n12 // "ARGLIST" -> "doc:Document"
+  n11 -> n13 // "ARGLIST" -> "addr:Element"
+  n9 -> n14 // "FUNCDEC" -> "FUNCBODY"
+  n14 -> n15 // "FUNCBODY" -> "BLOCK"
+  n15 -> n16 // "BLOCK" -> "ID"
+  n15 -> n17 // "BLOCK" -> "="
+  n15 -> n18 // "BLOCK" -> "VALSTR"
+  n18 -> n19 // "VALSTR" -> "'4'"
+  n8 -> n20 // "FUNCDECLIST" -> "FUNCDEC"
+  n20 -> n21 // "FUNCDEC" -> "Helper"
+  n20 -> n22 // "FUNCDEC" -> "ARGLIST"
+  n22 -> n23 // "ARGLIST" -> "elem:Element"
+  n22 -> n24 // "ARGLIST" -> "val:Int"
+  n20 -> n25 // "FUNCDEC" -> "FUNCBODY"
+  n25 -> n26 // "FUNCBODY" -> "BLOCK"
 
 }

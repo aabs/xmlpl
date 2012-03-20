@@ -1,0 +1,50 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="=?"];
+  n1 [label="x"];
+  n2 [label="XML"];
+  n2 [label="XML"];
+  n3 [label="XMLOPENELEM"];
+  n3 [label="XMLOPENELEM"];
+  n4 [label="a"];
+  n5 [label="XMLATTRS"];
+  n5 [label="XMLATTRS"];
+  n6 [label="XMLATTR"];
+  n6 [label="XMLATTR"];
+  n7 [label="x"];
+  n8 [label="VALSTR"];
+  n8 [label="VALSTR"];
+  n9 [label="'y'"];
+  n10 [label="XMLATTR"];
+  n10 [label="XMLATTR"];
+  n11 [label="c"];
+  n12 [label="VALSTR"];
+  n12 [label="VALSTR"];
+  n13 [label="'d'"];
+  n14 [label="XMLCLOSEELEM"];
+  n14 [label="XMLCLOSEELEM"];
+  n15 [label="a"];
+
+  n0 -> n1 // "=?" -> "x"
+  n0 -> n2 // "=?" -> "XML"
+  n2 -> n3 // "XML" -> "XMLOPENELEM"
+  n3 -> n4 // "XMLOPENELEM" -> "a"
+  n3 -> n5 // "XMLOPENELEM" -> "XMLATTRS"
+  n5 -> n6 // "XMLATTRS" -> "XMLATTR"
+  n6 -> n7 // "XMLATTR" -> "x"
+  n6 -> n8 // "XMLATTR" -> "VALSTR"
+  n8 -> n9 // "VALSTR" -> "'y'"
+  n5 -> n10 // "XMLATTRS" -> "XMLATTR"
+  n10 -> n11 // "XMLATTR" -> "c"
+  n10 -> n12 // "XMLATTR" -> "VALSTR"
+  n12 -> n13 // "VALSTR" -> "'d'"
+  n2 -> n14 // "XML" -> "XMLCLOSEELEM"
+  n14 -> n15 // "XMLCLOSEELEM" -> "a"
+
+}

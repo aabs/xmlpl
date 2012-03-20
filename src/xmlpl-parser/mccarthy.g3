@@ -6,6 +6,31 @@ options {
     output=AST;
     ASTLabelType=CommonTree;
 }
+tokens {
+ ROOT; Imports ; FUNCDEC ; FUNCDECLIST ; ARG; ARGLIST ; FUNCBODY; BLOCK;
+ BINDING ; VARREF ; REPLACE ; APPEND ; PREPEND ; MATCH ; PATH ; PATHCTX ;
+ SEG ; VALINT ; VALSTR ; XML; XMLOPENELEM ; XMLCLOSEELEM ; XMLCHILDREN ; XMLTEXT ; XMLATTR ; XMLATTRS ;
+}
+
+@members {
+public bool expectingXml = false;
+}
+
+@lexer::members {
+private int openTags = 0;
+private bool readyForAttrs = false;
+
+void inTagStart(){readyForAttrs = true;Console.WriteLine("starting xml tag");}
+void inTagBody(){openTags++;readyForAttrs = false;Console.WriteLine("inside xml tag body");} 
+void outOfTag(){openTags--;readyForAttrs = false;Console.WriteLine("left xml tag");}
+}
+
+@header{
+using System;
+}
+@lexer::header{
+using System;
+}
 
 @lexer::namespace{xmlpl_parser}
 @parser::namespace{xmlpl_parser}
@@ -19,13 +44,10 @@ ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
 
 INT :	'0'..'9'+
     ;
-
-FLOAT
-    :   ('0'..'9')+ '.' ('0'..'9')* EXPONENT?
-    |   '.' ('0'..'9')+ EXPONENT?
-    |   ('0'..'9')+ EXPONENT
-    ;
-
+STRING 
+	: '\'' .* '\''
+	| '\"' .* '\"'
+	;
 COMMENT
     :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=Hidden;}
     |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=Hidden;}
@@ -37,70 +59,36 @@ WS  :   ( ' '
         | '\n'
         ) {$channel=Hidden;}
     ;
+ 
 
-STRING
-    :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
+
+
+
+GENERIC_ID
+    : 
+      ( LETTER | '_' | ':') (NAMECHAR)*
     ;
+MATCHOP	:	'=?'; 
 
-CHAR:  '\'' ( ESC_SEQ | ~('\''|'\\') ) '\''
+fragment NAMECHAR
+    : LETTER | DIGIT | '.' | '-' | '_' | ':'
     ;
-
-fragment
-EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
-
-fragment
-HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
-
-fragment
-ESC_SEQ
-    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
-    |   UNICODE_ESC
-    |   OCTAL_ESC
+ 
+fragment DIGIT
+    :    '0'..'9'
     ;
-
-fragment
-OCTAL_ESC
-    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7')
+ 
+fragment LETTER
+    : 'a'..'z'
+    | 'A'..'Z'
     ;
-
-fragment
-UNICODE_ESC
-    :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
-    ;
-
-fragment ROOT : 'McCarthy' ;
-fragment Imports : 'imports' ;
-fragment FUNCDEC : 'FunctionDeclaration' ;
-fragment FUNCDECLIST : 'FunctionDeclarations' ;
-fragment ARG : 'arg' ;
-fragment ARGLIST : 'args' ;
-fragment FUNCBODY : 'FUNCBODY' ;
-fragment BLOCK : 'BLOCK' ;
-fragment BINDING : 'BINDING' ;
-fragment VARREF : 'VARREF' ;
-fragment REPLACE : 'REPLACE' ;
-fragment APPEND : 'APPEND' ;
-fragment PREPEND : 'PREPEND' ;
-fragment MATCH : 'MATCH' ;
-
-
-fragment PATH : 'PATH' ;
-fragment PATHCTX : 'PATHCTX' ;
-fragment SEG : 'SEG' ;
-fragment VALINT : 'VALINT' ;
-fragment VALSTR : 'VALSTR' ;
-fragment XMLELEM : 'XMLFRAG' ;
-fragment XMLCHILDREN : 'XMLCHILDREN' ;
-fragment XMLTEXT : 'XMLTEXT' ;
+ 
 
 /*
  * Parser Rules
  */
 
-public
-module
+public module
     :   md=moduleDeclaration 
     	id=importDeclarations
     	fd=functionDeclarations
@@ -138,9 +126,9 @@ arg
 	: argName=ID ':' type=ID
 		-> ^(ARG $argName $type)
 	;	
-statements
+statements 
 	:
-	(statement ';')* -> ^(BLOCK statement*)
+	(stat=statement ';')* -> ^(BLOCK $stat*) 
 	;
 
 statement
@@ -163,8 +151,7 @@ value
 
 assignment
 	:
-	var=ID '=' val=value
-		-> ^(BINDING ^(VARREF $var) $val)
+	id=ID '=' value
 	;	
 replaceOperation
 	:
@@ -189,19 +176,17 @@ prependOperation
 	pe=pathExpression '=<' val=value
 		-> ^(PREPEND $pe $val)
 	;
-matchOperation
+public matchOperation
+	@init{expectingXml = true;}
+	@after{expectingXml = false;}
 	:
-	// extract values out of a bound variable
-	var=ID '=?' frag=xmlObject
-		-> ^(MATCH ^(VARREF $var) $frag)
-	// extract variables out of a subtree of an XML document
-	| pe=pathExpression '=?' frag=xmlObject
-		-> ^(MATCH $pe $frag)
+	(ID|pathExpression) MATCHOP^ content
 	;
 moveOperation
 	:
 	var=ID '->'^ val=ID
 	;
+
 moveFrontOperation
 	:
 	var=ID '=><'^ val=ID
@@ -217,72 +202,51 @@ deleteOperation
 
 pattern :	'?' ID
     ;
-valueOf :	
-	 '{' ID '}'
+
+valueOf 
+	: '!' ID
     ;
 
-xmlDocument 
-	:	 '<?' ID xmlAttribute '?>' xmlObject 
-    ;
+//------------------------------------[new xml stuff]-----------------------------------
 
-xmlObject    
-	:	 xmlStartTag xmlContent* xmlEndTag
-              | xmlUnaryTag
-    ;
-
-xmlStartTag 
-	:	
-    '<' ID (xmlAttributesOrPattern)* '>'                                                     
-    ;
-
-xmlEndTag   
-	:	 '</' ID '>' 
-    ;
-
-xmlContent  
-	: xmlObject
-    | xmlText
-   ;
-xmlUnaryTag 
-	:	 '<' ID (xmlAttributesOrPattern)? '/>'
-    ;
-
-
-xmlAttributesOrPattern 
-		: pattern
-        | valueOf
-        | (xmlAttribute)+
-   ;
-               
-
-xmlAttribute 
-	:	 
-    ID                                                   
-        '=' 
-    xmlAttributeValue                                       
-    ;
-
-xmlAttributeValue
-	:	
-    STRING                                                 
-    ;
-
-xmlText :	 xmlWord*
-    ;
-
-xmlWord	: ID
-         | '='
-         | xmlCharName
-         | xmlCharNumber
+TEXT	:	;
+public content     :  (element)* -> ^(XML element*);
+public element     :   '<' ID attribute* '>' -> ^(XMLOPENELEM ID ^(XMLATTRS attribute*))
+            |   '<?' ID attribute* '?>' // deal with stuff like xml-stylesheet 
+            |   '<' '/' ID '>' ->^(XMLCLOSEELEM ID)
+            |   '<' ID attribute* '/>'
+            ;
+public attribute   :  ID '=' STRING -> ^(XMLATTR ID ^(VALSTR STRING));
+reference 
+	:	;
+//CDATA:;
+//-----------------------------------------------------------------------
+//------------------------------------[old xml stuff]-----------------------------------
+/*
+xml
+	@init{Console.WriteLine("xml");}
+ : OTag (xmlContent)* CTag -> ^(XMLELEM OTag xmlContent*)
+ | Tag
+ ;
+ xmlContent
+	:
+	PCData | xml
 	;
+PCData
+ : {openTags > 0}?=> ~'<'+
+ ;
+Attrs: {readyForAttrs}?=> Attr*;
+Attr: ID '=' STRING;
+OTag
+ : '<' ID {inTagStart();} Attrs ('>' {inTagBody();}  | '/>' {outOfTag();$type=Tag;})
+ ;
+CTag
+ : '</' ID '>' {outOfTag();}
+ ;
+fragment Tag : ;
+*/
+//-----------------------------------------------------------------------
 
-xmlCharName
-	:	
-    '&' ID ';'
-    ;
 
-xmlCharNumber
-	:	
-    '&#' INT ';'
-    ;
+
 

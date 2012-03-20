@@ -1,6 +1,13 @@
-﻿namespace xmlpl_parser
+﻿using Antlr.Runtime;
+
+namespace xmlpl_parser
 {
-    partial class mccarthyParser
+    public partial class mccarthyParser
     {
+        XmlParsingState State { get; set; }
+        public mccarthyParser( ITokenStream input, XmlParsingState state) : this(input)
+        {
+            State = state;
+        }
     }
 }

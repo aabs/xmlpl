@@ -1,0 +1,37 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="XMLELEM"];
+  n1 [label="a"];
+  n2 [label="XMLATTRS"];
+  n2 [label="XMLATTRS"];
+  n3 [label="XMLATTR"];
+  n3 [label="XMLATTR"];
+  n4 [label="x"];
+  n5 [label="VALSTR"];
+  n5 [label="VALSTR"];
+  n6 [label="'y'"];
+  n7 [label="XMLATTR"];
+  n7 [label="XMLATTR"];
+  n8 [label="c"];
+  n9 [label="VALSTR"];
+  n9 [label="VALSTR"];
+  n10 [label="'d'"];
+
+  n0 -> n1 // "XMLELEM" -> "a"
+  n0 -> n2 // "XMLELEM" -> "XMLATTRS"
+  n2 -> n3 // "XMLATTRS" -> "XMLATTR"
+  n3 -> n4 // "XMLATTR" -> "x"
+  n3 -> n5 // "XMLATTR" -> "VALSTR"
+  n5 -> n6 // "VALSTR" -> "'y'"
+  n2 -> n7 // "XMLATTRS" -> "XMLATTR"
+  n7 -> n8 // "XMLATTR" -> "c"
+  n7 -> n9 // "XMLATTR" -> "VALSTR"
+  n9 -> n10 // "VALSTR" -> "'d'"
+
+}

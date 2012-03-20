@@ -60,6 +60,8 @@ OCTAL_ESC
     |   '\\' ('0'..'7') ('0'..'7')
     |   '\\' ('0'..'7')
     ;
+fragment
+DIGIT       :   '0'..'9' ;
 
 fragment
 UNICODE_ESC

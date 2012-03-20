@@ -62,12 +62,8 @@
     <Compile Include="AttrBuilder.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="IOperationProvider.cs" />
-    <Compile Include="loblang.g3.lexer.cs" />
-    <Compile Include="loblang.g3.parser.cs" />
     <Compile Include="mccarthy.g3.lexer.cs" />
     <Compile Include="mccarthy.g3.parser.cs" />
-    <Compile Include="obj\Debug\loblangLexer.cs" />
-    <Compile Include="obj\Debug\loblangParser.cs" />
     <Compile Include="obj\Debug\mccarthyLexer.cs" />
     <Compile Include="obj\Debug\mccarthyParser.cs" />
     <Compile Include="OperationProvider.cs" />
@@ -81,11 +77,9 @@
     <Compile Include="Utilities.cs" />
     <Compile Include="XmlBuilder.cs" />
     <Compile Include="XmlCloser.cs" />
+    <Compile Include="XmlParsingState.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Antlr3 Include="loblang.g3">
-      <Generator>MSBuild:Compile</Generator>
-    </Antlr3>
     <Antlr3 Include="mccarthy.g3">
       <Generator>MSBuild:Compile</Generator>
     </Antlr3>
@@ -96,6 +90,7 @@
   <ItemGroup>
     <Content Include="semantics.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <!-- Folder containing AntlrBuildTask.dll -->
