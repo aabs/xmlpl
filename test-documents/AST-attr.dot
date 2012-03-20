@@ -8,9 +8,12 @@ digraph {
 
   n0 [label="XMLATTR"];
   n1 [label="a"];
-  n2 [label="'b'"];
+  n2 [label="VALSTR"];
+  n2 [label="VALSTR"];
+  n3 [label="'b'"];
 
   n0 -> n1 // "XMLATTR" -> "a"
-  n0 -> n2 // "XMLATTR" -> "'b'"
+  n0 -> n2 // "XMLATTR" -> "VALSTR"
+  n2 -> n3 // "VALSTR" -> "'b'"
 
 }

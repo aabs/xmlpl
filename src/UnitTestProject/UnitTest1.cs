@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -20,6 +21,13 @@ namespace UnitTestProject
             {
                 var x = parser.attribute();
                 WriteToDotFile(x.Tree, "AST-attr.dot");
+                TestForNodesAndArcs("AST-attr.dot", 
+                    new[]
+                        {
+                            Tuple.Create("XMLATTR", "a"),
+                            Tuple.Create("XMLATTR", "VALSTR"),
+                            Tuple.Create("VALSTR", "'b'")
+                        });
             }
             catch (RecognitionException e)
             {
@@ -35,6 +43,12 @@ namespace UnitTestProject
             {
                 var x = parser.element();
                 WriteToDotFile(x.Tree, "AST-simple-element.dot");
+                TestForNodesAndArcs("AST-simple-element.dot", 
+                    new[]
+                        {
+                            Tuple.Create("XMLOPENELEM", "a"),
+                            Tuple.Create("XMLOPENELEM", "XMLATTRS"),
+                        });
             }
             catch (RecognitionException e)
             {
@@ -50,6 +64,15 @@ namespace UnitTestProject
             {
                 var x = parser.element();
                 WriteToDotFile(x.Tree, "AST-simple-element-with-one-attr.dot");
+                TestForNodesAndArcs("AST-simple-element-with-one-attr.dot", 
+                    new[]
+                        {
+                            Tuple.Create("XMLATTR", "x"),
+                            Tuple.Create("XMLATTR", "c"),
+                            Tuple.Create("XMLATTR", "VALSTR"),
+                            Tuple.Create("VALSTR", "'y'"),
+                            Tuple.Create("VALSTR", "'d'"),
+                        });
             }
             catch (RecognitionException e)
             {
@@ -65,6 +88,18 @@ namespace UnitTestProject
             {
                 var x = parser.content();
                 WriteToDotFile(x.Tree, "AST-proper-element.dot");
+                TestForNodesAndArcs("AST-proper-element.dot", 
+                    new[]
+                        {
+                            Tuple.Create("XMLATTR", "x"),
+                            Tuple.Create("XMLATTR", "c"),
+                            Tuple.Create("XMLATTR", "VALSTR"),
+                            Tuple.Create("VALSTR", "'y'"),
+                            Tuple.Create("VALSTR", "'d'"),
+                            Tuple.Create("XML", "XMLOPENELEM"),
+                            Tuple.Create("XML", "XMLCLOSEELEM"),
+                            Tuple.Create("XMLCLOSEELEM", "a"),
+                        });
             }
             catch (RecognitionException e)
             {
@@ -80,6 +115,20 @@ namespace UnitTestProject
             {
                 var x = parser.matchOperation();
                 WriteToDotFile(x.Tree, "AST-match.dot");
+                TestForNodesAndArcs("AST-match.dot", 
+                    new[]
+                        {
+                            Tuple.Create("MATCH", "VARREF"),
+                            Tuple.Create("VARREF", "x"),
+                            Tuple.Create("XMLATTR", "x"),
+                            Tuple.Create("XMLATTR", "c"),
+                            Tuple.Create("XMLATTR", "VALSTR"),
+                            Tuple.Create("VALSTR", "'y'"),
+                            Tuple.Create("VALSTR", "'d'"),
+                            Tuple.Create("XML", "XMLOPENELEM"),
+                            Tuple.Create("XML", "XMLCLOSEELEM"),
+                            Tuple.Create("XMLCLOSEELEM", "a"),
+                        });
             }
             catch (RecognitionException e)
             {
@@ -95,6 +144,20 @@ namespace UnitTestProject
             {
                 var x = parser.statement();
                 WriteToDotFile(x.Tree, "AST-match-statement.dot");
+                TestForNodesAndArcs("AST-match-statement.dot", 
+                    new[]
+{
+                            Tuple.Create("MATCH", "VARREF"),
+                            Tuple.Create("VARREF", "x"),
+                            Tuple.Create("XMLATTR", "x"),
+                            Tuple.Create("XMLATTR", "c"),
+                            Tuple.Create("XMLATTR", "VALSTR"),
+                            Tuple.Create("VALSTR", "'y'"),
+                            Tuple.Create("VALSTR", "'d'"),
+                            Tuple.Create("XML", "XMLOPENELEM"),
+                            Tuple.Create("XML", "XMLCLOSEELEM"),
+                            Tuple.Create("XMLCLOSEELEM", "a"),
+                        });
             }
             catch (RecognitionException e)
             {
@@ -124,6 +187,21 @@ Helper(elem:Element, val:Int){}
             {
                 var x = parser.module();
                 WriteToDotFile(x.Tree, "AST-module.dot");
+                TestForNodesAndArcs("AST-module.dot", 
+                    new[]
+                        {
+                            Tuple.Create("ROOT", "module"),
+                            Tuple.Create("ROOT", "Imports"),
+                            Tuple.Create("Imports", "import"),
+                            Tuple.Create("import", "std"),
+                            Tuple.Create("import", "xml"),
+                            Tuple.Create("XMLATTR", "postcode"),
+                            Tuple.Create("XMLATTR", "VALSTR"),
+                            Tuple.Create("VALSTR", "'blah'"),
+                            Tuple.Create("XML", "landlord"),
+                            Tuple.Create("XMLCLOSEELEM", "address"),
+                            Tuple.Create("FUNCDEC", "EntryPoint"),
+                        });
             }
             catch (RecognitionException e)
             {
@@ -143,6 +221,18 @@ Helper(elem:Element, val:Int){}
             var gen = new DotTreeGenerator();
             string st = gen.ToDot(tree);
             File.WriteAllText(@"C:\dat\repository\personal\dev\projects\loblang\test-documents\" + fileName, st);
+        }
+        internal static void TestForNodesAndArcs(string fileName, IEnumerable<Tuple<string, string>> pairs )
+        {
+            var content = File.ReadAllText(@"C:\dat\repository\personal\dev\projects\loblang\test-documents\" + fileName);
+            foreach (var pair in pairs)
+            {
+                var sourceNodeName = pair.Item1;
+                var destNodeName = pair.Item2;
+                Assert.IsTrue(content.Contains(string.Format("[label=\"{0}\"];", sourceNodeName)), string.Format("could not find '{0}' node name definition", sourceNodeName));
+                Assert.IsTrue(content.Contains(string.Format("[label=\"{0}\"];", destNodeName)), string.Format("could not find '{0}' node name definition", destNodeName));
+                Assert.IsTrue(content.Contains(string.Format("// \"{0}\" -> \"{1}\"", sourceNodeName, destNodeName)), string.Format("unable to find an arc between '{0}' and '{1}'", sourceNodeName, destNodeName));
+            }
         }
     }
 }

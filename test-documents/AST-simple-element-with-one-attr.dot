@@ -6,7 +6,7 @@ digraph {
 		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
 	edge [arrowsize=.5, color="black", style="bold"]
 
-  n0 [label="XMLELEM"];
+  n0 [label="XMLOPENELEM"];
   n1 [label="a"];
   n2 [label="XMLATTRS"];
   n2 [label="XMLATTRS"];
@@ -23,8 +23,8 @@ digraph {
   n9 [label="VALSTR"];
   n10 [label="'d'"];
 
-  n0 -> n1 // "XMLELEM" -> "a"
-  n0 -> n2 // "XMLELEM" -> "XMLATTRS"
+  n0 -> n1 // "XMLOPENELEM" -> "a"
+  n0 -> n2 // "XMLOPENELEM" -> "XMLATTRS"
   n2 -> n3 // "XMLATTRS" -> "XMLATTR"
   n3 -> n4 // "XMLATTR" -> "x"
   n3 -> n5 // "XMLATTR" -> "VALSTR"
