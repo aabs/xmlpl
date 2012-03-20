@@ -131,7 +131,7 @@ statements
 	(stat=statement ';')* -> ^(BLOCK $stat*) 
 	;
 
-statement
+public statement
 	: assignment
 	| replaceOperation
 	| appendOperation
@@ -180,7 +180,8 @@ public matchOperation
 	@init{expectingXml = true;}
 	@after{expectingXml = false;}
 	:
-	(ID|pathExpression) MATCHOP^ content
+        ID MATCHOP content -> ^(MATCH ^(VARREF ID) content)
+	|pathExpression MATCHOP content -> ^(MATCH pathExpression content)
 	;
 moveOperation
 	:

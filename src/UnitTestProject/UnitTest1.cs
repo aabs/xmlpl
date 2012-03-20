@@ -87,6 +87,50 @@ namespace UnitTestProject
                 Assert.Fail(e.Message);
             }
         }
+        [TestMethod]
+        public void TestMatchStatement()
+        {
+            var parser = GetNewParser(@"x =? <a x='y' c='d'></a>;");
+            try
+            {
+                var x = parser.statement();
+                WriteToDotFile(x.Tree, "AST-match-statement.dot");
+            }
+            catch (RecognitionException e)
+            {
+                Console.Error.WriteLine(e.StackTrace);
+                Assert.Fail(e.Message);
+            }
+        }
+        [TestMethod]
+        public void TestModule()
+        {
+            string spec = @"
+module blah ;
+import std ;
+import xml ;
+EntryPoint(doc:Document, addr:Element){
+    x = y;
+    $doc/eric/ernie == x;
+    $a/x/y => b;
+    $e/f/g =< f;
+    x =? <address />;
+    y =? <address addr1='blah' addr2='blah' region='blah' postcode='blah' country='blah'><landlord name='joe blow' /></address>;
+}
+Helper(elem:Element, val:Int){}
+";
+            var parser = GetNewParser(spec);
+            try
+            {
+                var x = parser.module();
+                WriteToDotFile(x.Tree, "AST-module.dot");
+            }
+            catch (RecognitionException e)
+            {
+                Console.Error.WriteLine(e.StackTrace);
+                Assert.Fail(e.Message);
+            }
+        }
         internal mccarthyParser GetNewParser(string spec)
         {
             var lex = new mccarthyLexer(new ANTLRStringStream(spec));
