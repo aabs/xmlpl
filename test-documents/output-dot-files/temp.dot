@@ -1,0 +1,32 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="INVOCATION"];
+  n1 [label="some_function"];
+  n2 [label="PARAMETERS"];
+  n2 [label="PARAMETERS"];
+  n3 [label="VARREF"];
+  n3 [label="VARREF"];
+  n4 [label="a"];
+  n5 [label="VALINT"];
+  n5 [label="VALINT"];
+  n6 [label="2"];
+  n7 [label="VALSTR"];
+  n7 [label="VALSTR"];
+  n8 [label="'hello'"];
+
+  n0 -> n1 // "INVOCATION" -> "some_function"
+  n0 -> n2 // "INVOCATION" -> "PARAMETERS"
+  n2 -> n3 // "PARAMETERS" -> "VARREF"
+  n3 -> n4 // "VARREF" -> "a"
+  n2 -> n5 // "PARAMETERS" -> "VALINT"
+  n5 -> n6 // "VALINT" -> "2"
+  n2 -> n7 // "PARAMETERS" -> "VALSTR"
+  n7 -> n8 // "VALSTR" -> "'hello'"
+
+}

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 mccarthy.g3 2012-03-20 21:20:25
+// $ANTLR 3.3.1.7705 mccarthy.g3 2012-03-25 16:29:47
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -29,62 +29,62 @@ namespace xmlpl_parser
 public partial class mccarthyLexer : Antlr.Runtime.Lexer
 {
 	public const int EOF=-1;
-	public const int APPEND=4;
-	public const int ARG=5;
-	public const int ARGLIST=6;
-	public const int BINDING=7;
-	public const int BLOCK=8;
-	public const int COMMENT=9;
-	public const int DIGIT=10;
-	public const int FUNCBODY=11;
-	public const int FUNCDEC=12;
-	public const int FUNCDECLIST=13;
-	public const int GENERIC_ID=14;
-	public const int ID=15;
-	public const int INT=16;
-	public const int Imports=17;
-	public const int LETTER=18;
-	public const int MATCH=19;
-	public const int MATCHOP=20;
-	public const int NAMECHAR=21;
-	public const int PATH=22;
-	public const int PATHCTX=23;
-	public const int PREPEND=24;
-	public const int REPLACE=25;
-	public const int ROOT=26;
-	public const int SEG=27;
-	public const int STRING=28;
-	public const int TEXT=29;
-	public const int VALINT=30;
-	public const int VALSTR=31;
-	public const int VARREF=32;
-	public const int WS=33;
-	public const int XML=34;
-	public const int XMLATTR=35;
-	public const int XMLATTRS=36;
-	public const int XMLCHILDREN=37;
-	public const int XMLCLOSEELEM=38;
-	public const int XMLOPENELEM=39;
-	public const int XMLTEXT=40;
-	public const int T__41=41;
-	public const int T__42=42;
-	public const int T__43=43;
-	public const int T__44=44;
-	public const int T__45=45;
-	public const int T__46=46;
-	public const int T__47=47;
-	public const int T__48=48;
-	public const int T__49=49;
-	public const int T__50=50;
-	public const int T__51=51;
-	public const int T__52=52;
-	public const int T__53=53;
-	public const int T__54=54;
-	public const int T__55=55;
-	public const int T__56=56;
-	public const int T__57=57;
-	public const int T__58=58;
-	public const int T__59=59;
+	public const int AND=4;
+	public const int APPEND=5;
+	public const int ARG=6;
+	public const int ARGLIST=7;
+	public const int BINDING=8;
+	public const int BLOCK=9;
+	public const int COMMENT=10;
+	public const int DIGIT=11;
+	public const int DIV=12;
+	public const int EQUALS=13;
+	public const int FUNCBODY=14;
+	public const int FUNCDEC=15;
+	public const int FUNCDECLIST=16;
+	public const int GENERIC_ID=17;
+	public const int GT=18;
+	public const int GTEQ=19;
+	public const int ID=20;
+	public const int IMPORTDECL=21;
+	public const int INT=22;
+	public const int INVOCATION=23;
+	public const int Imports=24;
+	public const int LETTER=25;
+	public const int LT=26;
+	public const int LTEQ=27;
+	public const int MATCH=28;
+	public const int MATCHOP=29;
+	public const int MINUS=30;
+	public const int MOD=31;
+	public const int MODULEDECL=32;
+	public const int MULT=33;
+	public const int NAMECHAR=34;
+	public const int NOT=35;
+	public const int NOTEQUALS=36;
+	public const int OR=37;
+	public const int PARAMETER=38;
+	public const int PARAMETERS=39;
+	public const int PATH=40;
+	public const int PATHCTX=41;
+	public const int PLUS=42;
+	public const int PREPEND=43;
+	public const int REPLACE=44;
+	public const int ROOT=45;
+	public const int SEG=46;
+	public const int STRING=47;
+	public const int TEXT=48;
+	public const int VALINT=49;
+	public const int VALSTR=50;
+	public const int VARREF=51;
+	public const int WS=52;
+	public const int XML=53;
+	public const int XMLATTR=54;
+	public const int XMLATTRS=55;
+	public const int XMLCHILDREN=56;
+	public const int XMLCLOSEELEM=57;
+	public const int XMLOPENELEM=58;
+	public const int XMLTEXT=59;
 	public const int T__60=60;
 	public const int T__61=61;
 	public const int T__62=62;
@@ -92,6 +92,22 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	public const int T__64=64;
 	public const int T__65=65;
 	public const int T__66=66;
+	public const int T__67=67;
+	public const int T__68=68;
+	public const int T__69=69;
+	public const int T__70=70;
+	public const int T__71=71;
+	public const int T__72=72;
+	public const int T__73=73;
+	public const int T__74=74;
+	public const int T__75=75;
+	public const int T__76=76;
+	public const int T__77=77;
+	public const int T__78=78;
+	public const int T__79=79;
+	public const int T__80=80;
+	public const int T__81=81;
+	public const int T__82=82;
 
 	private int openTags = 0;
 	private bool readyForAttrs = false;
@@ -128,19 +144,19 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	partial void EnterRule(string ruleName, int ruleIndex);
 	partial void LeaveRule(string ruleName, int ruleIndex);
 
-	partial void EnterRule_T__41();
-	partial void LeaveRule_T__41();
+	partial void EnterRule_T__60();
+	partial void LeaveRule_T__60();
 
-	// $ANTLR start "T__41"
-	[GrammarRule("T__41")]
-	private void mT__41()
+	// $ANTLR start "T__60"
+	[GrammarRule("T__60")]
+	private void mT__60()
 	{
-		EnterRule_T__41();
-		EnterRule("T__41", 1);
-		TraceIn("T__41", 1);
+		EnterRule_T__60();
+		EnterRule("T__60", 1);
+		TraceIn("T__60", 1);
 		try
 		{
-			int _type = T__41;
+			int _type = T__60;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:21:7: ( '!' )
 			DebugEnterAlt(1);
@@ -156,26 +172,26 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__41", 1);
-			LeaveRule("T__41", 1);
-			LeaveRule_T__41();
+			TraceOut("T__60", 1);
+			LeaveRule("T__60", 1);
+			LeaveRule_T__60();
 		}
 	}
-	// $ANTLR end "T__41"
+	// $ANTLR end "T__60"
 
-	partial void EnterRule_T__42();
-	partial void LeaveRule_T__42();
+	partial void EnterRule_T__61();
+	partial void LeaveRule_T__61();
 
-	// $ANTLR start "T__42"
-	[GrammarRule("T__42")]
-	private void mT__42()
+	// $ANTLR start "T__61"
+	[GrammarRule("T__61")]
+	private void mT__61()
 	{
-		EnterRule_T__42();
-		EnterRule("T__42", 2);
-		TraceIn("T__42", 2);
+		EnterRule_T__61();
+		EnterRule("T__61", 2);
+		TraceIn("T__61", 2);
 		try
 		{
-			int _type = T__42;
+			int _type = T__61;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:22:7: ( '!=' )
 			DebugEnterAlt(1);
@@ -192,26 +208,26 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__42", 2);
-			LeaveRule("T__42", 2);
-			LeaveRule_T__42();
+			TraceOut("T__61", 2);
+			LeaveRule("T__61", 2);
+			LeaveRule_T__61();
 		}
 	}
-	// $ANTLR end "T__42"
+	// $ANTLR end "T__61"
 
-	partial void EnterRule_T__43();
-	partial void LeaveRule_T__43();
+	partial void EnterRule_T__62();
+	partial void LeaveRule_T__62();
 
-	// $ANTLR start "T__43"
-	[GrammarRule("T__43")]
-	private void mT__43()
+	// $ANTLR start "T__62"
+	[GrammarRule("T__62")]
+	private void mT__62()
 	{
-		EnterRule_T__43();
-		EnterRule("T__43", 3);
-		TraceIn("T__43", 3);
+		EnterRule_T__62();
+		EnterRule("T__62", 3);
+		TraceIn("T__62", 3);
 		try
 		{
-			int _type = T__43;
+			int _type = T__62;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:23:7: ( '$' )
 			DebugEnterAlt(1);
@@ -227,26 +243,26 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__43", 3);
-			LeaveRule("T__43", 3);
-			LeaveRule_T__43();
+			TraceOut("T__62", 3);
+			LeaveRule("T__62", 3);
+			LeaveRule_T__62();
 		}
 	}
-	// $ANTLR end "T__43"
+	// $ANTLR end "T__62"
 
-	partial void EnterRule_T__44();
-	partial void LeaveRule_T__44();
+	partial void EnterRule_T__63();
+	partial void LeaveRule_T__63();
 
-	// $ANTLR start "T__44"
-	[GrammarRule("T__44")]
-	private void mT__44()
+	// $ANTLR start "T__63"
+	[GrammarRule("T__63")]
+	private void mT__63()
 	{
-		EnterRule_T__44();
-		EnterRule("T__44", 4);
-		TraceIn("T__44", 4);
+		EnterRule_T__63();
+		EnterRule("T__63", 4);
+		TraceIn("T__63", 4);
 		try
 		{
-			int _type = T__44;
+			int _type = T__63;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:24:7: ( '(' )
 			DebugEnterAlt(1);
@@ -262,26 +278,26 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__44", 4);
-			LeaveRule("T__44", 4);
-			LeaveRule_T__44();
+			TraceOut("T__63", 4);
+			LeaveRule("T__63", 4);
+			LeaveRule_T__63();
 		}
 	}
-	// $ANTLR end "T__44"
+	// $ANTLR end "T__63"
 
-	partial void EnterRule_T__45();
-	partial void LeaveRule_T__45();
+	partial void EnterRule_T__64();
+	partial void LeaveRule_T__64();
 
-	// $ANTLR start "T__45"
-	[GrammarRule("T__45")]
-	private void mT__45()
+	// $ANTLR start "T__64"
+	[GrammarRule("T__64")]
+	private void mT__64()
 	{
-		EnterRule_T__45();
-		EnterRule("T__45", 5);
-		TraceIn("T__45", 5);
+		EnterRule_T__64();
+		EnterRule("T__64", 5);
+		TraceIn("T__64", 5);
 		try
 		{
-			int _type = T__45;
+			int _type = T__64;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:25:7: ( ')' )
 			DebugEnterAlt(1);
@@ -297,26 +313,26 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__45", 5);
-			LeaveRule("T__45", 5);
-			LeaveRule_T__45();
+			TraceOut("T__64", 5);
+			LeaveRule("T__64", 5);
+			LeaveRule_T__64();
 		}
 	}
-	// $ANTLR end "T__45"
+	// $ANTLR end "T__64"
 
-	partial void EnterRule_T__46();
-	partial void LeaveRule_T__46();
+	partial void EnterRule_T__65();
+	partial void LeaveRule_T__65();
 
-	// $ANTLR start "T__46"
-	[GrammarRule("T__46")]
-	private void mT__46()
+	// $ANTLR start "T__65"
+	[GrammarRule("T__65")]
+	private void mT__65()
 	{
-		EnterRule_T__46();
-		EnterRule("T__46", 6);
-		TraceIn("T__46", 6);
+		EnterRule_T__65();
+		EnterRule("T__65", 6);
+		TraceIn("T__65", 6);
 		try
 		{
-			int _type = T__46;
+			int _type = T__65;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:26:7: ( ',' )
 			DebugEnterAlt(1);
@@ -332,26 +348,26 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__46", 6);
-			LeaveRule("T__46", 6);
-			LeaveRule_T__46();
+			TraceOut("T__65", 6);
+			LeaveRule("T__65", 6);
+			LeaveRule_T__65();
 		}
 	}
-	// $ANTLR end "T__46"
+	// $ANTLR end "T__65"
 
-	partial void EnterRule_T__47();
-	partial void LeaveRule_T__47();
+	partial void EnterRule_T__66();
+	partial void LeaveRule_T__66();
 
-	// $ANTLR start "T__47"
-	[GrammarRule("T__47")]
-	private void mT__47()
+	// $ANTLR start "T__66"
+	[GrammarRule("T__66")]
+	private void mT__66()
 	{
-		EnterRule_T__47();
-		EnterRule("T__47", 7);
-		TraceIn("T__47", 7);
+		EnterRule_T__66();
+		EnterRule("T__66", 7);
+		TraceIn("T__66", 7);
 		try
 		{
-			int _type = T__47;
+			int _type = T__66;
 			int _channel = DefaultTokenChannel;
 			// mccarthy.g3:27:7: ( '->' )
 			DebugEnterAlt(1);
@@ -368,67 +384,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__47", 7);
-			LeaveRule("T__47", 7);
-			LeaveRule_T__47();
+			TraceOut("T__66", 7);
+			LeaveRule("T__66", 7);
+			LeaveRule_T__66();
 		}
 	}
-	// $ANTLR end "T__47"
+	// $ANTLR end "T__66"
 
-	partial void EnterRule_T__48();
-	partial void LeaveRule_T__48();
+	partial void EnterRule_T__67();
+	partial void LeaveRule_T__67();
 
-	// $ANTLR start "T__48"
-	[GrammarRule("T__48")]
-	private void mT__48()
+	// $ANTLR start "T__67"
+	[GrammarRule("T__67")]
+	private void mT__67()
 	{
-		EnterRule_T__48();
-		EnterRule("T__48", 8);
-		TraceIn("T__48", 8);
+		EnterRule_T__67();
+		EnterRule("T__67", 8);
+		TraceIn("T__67", 8);
 		try
 		{
-			int _type = T__48;
+			int _type = T__67;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:28:7: ( '/' )
+			// mccarthy.g3:28:7: ( '/>' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:28:9: '/'
+			// mccarthy.g3:28:9: '/>'
 			{
 			DebugLocation(28, 9);
-			Match('/'); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__48", 8);
-			LeaveRule("T__48", 8);
-			LeaveRule_T__48();
-		}
-	}
-	// $ANTLR end "T__48"
-
-	partial void EnterRule_T__49();
-	partial void LeaveRule_T__49();
-
-	// $ANTLR start "T__49"
-	[GrammarRule("T__49")]
-	private void mT__49()
-	{
-		EnterRule_T__49();
-		EnterRule("T__49", 9);
-		TraceIn("T__49", 9);
-		try
-		{
-			int _type = T__49;
-			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:29:7: ( '/>' )
-			DebugEnterAlt(1);
-			// mccarthy.g3:29:9: '/>'
-			{
-			DebugLocation(29, 9);
 			Match("/>"); 
 
 
@@ -439,32 +420,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__49", 9);
-			LeaveRule("T__49", 9);
-			LeaveRule_T__49();
+			TraceOut("T__67", 8);
+			LeaveRule("T__67", 8);
+			LeaveRule_T__67();
 		}
 	}
-	// $ANTLR end "T__49"
+	// $ANTLR end "T__67"
 
-	partial void EnterRule_T__50();
-	partial void LeaveRule_T__50();
+	partial void EnterRule_T__68();
+	partial void LeaveRule_T__68();
 
-	// $ANTLR start "T__50"
-	[GrammarRule("T__50")]
-	private void mT__50()
+	// $ANTLR start "T__68"
+	[GrammarRule("T__68")]
+	private void mT__68()
 	{
-		EnterRule_T__50();
-		EnterRule("T__50", 10);
-		TraceIn("T__50", 10);
+		EnterRule_T__68();
+		EnterRule("T__68", 9);
+		TraceIn("T__68", 9);
 		try
 		{
-			int _type = T__50;
+			int _type = T__68;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:30:7: ( ':' )
+			// mccarthy.g3:29:7: ( ':' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:30:9: ':'
+			// mccarthy.g3:29:9: ':'
 			{
-			DebugLocation(30, 9);
+			DebugLocation(29, 9);
 			Match(':'); 
 
 			}
@@ -474,32 +455,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__50", 10);
-			LeaveRule("T__50", 10);
-			LeaveRule_T__50();
+			TraceOut("T__68", 9);
+			LeaveRule("T__68", 9);
+			LeaveRule_T__68();
 		}
 	}
-	// $ANTLR end "T__50"
+	// $ANTLR end "T__68"
 
-	partial void EnterRule_T__51();
-	partial void LeaveRule_T__51();
+	partial void EnterRule_T__69();
+	partial void LeaveRule_T__69();
 
-	// $ANTLR start "T__51"
-	[GrammarRule("T__51")]
-	private void mT__51()
+	// $ANTLR start "T__69"
+	[GrammarRule("T__69")]
+	private void mT__69()
 	{
-		EnterRule_T__51();
-		EnterRule("T__51", 11);
-		TraceIn("T__51", 11);
+		EnterRule_T__69();
+		EnterRule("T__69", 10);
+		TraceIn("T__69", 10);
 		try
 		{
-			int _type = T__51;
+			int _type = T__69;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:31:7: ( ';' )
+			// mccarthy.g3:30:7: ( ';' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:31:9: ';'
+			// mccarthy.g3:30:9: ';'
 			{
-			DebugLocation(31, 9);
+			DebugLocation(30, 9);
 			Match(';'); 
 
 			}
@@ -509,67 +490,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__51", 11);
-			LeaveRule("T__51", 11);
-			LeaveRule_T__51();
+			TraceOut("T__69", 10);
+			LeaveRule("T__69", 10);
+			LeaveRule_T__69();
 		}
 	}
-	// $ANTLR end "T__51"
+	// $ANTLR end "T__69"
 
-	partial void EnterRule_T__52();
-	partial void LeaveRule_T__52();
+	partial void EnterRule_T__70();
+	partial void LeaveRule_T__70();
 
-	// $ANTLR start "T__52"
-	[GrammarRule("T__52")]
-	private void mT__52()
+	// $ANTLR start "T__70"
+	[GrammarRule("T__70")]
+	private void mT__70()
 	{
-		EnterRule_T__52();
-		EnterRule("T__52", 12);
-		TraceIn("T__52", 12);
+		EnterRule_T__70();
+		EnterRule("T__70", 11);
+		TraceIn("T__70", 11);
 		try
 		{
-			int _type = T__52;
+			int _type = T__70;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:32:7: ( '<' )
+			// mccarthy.g3:31:7: ( '<?' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:32:9: '<'
+			// mccarthy.g3:31:9: '<?'
 			{
-			DebugLocation(32, 9);
-			Match('<'); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__52", 12);
-			LeaveRule("T__52", 12);
-			LeaveRule_T__52();
-		}
-	}
-	// $ANTLR end "T__52"
-
-	partial void EnterRule_T__53();
-	partial void LeaveRule_T__53();
-
-	// $ANTLR start "T__53"
-	[GrammarRule("T__53")]
-	private void mT__53()
-	{
-		EnterRule_T__53();
-		EnterRule("T__53", 13);
-		TraceIn("T__53", 13);
-		try
-		{
-			int _type = T__53;
-			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:33:7: ( '<?' )
-			DebugEnterAlt(1);
-			// mccarthy.g3:33:9: '<?'
-			{
-			DebugLocation(33, 9);
+			DebugLocation(31, 9);
 			Match("<?"); 
 
 
@@ -580,32 +526,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__53", 13);
-			LeaveRule("T__53", 13);
-			LeaveRule_T__53();
+			TraceOut("T__70", 11);
+			LeaveRule("T__70", 11);
+			LeaveRule_T__70();
 		}
 	}
-	// $ANTLR end "T__53"
+	// $ANTLR end "T__70"
 
-	partial void EnterRule_T__54();
-	partial void LeaveRule_T__54();
+	partial void EnterRule_T__71();
+	partial void LeaveRule_T__71();
 
-	// $ANTLR start "T__54"
-	[GrammarRule("T__54")]
-	private void mT__54()
+	// $ANTLR start "T__71"
+	[GrammarRule("T__71")]
+	private void mT__71()
 	{
-		EnterRule_T__54();
-		EnterRule("T__54", 14);
-		TraceIn("T__54", 14);
+		EnterRule_T__71();
+		EnterRule("T__71", 12);
+		TraceIn("T__71", 12);
 		try
 		{
-			int _type = T__54;
+			int _type = T__71;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:34:7: ( '=' )
+			// mccarthy.g3:32:7: ( '=' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:34:9: '='
+			// mccarthy.g3:32:9: '='
 			{
-			DebugLocation(34, 9);
+			DebugLocation(32, 9);
 			Match('='); 
 
 			}
@@ -615,32 +561,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__54", 14);
-			LeaveRule("T__54", 14);
-			LeaveRule_T__54();
+			TraceOut("T__71", 12);
+			LeaveRule("T__71", 12);
+			LeaveRule_T__71();
 		}
 	}
-	// $ANTLR end "T__54"
+	// $ANTLR end "T__71"
 
-	partial void EnterRule_T__55();
-	partial void LeaveRule_T__55();
+	partial void EnterRule_T__72();
+	partial void LeaveRule_T__72();
 
-	// $ANTLR start "T__55"
-	[GrammarRule("T__55")]
-	private void mT__55()
+	// $ANTLR start "T__72"
+	[GrammarRule("T__72")]
+	private void mT__72()
 	{
-		EnterRule_T__55();
-		EnterRule("T__55", 15);
-		TraceIn("T__55", 15);
+		EnterRule_T__72();
+		EnterRule("T__72", 13);
+		TraceIn("T__72", 13);
 		try
 		{
-			int _type = T__55;
+			int _type = T__72;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:35:7: ( '=<' )
+			// mccarthy.g3:33:7: ( '=<' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:35:9: '=<'
+			// mccarthy.g3:33:9: '=<'
 			{
-			DebugLocation(35, 9);
+			DebugLocation(33, 9);
 			Match("=<"); 
 
 
@@ -651,32 +597,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__55", 15);
-			LeaveRule("T__55", 15);
-			LeaveRule_T__55();
+			TraceOut("T__72", 13);
+			LeaveRule("T__72", 13);
+			LeaveRule_T__72();
 		}
 	}
-	// $ANTLR end "T__55"
+	// $ANTLR end "T__72"
 
-	partial void EnterRule_T__56();
-	partial void LeaveRule_T__56();
+	partial void EnterRule_T__73();
+	partial void LeaveRule_T__73();
 
-	// $ANTLR start "T__56"
-	[GrammarRule("T__56")]
-	private void mT__56()
+	// $ANTLR start "T__73"
+	[GrammarRule("T__73")]
+	private void mT__73()
 	{
-		EnterRule_T__56();
-		EnterRule("T__56", 16);
-		TraceIn("T__56", 16);
+		EnterRule_T__73();
+		EnterRule("T__73", 14);
+		TraceIn("T__73", 14);
 		try
 		{
-			int _type = T__56;
+			int _type = T__73;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:36:7: ( '==' )
+			// mccarthy.g3:34:7: ( '==' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:36:9: '=='
+			// mccarthy.g3:34:9: '=='
 			{
-			DebugLocation(36, 9);
+			DebugLocation(34, 9);
 			Match("=="); 
 
 
@@ -687,32 +633,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__56", 16);
-			LeaveRule("T__56", 16);
-			LeaveRule_T__56();
+			TraceOut("T__73", 14);
+			LeaveRule("T__73", 14);
+			LeaveRule_T__73();
 		}
 	}
-	// $ANTLR end "T__56"
+	// $ANTLR end "T__73"
 
-	partial void EnterRule_T__57();
-	partial void LeaveRule_T__57();
+	partial void EnterRule_T__74();
+	partial void LeaveRule_T__74();
 
-	// $ANTLR start "T__57"
-	[GrammarRule("T__57")]
-	private void mT__57()
+	// $ANTLR start "T__74"
+	[GrammarRule("T__74")]
+	private void mT__74()
 	{
-		EnterRule_T__57();
-		EnterRule("T__57", 17);
-		TraceIn("T__57", 17);
+		EnterRule_T__74();
+		EnterRule("T__74", 15);
+		TraceIn("T__74", 15);
 		try
 		{
-			int _type = T__57;
+			int _type = T__74;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:37:7: ( '=>' )
+			// mccarthy.g3:35:7: ( '=>' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:37:9: '=>'
+			// mccarthy.g3:35:9: '=>'
 			{
-			DebugLocation(37, 9);
+			DebugLocation(35, 9);
 			Match("=>"); 
 
 
@@ -723,32 +669,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__57", 17);
-			LeaveRule("T__57", 17);
-			LeaveRule_T__57();
+			TraceOut("T__74", 15);
+			LeaveRule("T__74", 15);
+			LeaveRule_T__74();
 		}
 	}
-	// $ANTLR end "T__57"
+	// $ANTLR end "T__74"
 
-	partial void EnterRule_T__58();
-	partial void LeaveRule_T__58();
+	partial void EnterRule_T__75();
+	partial void LeaveRule_T__75();
 
-	// $ANTLR start "T__58"
-	[GrammarRule("T__58")]
-	private void mT__58()
+	// $ANTLR start "T__75"
+	[GrammarRule("T__75")]
+	private void mT__75()
 	{
-		EnterRule_T__58();
-		EnterRule("T__58", 18);
-		TraceIn("T__58", 18);
+		EnterRule_T__75();
+		EnterRule("T__75", 16);
+		TraceIn("T__75", 16);
 		try
 		{
-			int _type = T__58;
+			int _type = T__75;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:38:7: ( '=><' )
+			// mccarthy.g3:36:7: ( '=><' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:38:9: '=><'
+			// mccarthy.g3:36:9: '=><'
 			{
-			DebugLocation(38, 9);
+			DebugLocation(36, 9);
 			Match("=><"); 
 
 
@@ -759,32 +705,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__58", 18);
-			LeaveRule("T__58", 18);
-			LeaveRule_T__58();
+			TraceOut("T__75", 16);
+			LeaveRule("T__75", 16);
+			LeaveRule_T__75();
 		}
 	}
-	// $ANTLR end "T__58"
+	// $ANTLR end "T__75"
 
-	partial void EnterRule_T__59();
-	partial void LeaveRule_T__59();
+	partial void EnterRule_T__76();
+	partial void LeaveRule_T__76();
 
-	// $ANTLR start "T__59"
-	[GrammarRule("T__59")]
-	private void mT__59()
+	// $ANTLR start "T__76"
+	[GrammarRule("T__76")]
+	private void mT__76()
 	{
-		EnterRule_T__59();
-		EnterRule("T__59", 19);
-		TraceIn("T__59", 19);
+		EnterRule_T__76();
+		EnterRule("T__76", 17);
+		TraceIn("T__76", 17);
 		try
 		{
-			int _type = T__59;
+			int _type = T__76;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:39:7: ( '=>>' )
+			// mccarthy.g3:37:7: ( '=>>' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:39:9: '=>>'
+			// mccarthy.g3:37:9: '=>>'
 			{
-			DebugLocation(39, 9);
+			DebugLocation(37, 9);
 			Match("=>>"); 
 
 
@@ -795,67 +741,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__59", 19);
-			LeaveRule("T__59", 19);
-			LeaveRule_T__59();
+			TraceOut("T__76", 17);
+			LeaveRule("T__76", 17);
+			LeaveRule_T__76();
 		}
 	}
-	// $ANTLR end "T__59"
+	// $ANTLR end "T__76"
 
-	partial void EnterRule_T__60();
-	partial void LeaveRule_T__60();
+	partial void EnterRule_T__77();
+	partial void LeaveRule_T__77();
 
-	// $ANTLR start "T__60"
-	[GrammarRule("T__60")]
-	private void mT__60()
+	// $ANTLR start "T__77"
+	[GrammarRule("T__77")]
+	private void mT__77()
 	{
-		EnterRule_T__60();
-		EnterRule("T__60", 20);
-		TraceIn("T__60", 20);
+		EnterRule_T__77();
+		EnterRule("T__77", 18);
+		TraceIn("T__77", 18);
 		try
 		{
-			int _type = T__60;
+			int _type = T__77;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:40:7: ( '>' )
+			// mccarthy.g3:38:7: ( '?' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:40:9: '>'
+			// mccarthy.g3:38:9: '?'
 			{
-			DebugLocation(40, 9);
-			Match('>'); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__60", 20);
-			LeaveRule("T__60", 20);
-			LeaveRule_T__60();
-		}
-	}
-	// $ANTLR end "T__60"
-
-	partial void EnterRule_T__61();
-	partial void LeaveRule_T__61();
-
-	// $ANTLR start "T__61"
-	[GrammarRule("T__61")]
-	private void mT__61()
-	{
-		EnterRule_T__61();
-		EnterRule("T__61", 21);
-		TraceIn("T__61", 21);
-		try
-		{
-			int _type = T__61;
-			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:41:7: ( '?' )
-			DebugEnterAlt(1);
-			// mccarthy.g3:41:9: '?'
-			{
-			DebugLocation(41, 9);
+			DebugLocation(38, 9);
 			Match('?'); 
 
 			}
@@ -865,32 +776,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__61", 21);
-			LeaveRule("T__61", 21);
-			LeaveRule_T__61();
+			TraceOut("T__77", 18);
+			LeaveRule("T__77", 18);
+			LeaveRule_T__77();
 		}
 	}
-	// $ANTLR end "T__61"
+	// $ANTLR end "T__77"
 
-	partial void EnterRule_T__62();
-	partial void LeaveRule_T__62();
+	partial void EnterRule_T__78();
+	partial void LeaveRule_T__78();
 
-	// $ANTLR start "T__62"
-	[GrammarRule("T__62")]
-	private void mT__62()
+	// $ANTLR start "T__78"
+	[GrammarRule("T__78")]
+	private void mT__78()
 	{
-		EnterRule_T__62();
-		EnterRule("T__62", 22);
-		TraceIn("T__62", 22);
+		EnterRule_T__78();
+		EnterRule("T__78", 19);
+		TraceIn("T__78", 19);
 		try
 		{
-			int _type = T__62;
+			int _type = T__78;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:42:7: ( '?>' )
+			// mccarthy.g3:39:7: ( '?>' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:42:9: '?>'
+			// mccarthy.g3:39:9: '?>'
 			{
-			DebugLocation(42, 9);
+			DebugLocation(39, 9);
 			Match("?>"); 
 
 
@@ -901,32 +812,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__62", 22);
-			LeaveRule("T__62", 22);
-			LeaveRule_T__62();
+			TraceOut("T__78", 19);
+			LeaveRule("T__78", 19);
+			LeaveRule_T__78();
 		}
 	}
-	// $ANTLR end "T__62"
+	// $ANTLR end "T__78"
 
-	partial void EnterRule_T__63();
-	partial void LeaveRule_T__63();
+	partial void EnterRule_T__79();
+	partial void LeaveRule_T__79();
 
-	// $ANTLR start "T__63"
-	[GrammarRule("T__63")]
-	private void mT__63()
+	// $ANTLR start "T__79"
+	[GrammarRule("T__79")]
+	private void mT__79()
 	{
-		EnterRule_T__63();
-		EnterRule("T__63", 23);
-		TraceIn("T__63", 23);
+		EnterRule_T__79();
+		EnterRule("T__79", 20);
+		TraceIn("T__79", 20);
 		try
 		{
-			int _type = T__63;
+			int _type = T__79;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:43:7: ( 'import' )
+			// mccarthy.g3:40:7: ( 'import' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:43:9: 'import'
+			// mccarthy.g3:40:9: 'import'
 			{
-			DebugLocation(43, 9);
+			DebugLocation(40, 9);
 			Match("import"); 
 
 
@@ -937,32 +848,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__63", 23);
-			LeaveRule("T__63", 23);
-			LeaveRule_T__63();
+			TraceOut("T__79", 20);
+			LeaveRule("T__79", 20);
+			LeaveRule_T__79();
 		}
 	}
-	// $ANTLR end "T__63"
+	// $ANTLR end "T__79"
 
-	partial void EnterRule_T__64();
-	partial void LeaveRule_T__64();
+	partial void EnterRule_T__80();
+	partial void LeaveRule_T__80();
 
-	// $ANTLR start "T__64"
-	[GrammarRule("T__64")]
-	private void mT__64()
+	// $ANTLR start "T__80"
+	[GrammarRule("T__80")]
+	private void mT__80()
 	{
-		EnterRule_T__64();
-		EnterRule("T__64", 24);
-		TraceIn("T__64", 24);
+		EnterRule_T__80();
+		EnterRule("T__80", 21);
+		TraceIn("T__80", 21);
 		try
 		{
-			int _type = T__64;
+			int _type = T__80;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:44:7: ( 'module' )
+			// mccarthy.g3:41:7: ( 'module' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:44:9: 'module'
+			// mccarthy.g3:41:9: 'module'
 			{
-			DebugLocation(44, 9);
+			DebugLocation(41, 9);
 			Match("module"); 
 
 
@@ -973,32 +884,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__64", 24);
-			LeaveRule("T__64", 24);
-			LeaveRule_T__64();
+			TraceOut("T__80", 21);
+			LeaveRule("T__80", 21);
+			LeaveRule_T__80();
 		}
 	}
-	// $ANTLR end "T__64"
+	// $ANTLR end "T__80"
 
-	partial void EnterRule_T__65();
-	partial void LeaveRule_T__65();
+	partial void EnterRule_T__81();
+	partial void LeaveRule_T__81();
 
-	// $ANTLR start "T__65"
-	[GrammarRule("T__65")]
-	private void mT__65()
+	// $ANTLR start "T__81"
+	[GrammarRule("T__81")]
+	private void mT__81()
 	{
-		EnterRule_T__65();
-		EnterRule("T__65", 25);
-		TraceIn("T__65", 25);
+		EnterRule_T__81();
+		EnterRule("T__81", 22);
+		TraceIn("T__81", 22);
 		try
 		{
-			int _type = T__65;
+			int _type = T__81;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:45:7: ( '{' )
+			// mccarthy.g3:42:7: ( '{' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:45:9: '{'
+			// mccarthy.g3:42:9: '{'
 			{
-			DebugLocation(45, 9);
+			DebugLocation(42, 9);
 			Match('{'); 
 
 			}
@@ -1008,32 +919,32 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__65", 25);
-			LeaveRule("T__65", 25);
-			LeaveRule_T__65();
+			TraceOut("T__81", 22);
+			LeaveRule("T__81", 22);
+			LeaveRule_T__81();
 		}
 	}
-	// $ANTLR end "T__65"
+	// $ANTLR end "T__81"
 
-	partial void EnterRule_T__66();
-	partial void LeaveRule_T__66();
+	partial void EnterRule_T__82();
+	partial void LeaveRule_T__82();
 
-	// $ANTLR start "T__66"
-	[GrammarRule("T__66")]
-	private void mT__66()
+	// $ANTLR start "T__82"
+	[GrammarRule("T__82")]
+	private void mT__82()
 	{
-		EnterRule_T__66();
-		EnterRule("T__66", 26);
-		TraceIn("T__66", 26);
+		EnterRule_T__82();
+		EnterRule("T__82", 23);
+		TraceIn("T__82", 23);
 		try
 		{
-			int _type = T__66;
+			int _type = T__82;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:46:7: ( '}' )
+			// mccarthy.g3:43:7: ( '}' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:46:9: '}'
+			// mccarthy.g3:43:9: '}'
 			{
-			DebugLocation(46, 9);
+			DebugLocation(43, 9);
 			Match('}'); 
 
 			}
@@ -1043,12 +954,12 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__66", 26);
-			LeaveRule("T__66", 26);
-			LeaveRule_T__66();
+			TraceOut("T__82", 23);
+			LeaveRule("T__82", 23);
+			LeaveRule_T__82();
 		}
 	}
-	// $ANTLR end "T__66"
+	// $ANTLR end "T__82"
 
 	partial void EnterRule_ID();
 	partial void LeaveRule_ID();
@@ -1058,17 +969,17 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mID()
 	{
 		EnterRule_ID();
-		EnterRule("ID", 27);
-		TraceIn("ID", 27);
+		EnterRule("ID", 24);
+		TraceIn("ID", 24);
 		try
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:42:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// mccarthy.g3:44:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
 			DebugEnterAlt(1);
-			// mccarthy.g3:42:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// mccarthy.g3:44:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
-			DebugLocation(42, 7);
+			DebugLocation(44, 7);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1081,8 +992,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				Recover(mse);
 				throw mse;}
 
-			DebugLocation(42, 31);
-			// mccarthy.g3:42:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			DebugLocation(44, 31);
+			// mccarthy.g3:44:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -1103,7 +1014,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// mccarthy.g3:
 					{
-					DebugLocation(42, 31);
+					DebugLocation(44, 31);
 					input.Consume();
 
 
@@ -1128,8 +1039,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ID", 27);
-			LeaveRule("ID", 27);
+			TraceOut("ID", 24);
+			LeaveRule("ID", 24);
 			LeaveRule_ID();
 		}
 	}
@@ -1143,18 +1054,18 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mINT()
 	{
 		EnterRule_INT();
-		EnterRule("INT", 28);
-		TraceIn("INT", 28);
+		EnterRule("INT", 25);
+		TraceIn("INT", 25);
 		try
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:45:5: ( ( '0' .. '9' )+ )
+			// mccarthy.g3:47:5: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// mccarthy.g3:45:7: ( '0' .. '9' )+
+			// mccarthy.g3:47:7: ( '0' .. '9' )+
 			{
-			DebugLocation(45, 7);
-			// mccarthy.g3:45:7: ( '0' .. '9' )+
+			DebugLocation(47, 7);
+			// mccarthy.g3:47:7: ( '0' .. '9' )+
 			int cnt2=0;
 			try { DebugEnterSubRule(2);
 			while (true)
@@ -1176,7 +1087,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// mccarthy.g3:
 					{
-					DebugLocation(45, 7);
+					DebugLocation(47, 7);
 					input.Consume();
 
 
@@ -1206,8 +1117,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INT", 28);
-			LeaveRule("INT", 28);
+			TraceOut("INT", 25);
+			LeaveRule("INT", 25);
 			LeaveRule_INT();
 		}
 	}
@@ -1221,13 +1132,13 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mSTRING()
 	{
 		EnterRule_STRING();
-		EnterRule("STRING", 29);
-		TraceIn("STRING", 29);
+		EnterRule("STRING", 26);
+		TraceIn("STRING", 26);
 		try
 		{
 			int _type = STRING;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:48:2: ( '\\'' ( . )* '\\'' | '\\\"' ( . )* '\\\"' )
+			// mccarthy.g3:50:2: ( '\\'' ( . )* '\\'' | '\\\"' ( . )* '\\\"' )
 			int alt5=2;
 			try { DebugEnterDecision(5, false);
 			int LA5_0 = input.LA(1);
@@ -1251,12 +1162,12 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// mccarthy.g3:48:4: '\\'' ( . )* '\\''
+				// mccarthy.g3:50:4: '\\'' ( . )* '\\''
 				{
-				DebugLocation(48, 4);
+				DebugLocation(50, 4);
 				Match('\''); 
-				DebugLocation(48, 9);
-				// mccarthy.g3:48:9: ( . )*
+				DebugLocation(50, 9);
+				// mccarthy.g3:50:9: ( . )*
 				try { DebugEnterSubRule(3);
 				while (true)
 				{
@@ -1279,9 +1190,9 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// mccarthy.g3:48:9: .
+						// mccarthy.g3:50:9: .
 						{
-						DebugLocation(48, 9);
+						DebugLocation(50, 9);
 						MatchAny(); 
 
 						}
@@ -1297,19 +1208,19 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(3); }
 
-				DebugLocation(48, 12);
+				DebugLocation(50, 12);
 				Match('\''); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// mccarthy.g3:49:4: '\\\"' ( . )* '\\\"'
+				// mccarthy.g3:51:4: '\\\"' ( . )* '\\\"'
 				{
-				DebugLocation(49, 4);
+				DebugLocation(51, 4);
 				Match('\"'); 
-				DebugLocation(49, 9);
-				// mccarthy.g3:49:9: ( . )*
+				DebugLocation(51, 9);
+				// mccarthy.g3:51:9: ( . )*
 				try { DebugEnterSubRule(4);
 				while (true)
 				{
@@ -1332,9 +1243,9 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// mccarthy.g3:49:9: .
+						// mccarthy.g3:51:9: .
 						{
-						DebugLocation(49, 9);
+						DebugLocation(51, 9);
 						MatchAny(); 
 
 						}
@@ -1350,7 +1261,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(4); }
 
-				DebugLocation(49, 12);
+				DebugLocation(51, 12);
 				Match('\"'); 
 
 				}
@@ -1362,8 +1273,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("STRING", 29);
-			LeaveRule("STRING", 29);
+			TraceOut("STRING", 26);
+			LeaveRule("STRING", 26);
 			LeaveRule_STRING();
 		}
 	}
@@ -1377,13 +1288,13 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mCOMMENT()
 	{
 		EnterRule_COMMENT();
-		EnterRule("COMMENT", 30);
-		TraceIn("COMMENT", 30);
+		EnterRule("COMMENT", 27);
+		TraceIn("COMMENT", 27);
 		try
 		{
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:52:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// mccarthy.g3:54:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt9=2;
 			try { DebugEnterDecision(9, false);
 			int LA9_0 = input.LA(1);
@@ -1418,13 +1329,13 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// mccarthy.g3:52:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+				// mccarthy.g3:54:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 				{
-				DebugLocation(52, 9);
+				DebugLocation(54, 9);
 				Match("//"); 
 
-				DebugLocation(52, 14);
-				// mccarthy.g3:52:14: (~ ( '\\n' | '\\r' ) )*
+				DebugLocation(54, 14);
+				// mccarthy.g3:54:14: (~ ( '\\n' | '\\r' ) )*
 				try { DebugEnterSubRule(6);
 				while (true)
 				{
@@ -1445,7 +1356,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// mccarthy.g3:
 						{
-						DebugLocation(52, 14);
+						DebugLocation(54, 14);
 						input.Consume();
 
 
@@ -1462,8 +1373,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(52, 28);
-				// mccarthy.g3:52:28: ( '\\r' )?
+				DebugLocation(54, 28);
+				// mccarthy.g3:54:28: ( '\\r' )?
 				int alt7=2;
 				try { DebugEnterSubRule(7);
 				try { DebugEnterDecision(7, false);
@@ -1478,9 +1389,9 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:52:28: '\\r'
+					// mccarthy.g3:54:28: '\\r'
 					{
-					DebugLocation(52, 28);
+					DebugLocation(54, 28);
 					Match('\r'); 
 
 					}
@@ -1489,22 +1400,22 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(52, 34);
+				DebugLocation(54, 34);
 				Match('\n'); 
-				DebugLocation(52, 39);
+				DebugLocation(54, 39);
 				_channel=Hidden;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// mccarthy.g3:53:9: '/*' ( options {greedy=false; } : . )* '*/'
+				// mccarthy.g3:55:9: '/*' ( options {greedy=false; } : . )* '*/'
 				{
-				DebugLocation(53, 9);
+				DebugLocation(55, 9);
 				Match("/*"); 
 
-				DebugLocation(53, 14);
-				// mccarthy.g3:53:14: ( options {greedy=false; } : . )*
+				DebugLocation(55, 14);
+				// mccarthy.g3:55:14: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(8);
 				while (true)
 				{
@@ -1538,9 +1449,9 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// mccarthy.g3:53:42: .
+						// mccarthy.g3:55:42: .
 						{
-						DebugLocation(53, 42);
+						DebugLocation(55, 42);
 						MatchAny(); 
 
 						}
@@ -1556,10 +1467,10 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(53, 47);
+				DebugLocation(55, 47);
 				Match("*/"); 
 
-				DebugLocation(53, 52);
+				DebugLocation(55, 52);
 				_channel=Hidden;
 
 				}
@@ -1571,8 +1482,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("COMMENT", 30);
-			LeaveRule("COMMENT", 30);
+			TraceOut("COMMENT", 27);
+			LeaveRule("COMMENT", 27);
 			LeaveRule_COMMENT();
 		}
 	}
@@ -1586,17 +1497,17 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mWS()
 	{
 		EnterRule_WS();
-		EnterRule("WS", 31);
-		TraceIn("WS", 31);
+		EnterRule("WS", 28);
+		TraceIn("WS", 28);
 		try
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:56:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// mccarthy.g3:58:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:56:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// mccarthy.g3:58:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
-			DebugLocation(56, 9);
+			DebugLocation(58, 9);
 			if ((input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -1609,7 +1520,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				Recover(mse);
 				throw mse;}
 
-			DebugLocation(60, 11);
+			DebugLocation(62, 11);
 			_channel=Hidden;
 
 			}
@@ -1619,8 +1530,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WS", 31);
-			LeaveRule("WS", 31);
+			TraceOut("WS", 28);
+			LeaveRule("WS", 28);
 			LeaveRule_WS();
 		}
 	}
@@ -1634,17 +1545,17 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mGENERIC_ID()
 	{
 		EnterRule_GENERIC_ID();
-		EnterRule("GENERIC_ID", 32);
-		TraceIn("GENERIC_ID", 32);
+		EnterRule("GENERIC_ID", 29);
+		TraceIn("GENERIC_ID", 29);
 		try
 		{
 			int _type = GENERIC_ID;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:68:5: ( ( LETTER | '_' | ':' ) ( NAMECHAR )* )
+			// mccarthy.g3:70:5: ( ( LETTER | '_' | ':' ) ( NAMECHAR )* )
 			DebugEnterAlt(1);
-			// mccarthy.g3:69:7: ( LETTER | '_' | ':' ) ( NAMECHAR )*
+			// mccarthy.g3:71:7: ( LETTER | '_' | ':' ) ( NAMECHAR )*
 			{
-			DebugLocation(69, 7);
+			DebugLocation(71, 7);
 			if (input.LA(1)==':'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1657,8 +1568,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				Recover(mse);
 				throw mse;}
 
-			DebugLocation(69, 29);
-			// mccarthy.g3:69:29: ( NAMECHAR )*
+			DebugLocation(71, 29);
+			// mccarthy.g3:71:29: ( NAMECHAR )*
 			try { DebugEnterSubRule(10);
 			while (true)
 			{
@@ -1666,7 +1577,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				try { DebugEnterDecision(10, false);
 				int LA10_0 = input.LA(1);
 
-				if (((LA10_0>='-' && LA10_0<='.')||(LA10_0>='0' && LA10_0<=':')||(LA10_0>='A' && LA10_0<='Z')||LA10_0=='_'||(LA10_0>='a' && LA10_0<='z')))
+				if ((LA10_0=='.'||(LA10_0>='0' && LA10_0<=':')||(LA10_0>='A' && LA10_0<='Z')||LA10_0=='_'||(LA10_0>='a' && LA10_0<='z')))
 				{
 					alt10 = 1;
 				}
@@ -1679,7 +1590,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// mccarthy.g3:
 					{
-					DebugLocation(69, 29);
+					DebugLocation(71, 29);
 					input.Consume();
 
 
@@ -1704,8 +1615,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("GENERIC_ID", 32);
-			LeaveRule("GENERIC_ID", 32);
+			TraceOut("GENERIC_ID", 29);
+			LeaveRule("GENERIC_ID", 29);
 			LeaveRule_GENERIC_ID();
 		}
 	}
@@ -1719,17 +1630,17 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mMATCHOP()
 	{
 		EnterRule_MATCHOP();
-		EnterRule("MATCHOP", 33);
-		TraceIn("MATCHOP", 33);
+		EnterRule("MATCHOP", 30);
+		TraceIn("MATCHOP", 30);
 		try
 		{
 			int _type = MATCHOP;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:71:9: ( '=?' )
+			// mccarthy.g3:73:9: ( '=?' )
 			DebugEnterAlt(1);
-			// mccarthy.g3:71:11: '=?'
+			// mccarthy.g3:73:11: '=?'
 			{
-			DebugLocation(71, 11);
+			DebugLocation(73, 11);
 			Match("=?"); 
 
 
@@ -1740,12 +1651,610 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("MATCHOP", 33);
-			LeaveRule("MATCHOP", 33);
+			TraceOut("MATCHOP", 30);
+			LeaveRule("MATCHOP", 30);
 			LeaveRule_MATCHOP();
 		}
 	}
 	// $ANTLR end "MATCHOP"
+
+	partial void EnterRule_OR();
+	partial void LeaveRule_OR();
+
+	// $ANTLR start "OR"
+	[GrammarRule("OR")]
+	private void mOR()
+	{
+		EnterRule_OR();
+		EnterRule("OR", 31);
+		TraceIn("OR", 31);
+		try
+		{
+			int _type = OR;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:75:7: ( '||' | 'or' )
+			int alt11=2;
+			try { DebugEnterDecision(11, false);
+			int LA11_0 = input.LA(1);
+
+			if ((LA11_0=='|'))
+			{
+				alt11 = 1;
+			}
+			else if ((LA11_0=='o'))
+			{
+				alt11 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 11, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(11); }
+			switch (alt11)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// mccarthy.g3:75:13: '||'
+				{
+				DebugLocation(75, 13);
+				Match("||"); 
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// mccarthy.g3:75:20: 'or'
+				{
+				DebugLocation(75, 20);
+				Match("or"); 
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("OR", 31);
+			LeaveRule("OR", 31);
+			LeaveRule_OR();
+		}
+	}
+	// $ANTLR end "OR"
+
+	partial void EnterRule_AND();
+	partial void LeaveRule_AND();
+
+	// $ANTLR start "AND"
+	[GrammarRule("AND")]
+	private void mAND()
+	{
+		EnterRule_AND();
+		EnterRule("AND", 32);
+		TraceIn("AND", 32);
+		try
+		{
+			int _type = AND;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:76:7: ( '&&' | 'and' )
+			int alt12=2;
+			try { DebugEnterDecision(12, false);
+			int LA12_0 = input.LA(1);
+
+			if ((LA12_0=='&'))
+			{
+				alt12 = 1;
+			}
+			else if ((LA12_0=='a'))
+			{
+				alt12 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 12, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(12); }
+			switch (alt12)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// mccarthy.g3:76:13: '&&'
+				{
+				DebugLocation(76, 13);
+				Match("&&"); 
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// mccarthy.g3:76:20: 'and'
+				{
+				DebugLocation(76, 20);
+				Match("and"); 
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("AND", 32);
+			LeaveRule("AND", 32);
+			LeaveRule_AND();
+		}
+	}
+	// $ANTLR end "AND"
+
+	partial void EnterRule_EQUALS();
+	partial void LeaveRule_EQUALS();
+
+	// $ANTLR start "EQUALS"
+	[GrammarRule("EQUALS")]
+	private void mEQUALS()
+	{
+		EnterRule_EQUALS();
+		EnterRule("EQUALS", 33);
+		TraceIn("EQUALS", 33);
+		try
+		{
+			int _type = EQUALS;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:78:7: ( '===' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:78:12: '==='
+			{
+			DebugLocation(78, 12);
+			Match("==="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("EQUALS", 33);
+			LeaveRule("EQUALS", 33);
+			LeaveRule_EQUALS();
+		}
+	}
+	// $ANTLR end "EQUALS"
+
+	partial void EnterRule_NOTEQUALS();
+	partial void LeaveRule_NOTEQUALS();
+
+	// $ANTLR start "NOTEQUALS"
+	[GrammarRule("NOTEQUALS")]
+	private void mNOTEQUALS()
+	{
+		EnterRule_NOTEQUALS();
+		EnterRule("NOTEQUALS", 34);
+		TraceIn("NOTEQUALS", 34);
+		try
+		{
+			int _type = NOTEQUALS;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:80:7: ( '!=' | '<>' )
+			int alt13=2;
+			try { DebugEnterDecision(13, false);
+			int LA13_0 = input.LA(1);
+
+			if ((LA13_0=='!'))
+			{
+				alt13 = 1;
+			}
+			else if ((LA13_0=='<'))
+			{
+				alt13 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 13, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(13); }
+			switch (alt13)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// mccarthy.g3:80:12: '!='
+				{
+				DebugLocation(80, 12);
+				Match("!="); 
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// mccarthy.g3:80:19: '<>'
+				{
+				DebugLocation(80, 19);
+				Match("<>"); 
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("NOTEQUALS", 34);
+			LeaveRule("NOTEQUALS", 34);
+			LeaveRule_NOTEQUALS();
+		}
+	}
+	// $ANTLR end "NOTEQUALS"
+
+	partial void EnterRule_LT();
+	partial void LeaveRule_LT();
+
+	// $ANTLR start "LT"
+	[GrammarRule("LT")]
+	private void mLT()
+	{
+		EnterRule_LT();
+		EnterRule("LT", 35);
+		TraceIn("LT", 35);
+		try
+		{
+			int _type = LT;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:81:7: ( '<' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:81:12: '<'
+			{
+			DebugLocation(81, 12);
+			Match('<'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("LT", 35);
+			LeaveRule("LT", 35);
+			LeaveRule_LT();
+		}
+	}
+	// $ANTLR end "LT"
+
+	partial void EnterRule_LTEQ();
+	partial void LeaveRule_LTEQ();
+
+	// $ANTLR start "LTEQ"
+	[GrammarRule("LTEQ")]
+	private void mLTEQ()
+	{
+		EnterRule_LTEQ();
+		EnterRule("LTEQ", 36);
+		TraceIn("LTEQ", 36);
+		try
+		{
+			int _type = LTEQ;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:82:7: ( '<=' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:82:12: '<='
+			{
+			DebugLocation(82, 12);
+			Match("<="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("LTEQ", 36);
+			LeaveRule("LTEQ", 36);
+			LeaveRule_LTEQ();
+		}
+	}
+	// $ANTLR end "LTEQ"
+
+	partial void EnterRule_GT();
+	partial void LeaveRule_GT();
+
+	// $ANTLR start "GT"
+	[GrammarRule("GT")]
+	private void mGT()
+	{
+		EnterRule_GT();
+		EnterRule("GT", 37);
+		TraceIn("GT", 37);
+		try
+		{
+			int _type = GT;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:83:7: ( '>' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:83:12: '>'
+			{
+			DebugLocation(83, 12);
+			Match('>'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("GT", 37);
+			LeaveRule("GT", 37);
+			LeaveRule_GT();
+		}
+	}
+	// $ANTLR end "GT"
+
+	partial void EnterRule_GTEQ();
+	partial void LeaveRule_GTEQ();
+
+	// $ANTLR start "GTEQ"
+	[GrammarRule("GTEQ")]
+	private void mGTEQ()
+	{
+		EnterRule_GTEQ();
+		EnterRule("GTEQ", 38);
+		TraceIn("GTEQ", 38);
+		try
+		{
+			int _type = GTEQ;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:84:7: ( '>=' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:84:12: '>='
+			{
+			DebugLocation(84, 12);
+			Match(">="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("GTEQ", 38);
+			LeaveRule("GTEQ", 38);
+			LeaveRule_GTEQ();
+		}
+	}
+	// $ANTLR end "GTEQ"
+
+	partial void EnterRule_PLUS();
+	partial void LeaveRule_PLUS();
+
+	// $ANTLR start "PLUS"
+	[GrammarRule("PLUS")]
+	private void mPLUS()
+	{
+		EnterRule_PLUS();
+		EnterRule("PLUS", 39);
+		TraceIn("PLUS", 39);
+		try
+		{
+			int _type = PLUS;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:85:7: ( '+' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:85:12: '+'
+			{
+			DebugLocation(85, 12);
+			Match('+'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("PLUS", 39);
+			LeaveRule("PLUS", 39);
+			LeaveRule_PLUS();
+		}
+	}
+	// $ANTLR end "PLUS"
+
+	partial void EnterRule_MINUS();
+	partial void LeaveRule_MINUS();
+
+	// $ANTLR start "MINUS"
+	[GrammarRule("MINUS")]
+	private void mMINUS()
+	{
+		EnterRule_MINUS();
+		EnterRule("MINUS", 40);
+		TraceIn("MINUS", 40);
+		try
+		{
+			int _type = MINUS;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:86:7: ( '-' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:86:12: '-'
+			{
+			DebugLocation(86, 12);
+			Match('-'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MINUS", 40);
+			LeaveRule("MINUS", 40);
+			LeaveRule_MINUS();
+		}
+	}
+	// $ANTLR end "MINUS"
+
+	partial void EnterRule_MULT();
+	partial void LeaveRule_MULT();
+
+	// $ANTLR start "MULT"
+	[GrammarRule("MULT")]
+	private void mMULT()
+	{
+		EnterRule_MULT();
+		EnterRule("MULT", 41);
+		TraceIn("MULT", 41);
+		try
+		{
+			int _type = MULT;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:87:7: ( '*' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:87:12: '*'
+			{
+			DebugLocation(87, 12);
+			Match('*'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MULT", 41);
+			LeaveRule("MULT", 41);
+			LeaveRule_MULT();
+		}
+	}
+	// $ANTLR end "MULT"
+
+	partial void EnterRule_DIV();
+	partial void LeaveRule_DIV();
+
+	// $ANTLR start "DIV"
+	[GrammarRule("DIV")]
+	private void mDIV()
+	{
+		EnterRule_DIV();
+		EnterRule("DIV", 42);
+		TraceIn("DIV", 42);
+		try
+		{
+			int _type = DIV;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:88:7: ( '/' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:88:12: '/'
+			{
+			DebugLocation(88, 12);
+			Match('/'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("DIV", 42);
+			LeaveRule("DIV", 42);
+			LeaveRule_DIV();
+		}
+	}
+	// $ANTLR end "DIV"
+
+	partial void EnterRule_MOD();
+	partial void LeaveRule_MOD();
+
+	// $ANTLR start "MOD"
+	[GrammarRule("MOD")]
+	private void mMOD()
+	{
+		EnterRule_MOD();
+		EnterRule("MOD", 43);
+		TraceIn("MOD", 43);
+		try
+		{
+			int _type = MOD;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:89:7: ( '%' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:89:12: '%'
+			{
+			DebugLocation(89, 12);
+			Match('%'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MOD", 43);
+			LeaveRule("MOD", 43);
+			LeaveRule_MOD();
+		}
+	}
+	// $ANTLR end "MOD"
+
+	partial void EnterRule_NOT();
+	partial void LeaveRule_NOT();
+
+	// $ANTLR start "NOT"
+	[GrammarRule("NOT")]
+	private void mNOT()
+	{
+		EnterRule_NOT();
+		EnterRule("NOT", 44);
+		TraceIn("NOT", 44);
+		try
+		{
+			int _type = NOT;
+			int _channel = DefaultTokenChannel;
+			// mccarthy.g3:90:7: ( '~' )
+			DebugEnterAlt(1);
+			// mccarthy.g3:90:12: '~'
+			{
+			DebugLocation(90, 12);
+			Match('~'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("NOT", 44);
+			LeaveRule("NOT", 44);
+			LeaveRule_NOT();
+		}
+	}
+	// $ANTLR end "NOT"
 
 	partial void EnterRule_NAMECHAR();
 	partial void LeaveRule_NAMECHAR();
@@ -1755,16 +2264,16 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mNAMECHAR()
 	{
 		EnterRule_NAMECHAR();
-		EnterRule("NAMECHAR", 34);
-		TraceIn("NAMECHAR", 34);
+		EnterRule("NAMECHAR", 45);
+		TraceIn("NAMECHAR", 45);
 		try
 		{
-			// mccarthy.g3:74:5: ( LETTER | DIGIT | '.' | '-' | '_' | ':' )
+			// mccarthy.g3:94:5: ( LETTER | DIGIT | '.' | '_' | ':' )
 			DebugEnterAlt(1);
 			// mccarthy.g3:
 			{
-			DebugLocation(74, 5);
-			if ((input.LA(1)>='-' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
+			DebugLocation(94, 5);
+			if (input.LA(1)=='.'||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
 
@@ -1782,8 +2291,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NAMECHAR", 34);
-			LeaveRule("NAMECHAR", 34);
+			TraceOut("NAMECHAR", 45);
+			LeaveRule("NAMECHAR", 45);
 			LeaveRule_NAMECHAR();
 		}
 	}
@@ -1797,15 +2306,15 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mDIGIT()
 	{
 		EnterRule_DIGIT();
-		EnterRule("DIGIT", 35);
-		TraceIn("DIGIT", 35);
+		EnterRule("DIGIT", 46);
+		TraceIn("DIGIT", 46);
 		try
 		{
-			// mccarthy.g3:78:5: ( '0' .. '9' )
+			// mccarthy.g3:98:5: ( '0' .. '9' )
 			DebugEnterAlt(1);
 			// mccarthy.g3:
 			{
-			DebugLocation(78, 5);
+			DebugLocation(98, 5);
 			if ((input.LA(1)>='0' && input.LA(1)<='9'))
 			{
 				input.Consume();
@@ -1824,8 +2333,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DIGIT", 35);
-			LeaveRule("DIGIT", 35);
+			TraceOut("DIGIT", 46);
+			LeaveRule("DIGIT", 46);
 			LeaveRule_DIGIT();
 		}
 	}
@@ -1839,15 +2348,15 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mLETTER()
 	{
 		EnterRule_LETTER();
-		EnterRule("LETTER", 36);
-		TraceIn("LETTER", 36);
+		EnterRule("LETTER", 47);
+		TraceIn("LETTER", 47);
 		try
 		{
-			// mccarthy.g3:82:5: ( 'a' .. 'z' | 'A' .. 'Z' )
+			// mccarthy.g3:102:5: ( 'a' .. 'z' | 'A' .. 'Z' )
 			DebugEnterAlt(1);
 			// mccarthy.g3:
 			{
-			DebugLocation(82, 5);
+			DebugLocation(102, 5);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1866,8 +2375,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LETTER", 36);
-			LeaveRule("LETTER", 36);
+			TraceOut("LETTER", 47);
+			LeaveRule("LETTER", 47);
 			LeaveRule_LETTER();
 		}
 	}
@@ -1881,15 +2390,15 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mTEXT()
 	{
 		EnterRule_TEXT();
-		EnterRule("TEXT", 37);
-		TraceIn("TEXT", 37);
+		EnterRule("TEXT", 48);
+		TraceIn("TEXT", 48);
 		try
 		{
 			int _type = TEXT;
 			int _channel = DefaultTokenChannel;
-			// mccarthy.g3:213:6: ()
+			// mccarthy.g3:292:6: ()
 			DebugEnterAlt(1);
-			// mccarthy.g3:213:8: 
+			// mccarthy.g3:292:8: 
 			{
 			}
 
@@ -1898,8 +2407,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("TEXT", 37);
-			LeaveRule("TEXT", 37);
+			TraceOut("TEXT", 48);
+			LeaveRule("TEXT", 48);
 			LeaveRule_TEXT();
 		}
 	}
@@ -1907,323 +2416,422 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// mccarthy.g3:1:8: ( T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | ID | INT | STRING | COMMENT | WS | GENERIC_ID | MATCHOP | TEXT )
-		int alt11=34;
-		try { DebugEnterDecision(11, false);
+		// mccarthy.g3:1:8: ( T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | ID | INT | STRING | COMMENT | WS | GENERIC_ID | MATCHOP | OR | AND | EQUALS | NOTEQUALS | LT | LTEQ | GT | GTEQ | PLUS | MINUS | MULT | DIV | MOD | NOT | TEXT )
+		int alt14=45;
+		try { DebugEnterDecision(14, false);
 		try
 		{
-			alt11 = dfa11.Predict(input);
+			alt14 = dfa14.Predict(input);
 		}
 		catch (NoViableAltException nvae)
 		{
 			DebugRecognitionException(nvae);
 			throw;
 		}
-		} finally { DebugExitDecision(11); }
-		switch (alt11)
+		} finally { DebugExitDecision(14); }
+		switch (alt14)
 		{
 		case 1:
 			DebugEnterAlt(1);
-			// mccarthy.g3:1:10: T__41
+			// mccarthy.g3:1:10: T__60
 			{
 			DebugLocation(1, 10);
-			mT__41(); 
+			mT__60(); 
 
 			}
 			break;
 		case 2:
 			DebugEnterAlt(2);
-			// mccarthy.g3:1:16: T__42
+			// mccarthy.g3:1:16: T__61
 			{
 			DebugLocation(1, 16);
-			mT__42(); 
+			mT__61(); 
 
 			}
 			break;
 		case 3:
 			DebugEnterAlt(3);
-			// mccarthy.g3:1:22: T__43
+			// mccarthy.g3:1:22: T__62
 			{
 			DebugLocation(1, 22);
-			mT__43(); 
+			mT__62(); 
 
 			}
 			break;
 		case 4:
 			DebugEnterAlt(4);
-			// mccarthy.g3:1:28: T__44
+			// mccarthy.g3:1:28: T__63
 			{
 			DebugLocation(1, 28);
-			mT__44(); 
+			mT__63(); 
 
 			}
 			break;
 		case 5:
 			DebugEnterAlt(5);
-			// mccarthy.g3:1:34: T__45
+			// mccarthy.g3:1:34: T__64
 			{
 			DebugLocation(1, 34);
-			mT__45(); 
+			mT__64(); 
 
 			}
 			break;
 		case 6:
 			DebugEnterAlt(6);
-			// mccarthy.g3:1:40: T__46
+			// mccarthy.g3:1:40: T__65
 			{
 			DebugLocation(1, 40);
-			mT__46(); 
+			mT__65(); 
 
 			}
 			break;
 		case 7:
 			DebugEnterAlt(7);
-			// mccarthy.g3:1:46: T__47
+			// mccarthy.g3:1:46: T__66
 			{
 			DebugLocation(1, 46);
-			mT__47(); 
+			mT__66(); 
 
 			}
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// mccarthy.g3:1:52: T__48
+			// mccarthy.g3:1:52: T__67
 			{
 			DebugLocation(1, 52);
-			mT__48(); 
+			mT__67(); 
 
 			}
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// mccarthy.g3:1:58: T__49
+			// mccarthy.g3:1:58: T__68
 			{
 			DebugLocation(1, 58);
-			mT__49(); 
+			mT__68(); 
 
 			}
 			break;
 		case 10:
 			DebugEnterAlt(10);
-			// mccarthy.g3:1:64: T__50
+			// mccarthy.g3:1:64: T__69
 			{
 			DebugLocation(1, 64);
-			mT__50(); 
+			mT__69(); 
 
 			}
 			break;
 		case 11:
 			DebugEnterAlt(11);
-			// mccarthy.g3:1:70: T__51
+			// mccarthy.g3:1:70: T__70
 			{
 			DebugLocation(1, 70);
-			mT__51(); 
+			mT__70(); 
 
 			}
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// mccarthy.g3:1:76: T__52
+			// mccarthy.g3:1:76: T__71
 			{
 			DebugLocation(1, 76);
-			mT__52(); 
+			mT__71(); 
 
 			}
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// mccarthy.g3:1:82: T__53
+			// mccarthy.g3:1:82: T__72
 			{
 			DebugLocation(1, 82);
-			mT__53(); 
+			mT__72(); 
 
 			}
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// mccarthy.g3:1:88: T__54
+			// mccarthy.g3:1:88: T__73
 			{
 			DebugLocation(1, 88);
-			mT__54(); 
+			mT__73(); 
 
 			}
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// mccarthy.g3:1:94: T__55
+			// mccarthy.g3:1:94: T__74
 			{
 			DebugLocation(1, 94);
-			mT__55(); 
+			mT__74(); 
 
 			}
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// mccarthy.g3:1:100: T__56
+			// mccarthy.g3:1:100: T__75
 			{
 			DebugLocation(1, 100);
-			mT__56(); 
+			mT__75(); 
 
 			}
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// mccarthy.g3:1:106: T__57
+			// mccarthy.g3:1:106: T__76
 			{
 			DebugLocation(1, 106);
-			mT__57(); 
+			mT__76(); 
 
 			}
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// mccarthy.g3:1:112: T__58
+			// mccarthy.g3:1:112: T__77
 			{
 			DebugLocation(1, 112);
-			mT__58(); 
+			mT__77(); 
 
 			}
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// mccarthy.g3:1:118: T__59
+			// mccarthy.g3:1:118: T__78
 			{
 			DebugLocation(1, 118);
-			mT__59(); 
+			mT__78(); 
 
 			}
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// mccarthy.g3:1:124: T__60
+			// mccarthy.g3:1:124: T__79
 			{
 			DebugLocation(1, 124);
-			mT__60(); 
+			mT__79(); 
 
 			}
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// mccarthy.g3:1:130: T__61
+			// mccarthy.g3:1:130: T__80
 			{
 			DebugLocation(1, 130);
-			mT__61(); 
+			mT__80(); 
 
 			}
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// mccarthy.g3:1:136: T__62
+			// mccarthy.g3:1:136: T__81
 			{
 			DebugLocation(1, 136);
-			mT__62(); 
+			mT__81(); 
 
 			}
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// mccarthy.g3:1:142: T__63
+			// mccarthy.g3:1:142: T__82
 			{
 			DebugLocation(1, 142);
-			mT__63(); 
+			mT__82(); 
 
 			}
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// mccarthy.g3:1:148: T__64
+			// mccarthy.g3:1:148: ID
 			{
 			DebugLocation(1, 148);
-			mT__64(); 
+			mID(); 
 
 			}
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// mccarthy.g3:1:154: T__65
+			// mccarthy.g3:1:151: INT
 			{
-			DebugLocation(1, 154);
-			mT__65(); 
+			DebugLocation(1, 151);
+			mINT(); 
 
 			}
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// mccarthy.g3:1:160: T__66
+			// mccarthy.g3:1:155: STRING
 			{
-			DebugLocation(1, 160);
-			mT__66(); 
+			DebugLocation(1, 155);
+			mSTRING(); 
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// mccarthy.g3:1:166: ID
+			// mccarthy.g3:1:162: COMMENT
 			{
-			DebugLocation(1, 166);
-			mID(); 
+			DebugLocation(1, 162);
+			mCOMMENT(); 
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// mccarthy.g3:1:169: INT
+			// mccarthy.g3:1:170: WS
 			{
-			DebugLocation(1, 169);
-			mINT(); 
+			DebugLocation(1, 170);
+			mWS(); 
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// mccarthy.g3:1:173: STRING
+			// mccarthy.g3:1:173: GENERIC_ID
 			{
 			DebugLocation(1, 173);
-			mSTRING(); 
+			mGENERIC_ID(); 
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// mccarthy.g3:1:180: COMMENT
+			// mccarthy.g3:1:184: MATCHOP
 			{
-			DebugLocation(1, 180);
-			mCOMMENT(); 
+			DebugLocation(1, 184);
+			mMATCHOP(); 
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// mccarthy.g3:1:188: WS
+			// mccarthy.g3:1:192: OR
 			{
-			DebugLocation(1, 188);
-			mWS(); 
+			DebugLocation(1, 192);
+			mOR(); 
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// mccarthy.g3:1:191: GENERIC_ID
+			// mccarthy.g3:1:195: AND
 			{
-			DebugLocation(1, 191);
-			mGENERIC_ID(); 
+			DebugLocation(1, 195);
+			mAND(); 
 
 			}
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// mccarthy.g3:1:202: MATCHOP
+			// mccarthy.g3:1:199: EQUALS
 			{
-			DebugLocation(1, 202);
-			mMATCHOP(); 
+			DebugLocation(1, 199);
+			mEQUALS(); 
 
 			}
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// mccarthy.g3:1:210: TEXT
+			// mccarthy.g3:1:206: NOTEQUALS
 			{
-			DebugLocation(1, 210);
+			DebugLocation(1, 206);
+			mNOTEQUALS(); 
+
+			}
+			break;
+		case 35:
+			DebugEnterAlt(35);
+			// mccarthy.g3:1:216: LT
+			{
+			DebugLocation(1, 216);
+			mLT(); 
+
+			}
+			break;
+		case 36:
+			DebugEnterAlt(36);
+			// mccarthy.g3:1:219: LTEQ
+			{
+			DebugLocation(1, 219);
+			mLTEQ(); 
+
+			}
+			break;
+		case 37:
+			DebugEnterAlt(37);
+			// mccarthy.g3:1:224: GT
+			{
+			DebugLocation(1, 224);
+			mGT(); 
+
+			}
+			break;
+		case 38:
+			DebugEnterAlt(38);
+			// mccarthy.g3:1:227: GTEQ
+			{
+			DebugLocation(1, 227);
+			mGTEQ(); 
+
+			}
+			break;
+		case 39:
+			DebugEnterAlt(39);
+			// mccarthy.g3:1:232: PLUS
+			{
+			DebugLocation(1, 232);
+			mPLUS(); 
+
+			}
+			break;
+		case 40:
+			DebugEnterAlt(40);
+			// mccarthy.g3:1:237: MINUS
+			{
+			DebugLocation(1, 237);
+			mMINUS(); 
+
+			}
+			break;
+		case 41:
+			DebugEnterAlt(41);
+			// mccarthy.g3:1:243: MULT
+			{
+			DebugLocation(1, 243);
+			mMULT(); 
+
+			}
+			break;
+		case 42:
+			DebugEnterAlt(42);
+			// mccarthy.g3:1:248: DIV
+			{
+			DebugLocation(1, 248);
+			mDIV(); 
+
+			}
+			break;
+		case 43:
+			DebugEnterAlt(43);
+			// mccarthy.g3:1:252: MOD
+			{
+			DebugLocation(1, 252);
+			mMOD(); 
+
+			}
+			break;
+		case 44:
+			DebugEnterAlt(44);
+			// mccarthy.g3:1:256: NOT
+			{
+			DebugLocation(1, 256);
+			mNOT(); 
+
+			}
+			break;
+		case 45:
+			DebugEnterAlt(45);
+			// mccarthy.g3:1:260: TEXT
+			{
+			DebugLocation(1, 260);
 			mTEXT(); 
 
 			}
@@ -2235,66 +2843,84 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 
 	#region DFA
-	DFA11 dfa11;
+	DFA14 dfa14;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa11 = new DFA11(this);
+		dfa14 = new DFA14(this);
 	}
 
-	private class DFA11 : DFA
+	private class DFA14 : DFA
 	{
-		private const string DFA11_eotS =
-			"\x1\x16\x1\x18\x5\xFFFF\x1\x1B\x1\x1C\x1\xFFFF\x1\x1F\x1\x24\x1\xFFFF"+
-			"\x1\x26\x2\x29\x2\xFFFF\x1\x29\xF\xFFFF\x1\x2D\x4\xFFFF\x2\x29\x1\xFFFF"+
-			"\x1\x29\x3\xFFFF\x6\x29\x1\x36\x1\x37\x2\xFFFF";
-		private const string DFA11_eofS =
-			"\x38\xFFFF";
-		private const string DFA11_minS =
-			"\x1\x9\x1\x3D\x5\xFFFF\x1\x2A\x1\x2D\x1\xFFFF\x1\x3F\x1\x3C\x1\xFFFF"+
-			"\x1\x3E\x2\x2D\x2\xFFFF\x1\x2D\xF\xFFFF\x1\x3C\x4\xFFFF\x2\x2D\x1\xFFFF"+
-			"\x1\x2D\x3\xFFFF\x8\x2D\x2\xFFFF";
-		private const string DFA11_maxS =
-			"\x1\x7D\x1\x3D\x5\xFFFF\x1\x3E\x1\x7A\x1\xFFFF\x2\x3F\x1\xFFFF\x1\x3E"+
-			"\x2\x7A\x2\xFFFF\x1\x7A\xF\xFFFF\x1\x3E\x4\xFFFF\x2\x7A\x1\xFFFF\x1\x7A"+
-			"\x3\xFFFF\x8\x7A\x2\xFFFF";
-		private const string DFA11_acceptS =
-			"\x2\xFFFF\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x2\xFFFF\x1\xB\x2\xFFFF\x1\x14"+
-			"\x3\xFFFF\x1\x19\x1\x1A\x1\xFFFF\x1\x1C\x1\x1D\x1\x1F\x1\x22\x1\x2\x1"+
-			"\x1\x1\x9\x1\x1E\x1\x8\x1\xA\x1\x20\x1\xD\x1\xC\x1\xF\x1\x10\x1\xFFFF"+
-			"\x1\x21\x1\xE\x1\x16\x1\x15\x2\xFFFF\x1\x1B\x1\xFFFF\x1\x12\x1\x13\x1"+
-			"\x11\x8\xFFFF\x1\x17\x1\x18";
-		private const string DFA11_specialS =
-			"\x38\xFFFF}>";
-		private static readonly string[] DFA11_transitionS =
+		private const string DFA14_eotS =
+			"\x1\x1E\x1\x20\x4\xFFFF\x1\x22\x1\x25\x1\x26\x1\xFFFF\x1\x2B\x1\x30\x1"+
+			"\x32\x2\x35\x2\xFFFF\x1\x35\x4\xFFFF\x1\x35\x1\xFFFF\x1\x35\x1\x3A\x13"+
+			"\xFFFF\x1\x3D\x1\x40\x4\xFFFF\x2\x35\x1\xFFFF\x3\x35\x8\xFFFF\x7\x35"+
+			"\x1\x4A\x1\x4B\x2\xFFFF";
+		private const string DFA14_eofS =
+			"\x4C\xFFFF";
+		private const string DFA14_minS =
+			"\x1\x9\x1\x3D\x4\xFFFF\x1\x3E\x1\x2A\x1\x2E\x1\xFFFF\x1\x3D\x1\x3C\x1"+
+			"\x3E\x2\x2E\x2\xFFFF\x1\x2E\x4\xFFFF\x1\x2E\x1\xFFFF\x1\x2E\x1\x3D\x13"+
+			"\xFFFF\x1\x3D\x1\x3C\x4\xFFFF\x2\x2E\x1\xFFFF\x3\x2E\x8\xFFFF\x9\x2E"+
+			"\x2\xFFFF";
+		private const string DFA14_maxS =
+			"\x1\x7E\x1\x3D\x4\xFFFF\x2\x3E\x1\x7A\x1\xFFFF\x2\x3F\x1\x3E\x2\x7A\x2"+
+			"\xFFFF\x1\x7A\x4\xFFFF\x1\x7A\x1\xFFFF\x1\x7A\x1\x3D\x13\xFFFF\x1\x3D"+
+			"\x1\x3E\x4\xFFFF\x2\x7A\x1\xFFFF\x3\x7A\x8\xFFFF\x9\x7A\x2\xFFFF";
+		private const string DFA14_acceptS =
+			"\x2\xFFFF\x1\x3\x1\x4\x1\x5\x1\x6\x3\xFFFF\x1\xA\x5\xFFFF\x1\x16\x1\x17"+
+			"\x1\xFFFF\x1\x19\x1\x1A\x1\x1C\x1\x1F\x1\xFFFF\x1\x20\x2\xFFFF\x1\x27"+
+			"\x1\x29\x1\x2B\x1\x2C\x1\x2D\x1\x2\x1\x1\x1\x7\x1\x28\x1\x8\x1\x1B\x1"+
+			"\x2A\x1\x9\x1\x1D\x1\xB\x1\x22\x1\x24\x1\x23\x1\xD\x2\xFFFF\x1\x1E\x1"+
+			"\xC\x1\x13\x1\x12\x2\xFFFF\x1\x18\x3\xFFFF\x1\x26\x1\x25\x1\x2\x1\x21"+
+			"\x1\xE\x1\x10\x1\x11\x1\xF\x9\xFFFF\x1\x14\x1\x15";
+		private const string DFA14_specialS =
+			"\x4C\xFFFF}>";
+		private static readonly string[] DFA14_transitionS =
 			{
-				"\x2\x15\x2\xFFFF\x1\x15\x12\xFFFF\x1\x15\x1\x1\x1\x14\x1\xFFFF\x1\x2"+
-				"\x2\xFFFF\x1\x14\x1\x3\x1\x4\x2\xFFFF\x1\x5\x1\x6\x1\xFFFF\x1\x7\xA"+
-				"\x13\x1\x8\x1\x9\x1\xA\x1\xB\x1\xC\x1\xD\x1\xFFFF\x1A\x12\x4\xFFFF\x1"+
-				"\x12\x1\xFFFF\x8\x12\x1\xE\x3\x12\x1\xF\xD\x12\x1\x10\x1\xFFFF\x1\x11",
-				"\x1\x17",
+				"\x2\x14\x2\xFFFF\x1\x14\x12\xFFFF\x1\x14\x1\x1\x1\x13\x1\xFFFF\x1\x2"+
+				"\x1\x1C\x1\x17\x1\x13\x1\x3\x1\x4\x1\x1B\x1\x1A\x1\x5\x1\x6\x1\xFFFF"+
+				"\x1\x7\xA\x12\x1\x8\x1\x9\x1\xA\x1\xB\x1\x19\x1\xC\x1\xFFFF\x1A\x18"+
+				"\x4\xFFFF\x1\x18\x1\xFFFF\x1\x16\x7\x18\x1\xD\x3\x18\x1\xE\x1\x18\x1"+
+				"\x11\xB\x18\x1\xF\x1\x15\x1\x10\x1\x1D",
+				"\x1\x1F",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x21",
+				"\x1\x24\x4\xFFFF\x1\x24\xE\xFFFF\x1\x23",
+				"\x1\x27\x1\xFFFF\xB\x27\x6\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A"+
+				"\x27",
+				"",
+				"\x1\x2A\x1\x29\x1\x28",
+				"\x1\x2C\x1\x2D\x1\x2E\x1\x2F",
+				"\x1\x31",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\xC\x34\x1\x33\xD\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\xE\x34\x1\x36\xB\x34",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x11\x34\x1\x37\x8\x34",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\xD\x34\x1\x38\xC\x34",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x1A\x34",
+				"\x1\x39",
 				"",
 				"",
 				"",
 				"",
 				"",
-				"\x1\x1A\x4\xFFFF\x1\x1A\xE\xFFFF\x1\x19",
-				"\x2\x1D\x1\xFFFF\xB\x1D\x6\xFFFF\x1A\x1D\x4\xFFFF\x1\x1D\x1\xFFFF\x1A"+
-				"\x1D",
-				"",
-				"\x1\x1E",
-				"\x1\x20\x1\x21\x1\x22\x1\x23",
-				"",
-				"\x1\x25",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\xC\x28\x1\x27\xD\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\xE\x28\x1\x2A\xB\x28",
-				"",
-				"",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x1A\x28",
 				"",
 				"",
 				"",
@@ -2309,74 +2935,85 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
-				"",
-				"\x1\x2B\x1\xFFFF\x1\x2C",
-				"",
-				"",
-				"",
-				"",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\xF\x28\x1\x2E\xA\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x1A\x28",
-				"",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x3\x28\x1\x2F\x16\x28",
+				"\x1\x3C",
+				"\x1\x3E\x1\xFFFF\x1\x3F",
 				"",
 				"",
 				"",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\xE\x28\x1\x30\xB\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x14\x28\x1\x31\x5\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x11\x28\x1\x32\x8\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\xB\x28\x1\x33\xE\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x13\x28\x1\x34\x6\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x4\x28\x1\x35\x15\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x1A\x28",
-				"\x2\x1D\x1\xFFFF\xA\x28\x1\x1D\x6\xFFFF\x1A\x28\x4\xFFFF\x1\x28\x1\xFFFF"+
-				"\x1A\x28",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\xF\x34\x1\x41\xA\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x1A\x34",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x3\x34\x1\x42\x16\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x1A\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x3\x34\x1\x43\x16\x34",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\xE\x34\x1\x44\xB\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x14\x34\x1\x45\x5\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x1A\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x11\x34\x1\x46\x8\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\xB\x34\x1\x47\xE\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x13\x34\x1\x48\x6\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x4\x34\x1\x49\x15\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x1A\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF"+
+				"\x1A\x34",
 				"",
 				""
 			};
 
-		private static readonly short[] DFA11_eot = DFA.UnpackEncodedString(DFA11_eotS);
-		private static readonly short[] DFA11_eof = DFA.UnpackEncodedString(DFA11_eofS);
-		private static readonly char[] DFA11_min = DFA.UnpackEncodedStringToUnsignedChars(DFA11_minS);
-		private static readonly char[] DFA11_max = DFA.UnpackEncodedStringToUnsignedChars(DFA11_maxS);
-		private static readonly short[] DFA11_accept = DFA.UnpackEncodedString(DFA11_acceptS);
-		private static readonly short[] DFA11_special = DFA.UnpackEncodedString(DFA11_specialS);
-		private static readonly short[][] DFA11_transition;
+		private static readonly short[] DFA14_eot = DFA.UnpackEncodedString(DFA14_eotS);
+		private static readonly short[] DFA14_eof = DFA.UnpackEncodedString(DFA14_eofS);
+		private static readonly char[] DFA14_min = DFA.UnpackEncodedStringToUnsignedChars(DFA14_minS);
+		private static readonly char[] DFA14_max = DFA.UnpackEncodedStringToUnsignedChars(DFA14_maxS);
+		private static readonly short[] DFA14_accept = DFA.UnpackEncodedString(DFA14_acceptS);
+		private static readonly short[] DFA14_special = DFA.UnpackEncodedString(DFA14_specialS);
+		private static readonly short[][] DFA14_transition;
 
-		static DFA11()
+		static DFA14()
 		{
-			int numStates = DFA11_transitionS.Length;
-			DFA11_transition = new short[numStates][];
+			int numStates = DFA14_transitionS.Length;
+			DFA14_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA11_transition[i] = DFA.UnpackEncodedString(DFA11_transitionS[i]);
+				DFA14_transition[i] = DFA.UnpackEncodedString(DFA14_transitionS[i]);
 			}
 		}
 
-		public DFA11( BaseRecognizer recognizer )
+		public DFA14( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 11;
-			this.eot = DFA11_eot;
-			this.eof = DFA11_eof;
-			this.min = DFA11_min;
-			this.max = DFA11_max;
-			this.accept = DFA11_accept;
-			this.special = DFA11_special;
-			this.transition = DFA11_transition;
+			this.decisionNumber = 14;
+			this.eot = DFA14_eot;
+			this.eof = DFA14_eof;
+			this.min = DFA14_min;
+			this.max = DFA14_max;
+			this.accept = DFA14_accept;
+			this.special = DFA14_special;
+			this.transition = DFA14_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | ID | INT | STRING | COMMENT | WS | GENERIC_ID | MATCHOP | TEXT );"; } }
+		public override string Description { get { return "1:1: Tokens : ( T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | ID | INT | STRING | COMMENT | WS | GENERIC_ID | MATCHOP | OR | AND | EQUALS | NOTEQUALS | LT | LTEQ | GT | GTEQ | PLUS | MINUS | MULT | DIV | MOD | NOT | TEXT );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

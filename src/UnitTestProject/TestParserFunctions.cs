@@ -64,39 +64,12 @@ namespace UnitTestProject
 
         private static IEnumerable DirectTests()
         {
-            yield return CreateTest("(a+b)*c", parser => parser.logicalExpression().Tree,
-                                    new[] { "* -> +", "+ -> VARREF", "VARREF -> a", "* -> VARREF", "VARREF -> b", "VARREF -> c" });
-            yield return CreateTest("a*(b+c)", parser => parser.logicalExpression().Tree,
-                                    new[] { "* -> +", "+ -> VARREF", "VARREF -> c", "* -> VARREF", "VARREF -> a", "VARREF -> b" });
-
-            // tests priority (NB this kind of peephole graph checking is not a proper validation of the global structure of the AST)
-            yield return CreateTest("a+b*c", parser => parser.logicalExpression().Tree,
-                                    new[] { "+ -> *", "+ -> VARREF", "VARREF -> a", "* -> VARREF", "VARREF -> b", "VARREF -> c" });
-            yield return CreateTest("a*b+c", parser => parser.logicalExpression().Tree,
-                                    new[] { "+ -> *", "+ -> VARREF", "VARREF -> c", "* -> VARREF", "VARREF -> a", "VARREF -> b" });
-
-            yield return CreateTest("a/b", parser => parser.logicalExpression().Tree,
-                                    new[] { "/ -> VARREF", "/ -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a / b", parser => parser.logicalExpression().Tree,
-                                    new[] { "/ -> VARREF", "/ -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a*b", parser => parser.logicalExpression().Tree,
-                                    new[] { "* -> VARREF", "* -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a * b", parser => parser.logicalExpression().Tree,
-                                    new[] { "* -> VARREF", "* -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a-b", parser => parser.logicalExpression().Tree,
-                                    new[] { "- -> VARREF", "- -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a - b", parser => parser.logicalExpression().Tree,
-                                    new[] { "- -> VARREF", "- -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a+b", parser => parser.logicalExpression().Tree,
-                                    new[] { "+ -> VARREF", "+ -> VARREF", "VARREF -> a", "VARREF -> b" });
-            yield return CreateTest("a + b", parser => parser.logicalExpression().Tree,
-                                    new[] { "+ -> VARREF", "+ -> VARREF", "VARREF -> a", "VARREF -> b" });
             yield return CreateTest("a=\"b\"", parser => parser.attribute().Tree,
-                                    new[] { "XMLATTR -> a", "XMLATTR -> VALSTR", @"VALSTR -> \\""b\\""" });
+                                    new[] {"XMLATTR -> a", "XMLATTR -> VALSTR", @"VALSTR -> \\""b\\"""});
             yield return CreateTest("a=\"b\"", parser => parser.attribute().Tree,
-                                    new[] { "XMLATTR -> a", "XMLATTR -> VALSTR", @"VALSTR -> \\""b\\""" });
+                                    new[] {"XMLATTR -> a", "XMLATTR -> VALSTR", @"VALSTR -> \\""b\\"""});
             yield return CreateTest("<a>", parser => parser.element().Tree,
-                                    new[] { "XMLOPENELEM -> a", "XMLOPENELEM -> XMLATTRS" });
+                                    new[] {"XMLOPENELEM -> a", "XMLOPENELEM -> XMLATTRS"});
             yield return CreateTest("<a x='y' c='d'>", parser => parser.element().Tree,
                                     new[] { "XMLOPENELEM -> a", "XMLOPENELEM -> XMLATTRS", "XMLATTR -> x",
                                             "XMLATTR -> c", "XMLATTR -> VALSTR", "VALSTR -> 'y'", "VALSTR -> 'd'" });
@@ -104,10 +77,9 @@ namespace UnitTestProject
                                     new[] { "XMLOPENELEM -> a", "XMLOPENELEM -> XMLATTRS", "XMLATTR -> x", "XMLATTR -> c",
                                             "XMLATTR -> VALSTR", "VALSTR -> 'y'", "VALSTR -> 'd'" });
             yield return CreateTest("import blah;", parser => parser.importDeclaration().Tree,
-                                    new[] { "IMPORTDECL -> blah" });
-            yield return CreateTest("some_function(a, 2, 'hello')", parser => parser.functionInvocation().Tree,
-                                    new[] { "INVOCATION -> some_function", "INVOCATION -> PARAMETERS", "PARAMETERS -> VALINT", "PARAMETERS -> VARREF", "PARAMETERS -> VALSTR",
-                                             "VALINT -> 2", "VARREF -> a", "VALSTR -> 'hello'"});
+                                    new[] { "IMPORTDECL -> blah"});
+            yield return CreateTest("some_function(a, 2, 'hello')", parser => parser.importDeclaration().Tree,
+                                    new[] { "INVOCATION -> some_function", "INVOCATION -> PARAMETERS", "PARAMETERS -> PARAMETER", "PARAMETER -> VALINT", "PARAMETER -> VARREF", "PARAMETER -> VALSTR" }); 
         }
 
         private static IEnumerable FileBasedTests()

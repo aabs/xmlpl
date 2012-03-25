@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3 2012-03-12 10:22:02
+// $ANTLR 3.4 C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3 2012-03-24 15:29:20
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -18,6 +18,9 @@
 #pragma warning disable 1591
 // CLS compliance checking will not be performed on 'type' because it is not visible from outside this assembly.
 #pragma warning disable 3019
+
+
+using System;
 
 
 using System.Collections.Generic;
@@ -31,20 +34,93 @@ namespace xmlpl_parser
 public partial class mccarthyLexer : Antlr.Runtime.Lexer
 {
 	public const int EOF=-1;
-	public const int T__16=16;
-	public const int T__17=17;
-	public const int CHAR=4;
-	public const int COMMENT=5;
-	public const int ESC_SEQ=6;
-	public const int EXPONENT=7;
-	public const int FLOAT=8;
-	public const int HEX_DIGIT=9;
-	public const int ID=10;
-	public const int INT=11;
-	public const int OCTAL_ESC=12;
-	public const int STRING=13;
-	public const int UNICODE_ESC=14;
-	public const int WS=15;
+	public const int T__60=60;
+	public const int T__61=61;
+	public const int T__62=62;
+	public const int T__63=63;
+	public const int T__64=64;
+	public const int T__65=65;
+	public const int T__66=66;
+	public const int T__67=67;
+	public const int T__68=68;
+	public const int T__69=69;
+	public const int T__70=70;
+	public const int T__71=71;
+	public const int T__72=72;
+	public const int T__73=73;
+	public const int T__74=74;
+	public const int T__75=75;
+	public const int T__76=76;
+	public const int T__77=77;
+	public const int T__78=78;
+	public const int T__79=79;
+	public const int T__80=80;
+	public const int T__81=81;
+	public const int T__82=82;
+	public const int AND=4;
+	public const int APPEND=5;
+	public const int ARG=6;
+	public const int ARGLIST=7;
+	public const int BINDING=8;
+	public const int BLOCK=9;
+	public const int COMMENT=10;
+	public const int DIGIT=11;
+	public const int DIV=12;
+	public const int EQUALS=13;
+	public const int FUNCBODY=14;
+	public const int FUNCDEC=15;
+	public const int FUNCDECLIST=16;
+	public const int GENERIC_ID=17;
+	public const int GT=18;
+	public const int GTEQ=19;
+	public const int ID=20;
+	public const int IMPORTDECL=21;
+	public const int INT=22;
+	public const int INVOCATION=23;
+	public const int Imports=24;
+	public const int LETTER=25;
+	public const int LT=26;
+	public const int LTEQ=27;
+	public const int MATCH=28;
+	public const int MATCHOP=29;
+	public const int MINUS=30;
+	public const int MOD=31;
+	public const int MODULEDECL=32;
+	public const int MULT=33;
+	public const int NAMECHAR=34;
+	public const int NOT=35;
+	public const int NOTEQUALS=36;
+	public const int OR=37;
+	public const int PARAMETER=38;
+	public const int PARAMETERS=39;
+	public const int PATH=40;
+	public const int PATHCTX=41;
+	public const int PLUS=42;
+	public const int PREPEND=43;
+	public const int REPLACE=44;
+	public const int ROOT=45;
+	public const int SEG=46;
+	public const int STRING=47;
+	public const int TEXT=48;
+	public const int VALINT=49;
+	public const int VALSTR=50;
+	public const int VARREF=51;
+	public const int WS=52;
+	public const int XML=53;
+	public const int XMLATTR=54;
+	public const int XMLATTRS=55;
+	public const int XMLCHILDREN=56;
+	public const int XMLCLOSEELEM=57;
+	public const int XMLOPENELEM=58;
+	public const int XMLTEXT=59;
+
+	private int openTags = 0;
+	private bool readyForAttrs = false;
+
+	void inTagStart(){readyForAttrs = true;Console.WriteLine("starting xml tag");}
+	void inTagBody(){openTags++;readyForAttrs = false;Console.WriteLine("inside xml tag body");} 
+	void outOfTag(){openTags--;readyForAttrs = false;Console.WriteLine("left xml tag");}
+
 
     // delegates
     // delegators
@@ -72,25 +148,343 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	partial void EnterRule(string ruleName, int ruleIndex);
 	partial void LeaveRule(string ruleName, int ruleIndex);
 
-	partial void EnterRule_T__16();
-	partial void LeaveRule_T__16();
+	partial void EnterRule_T__60();
+	partial void LeaveRule_T__60();
 
-	// $ANTLR start "T__16"
-	[GrammarRule("T__16")]
-	private void mT__16()
+	// $ANTLR start "T__60"
+	[GrammarRule("T__60")]
+	private void mT__60()
 	{
-		EnterRule_T__16();
-		EnterRule("T__16", 1);
-		TraceIn("T__16", 1);
+		EnterRule_T__60();
+		EnterRule("T__60", 1);
+		TraceIn("T__60", 1);
 		try
 		{
-			int _type = T__16;
+			int _type = T__60;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:10:7: ( ';' )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:21:7: ( '!' )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:10:9: ';'
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:21:9: '!'
 			{
-			DebugLocation(10, 9);
+			DebugLocation(21, 9);
+			Match('!'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__60", 1);
+			LeaveRule("T__60", 1);
+			LeaveRule_T__60();
+		}
+	}
+	// $ANTLR end "T__60"
+
+	partial void EnterRule_T__61();
+	partial void LeaveRule_T__61();
+
+	// $ANTLR start "T__61"
+	[GrammarRule("T__61")]
+	private void mT__61()
+	{
+		EnterRule_T__61();
+		EnterRule("T__61", 2);
+		TraceIn("T__61", 2);
+		try
+		{
+			int _type = T__61;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:22:7: ( '!=' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:22:9: '!='
+			{
+			DebugLocation(22, 9);
+			Match("!="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__61", 2);
+			LeaveRule("T__61", 2);
+			LeaveRule_T__61();
+		}
+	}
+	// $ANTLR end "T__61"
+
+	partial void EnterRule_T__62();
+	partial void LeaveRule_T__62();
+
+	// $ANTLR start "T__62"
+	[GrammarRule("T__62")]
+	private void mT__62()
+	{
+		EnterRule_T__62();
+		EnterRule("T__62", 3);
+		TraceIn("T__62", 3);
+		try
+		{
+			int _type = T__62;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:23:7: ( '$' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:23:9: '$'
+			{
+			DebugLocation(23, 9);
+			Match('$'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__62", 3);
+			LeaveRule("T__62", 3);
+			LeaveRule_T__62();
+		}
+	}
+	// $ANTLR end "T__62"
+
+	partial void EnterRule_T__63();
+	partial void LeaveRule_T__63();
+
+	// $ANTLR start "T__63"
+	[GrammarRule("T__63")]
+	private void mT__63()
+	{
+		EnterRule_T__63();
+		EnterRule("T__63", 4);
+		TraceIn("T__63", 4);
+		try
+		{
+			int _type = T__63;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:7: ( '(' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:9: '('
+			{
+			DebugLocation(24, 9);
+			Match('('); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__63", 4);
+			LeaveRule("T__63", 4);
+			LeaveRule_T__63();
+		}
+	}
+	// $ANTLR end "T__63"
+
+	partial void EnterRule_T__64();
+	partial void LeaveRule_T__64();
+
+	// $ANTLR start "T__64"
+	[GrammarRule("T__64")]
+	private void mT__64()
+	{
+		EnterRule_T__64();
+		EnterRule("T__64", 5);
+		TraceIn("T__64", 5);
+		try
+		{
+			int _type = T__64;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:25:7: ( ')' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:25:9: ')'
+			{
+			DebugLocation(25, 9);
+			Match(')'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__64", 5);
+			LeaveRule("T__64", 5);
+			LeaveRule_T__64();
+		}
+	}
+	// $ANTLR end "T__64"
+
+	partial void EnterRule_T__65();
+	partial void LeaveRule_T__65();
+
+	// $ANTLR start "T__65"
+	[GrammarRule("T__65")]
+	private void mT__65()
+	{
+		EnterRule_T__65();
+		EnterRule("T__65", 6);
+		TraceIn("T__65", 6);
+		try
+		{
+			int _type = T__65;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:26:7: ( ',' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:26:9: ','
+			{
+			DebugLocation(26, 9);
+			Match(','); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__65", 6);
+			LeaveRule("T__65", 6);
+			LeaveRule_T__65();
+		}
+	}
+	// $ANTLR end "T__65"
+
+	partial void EnterRule_T__66();
+	partial void LeaveRule_T__66();
+
+	// $ANTLR start "T__66"
+	[GrammarRule("T__66")]
+	private void mT__66()
+	{
+		EnterRule_T__66();
+		EnterRule("T__66", 7);
+		TraceIn("T__66", 7);
+		try
+		{
+			int _type = T__66;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:27:7: ( '->' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:27:9: '->'
+			{
+			DebugLocation(27, 9);
+			Match("->"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__66", 7);
+			LeaveRule("T__66", 7);
+			LeaveRule_T__66();
+		}
+	}
+	// $ANTLR end "T__66"
+
+	partial void EnterRule_T__67();
+	partial void LeaveRule_T__67();
+
+	// $ANTLR start "T__67"
+	[GrammarRule("T__67")]
+	private void mT__67()
+	{
+		EnterRule_T__67();
+		EnterRule("T__67", 8);
+		TraceIn("T__67", 8);
+		try
+		{
+			int _type = T__67;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:28:7: ( '/>' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:28:9: '/>'
+			{
+			DebugLocation(28, 9);
+			Match("/>"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__67", 8);
+			LeaveRule("T__67", 8);
+			LeaveRule_T__67();
+		}
+	}
+	// $ANTLR end "T__67"
+
+	partial void EnterRule_T__68();
+	partial void LeaveRule_T__68();
+
+	// $ANTLR start "T__68"
+	[GrammarRule("T__68")]
+	private void mT__68()
+	{
+		EnterRule_T__68();
+		EnterRule("T__68", 9);
+		TraceIn("T__68", 9);
+		try
+		{
+			int _type = T__68;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:29:7: ( ':' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:29:9: ':'
+			{
+			DebugLocation(29, 9);
+			Match(':'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__68", 9);
+			LeaveRule("T__68", 9);
+			LeaveRule_T__68();
+		}
+	}
+	// $ANTLR end "T__68"
+
+	partial void EnterRule_T__69();
+	partial void LeaveRule_T__69();
+
+	// $ANTLR start "T__69"
+	[GrammarRule("T__69")]
+	private void mT__69()
+	{
+		EnterRule_T__69();
+		EnterRule("T__69", 10);
+		TraceIn("T__69", 10);
+		try
+		{
+			int _type = T__69;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:7: ( ';' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:9: ';'
+			{
+			DebugLocation(30, 9);
 			Match(';'); 
 
 			}
@@ -100,32 +494,390 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__16", 1);
-			LeaveRule("T__16", 1);
-			LeaveRule_T__16();
+			TraceOut("T__69", 10);
+			LeaveRule("T__69", 10);
+			LeaveRule_T__69();
 		}
 	}
-	// $ANTLR end "T__16"
+	// $ANTLR end "T__69"
 
-	partial void EnterRule_T__17();
-	partial void LeaveRule_T__17();
+	partial void EnterRule_T__70();
+	partial void LeaveRule_T__70();
 
-	// $ANTLR start "T__17"
-	[GrammarRule("T__17")]
-	private void mT__17()
+	// $ANTLR start "T__70"
+	[GrammarRule("T__70")]
+	private void mT__70()
 	{
-		EnterRule_T__17();
-		EnterRule("T__17", 2);
-		TraceIn("T__17", 2);
+		EnterRule_T__70();
+		EnterRule("T__70", 11);
+		TraceIn("T__70", 11);
 		try
 		{
-			int _type = T__17;
+			int _type = T__70;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:11:7: ( 'module' )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:31:7: ( '<?' )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:11:9: 'module'
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:31:9: '<?'
 			{
-			DebugLocation(11, 9);
+			DebugLocation(31, 9);
+			Match("<?"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__70", 11);
+			LeaveRule("T__70", 11);
+			LeaveRule_T__70();
+		}
+	}
+	// $ANTLR end "T__70"
+
+	partial void EnterRule_T__71();
+	partial void LeaveRule_T__71();
+
+	// $ANTLR start "T__71"
+	[GrammarRule("T__71")]
+	private void mT__71()
+	{
+		EnterRule_T__71();
+		EnterRule("T__71", 12);
+		TraceIn("T__71", 12);
+		try
+		{
+			int _type = T__71;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:32:7: ( '=' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:32:9: '='
+			{
+			DebugLocation(32, 9);
+			Match('='); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__71", 12);
+			LeaveRule("T__71", 12);
+			LeaveRule_T__71();
+		}
+	}
+	// $ANTLR end "T__71"
+
+	partial void EnterRule_T__72();
+	partial void LeaveRule_T__72();
+
+	// $ANTLR start "T__72"
+	[GrammarRule("T__72")]
+	private void mT__72()
+	{
+		EnterRule_T__72();
+		EnterRule("T__72", 13);
+		TraceIn("T__72", 13);
+		try
+		{
+			int _type = T__72;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:33:7: ( '=<' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:33:9: '=<'
+			{
+			DebugLocation(33, 9);
+			Match("=<"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__72", 13);
+			LeaveRule("T__72", 13);
+			LeaveRule_T__72();
+		}
+	}
+	// $ANTLR end "T__72"
+
+	partial void EnterRule_T__73();
+	partial void LeaveRule_T__73();
+
+	// $ANTLR start "T__73"
+	[GrammarRule("T__73")]
+	private void mT__73()
+	{
+		EnterRule_T__73();
+		EnterRule("T__73", 14);
+		TraceIn("T__73", 14);
+		try
+		{
+			int _type = T__73;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:34:7: ( '==' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:34:9: '=='
+			{
+			DebugLocation(34, 9);
+			Match("=="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__73", 14);
+			LeaveRule("T__73", 14);
+			LeaveRule_T__73();
+		}
+	}
+	// $ANTLR end "T__73"
+
+	partial void EnterRule_T__74();
+	partial void LeaveRule_T__74();
+
+	// $ANTLR start "T__74"
+	[GrammarRule("T__74")]
+	private void mT__74()
+	{
+		EnterRule_T__74();
+		EnterRule("T__74", 15);
+		TraceIn("T__74", 15);
+		try
+		{
+			int _type = T__74;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:35:7: ( '=>' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:35:9: '=>'
+			{
+			DebugLocation(35, 9);
+			Match("=>"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__74", 15);
+			LeaveRule("T__74", 15);
+			LeaveRule_T__74();
+		}
+	}
+	// $ANTLR end "T__74"
+
+	partial void EnterRule_T__75();
+	partial void LeaveRule_T__75();
+
+	// $ANTLR start "T__75"
+	[GrammarRule("T__75")]
+	private void mT__75()
+	{
+		EnterRule_T__75();
+		EnterRule("T__75", 16);
+		TraceIn("T__75", 16);
+		try
+		{
+			int _type = T__75;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:36:7: ( '=><' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:36:9: '=><'
+			{
+			DebugLocation(36, 9);
+			Match("=><"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__75", 16);
+			LeaveRule("T__75", 16);
+			LeaveRule_T__75();
+		}
+	}
+	// $ANTLR end "T__75"
+
+	partial void EnterRule_T__76();
+	partial void LeaveRule_T__76();
+
+	// $ANTLR start "T__76"
+	[GrammarRule("T__76")]
+	private void mT__76()
+	{
+		EnterRule_T__76();
+		EnterRule("T__76", 17);
+		TraceIn("T__76", 17);
+		try
+		{
+			int _type = T__76;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:37:7: ( '=>>' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:37:9: '=>>'
+			{
+			DebugLocation(37, 9);
+			Match("=>>"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__76", 17);
+			LeaveRule("T__76", 17);
+			LeaveRule_T__76();
+		}
+	}
+	// $ANTLR end "T__76"
+
+	partial void EnterRule_T__77();
+	partial void LeaveRule_T__77();
+
+	// $ANTLR start "T__77"
+	[GrammarRule("T__77")]
+	private void mT__77()
+	{
+		EnterRule_T__77();
+		EnterRule("T__77", 18);
+		TraceIn("T__77", 18);
+		try
+		{
+			int _type = T__77;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:38:7: ( '?' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:38:9: '?'
+			{
+			DebugLocation(38, 9);
+			Match('?'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__77", 18);
+			LeaveRule("T__77", 18);
+			LeaveRule_T__77();
+		}
+	}
+	// $ANTLR end "T__77"
+
+	partial void EnterRule_T__78();
+	partial void LeaveRule_T__78();
+
+	// $ANTLR start "T__78"
+	[GrammarRule("T__78")]
+	private void mT__78()
+	{
+		EnterRule_T__78();
+		EnterRule("T__78", 19);
+		TraceIn("T__78", 19);
+		try
+		{
+			int _type = T__78;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:39:7: ( '?>' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:39:9: '?>'
+			{
+			DebugLocation(39, 9);
+			Match("?>"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__78", 19);
+			LeaveRule("T__78", 19);
+			LeaveRule_T__78();
+		}
+	}
+	// $ANTLR end "T__78"
+
+	partial void EnterRule_T__79();
+	partial void LeaveRule_T__79();
+
+	// $ANTLR start "T__79"
+	[GrammarRule("T__79")]
+	private void mT__79()
+	{
+		EnterRule_T__79();
+		EnterRule("T__79", 20);
+		TraceIn("T__79", 20);
+		try
+		{
+			int _type = T__79;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:40:7: ( 'import' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:40:9: 'import'
+			{
+			DebugLocation(40, 9);
+			Match("import"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__79", 20);
+			LeaveRule("T__79", 20);
+			LeaveRule_T__79();
+		}
+	}
+	// $ANTLR end "T__79"
+
+	partial void EnterRule_T__80();
+	partial void LeaveRule_T__80();
+
+	// $ANTLR start "T__80"
+	[GrammarRule("T__80")]
+	private void mT__80()
+	{
+		EnterRule_T__80();
+		EnterRule("T__80", 21);
+		TraceIn("T__80", 21);
+		try
+		{
+			int _type = T__80;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:41:7: ( 'module' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:41:9: 'module'
+			{
+			DebugLocation(41, 9);
 			Match("module"); 
 
 
@@ -136,12 +888,82 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__17", 2);
-			LeaveRule("T__17", 2);
-			LeaveRule_T__17();
+			TraceOut("T__80", 21);
+			LeaveRule("T__80", 21);
+			LeaveRule_T__80();
 		}
 	}
-	// $ANTLR end "T__17"
+	// $ANTLR end "T__80"
+
+	partial void EnterRule_T__81();
+	partial void LeaveRule_T__81();
+
+	// $ANTLR start "T__81"
+	[GrammarRule("T__81")]
+	private void mT__81()
+	{
+		EnterRule_T__81();
+		EnterRule("T__81", 22);
+		TraceIn("T__81", 22);
+		try
+		{
+			int _type = T__81;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:7: ( '{' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:9: '{'
+			{
+			DebugLocation(42, 9);
+			Match('{'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__81", 22);
+			LeaveRule("T__81", 22);
+			LeaveRule_T__81();
+		}
+	}
+	// $ANTLR end "T__81"
+
+	partial void EnterRule_T__82();
+	partial void LeaveRule_T__82();
+
+	// $ANTLR start "T__82"
+	[GrammarRule("T__82")]
+	private void mT__82()
+	{
+		EnterRule_T__82();
+		EnterRule("T__82", 23);
+		TraceIn("T__82", 23);
+		try
+		{
+			int _type = T__82;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:43:7: ( '}' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:43:9: '}'
+			{
+			DebugLocation(43, 9);
+			Match('}'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__82", 23);
+			LeaveRule("T__82", 23);
+			LeaveRule_T__82();
+		}
+	}
+	// $ANTLR end "T__82"
 
 	partial void EnterRule_ID();
 	partial void LeaveRule_ID();
@@ -151,17 +973,17 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mID()
 	{
 		EnterRule_ID();
-		EnterRule("ID", 3);
-		TraceIn("ID", 3);
+		EnterRule("ID", 24);
+		TraceIn("ID", 24);
 		try
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:17:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:43:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:17:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:43:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
-			DebugLocation(17, 7);
+			DebugLocation(43, 7);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -174,8 +996,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(17, 31);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:17:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			DebugLocation(43, 31);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:43:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -196,7 +1018,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
 					{
-					DebugLocation(17, 31);
+					DebugLocation(43, 31);
 					input.Consume();
 
 
@@ -221,8 +1043,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ID", 3);
-			LeaveRule("ID", 3);
+			TraceOut("ID", 24);
+			LeaveRule("ID", 24);
 			LeaveRule_ID();
 		}
 	}
@@ -236,18 +1058,18 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mINT()
 	{
 		EnterRule_INT();
-		EnterRule("INT", 4);
-		TraceIn("INT", 4);
+		EnterRule("INT", 25);
+		TraceIn("INT", 25);
 		try
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:20:5: ( ( '0' .. '9' )+ )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:46:5: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:20:7: ( '0' .. '9' )+
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:46:7: ( '0' .. '9' )+
 			{
-			DebugLocation(20, 7);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:20:7: ( '0' .. '9' )+
+			DebugLocation(46, 7);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:46:7: ( '0' .. '9' )+
 			int cnt2=0;
 			try { DebugEnterSubRule(2);
 			while (true)
@@ -269,7 +1091,7 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
 					{
-					DebugLocation(20, 7);
+					DebugLocation(46, 7);
 					input.Consume();
 
 
@@ -299,49 +1121,57 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INT", 4);
-			LeaveRule("INT", 4);
+			TraceOut("INT", 25);
+			LeaveRule("INT", 25);
 			LeaveRule_INT();
 		}
 	}
 	// $ANTLR end "INT"
 
-	partial void EnterRule_FLOAT();
-	partial void LeaveRule_FLOAT();
+	partial void EnterRule_STRING();
+	partial void LeaveRule_STRING();
 
-	// $ANTLR start "FLOAT"
-	[GrammarRule("FLOAT")]
-	private void mFLOAT()
+	// $ANTLR start "STRING"
+	[GrammarRule("STRING")]
+	private void mSTRING()
 	{
-		EnterRule_FLOAT();
-		EnterRule("FLOAT", 5);
-		TraceIn("FLOAT", 5);
+		EnterRule_STRING();
+		EnterRule("STRING", 26);
+		TraceIn("STRING", 26);
 		try
 		{
-			int _type = FLOAT;
+			int _type = STRING;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
-			int alt9=3;
-			try { DebugEnterDecision(9, false);
-			try
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:49:2: ( '\\'' ( . )* '\\'' | '\\\"' ( . )* '\\\"' )
+			int alt5=2;
+			try { DebugEnterDecision(5, false);
+			int LA5_0 = input.LA(1);
+
+			if ((LA5_0=='\''))
 			{
-				alt9 = dfa9.Predict(input);
+				alt5 = 1;
 			}
-			catch (NoViableAltException nvae)
+			else if ((LA5_0=='\"'))
 			{
+				alt5 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 5, 0, input);
 				DebugRecognitionException(nvae);
-				throw;
+				throw nvae;
 			}
-			} finally { DebugExitDecision(9); }
-			switch (alt9)
+			} finally { DebugExitDecision(5); }
+			switch (alt5)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:49:4: '\\'' ( . )* '\\''
 				{
-				DebugLocation(24, 9);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:9: ( '0' .. '9' )+
-				int cnt3=0;
+				DebugLocation(49, 4);
+				Match('\''); 
+				DebugLocation(49, 9);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:49:9: ( . )*
 				try { DebugEnterSubRule(3);
 				while (true)
 				{
@@ -349,45 +1179,52 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					try { DebugEnterDecision(3, false);
 					int LA3_0 = input.LA(1);
 
-					if (((LA3_0>='0' && LA3_0<='9')))
+					if ((LA3_0=='\''))
+					{
+						alt3 = 2;
+					}
+					else if (((LA3_0>='\u0000' && LA3_0<='&')||(LA3_0>='(' && LA3_0<='\uFFFF')))
 					{
 						alt3 = 1;
 					}
 
 
 					} finally { DebugExitDecision(3); }
-					switch (alt3)
+					switch ( alt3 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
+						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:49:9: .
 						{
-						DebugLocation(24, 9);
-						input.Consume();
-
+						DebugLocation(49, 9);
+						MatchAny(); 
 
 						}
 						break;
 
 					default:
-						if (cnt3 >= 1)
-							goto loop3;
-
-						EarlyExitException eee3 = new EarlyExitException( 3, input );
-						DebugRecognitionException(eee3);
-						throw eee3;
+						goto loop3;
 					}
-					cnt3++;
 				}
+
 				loop3:
 					;
 
 				} finally { DebugExitSubRule(3); }
 
-				DebugLocation(24, 21);
-				Match('.'); 
-				DebugLocation(24, 25);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:25: ( '0' .. '9' )*
+				DebugLocation(49, 12);
+				Match('\''); 
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:4: '\\\"' ( . )* '\\\"'
+				{
+				DebugLocation(50, 4);
+				Match('\"'); 
+				DebugLocation(50, 9);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:9: ( . )*
 				try { DebugEnterSubRule(4);
 				while (true)
 				{
@@ -395,7 +1232,11 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					try { DebugEnterDecision(4, false);
 					int LA4_0 = input.LA(1);
 
-					if (((LA4_0>='0' && LA4_0<='9')))
+					if ((LA4_0=='\"'))
+					{
+						alt4 = 2;
+					}
+					else if (((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='\uFFFF')))
 					{
 						alt4 = 1;
 					}
@@ -406,11 +1247,10 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
+						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:9: .
 						{
-						DebugLocation(24, 25);
-						input.Consume();
-
+						DebugLocation(50, 9);
+						MatchAny(); 
 
 						}
 						break;
@@ -425,168 +1265,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(4); }
 
-				DebugLocation(24, 37);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:37: ( EXPONENT )?
-				int alt5=2;
-				try { DebugEnterSubRule(5);
-				try { DebugEnterDecision(5, false);
-				int LA5_0 = input.LA(1);
-
-				if ((LA5_0=='E'||LA5_0=='e'))
-				{
-					alt5 = 1;
-				}
-				} finally { DebugExitDecision(5); }
-				switch (alt5)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:24:37: EXPONENT
-					{
-					DebugLocation(24, 37);
-					mEXPONENT(); 
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(5); }
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:25:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
-				{
-				DebugLocation(25, 9);
-				Match('.'); 
-				DebugLocation(25, 13);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:25:13: ( '0' .. '9' )+
-				int cnt6=0;
-				try { DebugEnterSubRule(6);
-				while (true)
-				{
-					int alt6=2;
-					try { DebugEnterDecision(6, false);
-					int LA6_0 = input.LA(1);
-
-					if (((LA6_0>='0' && LA6_0<='9')))
-					{
-						alt6 = 1;
-					}
-
-
-					} finally { DebugExitDecision(6); }
-					switch (alt6)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
-						{
-						DebugLocation(25, 13);
-						input.Consume();
-
-
-						}
-						break;
-
-					default:
-						if (cnt6 >= 1)
-							goto loop6;
-
-						EarlyExitException eee6 = new EarlyExitException( 6, input );
-						DebugRecognitionException(eee6);
-						throw eee6;
-					}
-					cnt6++;
-				}
-				loop6:
-					;
-
-				} finally { DebugExitSubRule(6); }
-
-				DebugLocation(25, 25);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:25:25: ( EXPONENT )?
-				int alt7=2;
-				try { DebugEnterSubRule(7);
-				try { DebugEnterDecision(7, false);
-				int LA7_0 = input.LA(1);
-
-				if ((LA7_0=='E'||LA7_0=='e'))
-				{
-					alt7 = 1;
-				}
-				} finally { DebugExitDecision(7); }
-				switch (alt7)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:25:25: EXPONENT
-					{
-					DebugLocation(25, 25);
-					mEXPONENT(); 
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(7); }
-
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:26:9: ( '0' .. '9' )+ EXPONENT
-				{
-				DebugLocation(26, 9);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:26:9: ( '0' .. '9' )+
-				int cnt8=0;
-				try { DebugEnterSubRule(8);
-				while (true)
-				{
-					int alt8=2;
-					try { DebugEnterDecision(8, false);
-					int LA8_0 = input.LA(1);
-
-					if (((LA8_0>='0' && LA8_0<='9')))
-					{
-						alt8 = 1;
-					}
-
-
-					} finally { DebugExitDecision(8); }
-					switch (alt8)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
-						{
-						DebugLocation(26, 9);
-						input.Consume();
-
-
-						}
-						break;
-
-					default:
-						if (cnt8 >= 1)
-							goto loop8;
-
-						EarlyExitException eee8 = new EarlyExitException( 8, input );
-						DebugRecognitionException(eee8);
-						throw eee8;
-					}
-					cnt8++;
-				}
-				loop8:
-					;
-
-				} finally { DebugExitSubRule(8); }
-
-				DebugLocation(26, 21);
-				mEXPONENT(); 
+				DebugLocation(50, 12);
+				Match('\"'); 
 
 				}
 				break;
@@ -597,12 +1277,12 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("FLOAT", 5);
-			LeaveRule("FLOAT", 5);
-			LeaveRule_FLOAT();
+			TraceOut("STRING", 26);
+			LeaveRule("STRING", 26);
+			LeaveRule_STRING();
 		}
 	}
-	// $ANTLR end "FLOAT"
+	// $ANTLR end "STRING"
 
 	partial void EnterRule_COMMENT();
 	partial void LeaveRule_COMMENT();
@@ -612,75 +1292,75 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mCOMMENT()
 	{
 		EnterRule_COMMENT();
-		EnterRule("COMMENT", 6);
-		TraceIn("COMMENT", 6);
+		EnterRule("COMMENT", 27);
+		TraceIn("COMMENT", 27);
 		try
 		{
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
-			int alt13=2;
-			try { DebugEnterDecision(13, false);
-			int LA13_0 = input.LA(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:53:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			int alt9=2;
+			try { DebugEnterDecision(9, false);
+			int LA9_0 = input.LA(1);
 
-			if ((LA13_0=='/'))
+			if ((LA9_0=='/'))
 			{
-				int LA13_1 = input.LA(2);
+				int LA9_1 = input.LA(2);
 
-				if ((LA13_1=='/'))
+				if ((LA9_1=='/'))
 				{
-					alt13 = 1;
+					alt9 = 1;
 				}
-				else if ((LA13_1=='*'))
+				else if ((LA9_1=='*'))
 				{
-					alt13 = 2;
+					alt9 = 2;
 				}
 				else
 				{
-					NoViableAltException nvae = new NoViableAltException("", 13, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 9, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 			else
 			{
-				NoViableAltException nvae = new NoViableAltException("", 13, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 9, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(13); }
-			switch (alt13)
+			} finally { DebugExitDecision(9); }
+			switch (alt9)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:53:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 				{
-				DebugLocation(30, 9);
+				DebugLocation(53, 9);
 				Match("//"); 
 
-				DebugLocation(30, 14);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:14: (~ ( '\\n' | '\\r' ) )*
-				try { DebugEnterSubRule(10);
+				DebugLocation(53, 14);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:53:14: (~ ( '\\n' | '\\r' ) )*
+				try { DebugEnterSubRule(6);
 				while (true)
 				{
-					int alt10=2;
-					try { DebugEnterDecision(10, false);
-					int LA10_0 = input.LA(1);
+					int alt6=2;
+					try { DebugEnterDecision(6, false);
+					int LA6_0 = input.LA(1);
 
-					if (((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\uFFFF')))
+					if (((LA6_0>='\u0000' && LA6_0<='\t')||(LA6_0>='\u000B' && LA6_0<='\f')||(LA6_0>='\u000E' && LA6_0<='\uFFFF')))
 					{
-						alt10 = 1;
+						alt6 = 1;
 					}
 
 
-					} finally { DebugExitDecision(10); }
-					switch ( alt10 )
+					} finally { DebugExitDecision(6); }
+					switch ( alt6 )
 					{
 					case 1:
 						DebugEnterAlt(1);
 						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
 						{
-						DebugLocation(30, 14);
+						DebugLocation(53, 14);
 						input.Consume();
 
 
@@ -688,114 +1368,114 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						goto loop10;
+						goto loop6;
 					}
 				}
 
-				loop10:
+				loop6:
 					;
 
-				} finally { DebugExitSubRule(10); }
+				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(30, 28);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:28: ( '\\r' )?
-				int alt11=2;
-				try { DebugEnterSubRule(11);
-				try { DebugEnterDecision(11, false);
-				int LA11_0 = input.LA(1);
+				DebugLocation(53, 28);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:53:28: ( '\\r' )?
+				int alt7=2;
+				try { DebugEnterSubRule(7);
+				try { DebugEnterDecision(7, false);
+				int LA7_0 = input.LA(1);
 
-				if ((LA11_0=='\r'))
+				if ((LA7_0=='\r'))
 				{
-					alt11 = 1;
+					alt7 = 1;
 				}
-				} finally { DebugExitDecision(11); }
-				switch (alt11)
+				} finally { DebugExitDecision(7); }
+				switch (alt7)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:30:28: '\\r'
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:53:28: '\\r'
 					{
-					DebugLocation(30, 28);
+					DebugLocation(53, 28);
 					Match('\r'); 
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(11); }
+				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(30, 34);
+				DebugLocation(53, 34);
 				Match('\n'); 
-				DebugLocation(30, 39);
-				_channel=HIDDEN;
+				DebugLocation(53, 39);
+				_channel=Hidden;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:31:9: '/*' ( options {greedy=false; } : . )* '*/'
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:54:9: '/*' ( options {greedy=false; } : . )* '*/'
 				{
-				DebugLocation(31, 9);
+				DebugLocation(54, 9);
 				Match("/*"); 
 
-				DebugLocation(31, 14);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:31:14: ( options {greedy=false; } : . )*
-				try { DebugEnterSubRule(12);
+				DebugLocation(54, 14);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:54:14: ( options {greedy=false; } : . )*
+				try { DebugEnterSubRule(8);
 				while (true)
 				{
-					int alt12=2;
-					try { DebugEnterDecision(12, false);
-					int LA12_0 = input.LA(1);
+					int alt8=2;
+					try { DebugEnterDecision(8, false);
+					int LA8_0 = input.LA(1);
 
-					if ((LA12_0=='*'))
+					if ((LA8_0=='*'))
 					{
-						int LA12_1 = input.LA(2);
+						int LA8_1 = input.LA(2);
 
-						if ((LA12_1=='/'))
+						if ((LA8_1=='/'))
 						{
-							alt12 = 2;
+							alt8 = 2;
 						}
-						else if (((LA12_1>='\u0000' && LA12_1<='.')||(LA12_1>='0' && LA12_1<='\uFFFF')))
+						else if (((LA8_1>='\u0000' && LA8_1<='.')||(LA8_1>='0' && LA8_1<='\uFFFF')))
 						{
-							alt12 = 1;
+							alt8 = 1;
 						}
 
 
 					}
-					else if (((LA12_0>='\u0000' && LA12_0<=')')||(LA12_0>='+' && LA12_0<='\uFFFF')))
+					else if (((LA8_0>='\u0000' && LA8_0<=')')||(LA8_0>='+' && LA8_0<='\uFFFF')))
 					{
-						alt12 = 1;
+						alt8 = 1;
 					}
 
 
-					} finally { DebugExitDecision(12); }
-					switch ( alt12 )
+					} finally { DebugExitDecision(8); }
+					switch ( alt8 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:31:42: .
+						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:54:42: .
 						{
-						DebugLocation(31, 42);
+						DebugLocation(54, 42);
 						MatchAny(); 
 
 						}
 						break;
 
 					default:
-						goto loop12;
+						goto loop8;
 					}
 				}
 
-				loop12:
+				loop8:
 					;
 
-				} finally { DebugExitSubRule(12); }
+				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(31, 47);
+				DebugLocation(54, 47);
 				Match("*/"); 
 
-				DebugLocation(31, 52);
-				_channel=HIDDEN;
+				DebugLocation(54, 52);
+				_channel=Hidden;
 
 				}
 				break;
@@ -806,8 +1486,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("COMMENT", 6);
-			LeaveRule("COMMENT", 6);
+			TraceOut("COMMENT", 27);
+			LeaveRule("COMMENT", 27);
 			LeaveRule_COMMENT();
 		}
 	}
@@ -821,17 +1501,17 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 	private void mWS()
 	{
 		EnterRule_WS();
-		EnterRule("WS", 7);
-		TraceIn("WS", 7);
+		EnterRule("WS", 28);
+		TraceIn("WS", 28);
 		try
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:34:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:57:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:34:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:57:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
-			DebugLocation(34, 9);
+			DebugLocation(57, 9);
 			if ((input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -844,8 +1524,8 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(38, 11);
-			_channel=HIDDEN;
+			DebugLocation(61, 11);
+			_channel=Hidden;
 
 			}
 
@@ -854,204 +1534,33 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WS", 7);
-			LeaveRule("WS", 7);
+			TraceOut("WS", 28);
+			LeaveRule("WS", 28);
 			LeaveRule_WS();
 		}
 	}
 	// $ANTLR end "WS"
 
-	partial void EnterRule_STRING();
-	partial void LeaveRule_STRING();
+	partial void EnterRule_GENERIC_ID();
+	partial void LeaveRule_GENERIC_ID();
 
-	// $ANTLR start "STRING"
-	[GrammarRule("STRING")]
-	private void mSTRING()
+	// $ANTLR start "GENERIC_ID"
+	[GrammarRule("GENERIC_ID")]
+	private void mGENERIC_ID()
 	{
-		EnterRule_STRING();
-		EnterRule("STRING", 8);
-		TraceIn("STRING", 8);
+		EnterRule_GENERIC_ID();
+		EnterRule("GENERIC_ID", 29);
+		TraceIn("GENERIC_ID", 29);
 		try
 		{
-			int _type = STRING;
+			int _type = GENERIC_ID;
 			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:69:5: ( ( LETTER | '_' | ':' ) ( NAMECHAR )* )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:70:7: ( LETTER | '_' | ':' ) ( NAMECHAR )*
 			{
-			DebugLocation(42, 8);
-			Match('\"'); 
-			DebugLocation(42, 12);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
-			try { DebugEnterSubRule(14);
-			while (true)
-			{
-				int alt14=3;
-				try { DebugEnterDecision(14, false);
-				int LA14_0 = input.LA(1);
-
-				if ((LA14_0=='\\'))
-				{
-					alt14 = 1;
-				}
-				else if (((LA14_0>='\u0000' && LA14_0<='!')||(LA14_0>='#' && LA14_0<='[')||(LA14_0>=']' && LA14_0<='\uFFFF')))
-				{
-					alt14 = 2;
-				}
-
-
-				} finally { DebugExitDecision(14); }
-				switch ( alt14 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:14: ESC_SEQ
-					{
-					DebugLocation(42, 14);
-					mESC_SEQ(); 
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:42:24: ~ ( '\\\\' | '\"' )
-					{
-					DebugLocation(42, 24);
-					input.Consume();
-
-
-					}
-					break;
-
-				default:
-					goto loop14;
-				}
-			}
-
-			loop14:
-				;
-
-			} finally { DebugExitSubRule(14); }
-
-			DebugLocation(42, 39);
-			Match('\"'); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("STRING", 8);
-			LeaveRule("STRING", 8);
-			LeaveRule_STRING();
-		}
-	}
-	// $ANTLR end "STRING"
-
-	partial void EnterRule_CHAR();
-	partial void LeaveRule_CHAR();
-
-	// $ANTLR start "CHAR"
-	[GrammarRule("CHAR")]
-	private void mCHAR()
-	{
-		EnterRule_CHAR();
-		EnterRule("CHAR", 9);
-		TraceIn("CHAR", 9);
-		try
-		{
-			int _type = CHAR;
-			int _channel = DefaultTokenChannel;
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:45:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:45:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
-			{
-			DebugLocation(45, 8);
-			Match('\''); 
-			DebugLocation(45, 13);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:45:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
-			int alt15=2;
-			try { DebugEnterSubRule(15);
-			try { DebugEnterDecision(15, false);
-			int LA15_0 = input.LA(1);
-
-			if ((LA15_0=='\\'))
-			{
-				alt15 = 1;
-			}
-			else if (((LA15_0>='\u0000' && LA15_0<='&')||(LA15_0>='(' && LA15_0<='[')||(LA15_0>=']' && LA15_0<='\uFFFF')))
-			{
-				alt15 = 2;
-			}
-			else
-			{
-				NoViableAltException nvae = new NoViableAltException("", 15, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(15); }
-			switch (alt15)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:45:15: ESC_SEQ
-				{
-				DebugLocation(45, 15);
-				mESC_SEQ(); 
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:45:25: ~ ( '\\'' | '\\\\' )
-				{
-				DebugLocation(45, 25);
-				input.Consume();
-
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(15); }
-
-			DebugLocation(45, 40);
-			Match('\''); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("CHAR", 9);
-			LeaveRule("CHAR", 9);
-			LeaveRule_CHAR();
-		}
-	}
-	// $ANTLR end "CHAR"
-
-	partial void EnterRule_EXPONENT();
-	partial void LeaveRule_EXPONENT();
-
-	// $ANTLR start "EXPONENT"
-	[GrammarRule("EXPONENT")]
-	private void mEXPONENT()
-	{
-		EnterRule_EXPONENT();
-		EnterRule("EXPONENT", 10);
-		TraceIn("EXPONENT", 10);
-		try
-		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
-			{
-			DebugLocation(50, 12);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
+			DebugLocation(70, 7);
+			if (input.LA(1)==':'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
 			}
@@ -1063,58 +1572,29 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(50, 22);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:22: ( '+' | '-' )?
-			int alt16=2;
-			try { DebugEnterSubRule(16);
-			try { DebugEnterDecision(16, false);
-			int LA16_0 = input.LA(1);
-
-			if ((LA16_0=='+'||LA16_0=='-'))
-			{
-				alt16 = 1;
-			}
-			} finally { DebugExitDecision(16); }
-			switch (alt16)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
-				{
-				DebugLocation(50, 22);
-				input.Consume();
-
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(16); }
-
-			DebugLocation(50, 33);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:50:33: ( '0' .. '9' )+
-			int cnt17=0;
-			try { DebugEnterSubRule(17);
+			DebugLocation(70, 29);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:70:29: ( NAMECHAR )*
+			try { DebugEnterSubRule(10);
 			while (true)
 			{
-				int alt17=2;
-				try { DebugEnterDecision(17, false);
-				int LA17_0 = input.LA(1);
+				int alt10=2;
+				try { DebugEnterDecision(10, false);
+				int LA10_0 = input.LA(1);
 
-				if (((LA17_0>='0' && LA17_0<='9')))
+				if ((LA10_0=='.'||(LA10_0>='0' && LA10_0<=':')||(LA10_0>='A' && LA10_0<='Z')||LA10_0=='_'||(LA10_0>='a' && LA10_0<='z')))
 				{
-					alt17 = 1;
+					alt10 = 1;
 				}
 
 
-				} finally { DebugExitDecision(17); }
-				switch (alt17)
+				} finally { DebugExitDecision(10); }
+				switch ( alt10 )
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
 					{
-					DebugLocation(50, 33);
+					DebugLocation(70, 29);
 					input.Consume();
 
 
@@ -1122,51 +1602,682 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					if (cnt17 >= 1)
-						goto loop17;
-
-					EarlyExitException eee17 = new EarlyExitException( 17, input );
-					DebugRecognitionException(eee17);
-					throw eee17;
+					goto loop10;
 				}
-				cnt17++;
 			}
-			loop17:
+
+			loop10:
 				;
 
-			} finally { DebugExitSubRule(17); }
+			} finally { DebugExitSubRule(10); }
 
 
 			}
 
+			state.type = _type;
+			state.channel = _channel;
 		}
 		finally
 		{
-			TraceOut("EXPONENT", 10);
-			LeaveRule("EXPONENT", 10);
-			LeaveRule_EXPONENT();
+			TraceOut("GENERIC_ID", 29);
+			LeaveRule("GENERIC_ID", 29);
+			LeaveRule_GENERIC_ID();
 		}
 	}
-	// $ANTLR end "EXPONENT"
+	// $ANTLR end "GENERIC_ID"
 
-	partial void EnterRule_HEX_DIGIT();
-	partial void LeaveRule_HEX_DIGIT();
+	partial void EnterRule_MATCHOP();
+	partial void LeaveRule_MATCHOP();
 
-	// $ANTLR start "HEX_DIGIT"
-	[GrammarRule("HEX_DIGIT")]
-	private void mHEX_DIGIT()
+	// $ANTLR start "MATCHOP"
+	[GrammarRule("MATCHOP")]
+	private void mMATCHOP()
 	{
-		EnterRule_HEX_DIGIT();
-		EnterRule("HEX_DIGIT", 11);
-		TraceIn("HEX_DIGIT", 11);
+		EnterRule_MATCHOP();
+		EnterRule("MATCHOP", 30);
+		TraceIn("MATCHOP", 30);
 		try
 		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:53:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			int _type = MATCHOP;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:72:9: ( '=?' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:72:11: '=?'
+			{
+			DebugLocation(72, 11);
+			Match("=?"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MATCHOP", 30);
+			LeaveRule("MATCHOP", 30);
+			LeaveRule_MATCHOP();
+		}
+	}
+	// $ANTLR end "MATCHOP"
+
+	partial void EnterRule_OR();
+	partial void LeaveRule_OR();
+
+	// $ANTLR start "OR"
+	[GrammarRule("OR")]
+	private void mOR()
+	{
+		EnterRule_OR();
+		EnterRule("OR", 31);
+		TraceIn("OR", 31);
+		try
+		{
+			int _type = OR;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:74:7: ( '||' | 'or' )
+			int alt11=2;
+			try { DebugEnterDecision(11, false);
+			int LA11_0 = input.LA(1);
+
+			if ((LA11_0=='|'))
+			{
+				alt11 = 1;
+			}
+			else if ((LA11_0=='o'))
+			{
+				alt11 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 11, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(11); }
+			switch (alt11)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:74:13: '||'
+				{
+				DebugLocation(74, 13);
+				Match("||"); 
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:74:20: 'or'
+				{
+				DebugLocation(74, 20);
+				Match("or"); 
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("OR", 31);
+			LeaveRule("OR", 31);
+			LeaveRule_OR();
+		}
+	}
+	// $ANTLR end "OR"
+
+	partial void EnterRule_AND();
+	partial void LeaveRule_AND();
+
+	// $ANTLR start "AND"
+	[GrammarRule("AND")]
+	private void mAND()
+	{
+		EnterRule_AND();
+		EnterRule("AND", 32);
+		TraceIn("AND", 32);
+		try
+		{
+			int _type = AND;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:75:7: ( '&&' | 'and' )
+			int alt12=2;
+			try { DebugEnterDecision(12, false);
+			int LA12_0 = input.LA(1);
+
+			if ((LA12_0=='&'))
+			{
+				alt12 = 1;
+			}
+			else if ((LA12_0=='a'))
+			{
+				alt12 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 12, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(12); }
+			switch (alt12)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:75:13: '&&'
+				{
+				DebugLocation(75, 13);
+				Match("&&"); 
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:75:20: 'and'
+				{
+				DebugLocation(75, 20);
+				Match("and"); 
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("AND", 32);
+			LeaveRule("AND", 32);
+			LeaveRule_AND();
+		}
+	}
+	// $ANTLR end "AND"
+
+	partial void EnterRule_EQUALS();
+	partial void LeaveRule_EQUALS();
+
+	// $ANTLR start "EQUALS"
+	[GrammarRule("EQUALS")]
+	private void mEQUALS()
+	{
+		EnterRule_EQUALS();
+		EnterRule("EQUALS", 33);
+		TraceIn("EQUALS", 33);
+		try
+		{
+			int _type = EQUALS;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:77:7: ( '===' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:77:12: '==='
+			{
+			DebugLocation(77, 12);
+			Match("==="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("EQUALS", 33);
+			LeaveRule("EQUALS", 33);
+			LeaveRule_EQUALS();
+		}
+	}
+	// $ANTLR end "EQUALS"
+
+	partial void EnterRule_NOTEQUALS();
+	partial void LeaveRule_NOTEQUALS();
+
+	// $ANTLR start "NOTEQUALS"
+	[GrammarRule("NOTEQUALS")]
+	private void mNOTEQUALS()
+	{
+		EnterRule_NOTEQUALS();
+		EnterRule("NOTEQUALS", 34);
+		TraceIn("NOTEQUALS", 34);
+		try
+		{
+			int _type = NOTEQUALS;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:79:7: ( '!=' | '<>' )
+			int alt13=2;
+			try { DebugEnterDecision(13, false);
+			int LA13_0 = input.LA(1);
+
+			if ((LA13_0=='!'))
+			{
+				alt13 = 1;
+			}
+			else if ((LA13_0=='<'))
+			{
+				alt13 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 13, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(13); }
+			switch (alt13)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:79:12: '!='
+				{
+				DebugLocation(79, 12);
+				Match("!="); 
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:79:19: '<>'
+				{
+				DebugLocation(79, 19);
+				Match("<>"); 
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("NOTEQUALS", 34);
+			LeaveRule("NOTEQUALS", 34);
+			LeaveRule_NOTEQUALS();
+		}
+	}
+	// $ANTLR end "NOTEQUALS"
+
+	partial void EnterRule_LT();
+	partial void LeaveRule_LT();
+
+	// $ANTLR start "LT"
+	[GrammarRule("LT")]
+	private void mLT()
+	{
+		EnterRule_LT();
+		EnterRule("LT", 35);
+		TraceIn("LT", 35);
+		try
+		{
+			int _type = LT;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:80:7: ( '<' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:80:12: '<'
+			{
+			DebugLocation(80, 12);
+			Match('<'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("LT", 35);
+			LeaveRule("LT", 35);
+			LeaveRule_LT();
+		}
+	}
+	// $ANTLR end "LT"
+
+	partial void EnterRule_LTEQ();
+	partial void LeaveRule_LTEQ();
+
+	// $ANTLR start "LTEQ"
+	[GrammarRule("LTEQ")]
+	private void mLTEQ()
+	{
+		EnterRule_LTEQ();
+		EnterRule("LTEQ", 36);
+		TraceIn("LTEQ", 36);
+		try
+		{
+			int _type = LTEQ;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:81:7: ( '<=' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:81:12: '<='
+			{
+			DebugLocation(81, 12);
+			Match("<="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("LTEQ", 36);
+			LeaveRule("LTEQ", 36);
+			LeaveRule_LTEQ();
+		}
+	}
+	// $ANTLR end "LTEQ"
+
+	partial void EnterRule_GT();
+	partial void LeaveRule_GT();
+
+	// $ANTLR start "GT"
+	[GrammarRule("GT")]
+	private void mGT()
+	{
+		EnterRule_GT();
+		EnterRule("GT", 37);
+		TraceIn("GT", 37);
+		try
+		{
+			int _type = GT;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:82:7: ( '>' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:82:12: '>'
+			{
+			DebugLocation(82, 12);
+			Match('>'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("GT", 37);
+			LeaveRule("GT", 37);
+			LeaveRule_GT();
+		}
+	}
+	// $ANTLR end "GT"
+
+	partial void EnterRule_GTEQ();
+	partial void LeaveRule_GTEQ();
+
+	// $ANTLR start "GTEQ"
+	[GrammarRule("GTEQ")]
+	private void mGTEQ()
+	{
+		EnterRule_GTEQ();
+		EnterRule("GTEQ", 38);
+		TraceIn("GTEQ", 38);
+		try
+		{
+			int _type = GTEQ;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:83:7: ( '>=' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:83:12: '>='
+			{
+			DebugLocation(83, 12);
+			Match(">="); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("GTEQ", 38);
+			LeaveRule("GTEQ", 38);
+			LeaveRule_GTEQ();
+		}
+	}
+	// $ANTLR end "GTEQ"
+
+	partial void EnterRule_PLUS();
+	partial void LeaveRule_PLUS();
+
+	// $ANTLR start "PLUS"
+	[GrammarRule("PLUS")]
+	private void mPLUS()
+	{
+		EnterRule_PLUS();
+		EnterRule("PLUS", 39);
+		TraceIn("PLUS", 39);
+		try
+		{
+			int _type = PLUS;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:84:7: ( '+' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:84:12: '+'
+			{
+			DebugLocation(84, 12);
+			Match('+'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("PLUS", 39);
+			LeaveRule("PLUS", 39);
+			LeaveRule_PLUS();
+		}
+	}
+	// $ANTLR end "PLUS"
+
+	partial void EnterRule_MINUS();
+	partial void LeaveRule_MINUS();
+
+	// $ANTLR start "MINUS"
+	[GrammarRule("MINUS")]
+	private void mMINUS()
+	{
+		EnterRule_MINUS();
+		EnterRule("MINUS", 40);
+		TraceIn("MINUS", 40);
+		try
+		{
+			int _type = MINUS;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:85:7: ( '-' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:85:12: '-'
+			{
+			DebugLocation(85, 12);
+			Match('-'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MINUS", 40);
+			LeaveRule("MINUS", 40);
+			LeaveRule_MINUS();
+		}
+	}
+	// $ANTLR end "MINUS"
+
+	partial void EnterRule_MULT();
+	partial void LeaveRule_MULT();
+
+	// $ANTLR start "MULT"
+	[GrammarRule("MULT")]
+	private void mMULT()
+	{
+		EnterRule_MULT();
+		EnterRule("MULT", 41);
+		TraceIn("MULT", 41);
+		try
+		{
+			int _type = MULT;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:86:7: ( '*' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:86:12: '*'
+			{
+			DebugLocation(86, 12);
+			Match('*'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MULT", 41);
+			LeaveRule("MULT", 41);
+			LeaveRule_MULT();
+		}
+	}
+	// $ANTLR end "MULT"
+
+	partial void EnterRule_DIV();
+	partial void LeaveRule_DIV();
+
+	// $ANTLR start "DIV"
+	[GrammarRule("DIV")]
+	private void mDIV()
+	{
+		EnterRule_DIV();
+		EnterRule("DIV", 42);
+		TraceIn("DIV", 42);
+		try
+		{
+			int _type = DIV;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:87:7: ( '/' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:87:12: '/'
+			{
+			DebugLocation(87, 12);
+			Match('/'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("DIV", 42);
+			LeaveRule("DIV", 42);
+			LeaveRule_DIV();
+		}
+	}
+	// $ANTLR end "DIV"
+
+	partial void EnterRule_MOD();
+	partial void LeaveRule_MOD();
+
+	// $ANTLR start "MOD"
+	[GrammarRule("MOD")]
+	private void mMOD()
+	{
+		EnterRule_MOD();
+		EnterRule("MOD", 43);
+		TraceIn("MOD", 43);
+		try
+		{
+			int _type = MOD;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:88:7: ( '%' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:88:12: '%'
+			{
+			DebugLocation(88, 12);
+			Match('%'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("MOD", 43);
+			LeaveRule("MOD", 43);
+			LeaveRule_MOD();
+		}
+	}
+	// $ANTLR end "MOD"
+
+	partial void EnterRule_NOT();
+	partial void LeaveRule_NOT();
+
+	// $ANTLR start "NOT"
+	[GrammarRule("NOT")]
+	private void mNOT()
+	{
+		EnterRule_NOT();
+		EnterRule("NOT", 44);
+		TraceIn("NOT", 44);
+		try
+		{
+			int _type = NOT;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:89:7: ( '~' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:89:12: '~'
+			{
+			DebugLocation(89, 12);
+			Match('~'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("NOT", 44);
+			LeaveRule("NOT", 44);
+			LeaveRule_NOT();
+		}
+	}
+	// $ANTLR end "NOT"
+
+	partial void EnterRule_NAMECHAR();
+	partial void LeaveRule_NAMECHAR();
+
+	// $ANTLR start "NAMECHAR"
+	[GrammarRule("NAMECHAR")]
+	private void mNAMECHAR()
+	{
+		EnterRule_NAMECHAR();
+		EnterRule("NAMECHAR", 45);
+		TraceIn("NAMECHAR", 45);
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:93:5: ( LETTER | DIGIT | '.' | '_' | ':' )
 			DebugEnterAlt(1);
 			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
 			{
-			DebugLocation(53, 11);
-			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
+			DebugLocation(93, 5);
+			if (input.LA(1)=='.'||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
 			}
@@ -1184,388 +2295,548 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HEX_DIGIT", 11);
-			LeaveRule("HEX_DIGIT", 11);
-			LeaveRule_HEX_DIGIT();
+			TraceOut("NAMECHAR", 45);
+			LeaveRule("NAMECHAR", 45);
+			LeaveRule_NAMECHAR();
 		}
 	}
-	// $ANTLR end "HEX_DIGIT"
+	// $ANTLR end "NAMECHAR"
 
-	partial void EnterRule_ESC_SEQ();
-	partial void LeaveRule_ESC_SEQ();
+	partial void EnterRule_DIGIT();
+	partial void LeaveRule_DIGIT();
 
-	// $ANTLR start "ESC_SEQ"
-	[GrammarRule("ESC_SEQ")]
-	private void mESC_SEQ()
+	// $ANTLR start "DIGIT"
+	[GrammarRule("DIGIT")]
+	private void mDIGIT()
 	{
-		EnterRule_ESC_SEQ();
-		EnterRule("ESC_SEQ", 12);
-		TraceIn("ESC_SEQ", 12);
+		EnterRule_DIGIT();
+		EnterRule("DIGIT", 46);
+		TraceIn("DIGIT", 46);
 		try
 		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:57:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
-			int alt18=3;
-			try { DebugEnterDecision(18, false);
-			int LA18_0 = input.LA(1);
-
-			if ((LA18_0=='\\'))
-			{
-				switch (input.LA(2))
-				{
-				case '\"':
-				case '\'':
-				case '\\':
-				case 'b':
-				case 'f':
-				case 'n':
-				case 'r':
-				case 't':
-					{
-					alt18 = 1;
-					}
-					break;
-				case 'u':
-					{
-					alt18 = 2;
-					}
-					break;
-				case '0':
-				case '1':
-				case '2':
-				case '3':
-				case '4':
-				case '5':
-				case '6':
-				case '7':
-					{
-					alt18 = 3;
-					}
-					break;
-				default:
-					{
-						NoViableAltException nvae = new NoViableAltException("", 18, 1, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-				}
-
-			}
-			else
-			{
-				NoViableAltException nvae = new NoViableAltException("", 18, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(18); }
-			switch (alt18)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:57:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
-				{
-				DebugLocation(57, 9);
-				Match('\\'); 
-				DebugLocation(57, 14);
-				input.Consume();
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:58:9: UNICODE_ESC
-				{
-				DebugLocation(58, 9);
-				mUNICODE_ESC(); 
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:59:9: OCTAL_ESC
-				{
-				DebugLocation(59, 9);
-				mOCTAL_ESC(); 
-
-				}
-				break;
-
-			}
-		}
-		finally
-		{
-			TraceOut("ESC_SEQ", 12);
-			LeaveRule("ESC_SEQ", 12);
-			LeaveRule_ESC_SEQ();
-		}
-	}
-	// $ANTLR end "ESC_SEQ"
-
-	partial void EnterRule_OCTAL_ESC();
-	partial void LeaveRule_OCTAL_ESC();
-
-	// $ANTLR start "OCTAL_ESC"
-	[GrammarRule("OCTAL_ESC")]
-	private void mOCTAL_ESC()
-	{
-		EnterRule_OCTAL_ESC();
-		EnterRule("OCTAL_ESC", 13);
-		TraceIn("OCTAL_ESC", 13);
-		try
-		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:64:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
-			int alt19=3;
-			try { DebugEnterDecision(19, false);
-			int LA19_0 = input.LA(1);
-
-			if ((LA19_0=='\\'))
-			{
-				int LA19_1 = input.LA(2);
-
-				if (((LA19_1>='0' && LA19_1<='3')))
-				{
-					int LA19_2 = input.LA(3);
-
-					if (((LA19_2>='0' && LA19_2<='7')))
-					{
-						int LA19_4 = input.LA(4);
-
-						if (((LA19_4>='0' && LA19_4<='7')))
-						{
-							alt19 = 1;
-						}
-						else
-						{
-							alt19 = 2;
-						}
-					}
-					else
-					{
-						alt19 = 3;
-					}
-				}
-				else if (((LA19_1>='4' && LA19_1<='7')))
-				{
-					int LA19_3 = input.LA(3);
-
-					if (((LA19_3>='0' && LA19_3<='7')))
-					{
-						alt19 = 2;
-					}
-					else
-					{
-						alt19 = 3;
-					}
-				}
-				else
-				{
-					NoViableAltException nvae = new NoViableAltException("", 19, 1, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
-			else
-			{
-				NoViableAltException nvae = new NoViableAltException("", 19, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(19); }
-			switch (alt19)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:64:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
-				{
-				DebugLocation(64, 9);
-				Match('\\'); 
-				DebugLocation(64, 14);
-				input.Consume();
-
-				DebugLocation(64, 25);
-				input.Consume();
-
-				DebugLocation(64, 36);
-				input.Consume();
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:65:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
-				{
-				DebugLocation(65, 9);
-				Match('\\'); 
-				DebugLocation(65, 14);
-				input.Consume();
-
-				DebugLocation(65, 25);
-				input.Consume();
-
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:66:9: '\\\\' ( '0' .. '7' )
-				{
-				DebugLocation(66, 9);
-				Match('\\'); 
-				DebugLocation(66, 14);
-				input.Consume();
-
-
-				}
-				break;
-
-			}
-		}
-		finally
-		{
-			TraceOut("OCTAL_ESC", 13);
-			LeaveRule("OCTAL_ESC", 13);
-			LeaveRule_OCTAL_ESC();
-		}
-	}
-	// $ANTLR end "OCTAL_ESC"
-
-	partial void EnterRule_UNICODE_ESC();
-	partial void LeaveRule_UNICODE_ESC();
-
-	// $ANTLR start "UNICODE_ESC"
-	[GrammarRule("UNICODE_ESC")]
-	private void mUNICODE_ESC()
-	{
-		EnterRule_UNICODE_ESC();
-		EnterRule("UNICODE_ESC", 14);
-		TraceIn("UNICODE_ESC", 14);
-		try
-		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:71:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:97:5: ( '0' .. '9' )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:71:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
 			{
-			DebugLocation(71, 9);
-			Match('\\'); 
-			DebugLocation(71, 14);
-			Match('u'); 
-			DebugLocation(71, 18);
-			mHEX_DIGIT(); 
-			DebugLocation(71, 28);
-			mHEX_DIGIT(); 
-			DebugLocation(71, 38);
-			mHEX_DIGIT(); 
-			DebugLocation(71, 48);
-			mHEX_DIGIT(); 
+			DebugLocation(97, 5);
+			if ((input.LA(1)>='0' && input.LA(1)<='9'))
+			{
+				input.Consume();
+			}
+			else
+			{
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("UNICODE_ESC", 14);
-			LeaveRule("UNICODE_ESC", 14);
-			LeaveRule_UNICODE_ESC();
+			TraceOut("DIGIT", 46);
+			LeaveRule("DIGIT", 46);
+			LeaveRule_DIGIT();
 		}
 	}
-	// $ANTLR end "UNICODE_ESC"
+	// $ANTLR end "DIGIT"
+
+	partial void EnterRule_LETTER();
+	partial void LeaveRule_LETTER();
+
+	// $ANTLR start "LETTER"
+	[GrammarRule("LETTER")]
+	private void mLETTER()
+	{
+		EnterRule_LETTER();
+		EnterRule("LETTER", 47);
+		TraceIn("LETTER", 47);
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:101:5: ( 'a' .. 'z' | 'A' .. 'Z' )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:
+			{
+			DebugLocation(101, 5);
+			if ((input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z'))
+			{
+				input.Consume();
+			}
+			else
+			{
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("LETTER", 47);
+			LeaveRule("LETTER", 47);
+			LeaveRule_LETTER();
+		}
+	}
+	// $ANTLR end "LETTER"
+
+	partial void EnterRule_TEXT();
+	partial void LeaveRule_TEXT();
+
+	// $ANTLR start "TEXT"
+	[GrammarRule("TEXT")]
+	private void mTEXT()
+	{
+		EnterRule_TEXT();
+		EnterRule("TEXT", 48);
+		TraceIn("TEXT", 48);
+		try
+		{
+			int _type = TEXT;
+			int _channel = DefaultTokenChannel;
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:279:6: ()
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:279:8: 
+			{
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("TEXT", 48);
+			LeaveRule("TEXT", 48);
+			LeaveRule_TEXT();
+		}
+	}
+	// $ANTLR end "TEXT"
 
 	public override void mTokens()
 	{
-		// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:8: ( T__16 | T__17 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR )
-		int alt20=9;
-		try { DebugEnterDecision(20, false);
+		// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:8: ( T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | ID | INT | STRING | COMMENT | WS | GENERIC_ID | MATCHOP | OR | AND | EQUALS | NOTEQUALS | LT | LTEQ | GT | GTEQ | PLUS | MINUS | MULT | DIV | MOD | NOT | TEXT )
+		int alt14=45;
+		try { DebugEnterDecision(14, false);
 		try
 		{
-			alt20 = dfa20.Predict(input);
+			alt14 = dfa14.Predict(input);
 		}
 		catch (NoViableAltException nvae)
 		{
 			DebugRecognitionException(nvae);
 			throw;
 		}
-		} finally { DebugExitDecision(20); }
-		switch (alt20)
+		} finally { DebugExitDecision(14); }
+		switch (alt14)
 		{
 		case 1:
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:10: T__16
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:10: T__60
 			{
 			DebugLocation(1, 10);
-			mT__16(); 
+			mT__60(); 
 
 			}
 			break;
 		case 2:
 			DebugEnterAlt(2);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:16: T__17
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:16: T__61
 			{
 			DebugLocation(1, 16);
-			mT__17(); 
+			mT__61(); 
 
 			}
 			break;
 		case 3:
 			DebugEnterAlt(3);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:22: ID
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:22: T__62
 			{
 			DebugLocation(1, 22);
-			mID(); 
+			mT__62(); 
 
 			}
 			break;
 		case 4:
 			DebugEnterAlt(4);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:25: INT
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:28: T__63
 			{
-			DebugLocation(1, 25);
-			mINT(); 
+			DebugLocation(1, 28);
+			mT__63(); 
 
 			}
 			break;
 		case 5:
 			DebugEnterAlt(5);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:29: FLOAT
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:34: T__64
 			{
-			DebugLocation(1, 29);
-			mFLOAT(); 
+			DebugLocation(1, 34);
+			mT__64(); 
 
 			}
 			break;
 		case 6:
 			DebugEnterAlt(6);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:35: COMMENT
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:40: T__65
 			{
-			DebugLocation(1, 35);
-			mCOMMENT(); 
+			DebugLocation(1, 40);
+			mT__65(); 
 
 			}
 			break;
 		case 7:
 			DebugEnterAlt(7);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:43: WS
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:46: T__66
 			{
-			DebugLocation(1, 43);
-			mWS(); 
+			DebugLocation(1, 46);
+			mT__66(); 
 
 			}
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:46: STRING
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:52: T__67
 			{
-			DebugLocation(1, 46);
-			mSTRING(); 
+			DebugLocation(1, 52);
+			mT__67(); 
 
 			}
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:53: CHAR
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:58: T__68
 			{
-			DebugLocation(1, 53);
-			mCHAR(); 
+			DebugLocation(1, 58);
+			mT__68(); 
+
+			}
+			break;
+		case 10:
+			DebugEnterAlt(10);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:64: T__69
+			{
+			DebugLocation(1, 64);
+			mT__69(); 
+
+			}
+			break;
+		case 11:
+			DebugEnterAlt(11);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:70: T__70
+			{
+			DebugLocation(1, 70);
+			mT__70(); 
+
+			}
+			break;
+		case 12:
+			DebugEnterAlt(12);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:76: T__71
+			{
+			DebugLocation(1, 76);
+			mT__71(); 
+
+			}
+			break;
+		case 13:
+			DebugEnterAlt(13);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:82: T__72
+			{
+			DebugLocation(1, 82);
+			mT__72(); 
+
+			}
+			break;
+		case 14:
+			DebugEnterAlt(14);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:88: T__73
+			{
+			DebugLocation(1, 88);
+			mT__73(); 
+
+			}
+			break;
+		case 15:
+			DebugEnterAlt(15);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:94: T__74
+			{
+			DebugLocation(1, 94);
+			mT__74(); 
+
+			}
+			break;
+		case 16:
+			DebugEnterAlt(16);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:100: T__75
+			{
+			DebugLocation(1, 100);
+			mT__75(); 
+
+			}
+			break;
+		case 17:
+			DebugEnterAlt(17);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:106: T__76
+			{
+			DebugLocation(1, 106);
+			mT__76(); 
+
+			}
+			break;
+		case 18:
+			DebugEnterAlt(18);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:112: T__77
+			{
+			DebugLocation(1, 112);
+			mT__77(); 
+
+			}
+			break;
+		case 19:
+			DebugEnterAlt(19);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:118: T__78
+			{
+			DebugLocation(1, 118);
+			mT__78(); 
+
+			}
+			break;
+		case 20:
+			DebugEnterAlt(20);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:124: T__79
+			{
+			DebugLocation(1, 124);
+			mT__79(); 
+
+			}
+			break;
+		case 21:
+			DebugEnterAlt(21);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:130: T__80
+			{
+			DebugLocation(1, 130);
+			mT__80(); 
+
+			}
+			break;
+		case 22:
+			DebugEnterAlt(22);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:136: T__81
+			{
+			DebugLocation(1, 136);
+			mT__81(); 
+
+			}
+			break;
+		case 23:
+			DebugEnterAlt(23);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:142: T__82
+			{
+			DebugLocation(1, 142);
+			mT__82(); 
+
+			}
+			break;
+		case 24:
+			DebugEnterAlt(24);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:148: ID
+			{
+			DebugLocation(1, 148);
+			mID(); 
+
+			}
+			break;
+		case 25:
+			DebugEnterAlt(25);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:151: INT
+			{
+			DebugLocation(1, 151);
+			mINT(); 
+
+			}
+			break;
+		case 26:
+			DebugEnterAlt(26);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:155: STRING
+			{
+			DebugLocation(1, 155);
+			mSTRING(); 
+
+			}
+			break;
+		case 27:
+			DebugEnterAlt(27);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:162: COMMENT
+			{
+			DebugLocation(1, 162);
+			mCOMMENT(); 
+
+			}
+			break;
+		case 28:
+			DebugEnterAlt(28);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:170: WS
+			{
+			DebugLocation(1, 170);
+			mWS(); 
+
+			}
+			break;
+		case 29:
+			DebugEnterAlt(29);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:173: GENERIC_ID
+			{
+			DebugLocation(1, 173);
+			mGENERIC_ID(); 
+
+			}
+			break;
+		case 30:
+			DebugEnterAlt(30);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:184: MATCHOP
+			{
+			DebugLocation(1, 184);
+			mMATCHOP(); 
+
+			}
+			break;
+		case 31:
+			DebugEnterAlt(31);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:192: OR
+			{
+			DebugLocation(1, 192);
+			mOR(); 
+
+			}
+			break;
+		case 32:
+			DebugEnterAlt(32);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:195: AND
+			{
+			DebugLocation(1, 195);
+			mAND(); 
+
+			}
+			break;
+		case 33:
+			DebugEnterAlt(33);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:199: EQUALS
+			{
+			DebugLocation(1, 199);
+			mEQUALS(); 
+
+			}
+			break;
+		case 34:
+			DebugEnterAlt(34);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:206: NOTEQUALS
+			{
+			DebugLocation(1, 206);
+			mNOTEQUALS(); 
+
+			}
+			break;
+		case 35:
+			DebugEnterAlt(35);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:216: LT
+			{
+			DebugLocation(1, 216);
+			mLT(); 
+
+			}
+			break;
+		case 36:
+			DebugEnterAlt(36);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:219: LTEQ
+			{
+			DebugLocation(1, 219);
+			mLTEQ(); 
+
+			}
+			break;
+		case 37:
+			DebugEnterAlt(37);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:224: GT
+			{
+			DebugLocation(1, 224);
+			mGT(); 
+
+			}
+			break;
+		case 38:
+			DebugEnterAlt(38);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:227: GTEQ
+			{
+			DebugLocation(1, 227);
+			mGTEQ(); 
+
+			}
+			break;
+		case 39:
+			DebugEnterAlt(39);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:232: PLUS
+			{
+			DebugLocation(1, 232);
+			mPLUS(); 
+
+			}
+			break;
+		case 40:
+			DebugEnterAlt(40);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:237: MINUS
+			{
+			DebugLocation(1, 237);
+			mMINUS(); 
+
+			}
+			break;
+		case 41:
+			DebugEnterAlt(41);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:243: MULT
+			{
+			DebugLocation(1, 243);
+			mMULT(); 
+
+			}
+			break;
+		case 42:
+			DebugEnterAlt(42);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:248: DIV
+			{
+			DebugLocation(1, 248);
+			mDIV(); 
+
+			}
+			break;
+		case 43:
+			DebugEnterAlt(43);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:252: MOD
+			{
+			DebugLocation(1, 252);
+			mMOD(); 
+
+			}
+			break;
+		case 44:
+			DebugEnterAlt(44);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:256: NOT
+			{
+			DebugLocation(1, 256);
+			mNOT(); 
+
+			}
+			break;
+		case 45:
+			DebugEnterAlt(45);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:1:260: TEXT
+			{
+			DebugLocation(1, 260);
+			mTEXT(); 
 
 			}
 			break;
@@ -1576,151 +2847,177 @@ public partial class mccarthyLexer : Antlr.Runtime.Lexer
 
 
 	#region DFA
-	DFA9 dfa9;
-	DFA20 dfa20;
+	DFA14 dfa14;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa9 = new DFA9(this);
-		dfa20 = new DFA20(this);
+		dfa14 = new DFA14(this);
 	}
 
-	private class DFA9 : DFA
+	private class DFA14 : DFA
 	{
-		private const string DFA9_eotS =
-			"\x5\xFFFF";
-		private const string DFA9_eofS =
-			"\x5\xFFFF";
-		private const string DFA9_minS =
-			"\x2\x2E\x3\xFFFF";
-		private const string DFA9_maxS =
-			"\x1\x39\x1\x65\x3\xFFFF";
-		private const string DFA9_acceptS =
-			"\x2\xFFFF\x1\x2\x1\x1\x1\x3";
-		private const string DFA9_specialS =
-			"\x5\xFFFF}>";
-		private static readonly string[] DFA9_transitionS =
+		private const string DFA14_eotS =
+			"\x1\x1E\x1\x20\x4\xFFFF\x1\x22\x1\x25\x1\x26\x1\xFFFF\x1\x2B\x1\x30\x1"+
+			"\x32\x2\x35\x2\xFFFF\x1\x35\x4\xFFFF\x1\x35\x1\xFFFF\x1\x35\x1\x3A\x13"+
+			"\xFFFF\x1\x3D\x1\x40\x4\xFFFF\x2\x35\x1\xFFFF\x3\x35\x8\xFFFF\x7\x35"+
+			"\x1\x4A\x1\x4B\x2\xFFFF";
+		private const string DFA14_eofS =
+			"\x4C\xFFFF";
+		private const string DFA14_minS =
+			"\x1\x9\x1\x3D\x4\xFFFF\x1\x3E\x1\x2A\x1\x2E\x1\xFFFF\x1\x3D\x1\x3C\x1"+
+			"\x3E\x2\x2E\x2\xFFFF\x1\x2E\x4\xFFFF\x1\x2E\x1\xFFFF\x1\x2E\x1\x3D\x13"+
+			"\xFFFF\x1\x3D\x1\x3C\x4\xFFFF\x2\x2E\x1\xFFFF\x3\x2E\x8\xFFFF\x9\x2E"+
+			"\x2\xFFFF";
+		private const string DFA14_maxS =
+			"\x1\x7E\x1\x3D\x4\xFFFF\x2\x3E\x1\x7A\x1\xFFFF\x2\x3F\x1\x3E\x2\x7A\x2"+
+			"\xFFFF\x1\x7A\x4\xFFFF\x1\x7A\x1\xFFFF\x1\x7A\x1\x3D\x13\xFFFF\x1\x3D"+
+			"\x1\x3E\x4\xFFFF\x2\x7A\x1\xFFFF\x3\x7A\x8\xFFFF\x9\x7A\x2\xFFFF";
+		private const string DFA14_acceptS =
+			"\x2\xFFFF\x1\x3\x1\x4\x1\x5\x1\x6\x3\xFFFF\x1\xA\x5\xFFFF\x1\x16\x1\x17"+
+			"\x1\xFFFF\x1\x19\x1\x1A\x1\x1C\x1\x1F\x1\xFFFF\x1\x20\x2\xFFFF\x1\x27"+
+			"\x1\x29\x1\x2B\x1\x2C\x1\x2D\x1\x2\x1\x1\x1\x7\x1\x28\x1\x8\x1\x1B\x1"+
+			"\x2A\x1\x9\x1\x1D\x1\xB\x1\x22\x1\x24\x1\x23\x1\xD\x2\xFFFF\x1\x1E\x1"+
+			"\xC\x1\x13\x1\x12\x2\xFFFF\x1\x18\x3\xFFFF\x1\x26\x1\x25\x1\x2\x1\x21"+
+			"\x1\xE\x1\x10\x1\x11\x1\xF\x9\xFFFF\x1\x14\x1\x15";
+		private const string DFA14_specialS =
+			"\x4C\xFFFF}>";
+		private static readonly string[] DFA14_transitionS =
 			{
-				"\x1\x2\x1\xFFFF\xA\x1",
-				"\x1\x3\x1\xFFFF\xA\x1\xB\xFFFF\x1\x4\x1F\xFFFF\x1\x4",
+				"\x2\x14\x2\xFFFF\x1\x14\x12\xFFFF\x1\x14\x1\x1\x1\x13\x1\xFFFF\x1\x2"+
+				"\x1\x1C\x1\x17\x1\x13\x1\x3\x1\x4\x1\x1B\x1\x1A\x1\x5\x1\x6\x1\xFFFF"+
+				"\x1\x7\xA\x12\x1\x8\x1\x9\x1\xA\x1\xB\x1\x19\x1\xC\x1\xFFFF\x1A\x18"+
+				"\x4\xFFFF\x1\x18\x1\xFFFF\x1\x16\x7\x18\x1\xD\x3\x18\x1\xE\x1\x18\x1"+
+				"\x11\xB\x18\x1\xF\x1\x15\x1\x10\x1\x1D",
+				"\x1\x1F",
 				"",
+				"",
+				"",
+				"",
+				"\x1\x21",
+				"\x1\x24\x4\xFFFF\x1\x24\xE\xFFFF\x1\x23",
+				"\x1\x27\x1\xFFFF\xB\x27\x6\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A"+
+				"\x27",
+				"",
+				"\x1\x2A\x1\x29\x1\x28",
+				"\x1\x2C\x1\x2D\x1\x2E\x1\x2F",
+				"\x1\x31",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\xC\x34\x1\x33\xD\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\xE\x34\x1\x36\xB\x34",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x11\x34\x1\x37\x8\x34",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\xD\x34\x1\x38\xC\x34",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x1A\x34",
+				"\x1\x39",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x3C",
+				"\x1\x3E\x1\xFFFF\x1\x3F",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\xF\x34\x1\x41\xA\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x1A\x34",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x3\x34\x1\x42\x16\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x1A\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x3\x34\x1\x43\x16\x34",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\xE\x34\x1\x44\xB\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x14\x34\x1\x45\x5\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x1A\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x11\x34\x1\x46\x8\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\xB\x34\x1\x47\xE\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x13\x34\x1\x48\x6\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x4\x34\x1\x49\x15\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x1A\x34",
+				"\x1\x27\x1\xFFFF\xA\x34\x1\x27\x6\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1"+
+				"\xFFFF\x1A\x34",
 				"",
 				""
 			};
 
-		private static readonly short[] DFA9_eot = DFA.UnpackEncodedString(DFA9_eotS);
-		private static readonly short[] DFA9_eof = DFA.UnpackEncodedString(DFA9_eofS);
-		private static readonly char[] DFA9_min = DFA.UnpackEncodedStringToUnsignedChars(DFA9_minS);
-		private static readonly char[] DFA9_max = DFA.UnpackEncodedStringToUnsignedChars(DFA9_maxS);
-		private static readonly short[] DFA9_accept = DFA.UnpackEncodedString(DFA9_acceptS);
-		private static readonly short[] DFA9_special = DFA.UnpackEncodedString(DFA9_specialS);
-		private static readonly short[][] DFA9_transition;
+		private static readonly short[] DFA14_eot = DFA.UnpackEncodedString(DFA14_eotS);
+		private static readonly short[] DFA14_eof = DFA.UnpackEncodedString(DFA14_eofS);
+		private static readonly char[] DFA14_min = DFA.UnpackEncodedStringToUnsignedChars(DFA14_minS);
+		private static readonly char[] DFA14_max = DFA.UnpackEncodedStringToUnsignedChars(DFA14_maxS);
+		private static readonly short[] DFA14_accept = DFA.UnpackEncodedString(DFA14_acceptS);
+		private static readonly short[] DFA14_special = DFA.UnpackEncodedString(DFA14_specialS);
+		private static readonly short[][] DFA14_transition;
 
-		static DFA9()
+		static DFA14()
 		{
-			int numStates = DFA9_transitionS.Length;
-			DFA9_transition = new short[numStates][];
+			int numStates = DFA14_transitionS.Length;
+			DFA14_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA9_transition[i] = DFA.UnpackEncodedString(DFA9_transitionS[i]);
+				DFA14_transition[i] = DFA.UnpackEncodedString(DFA14_transitionS[i]);
 			}
 		}
 
-		public DFA9( BaseRecognizer recognizer )
+		public DFA14( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 9;
-			this.eot = DFA9_eot;
-			this.eof = DFA9_eof;
-			this.min = DFA9_min;
-			this.max = DFA9_max;
-			this.accept = DFA9_accept;
-			this.special = DFA9_special;
-			this.transition = DFA9_transition;
+			this.decisionNumber = 14;
+			this.eot = DFA14_eot;
+			this.eof = DFA14_eof;
+			this.min = DFA14_min;
+			this.max = DFA14_max;
+			this.accept = DFA14_accept;
+			this.special = DFA14_special;
+			this.transition = DFA14_transition;
 		}
 
-		public override string Description { get { return "23:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
-
-		public override void Error(NoViableAltException nvae)
-		{
-			DebugRecognitionException(nvae);
-		}
-	}
-
-	private class DFA20 : DFA
-	{
-		private const string DFA20_eotS =
-			"\x2\xFFFF\x1\x3\x1\xFFFF\x1\xB\x5\xFFFF\x1\x3\x1\xFFFF\x3\x3\x1\x10\x1"+
-			"\xFFFF";
-		private const string DFA20_eofS =
-			"\x11\xFFFF";
-		private const string DFA20_minS =
-			"\x1\x9\x1\xFFFF\x1\x6F\x1\xFFFF\x1\x2E\x5\xFFFF\x1\x64\x1\xFFFF\x1\x75"+
-			"\x1\x6C\x1\x65\x1\x30\x1\xFFFF";
-		private const string DFA20_maxS =
-			"\x1\x7A\x1\xFFFF\x1\x6F\x1\xFFFF\x1\x65\x5\xFFFF\x1\x64\x1\xFFFF\x1\x75"+
-			"\x1\x6C\x1\x65\x1\x7A\x1\xFFFF";
-		private const string DFA20_acceptS =
-			"\x1\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9"+
-			"\x1\xFFFF\x1\x4\x4\xFFFF\x1\x2";
-		private const string DFA20_specialS =
-			"\x11\xFFFF}>";
-		private static readonly string[] DFA20_transitionS =
-			{
-				"\x2\x7\x2\xFFFF\x1\x7\x12\xFFFF\x1\x7\x1\xFFFF\x1\x8\x4\xFFFF\x1\x9"+
-				"\x6\xFFFF\x1\x5\x1\x6\xA\x4\x1\xFFFF\x1\x1\x5\xFFFF\x1A\x3\x4\xFFFF"+
-				"\x1\x3\x1\xFFFF\xC\x3\x1\x2\xD\x3",
-				"",
-				"\x1\xA",
-				"",
-				"\x1\x5\x1\xFFFF\xA\x4\xB\xFFFF\x1\x5\x1F\xFFFF\x1\x5",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"\x1\xC",
-				"",
-				"\x1\xD",
-				"\x1\xE",
-				"\x1\xF",
-				"\xA\x3\x7\xFFFF\x1A\x3\x4\xFFFF\x1\x3\x1\xFFFF\x1A\x3",
-				""
-			};
-
-		private static readonly short[] DFA20_eot = DFA.UnpackEncodedString(DFA20_eotS);
-		private static readonly short[] DFA20_eof = DFA.UnpackEncodedString(DFA20_eofS);
-		private static readonly char[] DFA20_min = DFA.UnpackEncodedStringToUnsignedChars(DFA20_minS);
-		private static readonly char[] DFA20_max = DFA.UnpackEncodedStringToUnsignedChars(DFA20_maxS);
-		private static readonly short[] DFA20_accept = DFA.UnpackEncodedString(DFA20_acceptS);
-		private static readonly short[] DFA20_special = DFA.UnpackEncodedString(DFA20_specialS);
-		private static readonly short[][] DFA20_transition;
-
-		static DFA20()
-		{
-			int numStates = DFA20_transitionS.Length;
-			DFA20_transition = new short[numStates][];
-			for ( int i=0; i < numStates; i++ )
-			{
-				DFA20_transition[i] = DFA.UnpackEncodedString(DFA20_transitionS[i]);
-			}
-		}
-
-		public DFA20( BaseRecognizer recognizer )
-		{
-			this.recognizer = recognizer;
-			this.decisionNumber = 20;
-			this.eot = DFA20_eot;
-			this.eof = DFA20_eof;
-			this.min = DFA20_min;
-			this.max = DFA20_max;
-			this.accept = DFA20_accept;
-			this.special = DFA20_special;
-			this.transition = DFA20_transition;
-		}
-
-		public override string Description { get { return "1:1: Tokens : ( T__16 | T__17 | ID | INT | FLOAT | COMMENT | WS | STRING | CHAR );"; } }
+		public override string Description { get { return "1:1: Tokens : ( T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | ID | INT | STRING | COMMENT | WS | GENERIC_ID | MATCHOP | OR | AND | EQUALS | NOTEQUALS | LT | LTEQ | GT | GTEQ | PLUS | MINUS | MULT | DIV | MOD | NOT | TEXT );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

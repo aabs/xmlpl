@@ -5,11 +5,13 @@ options {
     TokenLabelType=CommonToken;
     output=AST;
     ASTLabelType=CommonTree;
+	backtrack=true;
 }
 tokens {
  ROOT; Imports ; FUNCDEC ; FUNCDECLIST ; ARG; ARGLIST ; FUNCBODY; BLOCK;
- BINDING ; VARREF ; REPLACE ; APPEND ; PREPEND ; MATCH ; PATH ; PATHCTX ;
+ BINDING ; VARREF ; REPLACE ; APPEND ; PREPEND ; MATCH ; PATH ; PATHCTX ; IMPORTDECL; MODULEDECL;
  SEG ; VALINT ; VALSTR ; XML; XMLOPENELEM ; XMLCLOSEELEM ; XMLCHILDREN ; XMLTEXT ; XMLATTR ; XMLATTRS ;
+ INVOCATION; PARAMETER; PARAMETERS;
 }
 
 @members {
@@ -70,8 +72,26 @@ GENERIC_ID
     ;
 MATCHOP	:	'=?'; 
 
+OR    :     '||' | 'or';
+AND   :     '&&' | 'and';
+EQUALS
+      :    '===';
+NOTEQUALS
+      :    '!=' | '<>';
+LT    :    '<';
+LTEQ  :    '<=';
+GT    :    '>';
+GTEQ  :    '>=';
+PLUS  :    '+';
+MINUS :    '-';
+MULT  :    '*';
+DIV   :    '/';
+MOD   :    '%';
+NOT   :    '~';
+
+
 fragment NAMECHAR
-    : LETTER | DIGIT | '.' | '-' | '_' | ':'
+    : LETTER | DIGIT | '.' | /*'-' |*/ '_' | ':'
     ;
  
 fragment DIGIT
@@ -97,15 +117,15 @@ public module
 					^(FUNCDECLIST $fd)?
 				)
     ;
-importDeclarations
+public importDeclarations
 	: (importDeclaration)*
 	;
 
-importDeclaration
-	: 'import' ID ';' -> ^('import' ID) ;
+public importDeclaration
+	: 'import' ID ';' -> ^(IMPORTDECL ID) ;
 
-moduleDeclaration
-	: 'module' ID ';' -> ^('module' ID)
+public moduleDeclaration
+	: 'module' ID ';' -> ^(MODULEDECL ID)
 	;
 
 functionDeclarations
@@ -117,6 +137,18 @@ functionDeclaration
 		-> ^(FUNCDEC $functionName ^(ARGLIST $al)? ^(FUNCBODY $sl)?)
 	;
 
+public functionInvocation
+    : funcName=ID '(' parameterList ')' -> ^(INVOCATION $funcName ^(PARAMETERS parameterList))
+    ;
+
+parameterList
+    : param (','! param) *
+    ;
+
+param
+    : value
+    ;
+
 argList
 	: arg (',' arg)*
 		-> arg+
@@ -126,10 +158,55 @@ arg
 	: argName=ID ':' type=ID
 		-> ^(ARG $argName $type)
 	;	
+
 statements 
 	:
 	(statement ';')* -> ^(BLOCK statement*) 
 	;
+
+public logicalExpression
+    :    booleanAndExpression ( OR^ booleanAndExpression )*
+    ;
+
+public booleanAndExpression
+    :    equalityExpression ( AND^ equalityExpression )*
+    ;
+
+public equalityExpression
+    :    relationalExpression 
+		( EQUALS^ relationalExpression
+		| NOTEQUALS^ relationalExpression)*
+    ;
+
+public relationalExpression
+    :    additiveExpression 
+		( LT^ additiveExpression 
+		| LTEQ^ additiveExpression 
+		| GT^ additiveExpression 
+		| GTEQ^ additiveExpression)*
+    ;
+
+public additiveExpression
+    :    multiplicativeExpression  PLUS^ multiplicativeExpression
+		| multiplicativeExpression MINUS^ multiplicativeExpression
+		| multiplicativeExpression
+    ;
+
+public multiplicativeExpression
+    :    unaryExpression
+		( MULT^ unaryExpression 
+		| DIV^ unaryExpression 
+		| MOD^ unaryExpression)*
+    ;
+
+public unaryExpression
+    :    NOT? primaryExpression
+       ;
+
+public primaryExpression
+    :    '('! logicalExpression ')'!
+    |    value
+    ;
 
 public statement
 	: assignment
@@ -142,11 +219,13 @@ public statement
 	| moveBackOperation
 	| deleteOperation
 	;
+
 value
 	:
 	  x=INT -> ^(VALINT $x)
 	| x=ID	-> ^(VARREF $x)
 	| x=STRING -> ^(VALSTR $x)
+    | functionInvocation
 	;
 
 assignment

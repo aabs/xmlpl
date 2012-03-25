@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.3.1.7705 mccarthy.g3 2012-03-20 21:20:24
+// $ANTLR 3.3.1.7705 mccarthy.g3 2012-03-25 16:29:46
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -33,65 +33,65 @@ namespace xmlpl_parser
 public partial class mccarthyParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "APPEND", "ARG", "ARGLIST", "BINDING", "BLOCK", "COMMENT", "DIGIT", "FUNCBODY", "FUNCDEC", "FUNCDECLIST", "GENERIC_ID", "ID", "INT", "Imports", "LETTER", "MATCH", "MATCHOP", "NAMECHAR", "PATH", "PATHCTX", "PREPEND", "REPLACE", "ROOT", "SEG", "STRING", "TEXT", "VALINT", "VALSTR", "VARREF", "WS", "XML", "XMLATTR", "XMLATTRS", "XMLCHILDREN", "XMLCLOSEELEM", "XMLOPENELEM", "XMLTEXT", "'!'", "'!='", "'$'", "'('", "')'", "','", "'->'", "'/'", "'/>'", "':'", "';'", "'<'", "'<?'", "'='", "'=<'", "'=='", "'=>'", "'=><'", "'=>>'", "'>'", "'?'", "'?>'", "'import'", "'module'", "'{'", "'}'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "APPEND", "ARG", "ARGLIST", "BINDING", "BLOCK", "COMMENT", "DIGIT", "DIV", "EQUALS", "FUNCBODY", "FUNCDEC", "FUNCDECLIST", "GENERIC_ID", "GT", "GTEQ", "ID", "IMPORTDECL", "INT", "INVOCATION", "Imports", "LETTER", "LT", "LTEQ", "MATCH", "MATCHOP", "MINUS", "MOD", "MODULEDECL", "MULT", "NAMECHAR", "NOT", "NOTEQUALS", "OR", "PARAMETER", "PARAMETERS", "PATH", "PATHCTX", "PLUS", "PREPEND", "REPLACE", "ROOT", "SEG", "STRING", "TEXT", "VALINT", "VALSTR", "VARREF", "WS", "XML", "XMLATTR", "XMLATTRS", "XMLCHILDREN", "XMLCLOSEELEM", "XMLOPENELEM", "XMLTEXT", "'!'", "'!='", "'$'", "'('", "')'", "','", "'->'", "'/>'", "':'", "';'", "'<?'", "'='", "'=<'", "'=='", "'=>'", "'=><'", "'=>>'", "'?'", "'?>'", "'import'", "'module'", "'{'", "'}'"
 	};
 	public const int EOF=-1;
-	public const int APPEND=4;
-	public const int ARG=5;
-	public const int ARGLIST=6;
-	public const int BINDING=7;
-	public const int BLOCK=8;
-	public const int COMMENT=9;
-	public const int DIGIT=10;
-	public const int FUNCBODY=11;
-	public const int FUNCDEC=12;
-	public const int FUNCDECLIST=13;
-	public const int GENERIC_ID=14;
-	public const int ID=15;
-	public const int INT=16;
-	public const int Imports=17;
-	public const int LETTER=18;
-	public const int MATCH=19;
-	public const int MATCHOP=20;
-	public const int NAMECHAR=21;
-	public const int PATH=22;
-	public const int PATHCTX=23;
-	public const int PREPEND=24;
-	public const int REPLACE=25;
-	public const int ROOT=26;
-	public const int SEG=27;
-	public const int STRING=28;
-	public const int TEXT=29;
-	public const int VALINT=30;
-	public const int VALSTR=31;
-	public const int VARREF=32;
-	public const int WS=33;
-	public const int XML=34;
-	public const int XMLATTR=35;
-	public const int XMLATTRS=36;
-	public const int XMLCHILDREN=37;
-	public const int XMLCLOSEELEM=38;
-	public const int XMLOPENELEM=39;
-	public const int XMLTEXT=40;
-	public const int T__41=41;
-	public const int T__42=42;
-	public const int T__43=43;
-	public const int T__44=44;
-	public const int T__45=45;
-	public const int T__46=46;
-	public const int T__47=47;
-	public const int T__48=48;
-	public const int T__49=49;
-	public const int T__50=50;
-	public const int T__51=51;
-	public const int T__52=52;
-	public const int T__53=53;
-	public const int T__54=54;
-	public const int T__55=55;
-	public const int T__56=56;
-	public const int T__57=57;
-	public const int T__58=58;
-	public const int T__59=59;
+	public const int AND=4;
+	public const int APPEND=5;
+	public const int ARG=6;
+	public const int ARGLIST=7;
+	public const int BINDING=8;
+	public const int BLOCK=9;
+	public const int COMMENT=10;
+	public const int DIGIT=11;
+	public const int DIV=12;
+	public const int EQUALS=13;
+	public const int FUNCBODY=14;
+	public const int FUNCDEC=15;
+	public const int FUNCDECLIST=16;
+	public const int GENERIC_ID=17;
+	public const int GT=18;
+	public const int GTEQ=19;
+	public const int ID=20;
+	public const int IMPORTDECL=21;
+	public const int INT=22;
+	public const int INVOCATION=23;
+	public const int Imports=24;
+	public const int LETTER=25;
+	public const int LT=26;
+	public const int LTEQ=27;
+	public const int MATCH=28;
+	public const int MATCHOP=29;
+	public const int MINUS=30;
+	public const int MOD=31;
+	public const int MODULEDECL=32;
+	public const int MULT=33;
+	public const int NAMECHAR=34;
+	public const int NOT=35;
+	public const int NOTEQUALS=36;
+	public const int OR=37;
+	public const int PARAMETER=38;
+	public const int PARAMETERS=39;
+	public const int PATH=40;
+	public const int PATHCTX=41;
+	public const int PLUS=42;
+	public const int PREPEND=43;
+	public const int REPLACE=44;
+	public const int ROOT=45;
+	public const int SEG=46;
+	public const int STRING=47;
+	public const int TEXT=48;
+	public const int VALINT=49;
+	public const int VALSTR=50;
+	public const int VARREF=51;
+	public const int WS=52;
+	public const int XML=53;
+	public const int XMLATTR=54;
+	public const int XMLATTRS=55;
+	public const int XMLCHILDREN=56;
+	public const int XMLCLOSEELEM=57;
+	public const int XMLOPENELEM=58;
+	public const int XMLTEXT=59;
 	public const int T__60=60;
 	public const int T__61=61;
 	public const int T__62=62;
@@ -99,6 +99,22 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	public const int T__64=64;
 	public const int T__65=65;
 	public const int T__66=66;
+	public const int T__67=67;
+	public const int T__68=68;
+	public const int T__69=69;
+	public const int T__70=70;
+	public const int T__71=71;
+	public const int T__72=72;
+	public const int T__73=73;
+	public const int T__74=74;
+	public const int T__75=75;
+	public const int T__76=76;
+	public const int T__77=77;
+	public const int T__78=78;
+	public const int T__79=79;
+	public const int T__80=80;
+	public const int T__81=81;
+	public const int T__82=82;
 
 	// delegates
 	// delegators
@@ -162,7 +178,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_module();
 
 	// $ANTLR start "module"
-	// mccarthy.g3:91:8: public module : md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? ) ;
+	// mccarthy.g3:111:8: public module : md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? ) ;
 	[GrammarRule("module")]
 	public mccarthyParser.module_return module()
 	{
@@ -185,34 +201,34 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_importDeclarations=new RewriteRuleSubtreeStream(adaptor,"rule importDeclarations");
 		RewriteRuleSubtreeStream stream_functionDeclarations=new RewriteRuleSubtreeStream(adaptor,"rule functionDeclarations");
 		try { DebugEnterRule(GrammarFileName, "module");
-		DebugLocation(91, 4);
+		DebugLocation(111, 4);
 		try
 		{
-			// mccarthy.g3:92:5: (md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? ) )
+			// mccarthy.g3:112:5: (md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:92:9: md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF
+			// mccarthy.g3:112:9: md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF
 			{
-			DebugLocation(92, 11);
-			PushFollow(Follow._moduleDeclaration_in_module578);
+			DebugLocation(112, 11);
+			PushFollow(Follow._moduleDeclaration_in_module787);
 			md=moduleDeclaration();
 			PopFollow();
-
-			stream_moduleDeclaration.Add(md.Tree);
-			DebugLocation(93, 8);
-			PushFollow(Follow._importDeclarations_in_module588);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_moduleDeclaration.Add(md.Tree);
+			DebugLocation(113, 8);
+			PushFollow(Follow._importDeclarations_in_module797);
 			id=importDeclarations();
 			PopFollow();
-
-			stream_importDeclarations.Add(id.Tree);
-			DebugLocation(94, 8);
-			PushFollow(Follow._functionDeclarations_in_module597);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_importDeclarations.Add(id.Tree);
+			DebugLocation(114, 8);
+			PushFollow(Follow._functionDeclarations_in_module806);
 			fd=functionDeclarations();
 			PopFollow();
-
-			stream_functionDeclarations.Add(fd.Tree);
-			DebugLocation(95, 6);
-			EOF1=(CommonToken)Match(input,EOF,Follow._EOF_in_module604);  
-			stream_EOF.Add(EOF1);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_functionDeclarations.Add(fd.Tree);
+			DebugLocation(115, 6);
+			EOF1=(CommonToken)Match(input,EOF,Follow._EOF_in_module813); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_EOF.Add(EOF1);
 
 
 
@@ -224,6 +240,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_md=new RewriteRuleSubtreeStream(adaptor,"rule md",md!=null?md.Tree:null);
 			RewriteRuleSubtreeStream stream_id=new RewriteRuleSubtreeStream(adaptor,"rule id",id!=null?id.Tree:null);
@@ -231,29 +248,29 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 95:10: -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? )
+			// 115:10: -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? )
 			{
-				DebugLocation(95, 13);
-				// mccarthy.g3:95:13: ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? )
+				DebugLocation(115, 13);
+				// mccarthy.g3:115:13: ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(95, 15);
+				DebugLocation(115, 15);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ROOT, "ROOT"), root_1);
 
-				DebugLocation(95, 21);
+				DebugLocation(115, 21);
 				adaptor.AddChild(root_1, stream_md.NextTree());
-				DebugLocation(96, 6);
-				// mccarthy.g3:96:6: ( ^( Imports $id) )?
+				DebugLocation(116, 6);
+				// mccarthy.g3:116:6: ( ^( Imports $id) )?
 				if (stream_id.HasNext)
 				{
-					DebugLocation(96, 6);
-					// mccarthy.g3:96:6: ^( Imports $id)
+					DebugLocation(116, 6);
+					// mccarthy.g3:116:6: ^( Imports $id)
 					{
 					CommonTree root_2 = (CommonTree)adaptor.Nil();
-					DebugLocation(96, 8);
+					DebugLocation(116, 8);
 					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Imports, "Imports"), root_2);
 
-					DebugLocation(96, 17);
+					DebugLocation(116, 17);
 					adaptor.AddChild(root_2, stream_id.NextTree());
 
 					adaptor.AddChild(root_1, root_2);
@@ -261,18 +278,18 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				}
 				stream_id.Reset();
-				DebugLocation(97, 6);
-				// mccarthy.g3:97:6: ( ^( FUNCDECLIST $fd) )?
+				DebugLocation(117, 6);
+				// mccarthy.g3:117:6: ( ^( FUNCDECLIST $fd) )?
 				if (stream_fd.HasNext)
 				{
-					DebugLocation(97, 6);
-					// mccarthy.g3:97:6: ^( FUNCDECLIST $fd)
+					DebugLocation(117, 6);
+					// mccarthy.g3:117:6: ^( FUNCDECLIST $fd)
 					{
 					CommonTree root_2 = (CommonTree)adaptor.Nil();
-					DebugLocation(97, 8);
+					DebugLocation(117, 8);
 					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(FUNCDECLIST, "FUNCDECLIST"), root_2);
 
-					DebugLocation(97, 21);
+					DebugLocation(117, 21);
 					adaptor.AddChild(root_2, stream_fd.NextTree());
 
 					adaptor.AddChild(root_1, root_2);
@@ -288,14 +305,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -310,14 +329,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			LeaveRule("module", 1);
 			LeaveRule_module();
 		}
-		DebugLocation(99, 4);
+		DebugLocation(119, 4);
 		} finally { DebugExitRule(GrammarFileName, "module"); }
 		return retval;
 
 	}
 	// $ANTLR end "module"
 
-	private sealed partial class importDeclarations_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	public sealed partial class importDeclarations_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
 	{
 		private CommonTree _tree;
 		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
@@ -330,9 +349,9 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_importDeclarations();
 
 	// $ANTLR start "importDeclarations"
-	// mccarthy.g3:100:1: importDeclarations : ( importDeclaration )* ;
+	// mccarthy.g3:120:8: public importDeclarations : ( importDeclaration )* ;
 	[GrammarRule("importDeclarations")]
-	private mccarthyParser.importDeclarations_return importDeclarations()
+	public mccarthyParser.importDeclarations_return importDeclarations()
 	{
 		EnterRule_importDeclarations();
 		EnterRule("importDeclarations", 2);
@@ -346,17 +365,17 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 
 		try { DebugEnterRule(GrammarFileName, "importDeclarations");
-		DebugLocation(100, 1);
+		DebugLocation(120, 1);
 		try
 		{
-			// mccarthy.g3:101:2: ( ( importDeclaration )* )
+			// mccarthy.g3:121:2: ( ( importDeclaration )* )
 			DebugEnterAlt(1);
-			// mccarthy.g3:101:4: ( importDeclaration )*
+			// mccarthy.g3:121:4: ( importDeclaration )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(101, 4);
-			// mccarthy.g3:101:4: ( importDeclaration )*
+			DebugLocation(121, 4);
+			// mccarthy.g3:121:4: ( importDeclaration )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -364,7 +383,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(1, false);
 				int LA1_0 = input.LA(1);
 
-				if ((LA1_0==63))
+				if ((LA1_0==79))
 				{
 					alt1 = 1;
 				}
@@ -375,14 +394,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:101:5: importDeclaration
+					// mccarthy.g3:121:5: importDeclaration
 					{
-					DebugLocation(101, 5);
-					PushFollow(Follow._importDeclaration_in_importDeclarations660);
+					DebugLocation(121, 5);
+					PushFollow(Follow._importDeclaration_in_importDeclarations871);
 					importDeclaration2=importDeclaration();
 					PopFollow();
-
-					adaptor.AddChild(root_0, importDeclaration2.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, importDeclaration2.Tree);
 
 					}
 					break;
@@ -402,9 +421,10 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -419,14 +439,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			LeaveRule("importDeclarations", 2);
 			LeaveRule_importDeclarations();
 		}
-		DebugLocation(102, 1);
+		DebugLocation(122, 1);
 		} finally { DebugExitRule(GrammarFileName, "importDeclarations"); }
 		return retval;
 
 	}
 	// $ANTLR end "importDeclarations"
 
-	private sealed partial class importDeclaration_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	public sealed partial class importDeclaration_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
 	{
 		private CommonTree _tree;
 		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
@@ -439,9 +459,9 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_importDeclaration();
 
 	// $ANTLR start "importDeclaration"
-	// mccarthy.g3:104:1: importDeclaration : 'import' ID ';' -> ^( 'import' ID ) ;
+	// mccarthy.g3:124:8: public importDeclaration : 'import' ID ';' -> ^( IMPORTDECL ID ) ;
 	[GrammarRule("importDeclaration")]
-	private mccarthyParser.importDeclaration_return importDeclaration()
+	public mccarthyParser.importDeclaration_return importDeclaration()
 	{
 		EnterRule_importDeclaration();
 		EnterRule("importDeclaration", 3);
@@ -458,54 +478,55 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		CommonTree string_literal3_tree = default(CommonTree);
 		CommonTree ID4_tree = default(CommonTree);
 		CommonTree char_literal5_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleITokenStream stream_79=new RewriteRuleITokenStream(adaptor,"token 79");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_51=new RewriteRuleITokenStream(adaptor,"token 51");
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
 
 		try { DebugEnterRule(GrammarFileName, "importDeclaration");
-		DebugLocation(104, 37);
+		DebugLocation(124, 39);
 		try
 		{
-			// mccarthy.g3:105:2: ( 'import' ID ';' -> ^( 'import' ID ) )
+			// mccarthy.g3:125:2: ( 'import' ID ';' -> ^( IMPORTDECL ID ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:105:4: 'import' ID ';'
+			// mccarthy.g3:125:4: 'import' ID ';'
 			{
-			DebugLocation(105, 4);
-			string_literal3=(CommonToken)Match(input,63,Follow._63_in_importDeclaration673);  
-			stream_63.Add(string_literal3);
+			DebugLocation(125, 4);
+			string_literal3=(CommonToken)Match(input,79,Follow._79_in_importDeclaration886); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_79.Add(string_literal3);
 
-			DebugLocation(105, 13);
-			ID4=(CommonToken)Match(input,ID,Follow._ID_in_importDeclaration675);  
-			stream_ID.Add(ID4);
+			DebugLocation(125, 13);
+			ID4=(CommonToken)Match(input,ID,Follow._ID_in_importDeclaration888); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(ID4);
 
-			DebugLocation(105, 16);
-			char_literal5=(CommonToken)Match(input,51,Follow._51_in_importDeclaration677);  
-			stream_51.Add(char_literal5);
+			DebugLocation(125, 16);
+			char_literal5=(CommonToken)Match(input,69,Follow._69_in_importDeclaration890); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_69.Add(char_literal5);
 
 
 
 			{
 			// AST REWRITE
-			// elements: 63, ID
+			// elements: ID
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 105:20: -> ^( 'import' ID )
+			// 125:20: -> ^( IMPORTDECL ID )
 			{
-				DebugLocation(105, 23);
-				// mccarthy.g3:105:23: ^( 'import' ID )
+				DebugLocation(125, 23);
+				// mccarthy.g3:125:23: ^( IMPORTDECL ID )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(105, 25);
-				root_1 = (CommonTree)adaptor.BecomeRoot(stream_63.NextNode(), root_1);
+				DebugLocation(125, 25);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(IMPORTDECL, "IMPORTDECL"), root_1);
 
-				DebugLocation(105, 34);
+				DebugLocation(125, 36);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
 
 				adaptor.AddChild(root_0, root_1);
@@ -515,14 +536,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -537,14 +560,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			LeaveRule("importDeclaration", 3);
 			LeaveRule_importDeclaration();
 		}
-		DebugLocation(105, 37);
+		DebugLocation(125, 39);
 		} finally { DebugExitRule(GrammarFileName, "importDeclaration"); }
 		return retval;
 
 	}
 	// $ANTLR end "importDeclaration"
 
-	private sealed partial class moduleDeclaration_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	public sealed partial class moduleDeclaration_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
 	{
 		private CommonTree _tree;
 		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
@@ -557,9 +580,9 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_moduleDeclaration();
 
 	// $ANTLR start "moduleDeclaration"
-	// mccarthy.g3:107:1: moduleDeclaration : 'module' ID ';' -> ^( 'module' ID ) ;
+	// mccarthy.g3:127:8: public moduleDeclaration : 'module' ID ';' -> ^( MODULEDECL ID ) ;
 	[GrammarRule("moduleDeclaration")]
-	private mccarthyParser.moduleDeclaration_return moduleDeclaration()
+	public mccarthyParser.moduleDeclaration_return moduleDeclaration()
 	{
 		EnterRule_moduleDeclaration();
 		EnterRule("moduleDeclaration", 4);
@@ -576,54 +599,55 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		CommonTree string_literal6_tree = default(CommonTree);
 		CommonTree ID7_tree = default(CommonTree);
 		CommonTree char_literal8_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_80=new RewriteRuleITokenStream(adaptor,"token 80");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_51=new RewriteRuleITokenStream(adaptor,"token 51");
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
 
 		try { DebugEnterRule(GrammarFileName, "moduleDeclaration");
-		DebugLocation(107, 1);
+		DebugLocation(127, 1);
 		try
 		{
-			// mccarthy.g3:108:2: ( 'module' ID ';' -> ^( 'module' ID ) )
+			// mccarthy.g3:128:2: ( 'module' ID ';' -> ^( MODULEDECL ID ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:108:4: 'module' ID ';'
+			// mccarthy.g3:128:4: 'module' ID ';'
 			{
-			DebugLocation(108, 4);
-			string_literal6=(CommonToken)Match(input,64,Follow._64_in_moduleDeclaration695);  
-			stream_64.Add(string_literal6);
+			DebugLocation(128, 4);
+			string_literal6=(CommonToken)Match(input,80,Follow._80_in_moduleDeclaration910); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_80.Add(string_literal6);
 
-			DebugLocation(108, 13);
-			ID7=(CommonToken)Match(input,ID,Follow._ID_in_moduleDeclaration697);  
-			stream_ID.Add(ID7);
+			DebugLocation(128, 13);
+			ID7=(CommonToken)Match(input,ID,Follow._ID_in_moduleDeclaration912); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(ID7);
 
-			DebugLocation(108, 16);
-			char_literal8=(CommonToken)Match(input,51,Follow._51_in_moduleDeclaration699);  
-			stream_51.Add(char_literal8);
+			DebugLocation(128, 16);
+			char_literal8=(CommonToken)Match(input,69,Follow._69_in_moduleDeclaration914); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_69.Add(char_literal8);
 
 
 
 			{
 			// AST REWRITE
-			// elements: 64, ID
+			// elements: ID
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 108:20: -> ^( 'module' ID )
+			// 128:20: -> ^( MODULEDECL ID )
 			{
-				DebugLocation(108, 23);
-				// mccarthy.g3:108:23: ^( 'module' ID )
+				DebugLocation(128, 23);
+				// mccarthy.g3:128:23: ^( MODULEDECL ID )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(108, 25);
-				root_1 = (CommonTree)adaptor.BecomeRoot(stream_64.NextNode(), root_1);
+				DebugLocation(128, 25);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MODULEDECL, "MODULEDECL"), root_1);
 
-				DebugLocation(108, 34);
+				DebugLocation(128, 36);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
 
 				adaptor.AddChild(root_0, root_1);
@@ -633,14 +657,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -655,7 +681,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			LeaveRule("moduleDeclaration", 4);
 			LeaveRule_moduleDeclaration();
 		}
-		DebugLocation(109, 1);
+		DebugLocation(129, 1);
 		} finally { DebugExitRule(GrammarFileName, "moduleDeclaration"); }
 		return retval;
 
@@ -675,7 +701,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_functionDeclarations();
 
 	// $ANTLR start "functionDeclarations"
-	// mccarthy.g3:111:1: functionDeclarations : ( functionDeclaration )* ;
+	// mccarthy.g3:131:1: functionDeclarations : ( functionDeclaration )* ;
 	[GrammarRule("functionDeclarations")]
 	private mccarthyParser.functionDeclarations_return functionDeclarations()
 	{
@@ -691,17 +717,17 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 
 		try { DebugEnterRule(GrammarFileName, "functionDeclarations");
-		DebugLocation(111, 1);
+		DebugLocation(131, 1);
 		try
 		{
-			// mccarthy.g3:112:2: ( ( functionDeclaration )* )
+			// mccarthy.g3:132:2: ( ( functionDeclaration )* )
 			DebugEnterAlt(1);
-			// mccarthy.g3:112:4: ( functionDeclaration )*
+			// mccarthy.g3:132:4: ( functionDeclaration )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(112, 4);
-			// mccarthy.g3:112:4: ( functionDeclaration )*
+			DebugLocation(132, 4);
+			// mccarthy.g3:132:4: ( functionDeclaration )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -720,14 +746,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:112:5: functionDeclaration
+					// mccarthy.g3:132:5: functionDeclaration
 					{
-					DebugLocation(112, 5);
-					PushFollow(Follow._functionDeclaration_in_functionDeclarations719);
+					DebugLocation(132, 5);
+					PushFollow(Follow._functionDeclaration_in_functionDeclarations934);
 					functionDeclaration9=functionDeclaration();
 					PopFollow();
-
-					adaptor.AddChild(root_0, functionDeclaration9.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, functionDeclaration9.Tree);
 
 					}
 					break;
@@ -747,9 +773,10 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -764,7 +791,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			LeaveRule("functionDeclarations", 5);
 			LeaveRule_functionDeclarations();
 		}
-		DebugLocation(113, 1);
+		DebugLocation(133, 1);
 		} finally { DebugExitRule(GrammarFileName, "functionDeclarations"); }
 		return retval;
 
@@ -784,7 +811,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_functionDeclaration();
 
 	// $ANTLR start "functionDeclaration"
-	// mccarthy.g3:115:1: functionDeclaration : functionName= ID '(' al= argList ')' '{' sl= statements '}' -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? ) ;
+	// mccarthy.g3:135:1: functionDeclaration : functionName= ID '(' al= argList ')' '{' sl= statements '}' -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? ) ;
 	[GrammarRule("functionDeclaration")]
 	private mccarthyParser.functionDeclaration_return functionDeclaration()
 	{
@@ -810,51 +837,51 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		CommonTree char_literal12_tree = default(CommonTree);
 		CommonTree char_literal13_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
-		RewriteRuleITokenStream stream_45=new RewriteRuleITokenStream(adaptor,"token 45");
-		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
-		RewriteRuleITokenStream stream_66=new RewriteRuleITokenStream(adaptor,"token 66");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_81=new RewriteRuleITokenStream(adaptor,"token 81");
+		RewriteRuleITokenStream stream_82=new RewriteRuleITokenStream(adaptor,"token 82");
 		RewriteRuleSubtreeStream stream_argList=new RewriteRuleSubtreeStream(adaptor,"rule argList");
 		RewriteRuleSubtreeStream stream_statements=new RewriteRuleSubtreeStream(adaptor,"rule statements");
 		try { DebugEnterRule(GrammarFileName, "functionDeclaration");
-		DebugLocation(115, 1);
+		DebugLocation(135, 1);
 		try
 		{
-			// mccarthy.g3:116:2: (functionName= ID '(' al= argList ')' '{' sl= statements '}' -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? ) )
+			// mccarthy.g3:136:2: (functionName= ID '(' al= argList ')' '{' sl= statements '}' -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:116:4: functionName= ID '(' al= argList ')' '{' sl= statements '}'
+			// mccarthy.g3:136:4: functionName= ID '(' al= argList ')' '{' sl= statements '}'
 			{
-			DebugLocation(116, 16);
-			functionName=(CommonToken)Match(input,ID,Follow._ID_in_functionDeclaration734);  
-			stream_ID.Add(functionName);
+			DebugLocation(136, 16);
+			functionName=(CommonToken)Match(input,ID,Follow._ID_in_functionDeclaration949); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(functionName);
 
-			DebugLocation(116, 20);
-			char_literal10=(CommonToken)Match(input,44,Follow._44_in_functionDeclaration736);  
-			stream_44.Add(char_literal10);
+			DebugLocation(136, 20);
+			char_literal10=(CommonToken)Match(input,63,Follow._63_in_functionDeclaration951); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_63.Add(char_literal10);
 
-			DebugLocation(116, 26);
-			PushFollow(Follow._argList_in_functionDeclaration740);
+			DebugLocation(136, 26);
+			PushFollow(Follow._argList_in_functionDeclaration955);
 			al=argList();
 			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_argList.Add(al.Tree);
+			DebugLocation(136, 35);
+			char_literal11=(CommonToken)Match(input,64,Follow._64_in_functionDeclaration957); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_64.Add(char_literal11);
 
-			stream_argList.Add(al.Tree);
-			DebugLocation(116, 35);
-			char_literal11=(CommonToken)Match(input,45,Follow._45_in_functionDeclaration742);  
-			stream_45.Add(char_literal11);
+			DebugLocation(136, 39);
+			char_literal12=(CommonToken)Match(input,81,Follow._81_in_functionDeclaration959); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_81.Add(char_literal12);
 
-			DebugLocation(116, 39);
-			char_literal12=(CommonToken)Match(input,65,Follow._65_in_functionDeclaration744);  
-			stream_65.Add(char_literal12);
-
-			DebugLocation(116, 45);
-			PushFollow(Follow._statements_in_functionDeclaration748);
+			DebugLocation(136, 45);
+			PushFollow(Follow._statements_in_functionDeclaration963);
 			sl=statements();
 			PopFollow();
-
-			stream_statements.Add(sl.Tree);
-			DebugLocation(116, 57);
-			char_literal13=(CommonToken)Match(input,66,Follow._66_in_functionDeclaration750);  
-			stream_66.Add(char_literal13);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_statements.Add(sl.Tree);
+			DebugLocation(136, 57);
+			char_literal13=(CommonToken)Match(input,82,Follow._82_in_functionDeclaration965); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_82.Add(char_literal13);
 
 
 
@@ -866,6 +893,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleITokenStream stream_functionName=new RewriteRuleITokenStream(adaptor,"token functionName",functionName);
 			RewriteRuleSubtreeStream stream_al=new RewriteRuleSubtreeStream(adaptor,"rule al",al!=null?al.Tree:null);
@@ -873,29 +901,29 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 117:3: -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? )
+			// 137:3: -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? )
 			{
-				DebugLocation(117, 6);
-				// mccarthy.g3:117:6: ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? )
+				DebugLocation(137, 6);
+				// mccarthy.g3:137:6: ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(117, 8);
+				DebugLocation(137, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(FUNCDEC, "FUNCDEC"), root_1);
 
-				DebugLocation(117, 17);
+				DebugLocation(137, 17);
 				adaptor.AddChild(root_1, stream_functionName.NextNode());
-				DebugLocation(117, 30);
-				// mccarthy.g3:117:30: ( ^( ARGLIST $al) )?
+				DebugLocation(137, 30);
+				// mccarthy.g3:137:30: ( ^( ARGLIST $al) )?
 				if (stream_al.HasNext)
 				{
-					DebugLocation(117, 30);
-					// mccarthy.g3:117:30: ^( ARGLIST $al)
+					DebugLocation(137, 30);
+					// mccarthy.g3:137:30: ^( ARGLIST $al)
 					{
 					CommonTree root_2 = (CommonTree)adaptor.Nil();
-					DebugLocation(117, 32);
+					DebugLocation(137, 32);
 					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ARGLIST, "ARGLIST"), root_2);
 
-					DebugLocation(117, 41);
+					DebugLocation(137, 41);
 					adaptor.AddChild(root_2, stream_al.NextTree());
 
 					adaptor.AddChild(root_1, root_2);
@@ -903,18 +931,18 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				}
 				stream_al.Reset();
-				DebugLocation(117, 46);
-				// mccarthy.g3:117:46: ( ^( FUNCBODY $sl) )?
+				DebugLocation(137, 46);
+				// mccarthy.g3:137:46: ( ^( FUNCBODY $sl) )?
 				if (stream_sl.HasNext)
 				{
-					DebugLocation(117, 46);
-					// mccarthy.g3:117:46: ^( FUNCBODY $sl)
+					DebugLocation(137, 46);
+					// mccarthy.g3:137:46: ^( FUNCBODY $sl)
 					{
 					CommonTree root_2 = (CommonTree)adaptor.Nil();
-					DebugLocation(117, 48);
+					DebugLocation(137, 48);
 					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(FUNCBODY, "FUNCBODY"), root_2);
 
-					DebugLocation(117, 58);
+					DebugLocation(137, 58);
 					adaptor.AddChild(root_2, stream_sl.NextTree());
 
 					adaptor.AddChild(root_1, root_2);
@@ -930,14 +958,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -952,61 +982,203 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			LeaveRule("functionDeclaration", 6);
 			LeaveRule_functionDeclaration();
 		}
-		DebugLocation(118, 1);
+		DebugLocation(138, 1);
 		} finally { DebugExitRule(GrammarFileName, "functionDeclaration"); }
 		return retval;
 
 	}
 	// $ANTLR end "functionDeclaration"
 
-	private sealed partial class argList_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	public sealed partial class functionInvocation_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
 	{
 		private CommonTree _tree;
 		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
 		object IAstRuleReturnScope.Tree { get { return Tree; } }
-		public argList_return(mccarthyParser grammar) {OnCreated(grammar);}
+		public functionInvocation_return(mccarthyParser grammar) {OnCreated(grammar);}
 		partial void OnCreated(mccarthyParser grammar);
 	}
 
-	partial void EnterRule_argList();
-	partial void LeaveRule_argList();
+	partial void EnterRule_functionInvocation();
+	partial void LeaveRule_functionInvocation();
 
-	// $ANTLR start "argList"
-	// mccarthy.g3:120:1: argList : arg ( ',' arg )* -> ( arg )+ ;
-	[GrammarRule("argList")]
-	private mccarthyParser.argList_return argList()
+	// $ANTLR start "functionInvocation"
+	// mccarthy.g3:140:8: public functionInvocation : funcName= ID '(' parameterList ')' -> ^( INVOCATION $funcName ^( PARAMETERS parameterList ) ) ;
+	[GrammarRule("functionInvocation")]
+	public mccarthyParser.functionInvocation_return functionInvocation()
 	{
-		EnterRule_argList();
-		EnterRule("argList", 7);
-		TraceIn("argList", 7);
-		mccarthyParser.argList_return retval = new mccarthyParser.argList_return(this);
+		EnterRule_functionInvocation();
+		EnterRule("functionInvocation", 7);
+		TraceIn("functionInvocation", 7);
+		mccarthyParser.functionInvocation_return retval = new mccarthyParser.functionInvocation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal15 = default(CommonToken);
-		mccarthyParser.arg_return arg14 = default(mccarthyParser.arg_return);
-		mccarthyParser.arg_return arg16 = default(mccarthyParser.arg_return);
+		CommonToken funcName = default(CommonToken);
+		CommonToken char_literal14 = default(CommonToken);
+		CommonToken char_literal16 = default(CommonToken);
+		mccarthyParser.parameterList_return parameterList15 = default(mccarthyParser.parameterList_return);
 
-		CommonTree char_literal15_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
-		RewriteRuleSubtreeStream stream_arg=new RewriteRuleSubtreeStream(adaptor,"rule arg");
-		try { DebugEnterRule(GrammarFileName, "argList");
-		DebugLocation(120, 1);
+		CommonTree funcName_tree = default(CommonTree);
+		CommonTree char_literal14_tree = default(CommonTree);
+		CommonTree char_literal16_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleSubtreeStream stream_parameterList=new RewriteRuleSubtreeStream(adaptor,"rule parameterList");
+		try { DebugEnterRule(GrammarFileName, "functionInvocation");
+		DebugLocation(140, 4);
 		try
 		{
-			// mccarthy.g3:121:2: ( arg ( ',' arg )* -> ( arg )+ )
+			// mccarthy.g3:141:5: (funcName= ID '(' parameterList ')' -> ^( INVOCATION $funcName ^( PARAMETERS parameterList ) ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:121:4: arg ( ',' arg )*
+			// mccarthy.g3:141:7: funcName= ID '(' parameterList ')'
 			{
-			DebugLocation(121, 4);
-			PushFollow(Follow._arg_in_argList788);
-			arg14=arg();
-			PopFollow();
+			DebugLocation(141, 15);
+			funcName=(CommonToken)Match(input,ID,Follow._ID_in_functionInvocation1010); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(funcName);
 
-			stream_arg.Add(arg14.Tree);
-			DebugLocation(121, 8);
-			// mccarthy.g3:121:8: ( ',' arg )*
+			DebugLocation(141, 19);
+			char_literal14=(CommonToken)Match(input,63,Follow._63_in_functionInvocation1012); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_63.Add(char_literal14);
+
+			DebugLocation(141, 23);
+			PushFollow(Follow._parameterList_in_functionInvocation1014);
+			parameterList15=parameterList();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_parameterList.Add(parameterList15.Tree);
+			DebugLocation(141, 37);
+			char_literal16=(CommonToken)Match(input,64,Follow._64_in_functionInvocation1016); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_64.Add(char_literal16);
+
+
+
+			{
+			// AST REWRITE
+			// elements: funcName, parameterList
+			// token labels: funcName
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			if (state.backtracking == 0) {
+			retval.Tree = root_0;
+			RewriteRuleITokenStream stream_funcName=new RewriteRuleITokenStream(adaptor,"token funcName",funcName);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 141:41: -> ^( INVOCATION $funcName ^( PARAMETERS parameterList ) )
+			{
+				DebugLocation(141, 44);
+				// mccarthy.g3:141:44: ^( INVOCATION $funcName ^( PARAMETERS parameterList ) )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(141, 46);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(INVOCATION, "INVOCATION"), root_1);
+
+				DebugLocation(141, 58);
+				adaptor.AddChild(root_1, stream_funcName.NextNode());
+				DebugLocation(141, 67);
+				// mccarthy.g3:141:67: ^( PARAMETERS parameterList )
+				{
+				CommonTree root_2 = (CommonTree)adaptor.Nil();
+				DebugLocation(141, 69);
+				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PARAMETERS, "PARAMETERS"), root_2);
+
+				DebugLocation(141, 80);
+				adaptor.AddChild(root_2, stream_parameterList.NextTree());
+
+				adaptor.AddChild(root_1, root_2);
+				}
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("functionInvocation", 7);
+			LeaveRule("functionInvocation", 7);
+			LeaveRule_functionInvocation();
+		}
+		DebugLocation(142, 4);
+		} finally { DebugExitRule(GrammarFileName, "functionInvocation"); }
+		return retval;
+
+	}
+	// $ANTLR end "functionInvocation"
+
+	private sealed partial class parameterList_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public parameterList_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_parameterList();
+	partial void LeaveRule_parameterList();
+
+	// $ANTLR start "parameterList"
+	// mccarthy.g3:144:1: parameterList : param ( ',' param )* ;
+	[GrammarRule("parameterList")]
+	private mccarthyParser.parameterList_return parameterList()
+	{
+		EnterRule_parameterList();
+		EnterRule("parameterList", 8);
+		TraceIn("parameterList", 8);
+		mccarthyParser.parameterList_return retval = new mccarthyParser.parameterList_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal18 = default(CommonToken);
+		mccarthyParser.param_return param17 = default(mccarthyParser.param_return);
+		mccarthyParser.param_return param19 = default(mccarthyParser.param_return);
+
+		CommonTree char_literal18_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "parameterList");
+		DebugLocation(144, 4);
+		try
+		{
+			// mccarthy.g3:145:5: ( param ( ',' param )* )
+			DebugEnterAlt(1);
+			// mccarthy.g3:145:7: param ( ',' param )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(145, 7);
+			PushFollow(Follow._param_in_parameterList1048);
+			param17=param();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, param17.Tree);
+			DebugLocation(145, 13);
+			// mccarthy.g3:145:13: ( ',' param )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -1014,7 +1186,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(3, false);
 				int LA3_0 = input.LA(1);
 
-				if ((LA3_0==46))
+				if ((LA3_0==65))
 				{
 					alt3 = 1;
 				}
@@ -1025,18 +1197,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:121:9: ',' arg
+					// mccarthy.g3:145:14: ',' param
 					{
-					DebugLocation(121, 9);
-					char_literal15=(CommonToken)Match(input,46,Follow._46_in_argList791);  
-					stream_46.Add(char_literal15);
-
-					DebugLocation(121, 13);
-					PushFollow(Follow._arg_in_argList793);
-					arg16=arg();
+					DebugLocation(145, 17);
+					char_literal18=(CommonToken)Match(input,65,Follow._65_in_parameterList1051); if (state.failed) return retval;
+					DebugLocation(145, 19);
+					PushFollow(Follow._param_in_parameterList1054);
+					param19=param();
 					PopFollow();
-
-					stream_arg.Add(arg16.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, param19.Tree);
 
 					}
 					break;
@@ -1052,46 +1222,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(3); }
 
 
-
-			{
-			// AST REWRITE
-			// elements: arg
-			// token labels: 
-			// rule labels: retval
-			// token list labels: 
-			// rule list labels: 
-			// wildcard labels: 
-			retval.Tree = root_0;
-			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
-
-			root_0 = (CommonTree)adaptor.Nil();
-			// 122:3: -> ( arg )+
-			{
-				DebugLocation(122, 6);
-				if (!(stream_arg.HasNext))
-				{
-					throw new RewriteEarlyExitException();
-				}
-				while ( stream_arg.HasNext )
-				{
-					DebugLocation(122, 6);
-					adaptor.AddChild(root_0, stream_arg.NextTree());
-
-				}
-				stream_arg.Reset();
-
-			}
-
-			retval.Tree = root_0;
-			}
-
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1102,11 +1240,242 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("argList", 7);
-			LeaveRule("argList", 7);
+			TraceOut("parameterList", 8);
+			LeaveRule("parameterList", 8);
+			LeaveRule_parameterList();
+		}
+		DebugLocation(146, 4);
+		} finally { DebugExitRule(GrammarFileName, "parameterList"); }
+		return retval;
+
+	}
+	// $ANTLR end "parameterList"
+
+	private sealed partial class param_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public param_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_param();
+	partial void LeaveRule_param();
+
+	// $ANTLR start "param"
+	// mccarthy.g3:148:1: param : value ;
+	[GrammarRule("param")]
+	private mccarthyParser.param_return param()
+	{
+		EnterRule_param();
+		EnterRule("param", 9);
+		TraceIn("param", 9);
+		mccarthyParser.param_return retval = new mccarthyParser.param_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		mccarthyParser.value_return value20 = default(mccarthyParser.value_return);
+
+
+		try { DebugEnterRule(GrammarFileName, "param");
+		DebugLocation(148, 4);
+		try
+		{
+			// mccarthy.g3:149:5: ( value )
+			DebugEnterAlt(1);
+			// mccarthy.g3:149:7: value
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(149, 7);
+			PushFollow(Follow._value_in_param1074);
+			value20=value();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, value20.Tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("param", 9);
+			LeaveRule("param", 9);
+			LeaveRule_param();
+		}
+		DebugLocation(150, 4);
+		} finally { DebugExitRule(GrammarFileName, "param"); }
+		return retval;
+
+	}
+	// $ANTLR end "param"
+
+	private sealed partial class argList_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public argList_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_argList();
+	partial void LeaveRule_argList();
+
+	// $ANTLR start "argList"
+	// mccarthy.g3:152:1: argList : arg ( ',' arg )* -> ( arg )+ ;
+	[GrammarRule("argList")]
+	private mccarthyParser.argList_return argList()
+	{
+		EnterRule_argList();
+		EnterRule("argList", 10);
+		TraceIn("argList", 10);
+		mccarthyParser.argList_return retval = new mccarthyParser.argList_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal22 = default(CommonToken);
+		mccarthyParser.arg_return arg21 = default(mccarthyParser.arg_return);
+		mccarthyParser.arg_return arg23 = default(mccarthyParser.arg_return);
+
+		CommonTree char_literal22_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
+		RewriteRuleSubtreeStream stream_arg=new RewriteRuleSubtreeStream(adaptor,"rule arg");
+		try { DebugEnterRule(GrammarFileName, "argList");
+		DebugLocation(152, 1);
+		try
+		{
+			// mccarthy.g3:153:2: ( arg ( ',' arg )* -> ( arg )+ )
+			DebugEnterAlt(1);
+			// mccarthy.g3:153:4: arg ( ',' arg )*
+			{
+			DebugLocation(153, 4);
+			PushFollow(Follow._arg_in_argList1088);
+			arg21=arg();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_arg.Add(arg21.Tree);
+			DebugLocation(153, 8);
+			// mccarthy.g3:153:8: ( ',' arg )*
+			try { DebugEnterSubRule(4);
+			while (true)
+			{
+				int alt4=2;
+				try { DebugEnterDecision(4, false);
+				int LA4_0 = input.LA(1);
+
+				if ((LA4_0==65))
+				{
+					alt4 = 1;
+				}
+
+
+				} finally { DebugExitDecision(4); }
+				switch ( alt4 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// mccarthy.g3:153:9: ',' arg
+					{
+					DebugLocation(153, 9);
+					char_literal22=(CommonToken)Match(input,65,Follow._65_in_argList1091); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_65.Add(char_literal22);
+
+					DebugLocation(153, 13);
+					PushFollow(Follow._arg_in_argList1093);
+					arg23=arg();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) stream_arg.Add(arg23.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop4;
+				}
+			}
+
+			loop4:
+				;
+
+			} finally { DebugExitSubRule(4); }
+
+
+
+			{
+			// AST REWRITE
+			// elements: arg
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			if (state.backtracking == 0) {
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 154:3: -> ( arg )+
+			{
+				DebugLocation(154, 6);
+				if (!(stream_arg.HasNext))
+				{
+					throw new RewriteEarlyExitException();
+				}
+				while ( stream_arg.HasNext )
+				{
+					DebugLocation(154, 6);
+					adaptor.AddChild(root_0, stream_arg.NextTree());
+
+				}
+				stream_arg.Reset();
+
+			}
+
+			retval.Tree = root_0;
+			}
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("argList", 10);
+			LeaveRule("argList", 10);
 			LeaveRule_argList();
 		}
-		DebugLocation(123, 1);
+		DebugLocation(155, 1);
 		} finally { DebugExitRule(GrammarFileName, "argList"); }
 		return retval;
 
@@ -1126,13 +1495,13 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_arg();
 
 	// $ANTLR start "arg"
-	// mccarthy.g3:125:1: arg : argName= ID ':' type= ID -> ^( ARG $argName $type) ;
+	// mccarthy.g3:157:1: arg : argName= ID ':' type= ID -> ^( ARG $argName $type) ;
 	[GrammarRule("arg")]
 	private mccarthyParser.arg_return arg()
 	{
 		EnterRule_arg();
-		EnterRule("arg", 8);
-		TraceIn("arg", 8);
+		EnterRule("arg", 11);
+		TraceIn("arg", 11);
 		mccarthyParser.arg_return retval = new mccarthyParser.arg_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
@@ -1140,33 +1509,33 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 		CommonToken argName = default(CommonToken);
 		CommonToken type = default(CommonToken);
-		CommonToken char_literal17 = default(CommonToken);
+		CommonToken char_literal24 = default(CommonToken);
 
 		CommonTree argName_tree = default(CommonTree);
 		CommonTree type_tree = default(CommonTree);
-		CommonTree char_literal17_tree = default(CommonTree);
+		CommonTree char_literal24_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_50=new RewriteRuleITokenStream(adaptor,"token 50");
+		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
 
 		try { DebugEnterRule(GrammarFileName, "arg");
-		DebugLocation(125, 1);
+		DebugLocation(157, 1);
 		try
 		{
-			// mccarthy.g3:126:2: (argName= ID ':' type= ID -> ^( ARG $argName $type) )
+			// mccarthy.g3:158:2: (argName= ID ':' type= ID -> ^( ARG $argName $type) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:126:4: argName= ID ':' type= ID
+			// mccarthy.g3:158:4: argName= ID ':' type= ID
 			{
-			DebugLocation(126, 11);
-			argName=(CommonToken)Match(input,ID,Follow._ID_in_arg815);  
-			stream_ID.Add(argName);
+			DebugLocation(158, 11);
+			argName=(CommonToken)Match(input,ID,Follow._ID_in_arg1115); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(argName);
 
-			DebugLocation(126, 15);
-			char_literal17=(CommonToken)Match(input,50,Follow._50_in_arg817);  
-			stream_50.Add(char_literal17);
+			DebugLocation(158, 15);
+			char_literal24=(CommonToken)Match(input,68,Follow._68_in_arg1117); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_68.Add(char_literal24);
 
-			DebugLocation(126, 23);
-			type=(CommonToken)Match(input,ID,Follow._ID_in_arg821);  
-			stream_ID.Add(type);
+			DebugLocation(158, 23);
+			type=(CommonToken)Match(input,ID,Follow._ID_in_arg1121); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(type);
 
 
 
@@ -1178,24 +1547,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleITokenStream stream_argName=new RewriteRuleITokenStream(adaptor,"token argName",argName);
 			RewriteRuleITokenStream stream_type=new RewriteRuleITokenStream(adaptor,"token type",type);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 127:3: -> ^( ARG $argName $type)
+			// 159:3: -> ^( ARG $argName $type)
 			{
-				DebugLocation(127, 6);
-				// mccarthy.g3:127:6: ^( ARG $argName $type)
+				DebugLocation(159, 6);
+				// mccarthy.g3:159:6: ^( ARG $argName $type)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(127, 8);
+				DebugLocation(159, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ARG, "ARG"), root_1);
 
-				DebugLocation(127, 13);
+				DebugLocation(159, 13);
 				adaptor.AddChild(root_1, stream_argName.NextNode());
-				DebugLocation(127, 22);
+				DebugLocation(159, 22);
 				adaptor.AddChild(root_1, stream_type.NextNode());
 
 				adaptor.AddChild(root_0, root_1);
@@ -1205,14 +1575,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1223,11 +1595,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("arg", 8);
-			LeaveRule("arg", 8);
+			TraceOut("arg", 11);
+			LeaveRule("arg", 11);
 			LeaveRule_arg();
 		}
-		DebugLocation(128, 1);
+		DebugLocation(160, 1);
 		} finally { DebugExitRule(GrammarFileName, "arg"); }
 		return retval;
 
@@ -1247,77 +1619,77 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_statements();
 
 	// $ANTLR start "statements"
-	// mccarthy.g3:129:1: statements : ( statement ';' )* -> ^( BLOCK ( statement )* ) ;
+	// mccarthy.g3:162:1: statements : ( statement ';' )* -> ^( BLOCK ( statement )* ) ;
 	[GrammarRule("statements")]
 	private mccarthyParser.statements_return statements()
 	{
 		EnterRule_statements();
-		EnterRule("statements", 9);
-		TraceIn("statements", 9);
+		EnterRule("statements", 12);
+		TraceIn("statements", 12);
 		mccarthyParser.statements_return retval = new mccarthyParser.statements_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal19 = default(CommonToken);
-		mccarthyParser.statement_return statement18 = default(mccarthyParser.statement_return);
+		CommonToken char_literal26 = default(CommonToken);
+		mccarthyParser.statement_return statement25 = default(mccarthyParser.statement_return);
 
-		CommonTree char_literal19_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_51=new RewriteRuleITokenStream(adaptor,"token 51");
+		CommonTree char_literal26_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		try { DebugEnterRule(GrammarFileName, "statements");
-		DebugLocation(129, 1);
+		DebugLocation(162, 1);
 		try
 		{
-			// mccarthy.g3:130:2: ( ( statement ';' )* -> ^( BLOCK ( statement )* ) )
+			// mccarthy.g3:163:2: ( ( statement ';' )* -> ^( BLOCK ( statement )* ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:131:2: ( statement ';' )*
+			// mccarthy.g3:164:2: ( statement ';' )*
 			{
-			DebugLocation(131, 2);
-			// mccarthy.g3:131:2: ( statement ';' )*
-			try { DebugEnterSubRule(4);
+			DebugLocation(164, 2);
+			// mccarthy.g3:164:2: ( statement ';' )*
+			try { DebugEnterSubRule(5);
 			while (true)
 			{
-				int alt4=2;
-				try { DebugEnterDecision(4, false);
-				int LA4_0 = input.LA(1);
+				int alt5=2;
+				try { DebugEnterDecision(5, false);
+				int LA5_0 = input.LA(1);
 
-				if ((LA4_0==ID||LA4_0==43))
+				if ((LA5_0==ID||LA5_0==62))
 				{
-					alt4 = 1;
+					alt5 = 1;
 				}
 
 
-				} finally { DebugExitDecision(4); }
-				switch ( alt4 )
+				} finally { DebugExitDecision(5); }
+				switch ( alt5 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:131:3: statement ';'
+					// mccarthy.g3:164:3: statement ';'
 					{
-					DebugLocation(131, 3);
-					PushFollow(Follow._statement_in_statements849);
-					statement18=statement();
+					DebugLocation(164, 3);
+					PushFollow(Follow._statement_in_statements1150);
+					statement25=statement();
 					PopFollow();
-
-					stream_statement.Add(statement18.Tree);
-					DebugLocation(131, 13);
-					char_literal19=(CommonToken)Match(input,51,Follow._51_in_statements851);  
-					stream_51.Add(char_literal19);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) stream_statement.Add(statement25.Tree);
+					DebugLocation(164, 13);
+					char_literal26=(CommonToken)Match(input,69,Follow._69_in_statements1152); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_69.Add(char_literal26);
 
 
 					}
 					break;
 
 				default:
-					goto loop4;
+					goto loop5;
 				}
 			}
 
-			loop4:
+			loop5:
 				;
 
-			} finally { DebugExitSubRule(4); }
+			} finally { DebugExitSubRule(5); }
 
 
 
@@ -1329,24 +1701,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 131:19: -> ^( BLOCK ( statement )* )
+			// 164:19: -> ^( BLOCK ( statement )* )
 			{
-				DebugLocation(131, 22);
-				// mccarthy.g3:131:22: ^( BLOCK ( statement )* )
+				DebugLocation(164, 22);
+				// mccarthy.g3:164:22: ^( BLOCK ( statement )* )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(131, 24);
+				DebugLocation(164, 24);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(BLOCK, "BLOCK"), root_1);
 
-				DebugLocation(131, 30);
-				// mccarthy.g3:131:30: ( statement )*
+				DebugLocation(164, 30);
+				// mccarthy.g3:164:30: ( statement )*
 				while ( stream_statement.HasNext )
 				{
-					DebugLocation(131, 30);
+					DebugLocation(164, 30);
 					adaptor.AddChild(root_1, stream_statement.NextTree());
 
 				}
@@ -1359,14 +1732,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1377,16 +1752,1316 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("statements", 9);
-			LeaveRule("statements", 9);
+			TraceOut("statements", 12);
+			LeaveRule("statements", 12);
 			LeaveRule_statements();
 		}
-		DebugLocation(132, 1);
+		DebugLocation(165, 1);
 		} finally { DebugExitRule(GrammarFileName, "statements"); }
 		return retval;
 
 	}
 	// $ANTLR end "statements"
+
+	public sealed partial class logicalExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public logicalExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_logicalExpression();
+	partial void LeaveRule_logicalExpression();
+
+	// $ANTLR start "logicalExpression"
+	// mccarthy.g3:167:8: public logicalExpression : booleanAndExpression ( OR booleanAndExpression )* ;
+	[GrammarRule("logicalExpression")]
+	public mccarthyParser.logicalExpression_return logicalExpression()
+	{
+		EnterRule_logicalExpression();
+		EnterRule("logicalExpression", 13);
+		TraceIn("logicalExpression", 13);
+		mccarthyParser.logicalExpression_return retval = new mccarthyParser.logicalExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken OR28 = default(CommonToken);
+		mccarthyParser.booleanAndExpression_return booleanAndExpression27 = default(mccarthyParser.booleanAndExpression_return);
+		mccarthyParser.booleanAndExpression_return booleanAndExpression29 = default(mccarthyParser.booleanAndExpression_return);
+
+		CommonTree OR28_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "logicalExpression");
+		DebugLocation(167, 4);
+		try
+		{
+			// mccarthy.g3:168:5: ( booleanAndExpression ( OR booleanAndExpression )* )
+			DebugEnterAlt(1);
+			// mccarthy.g3:168:10: booleanAndExpression ( OR booleanAndExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(168, 10);
+			PushFollow(Follow._booleanAndExpression_in_logicalExpression1183);
+			booleanAndExpression27=booleanAndExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, booleanAndExpression27.Tree);
+			DebugLocation(168, 31);
+			// mccarthy.g3:168:31: ( OR booleanAndExpression )*
+			try { DebugEnterSubRule(6);
+			while (true)
+			{
+				int alt6=2;
+				try { DebugEnterDecision(6, false);
+				int LA6_0 = input.LA(1);
+
+				if ((LA6_0==OR))
+				{
+					alt6 = 1;
+				}
+
+
+				} finally { DebugExitDecision(6); }
+				switch ( alt6 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// mccarthy.g3:168:33: OR booleanAndExpression
+					{
+					DebugLocation(168, 35);
+					OR28=(CommonToken)Match(input,OR,Follow._OR_in_logicalExpression1187); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					OR28_tree = (CommonTree)adaptor.Create(OR28);
+					root_0 = (CommonTree)adaptor.BecomeRoot(OR28_tree, root_0);
+					}
+					DebugLocation(168, 37);
+					PushFollow(Follow._booleanAndExpression_in_logicalExpression1190);
+					booleanAndExpression29=booleanAndExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, booleanAndExpression29.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop6;
+				}
+			}
+
+			loop6:
+				;
+
+			} finally { DebugExitSubRule(6); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("logicalExpression", 13);
+			LeaveRule("logicalExpression", 13);
+			LeaveRule_logicalExpression();
+		}
+		DebugLocation(169, 4);
+		} finally { DebugExitRule(GrammarFileName, "logicalExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "logicalExpression"
+
+	public sealed partial class booleanAndExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public booleanAndExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_booleanAndExpression();
+	partial void LeaveRule_booleanAndExpression();
+
+	// $ANTLR start "booleanAndExpression"
+	// mccarthy.g3:171:8: public booleanAndExpression : equalityExpression ( AND equalityExpression )* ;
+	[GrammarRule("booleanAndExpression")]
+	public mccarthyParser.booleanAndExpression_return booleanAndExpression()
+	{
+		EnterRule_booleanAndExpression();
+		EnterRule("booleanAndExpression", 14);
+		TraceIn("booleanAndExpression", 14);
+		mccarthyParser.booleanAndExpression_return retval = new mccarthyParser.booleanAndExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken AND31 = default(CommonToken);
+		mccarthyParser.equalityExpression_return equalityExpression30 = default(mccarthyParser.equalityExpression_return);
+		mccarthyParser.equalityExpression_return equalityExpression32 = default(mccarthyParser.equalityExpression_return);
+
+		CommonTree AND31_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "booleanAndExpression");
+		DebugLocation(171, 4);
+		try
+		{
+			// mccarthy.g3:172:5: ( equalityExpression ( AND equalityExpression )* )
+			DebugEnterAlt(1);
+			// mccarthy.g3:172:10: equalityExpression ( AND equalityExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(172, 10);
+			PushFollow(Follow._equalityExpression_in_booleanAndExpression1215);
+			equalityExpression30=equalityExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, equalityExpression30.Tree);
+			DebugLocation(172, 29);
+			// mccarthy.g3:172:29: ( AND equalityExpression )*
+			try { DebugEnterSubRule(7);
+			while (true)
+			{
+				int alt7=2;
+				try { DebugEnterDecision(7, false);
+				int LA7_0 = input.LA(1);
+
+				if ((LA7_0==AND))
+				{
+					alt7 = 1;
+				}
+
+
+				} finally { DebugExitDecision(7); }
+				switch ( alt7 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// mccarthy.g3:172:31: AND equalityExpression
+					{
+					DebugLocation(172, 34);
+					AND31=(CommonToken)Match(input,AND,Follow._AND_in_booleanAndExpression1219); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					AND31_tree = (CommonTree)adaptor.Create(AND31);
+					root_0 = (CommonTree)adaptor.BecomeRoot(AND31_tree, root_0);
+					}
+					DebugLocation(172, 36);
+					PushFollow(Follow._equalityExpression_in_booleanAndExpression1222);
+					equalityExpression32=equalityExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, equalityExpression32.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop7;
+				}
+			}
+
+			loop7:
+				;
+
+			} finally { DebugExitSubRule(7); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("booleanAndExpression", 14);
+			LeaveRule("booleanAndExpression", 14);
+			LeaveRule_booleanAndExpression();
+		}
+		DebugLocation(173, 4);
+		} finally { DebugExitRule(GrammarFileName, "booleanAndExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "booleanAndExpression"
+
+	public sealed partial class equalityExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public equalityExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_equalityExpression();
+	partial void LeaveRule_equalityExpression();
+
+	// $ANTLR start "equalityExpression"
+	// mccarthy.g3:175:8: public equalityExpression : relationalExpression ( EQUALS relationalExpression | NOTEQUALS relationalExpression )* ;
+	[GrammarRule("equalityExpression")]
+	public mccarthyParser.equalityExpression_return equalityExpression()
+	{
+		EnterRule_equalityExpression();
+		EnterRule("equalityExpression", 15);
+		TraceIn("equalityExpression", 15);
+		mccarthyParser.equalityExpression_return retval = new mccarthyParser.equalityExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken EQUALS34 = default(CommonToken);
+		CommonToken NOTEQUALS36 = default(CommonToken);
+		mccarthyParser.relationalExpression_return relationalExpression33 = default(mccarthyParser.relationalExpression_return);
+		mccarthyParser.relationalExpression_return relationalExpression35 = default(mccarthyParser.relationalExpression_return);
+		mccarthyParser.relationalExpression_return relationalExpression37 = default(mccarthyParser.relationalExpression_return);
+
+		CommonTree EQUALS34_tree = default(CommonTree);
+		CommonTree NOTEQUALS36_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "equalityExpression");
+		DebugLocation(175, 4);
+		try
+		{
+			// mccarthy.g3:176:5: ( relationalExpression ( EQUALS relationalExpression | NOTEQUALS relationalExpression )* )
+			DebugEnterAlt(1);
+			// mccarthy.g3:176:10: relationalExpression ( EQUALS relationalExpression | NOTEQUALS relationalExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(176, 10);
+			PushFollow(Follow._relationalExpression_in_equalityExpression1247);
+			relationalExpression33=relationalExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, relationalExpression33.Tree);
+			DebugLocation(177, 3);
+			// mccarthy.g3:177:3: ( EQUALS relationalExpression | NOTEQUALS relationalExpression )*
+			try { DebugEnterSubRule(8);
+			while (true)
+			{
+				int alt8=3;
+				try { DebugEnterDecision(8, false);
+				int LA8_0 = input.LA(1);
+
+				if ((LA8_0==EQUALS))
+				{
+					alt8 = 1;
+				}
+				else if ((LA8_0==NOTEQUALS))
+				{
+					alt8 = 2;
+				}
+
+
+				} finally { DebugExitDecision(8); }
+				switch ( alt8 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// mccarthy.g3:177:5: EQUALS relationalExpression
+					{
+					DebugLocation(177, 11);
+					EQUALS34=(CommonToken)Match(input,EQUALS,Follow._EQUALS_in_equalityExpression1254); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					EQUALS34_tree = (CommonTree)adaptor.Create(EQUALS34);
+					root_0 = (CommonTree)adaptor.BecomeRoot(EQUALS34_tree, root_0);
+					}
+					DebugLocation(177, 13);
+					PushFollow(Follow._relationalExpression_in_equalityExpression1257);
+					relationalExpression35=relationalExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, relationalExpression35.Tree);
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// mccarthy.g3:178:5: NOTEQUALS relationalExpression
+					{
+					DebugLocation(178, 14);
+					NOTEQUALS36=(CommonToken)Match(input,NOTEQUALS,Follow._NOTEQUALS_in_equalityExpression1263); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					NOTEQUALS36_tree = (CommonTree)adaptor.Create(NOTEQUALS36);
+					root_0 = (CommonTree)adaptor.BecomeRoot(NOTEQUALS36_tree, root_0);
+					}
+					DebugLocation(178, 16);
+					PushFollow(Follow._relationalExpression_in_equalityExpression1266);
+					relationalExpression37=relationalExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, relationalExpression37.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop8;
+				}
+			}
+
+			loop8:
+				;
+
+			} finally { DebugExitSubRule(8); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("equalityExpression", 15);
+			LeaveRule("equalityExpression", 15);
+			LeaveRule_equalityExpression();
+		}
+		DebugLocation(179, 4);
+		} finally { DebugExitRule(GrammarFileName, "equalityExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "equalityExpression"
+
+	public sealed partial class relationalExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public relationalExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_relationalExpression();
+	partial void LeaveRule_relationalExpression();
+
+	// $ANTLR start "relationalExpression"
+	// mccarthy.g3:181:8: public relationalExpression : additiveExpression ( LT additiveExpression | LTEQ additiveExpression | GT additiveExpression | GTEQ additiveExpression )* ;
+	[GrammarRule("relationalExpression")]
+	public mccarthyParser.relationalExpression_return relationalExpression()
+	{
+		EnterRule_relationalExpression();
+		EnterRule("relationalExpression", 16);
+		TraceIn("relationalExpression", 16);
+		mccarthyParser.relationalExpression_return retval = new mccarthyParser.relationalExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken LT39 = default(CommonToken);
+		CommonToken LTEQ41 = default(CommonToken);
+		CommonToken GT43 = default(CommonToken);
+		CommonToken GTEQ45 = default(CommonToken);
+		mccarthyParser.additiveExpression_return additiveExpression38 = default(mccarthyParser.additiveExpression_return);
+		mccarthyParser.additiveExpression_return additiveExpression40 = default(mccarthyParser.additiveExpression_return);
+		mccarthyParser.additiveExpression_return additiveExpression42 = default(mccarthyParser.additiveExpression_return);
+		mccarthyParser.additiveExpression_return additiveExpression44 = default(mccarthyParser.additiveExpression_return);
+		mccarthyParser.additiveExpression_return additiveExpression46 = default(mccarthyParser.additiveExpression_return);
+
+		CommonTree LT39_tree = default(CommonTree);
+		CommonTree LTEQ41_tree = default(CommonTree);
+		CommonTree GT43_tree = default(CommonTree);
+		CommonTree GTEQ45_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "relationalExpression");
+		DebugLocation(181, 4);
+		try
+		{
+			// mccarthy.g3:182:5: ( additiveExpression ( LT additiveExpression | LTEQ additiveExpression | GT additiveExpression | GTEQ additiveExpression )* )
+			DebugEnterAlt(1);
+			// mccarthy.g3:182:10: additiveExpression ( LT additiveExpression | LTEQ additiveExpression | GT additiveExpression | GTEQ additiveExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(182, 10);
+			PushFollow(Follow._additiveExpression_in_relationalExpression1290);
+			additiveExpression38=additiveExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression38.Tree);
+			DebugLocation(183, 3);
+			// mccarthy.g3:183:3: ( LT additiveExpression | LTEQ additiveExpression | GT additiveExpression | GTEQ additiveExpression )*
+			try { DebugEnterSubRule(9);
+			while (true)
+			{
+				int alt9=5;
+				try { DebugEnterDecision(9, false);
+				switch (input.LA(1))
+				{
+				case LT:
+					{
+					alt9 = 1;
+					}
+					break;
+				case LTEQ:
+					{
+					alt9 = 2;
+					}
+					break;
+				case GT:
+					{
+					alt9 = 3;
+					}
+					break;
+				case GTEQ:
+					{
+					alt9 = 4;
+					}
+					break;
+
+				}
+
+				} finally { DebugExitDecision(9); }
+				switch ( alt9 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// mccarthy.g3:183:5: LT additiveExpression
+					{
+					DebugLocation(183, 7);
+					LT39=(CommonToken)Match(input,LT,Follow._LT_in_relationalExpression1297); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					LT39_tree = (CommonTree)adaptor.Create(LT39);
+					root_0 = (CommonTree)adaptor.BecomeRoot(LT39_tree, root_0);
+					}
+					DebugLocation(183, 9);
+					PushFollow(Follow._additiveExpression_in_relationalExpression1300);
+					additiveExpression40=additiveExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression40.Tree);
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// mccarthy.g3:184:5: LTEQ additiveExpression
+					{
+					DebugLocation(184, 9);
+					LTEQ41=(CommonToken)Match(input,LTEQ,Follow._LTEQ_in_relationalExpression1307); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					LTEQ41_tree = (CommonTree)adaptor.Create(LTEQ41);
+					root_0 = (CommonTree)adaptor.BecomeRoot(LTEQ41_tree, root_0);
+					}
+					DebugLocation(184, 11);
+					PushFollow(Follow._additiveExpression_in_relationalExpression1310);
+					additiveExpression42=additiveExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression42.Tree);
+
+					}
+					break;
+				case 3:
+					DebugEnterAlt(3);
+					// mccarthy.g3:185:5: GT additiveExpression
+					{
+					DebugLocation(185, 7);
+					GT43=(CommonToken)Match(input,GT,Follow._GT_in_relationalExpression1317); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					GT43_tree = (CommonTree)adaptor.Create(GT43);
+					root_0 = (CommonTree)adaptor.BecomeRoot(GT43_tree, root_0);
+					}
+					DebugLocation(185, 9);
+					PushFollow(Follow._additiveExpression_in_relationalExpression1320);
+					additiveExpression44=additiveExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression44.Tree);
+
+					}
+					break;
+				case 4:
+					DebugEnterAlt(4);
+					// mccarthy.g3:186:5: GTEQ additiveExpression
+					{
+					DebugLocation(186, 9);
+					GTEQ45=(CommonToken)Match(input,GTEQ,Follow._GTEQ_in_relationalExpression1327); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					GTEQ45_tree = (CommonTree)adaptor.Create(GTEQ45);
+					root_0 = (CommonTree)adaptor.BecomeRoot(GTEQ45_tree, root_0);
+					}
+					DebugLocation(186, 11);
+					PushFollow(Follow._additiveExpression_in_relationalExpression1330);
+					additiveExpression46=additiveExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression46.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop9;
+				}
+			}
+
+			loop9:
+				;
+
+			} finally { DebugExitSubRule(9); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("relationalExpression", 16);
+			LeaveRule("relationalExpression", 16);
+			LeaveRule_relationalExpression();
+		}
+		DebugLocation(187, 4);
+		} finally { DebugExitRule(GrammarFileName, "relationalExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "relationalExpression"
+
+	public sealed partial class additiveExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public additiveExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_additiveExpression();
+	partial void LeaveRule_additiveExpression();
+
+	// $ANTLR start "additiveExpression"
+	// mccarthy.g3:189:8: public additiveExpression : ( multiplicativeExpression PLUS multiplicativeExpression | multiplicativeExpression MINUS multiplicativeExpression | multiplicativeExpression );
+	[GrammarRule("additiveExpression")]
+	public mccarthyParser.additiveExpression_return additiveExpression()
+	{
+		EnterRule_additiveExpression();
+		EnterRule("additiveExpression", 17);
+		TraceIn("additiveExpression", 17);
+		mccarthyParser.additiveExpression_return retval = new mccarthyParser.additiveExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken PLUS48 = default(CommonToken);
+		CommonToken MINUS51 = default(CommonToken);
+		mccarthyParser.multiplicativeExpression_return multiplicativeExpression47 = default(mccarthyParser.multiplicativeExpression_return);
+		mccarthyParser.multiplicativeExpression_return multiplicativeExpression49 = default(mccarthyParser.multiplicativeExpression_return);
+		mccarthyParser.multiplicativeExpression_return multiplicativeExpression50 = default(mccarthyParser.multiplicativeExpression_return);
+		mccarthyParser.multiplicativeExpression_return multiplicativeExpression52 = default(mccarthyParser.multiplicativeExpression_return);
+		mccarthyParser.multiplicativeExpression_return multiplicativeExpression53 = default(mccarthyParser.multiplicativeExpression_return);
+
+		CommonTree PLUS48_tree = default(CommonTree);
+		CommonTree MINUS51_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "additiveExpression");
+		DebugLocation(189, 4);
+		try
+		{
+			// mccarthy.g3:190:5: ( multiplicativeExpression PLUS multiplicativeExpression | multiplicativeExpression MINUS multiplicativeExpression | multiplicativeExpression )
+			int alt10=3;
+			try { DebugEnterDecision(10, false);
+			switch (input.LA(1))
+			{
+			case NOT:
+				{
+				int LA10_1 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred14_mccarthy_fragment)))
+				{
+					alt10 = 1;
+				}
+				else if ((EvaluatePredicate(synpred15_mccarthy_fragment)))
+				{
+					alt10 = 2;
+				}
+				else if ((true))
+				{
+					alt10 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 10, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case 63:
+				{
+				int LA10_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred14_mccarthy_fragment)))
+				{
+					alt10 = 1;
+				}
+				else if ((EvaluatePredicate(synpred15_mccarthy_fragment)))
+				{
+					alt10 = 2;
+				}
+				else if ((true))
+				{
+					alt10 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 10, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case INT:
+				{
+				int LA10_3 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred14_mccarthy_fragment)))
+				{
+					alt10 = 1;
+				}
+				else if ((EvaluatePredicate(synpred15_mccarthy_fragment)))
+				{
+					alt10 = 2;
+				}
+				else if ((true))
+				{
+					alt10 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 10, 3, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case ID:
+				{
+				int LA10_4 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred14_mccarthy_fragment)))
+				{
+					alt10 = 1;
+				}
+				else if ((EvaluatePredicate(synpred15_mccarthy_fragment)))
+				{
+					alt10 = 2;
+				}
+				else if ((true))
+				{
+					alt10 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 10, 4, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRING:
+				{
+				int LA10_5 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred14_mccarthy_fragment)))
+				{
+					alt10 = 1;
+				}
+				else if ((EvaluatePredicate(synpred15_mccarthy_fragment)))
+				{
+					alt10 = 2;
+				}
+				else if ((true))
+				{
+					alt10 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 10, 5, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 10, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(10); }
+			switch (alt10)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// mccarthy.g3:190:10: multiplicativeExpression PLUS multiplicativeExpression
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(190, 10);
+				PushFollow(Follow._multiplicativeExpression_in_additiveExpression1354);
+				multiplicativeExpression47=multiplicativeExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression47.Tree);
+				DebugLocation(190, 40);
+				PLUS48=(CommonToken)Match(input,PLUS,Follow._PLUS_in_additiveExpression1357); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				PLUS48_tree = (CommonTree)adaptor.Create(PLUS48);
+				root_0 = (CommonTree)adaptor.BecomeRoot(PLUS48_tree, root_0);
+				}
+				DebugLocation(190, 42);
+				PushFollow(Follow._multiplicativeExpression_in_additiveExpression1360);
+				multiplicativeExpression49=multiplicativeExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression49.Tree);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// mccarthy.g3:191:5: multiplicativeExpression MINUS multiplicativeExpression
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(191, 5);
+				PushFollow(Follow._multiplicativeExpression_in_additiveExpression1366);
+				multiplicativeExpression50=multiplicativeExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression50.Tree);
+				DebugLocation(191, 35);
+				MINUS51=(CommonToken)Match(input,MINUS,Follow._MINUS_in_additiveExpression1368); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				MINUS51_tree = (CommonTree)adaptor.Create(MINUS51);
+				root_0 = (CommonTree)adaptor.BecomeRoot(MINUS51_tree, root_0);
+				}
+				DebugLocation(191, 37);
+				PushFollow(Follow._multiplicativeExpression_in_additiveExpression1371);
+				multiplicativeExpression52=multiplicativeExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression52.Tree);
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// mccarthy.g3:192:5: multiplicativeExpression
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(192, 5);
+				PushFollow(Follow._multiplicativeExpression_in_additiveExpression1377);
+				multiplicativeExpression53=multiplicativeExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression53.Tree);
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("additiveExpression", 17);
+			LeaveRule("additiveExpression", 17);
+			LeaveRule_additiveExpression();
+		}
+		DebugLocation(193, 4);
+		} finally { DebugExitRule(GrammarFileName, "additiveExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "additiveExpression"
+
+	public sealed partial class multiplicativeExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public multiplicativeExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_multiplicativeExpression();
+	partial void LeaveRule_multiplicativeExpression();
+
+	// $ANTLR start "multiplicativeExpression"
+	// mccarthy.g3:195:8: public multiplicativeExpression : unaryExpression ( MULT unaryExpression | DIV unaryExpression | MOD unaryExpression )* ;
+	[GrammarRule("multiplicativeExpression")]
+	public mccarthyParser.multiplicativeExpression_return multiplicativeExpression()
+	{
+		EnterRule_multiplicativeExpression();
+		EnterRule("multiplicativeExpression", 18);
+		TraceIn("multiplicativeExpression", 18);
+		mccarthyParser.multiplicativeExpression_return retval = new mccarthyParser.multiplicativeExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken MULT55 = default(CommonToken);
+		CommonToken DIV57 = default(CommonToken);
+		CommonToken MOD59 = default(CommonToken);
+		mccarthyParser.unaryExpression_return unaryExpression54 = default(mccarthyParser.unaryExpression_return);
+		mccarthyParser.unaryExpression_return unaryExpression56 = default(mccarthyParser.unaryExpression_return);
+		mccarthyParser.unaryExpression_return unaryExpression58 = default(mccarthyParser.unaryExpression_return);
+		mccarthyParser.unaryExpression_return unaryExpression60 = default(mccarthyParser.unaryExpression_return);
+
+		CommonTree MULT55_tree = default(CommonTree);
+		CommonTree DIV57_tree = default(CommonTree);
+		CommonTree MOD59_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "multiplicativeExpression");
+		DebugLocation(195, 4);
+		try
+		{
+			// mccarthy.g3:196:5: ( unaryExpression ( MULT unaryExpression | DIV unaryExpression | MOD unaryExpression )* )
+			DebugEnterAlt(1);
+			// mccarthy.g3:196:10: unaryExpression ( MULT unaryExpression | DIV unaryExpression | MOD unaryExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(196, 10);
+			PushFollow(Follow._unaryExpression_in_multiplicativeExpression1399);
+			unaryExpression54=unaryExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression54.Tree);
+			DebugLocation(197, 3);
+			// mccarthy.g3:197:3: ( MULT unaryExpression | DIV unaryExpression | MOD unaryExpression )*
+			try { DebugEnterSubRule(11);
+			while (true)
+			{
+				int alt11=4;
+				try { DebugEnterDecision(11, false);
+				switch (input.LA(1))
+				{
+				case MULT:
+					{
+					alt11 = 1;
+					}
+					break;
+				case DIV:
+					{
+					alt11 = 2;
+					}
+					break;
+				case MOD:
+					{
+					alt11 = 3;
+					}
+					break;
+
+				}
+
+				} finally { DebugExitDecision(11); }
+				switch ( alt11 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// mccarthy.g3:197:5: MULT unaryExpression
+					{
+					DebugLocation(197, 9);
+					MULT55=(CommonToken)Match(input,MULT,Follow._MULT_in_multiplicativeExpression1405); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					MULT55_tree = (CommonTree)adaptor.Create(MULT55);
+					root_0 = (CommonTree)adaptor.BecomeRoot(MULT55_tree, root_0);
+					}
+					DebugLocation(197, 11);
+					PushFollow(Follow._unaryExpression_in_multiplicativeExpression1408);
+					unaryExpression56=unaryExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression56.Tree);
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// mccarthy.g3:198:5: DIV unaryExpression
+					{
+					DebugLocation(198, 8);
+					DIV57=(CommonToken)Match(input,DIV,Follow._DIV_in_multiplicativeExpression1415); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					DIV57_tree = (CommonTree)adaptor.Create(DIV57);
+					root_0 = (CommonTree)adaptor.BecomeRoot(DIV57_tree, root_0);
+					}
+					DebugLocation(198, 10);
+					PushFollow(Follow._unaryExpression_in_multiplicativeExpression1418);
+					unaryExpression58=unaryExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression58.Tree);
+
+					}
+					break;
+				case 3:
+					DebugEnterAlt(3);
+					// mccarthy.g3:199:5: MOD unaryExpression
+					{
+					DebugLocation(199, 8);
+					MOD59=(CommonToken)Match(input,MOD,Follow._MOD_in_multiplicativeExpression1425); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					MOD59_tree = (CommonTree)adaptor.Create(MOD59);
+					root_0 = (CommonTree)adaptor.BecomeRoot(MOD59_tree, root_0);
+					}
+					DebugLocation(199, 10);
+					PushFollow(Follow._unaryExpression_in_multiplicativeExpression1428);
+					unaryExpression60=unaryExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression60.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop11;
+				}
+			}
+
+			loop11:
+				;
+
+			} finally { DebugExitSubRule(11); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("multiplicativeExpression", 18);
+			LeaveRule("multiplicativeExpression", 18);
+			LeaveRule_multiplicativeExpression();
+		}
+		DebugLocation(200, 4);
+		} finally { DebugExitRule(GrammarFileName, "multiplicativeExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "multiplicativeExpression"
+
+	public sealed partial class unaryExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public unaryExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_unaryExpression();
+	partial void LeaveRule_unaryExpression();
+
+	// $ANTLR start "unaryExpression"
+	// mccarthy.g3:202:8: public unaryExpression : ( NOT )? primaryExpression ;
+	[GrammarRule("unaryExpression")]
+	public mccarthyParser.unaryExpression_return unaryExpression()
+	{
+		EnterRule_unaryExpression();
+		EnterRule("unaryExpression", 19);
+		TraceIn("unaryExpression", 19);
+		mccarthyParser.unaryExpression_return retval = new mccarthyParser.unaryExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken NOT61 = default(CommonToken);
+		mccarthyParser.primaryExpression_return primaryExpression62 = default(mccarthyParser.primaryExpression_return);
+
+		CommonTree NOT61_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "unaryExpression");
+		DebugLocation(202, 7);
+		try
+		{
+			// mccarthy.g3:203:5: ( ( NOT )? primaryExpression )
+			DebugEnterAlt(1);
+			// mccarthy.g3:203:10: ( NOT )? primaryExpression
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(203, 10);
+			// mccarthy.g3:203:10: ( NOT )?
+			int alt12=2;
+			try { DebugEnterSubRule(12);
+			try { DebugEnterDecision(12, false);
+			int LA12_0 = input.LA(1);
+
+			if ((LA12_0==NOT))
+			{
+				alt12 = 1;
+			}
+			} finally { DebugExitDecision(12); }
+			switch (alt12)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// mccarthy.g3:203:10: NOT
+				{
+				DebugLocation(203, 10);
+				NOT61=(CommonToken)Match(input,NOT,Follow._NOT_in_unaryExpression1452); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				NOT61_tree = (CommonTree)adaptor.Create(NOT61);
+				adaptor.AddChild(root_0, NOT61_tree);
+				}
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(12); }
+
+			DebugLocation(203, 15);
+			PushFollow(Follow._primaryExpression_in_unaryExpression1455);
+			primaryExpression62=primaryExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, primaryExpression62.Tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("unaryExpression", 19);
+			LeaveRule("unaryExpression", 19);
+			LeaveRule_unaryExpression();
+		}
+		DebugLocation(204, 7);
+		} finally { DebugExitRule(GrammarFileName, "unaryExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "unaryExpression"
+
+	public sealed partial class primaryExpression_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
+	{
+		private CommonTree _tree;
+		public CommonTree Tree { get { return _tree; } set { _tree = value; } }
+		object IAstRuleReturnScope.Tree { get { return Tree; } }
+		public primaryExpression_return(mccarthyParser grammar) {OnCreated(grammar);}
+		partial void OnCreated(mccarthyParser grammar);
+	}
+
+	partial void EnterRule_primaryExpression();
+	partial void LeaveRule_primaryExpression();
+
+	// $ANTLR start "primaryExpression"
+	// mccarthy.g3:206:8: public primaryExpression : ( '(' logicalExpression ')' | value );
+	[GrammarRule("primaryExpression")]
+	public mccarthyParser.primaryExpression_return primaryExpression()
+	{
+		EnterRule_primaryExpression();
+		EnterRule("primaryExpression", 20);
+		TraceIn("primaryExpression", 20);
+		mccarthyParser.primaryExpression_return retval = new mccarthyParser.primaryExpression_return(this);
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal63 = default(CommonToken);
+		CommonToken char_literal65 = default(CommonToken);
+		mccarthyParser.logicalExpression_return logicalExpression64 = default(mccarthyParser.logicalExpression_return);
+		mccarthyParser.value_return value66 = default(mccarthyParser.value_return);
+
+		CommonTree char_literal63_tree = default(CommonTree);
+		CommonTree char_literal65_tree = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "primaryExpression");
+		DebugLocation(206, 4);
+		try
+		{
+			// mccarthy.g3:207:5: ( '(' logicalExpression ')' | value )
+			int alt13=2;
+			try { DebugEnterDecision(13, false);
+			int LA13_0 = input.LA(1);
+
+			if ((LA13_0==63))
+			{
+				alt13 = 1;
+			}
+			else if ((LA13_0==ID||LA13_0==INT||LA13_0==STRING))
+			{
+				alt13 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 13, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(13); }
+			switch (alt13)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// mccarthy.g3:207:10: '(' logicalExpression ')'
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(207, 13);
+				char_literal63=(CommonToken)Match(input,63,Follow._63_in_primaryExpression1480); if (state.failed) return retval;
+				DebugLocation(207, 15);
+				PushFollow(Follow._logicalExpression_in_primaryExpression1483);
+				logicalExpression64=logicalExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalExpression64.Tree);
+				DebugLocation(207, 36);
+				char_literal65=(CommonToken)Match(input,64,Follow._64_in_primaryExpression1485); if (state.failed) return retval;
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// mccarthy.g3:208:10: value
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(208, 10);
+				PushFollow(Follow._value_in_primaryExpression1497);
+				value66=value();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, value66.Tree);
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("primaryExpression", 20);
+			LeaveRule("primaryExpression", 20);
+			LeaveRule_primaryExpression();
+		}
+		DebugLocation(209, 4);
+		} finally { DebugExitRule(GrammarFileName, "primaryExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "primaryExpression"
 
 	public sealed partial class statement_return : ParserRuleReturnScope<CommonToken>, IAstRuleReturnScope<CommonTree>, IAstRuleReturnScope
 	{
@@ -1401,180 +3076,180 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_statement();
 
 	// $ANTLR start "statement"
-	// mccarthy.g3:134:8: public statement : ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation );
+	// mccarthy.g3:211:8: public statement : ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation );
 	[GrammarRule("statement")]
 	public mccarthyParser.statement_return statement()
 	{
 		EnterRule_statement();
-		EnterRule("statement", 10);
-		TraceIn("statement", 10);
+		EnterRule("statement", 21);
+		TraceIn("statement", 21);
 		mccarthyParser.statement_return retval = new mccarthyParser.statement_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		mccarthyParser.assignment_return assignment20 = default(mccarthyParser.assignment_return);
-		mccarthyParser.replaceOperation_return replaceOperation21 = default(mccarthyParser.replaceOperation_return);
-		mccarthyParser.appendOperation_return appendOperation22 = default(mccarthyParser.appendOperation_return);
-		mccarthyParser.prependOperation_return prependOperation23 = default(mccarthyParser.prependOperation_return);
-		mccarthyParser.matchOperation_return matchOperation24 = default(mccarthyParser.matchOperation_return);
-		mccarthyParser.moveOperation_return moveOperation25 = default(mccarthyParser.moveOperation_return);
-		mccarthyParser.moveFrontOperation_return moveFrontOperation26 = default(mccarthyParser.moveFrontOperation_return);
-		mccarthyParser.moveBackOperation_return moveBackOperation27 = default(mccarthyParser.moveBackOperation_return);
-		mccarthyParser.deleteOperation_return deleteOperation28 = default(mccarthyParser.deleteOperation_return);
+		mccarthyParser.assignment_return assignment67 = default(mccarthyParser.assignment_return);
+		mccarthyParser.replaceOperation_return replaceOperation68 = default(mccarthyParser.replaceOperation_return);
+		mccarthyParser.appendOperation_return appendOperation69 = default(mccarthyParser.appendOperation_return);
+		mccarthyParser.prependOperation_return prependOperation70 = default(mccarthyParser.prependOperation_return);
+		mccarthyParser.matchOperation_return matchOperation71 = default(mccarthyParser.matchOperation_return);
+		mccarthyParser.moveOperation_return moveOperation72 = default(mccarthyParser.moveOperation_return);
+		mccarthyParser.moveFrontOperation_return moveFrontOperation73 = default(mccarthyParser.moveFrontOperation_return);
+		mccarthyParser.moveBackOperation_return moveBackOperation74 = default(mccarthyParser.moveBackOperation_return);
+		mccarthyParser.deleteOperation_return deleteOperation75 = default(mccarthyParser.deleteOperation_return);
 
 
 		try { DebugEnterRule(GrammarFileName, "statement");
-		DebugLocation(134, 1);
+		DebugLocation(211, 1);
 		try
 		{
-			// mccarthy.g3:135:2: ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
-			int alt5=9;
-			try { DebugEnterDecision(5, false);
+			// mccarthy.g3:212:2: ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
+			int alt14=9;
+			try { DebugEnterDecision(14, false);
 			try
 			{
-				alt5 = dfa5.Predict(input);
+				alt14 = dfa14.Predict(input);
 			}
 			catch (NoViableAltException nvae)
 			{
 				DebugRecognitionException(nvae);
 				throw;
 			}
-			} finally { DebugExitDecision(5); }
-			switch (alt5)
+			} finally { DebugExitDecision(14); }
+			switch (alt14)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// mccarthy.g3:135:4: assignment
+				// mccarthy.g3:212:4: assignment
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(135, 4);
-				PushFollow(Follow._assignment_in_statement876);
-				assignment20=assignment();
+				DebugLocation(212, 4);
+				PushFollow(Follow._assignment_in_statement1513);
+				assignment67=assignment();
 				PopFollow();
-
-				adaptor.AddChild(root_0, assignment20.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment67.Tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// mccarthy.g3:136:4: replaceOperation
+				// mccarthy.g3:213:4: replaceOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(136, 4);
-				PushFollow(Follow._replaceOperation_in_statement881);
-				replaceOperation21=replaceOperation();
+				DebugLocation(213, 4);
+				PushFollow(Follow._replaceOperation_in_statement1518);
+				replaceOperation68=replaceOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, replaceOperation21.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, replaceOperation68.Tree);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// mccarthy.g3:137:4: appendOperation
+				// mccarthy.g3:214:4: appendOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(137, 4);
-				PushFollow(Follow._appendOperation_in_statement886);
-				appendOperation22=appendOperation();
+				DebugLocation(214, 4);
+				PushFollow(Follow._appendOperation_in_statement1523);
+				appendOperation69=appendOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, appendOperation22.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, appendOperation69.Tree);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// mccarthy.g3:138:4: prependOperation
+				// mccarthy.g3:215:4: prependOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(138, 4);
-				PushFollow(Follow._prependOperation_in_statement891);
-				prependOperation23=prependOperation();
+				DebugLocation(215, 4);
+				PushFollow(Follow._prependOperation_in_statement1528);
+				prependOperation70=prependOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, prependOperation23.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, prependOperation70.Tree);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// mccarthy.g3:139:4: matchOperation
+				// mccarthy.g3:216:4: matchOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(139, 4);
-				PushFollow(Follow._matchOperation_in_statement896);
-				matchOperation24=matchOperation();
+				DebugLocation(216, 4);
+				PushFollow(Follow._matchOperation_in_statement1533);
+				matchOperation71=matchOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, matchOperation24.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, matchOperation71.Tree);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// mccarthy.g3:140:4: moveOperation
+				// mccarthy.g3:217:4: moveOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(140, 4);
-				PushFollow(Follow._moveOperation_in_statement901);
-				moveOperation25=moveOperation();
+				DebugLocation(217, 4);
+				PushFollow(Follow._moveOperation_in_statement1538);
+				moveOperation72=moveOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, moveOperation25.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, moveOperation72.Tree);
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// mccarthy.g3:141:4: moveFrontOperation
+				// mccarthy.g3:218:4: moveFrontOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(141, 4);
-				PushFollow(Follow._moveFrontOperation_in_statement906);
-				moveFrontOperation26=moveFrontOperation();
+				DebugLocation(218, 4);
+				PushFollow(Follow._moveFrontOperation_in_statement1543);
+				moveFrontOperation73=moveFrontOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, moveFrontOperation26.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, moveFrontOperation73.Tree);
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// mccarthy.g3:142:4: moveBackOperation
+				// mccarthy.g3:219:4: moveBackOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(142, 4);
-				PushFollow(Follow._moveBackOperation_in_statement911);
-				moveBackOperation27=moveBackOperation();
+				DebugLocation(219, 4);
+				PushFollow(Follow._moveBackOperation_in_statement1548);
+				moveBackOperation74=moveBackOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, moveBackOperation27.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, moveBackOperation74.Tree);
 
 				}
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// mccarthy.g3:143:4: deleteOperation
+				// mccarthy.g3:220:4: deleteOperation
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(143, 4);
-				PushFollow(Follow._deleteOperation_in_statement916);
-				deleteOperation28=deleteOperation();
+				DebugLocation(220, 4);
+				PushFollow(Follow._deleteOperation_in_statement1553);
+				deleteOperation75=deleteOperation();
 				PopFollow();
-
-				adaptor.AddChild(root_0, deleteOperation28.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, deleteOperation75.Tree);
 
 				}
 				break;
@@ -1582,9 +3257,10 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			}
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1595,11 +3271,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("statement", 10);
-			LeaveRule("statement", 10);
+			TraceOut("statement", 21);
+			LeaveRule("statement", 21);
 			LeaveRule_statement();
 		}
-		DebugLocation(144, 1);
+		DebugLocation(221, 1);
 		} finally { DebugExitRule(GrammarFileName, "statement"); }
 		return retval;
 
@@ -1619,19 +3295,20 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_value();
 
 	// $ANTLR start "value"
-	// mccarthy.g3:145:1: value : (x= INT -> ^( VALINT $x) |x= ID -> ^( VARREF $x) |x= STRING -> ^( VALSTR $x) );
+	// mccarthy.g3:223:1: value : (x= INT -> ^( VALINT $x) |x= ID -> ^( VARREF $x) |x= STRING -> ^( VALSTR $x) | functionInvocation );
 	[GrammarRule("value")]
 	private mccarthyParser.value_return value()
 	{
 		EnterRule_value();
-		EnterRule("value", 11);
-		TraceIn("value", 11);
+		EnterRule("value", 22);
+		TraceIn("value", 22);
 		mccarthyParser.value_return retval = new mccarthyParser.value_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
 		CommonToken x = default(CommonToken);
+		mccarthyParser.functionInvocation_return functionInvocation76 = default(mccarthyParser.functionInvocation_return);
 
 		CommonTree x_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_INT=new RewriteRuleITokenStream(adaptor,"token INT");
@@ -1639,47 +3316,64 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_STRING=new RewriteRuleITokenStream(adaptor,"token STRING");
 
 		try { DebugEnterRule(GrammarFileName, "value");
-		DebugLocation(145, 1);
+		DebugLocation(223, 1);
 		try
 		{
-			// mccarthy.g3:146:2: (x= INT -> ^( VALINT $x) |x= ID -> ^( VARREF $x) |x= STRING -> ^( VALSTR $x) )
-			int alt6=3;
-			try { DebugEnterDecision(6, false);
+			// mccarthy.g3:224:2: (x= INT -> ^( VALINT $x) |x= ID -> ^( VARREF $x) |x= STRING -> ^( VALSTR $x) | functionInvocation )
+			int alt15=4;
+			try { DebugEnterDecision(15, false);
 			switch (input.LA(1))
 			{
 			case INT:
 				{
-				alt6 = 1;
+				alt15 = 1;
 				}
 				break;
 			case ID:
 				{
-				alt6 = 2;
+				int LA15_2 = input.LA(2);
+
+				if ((LA15_2==63))
+				{
+					alt15 = 4;
+				}
+				else if ((LA15_2==EOF||LA15_2==AND||(LA15_2>=DIV && LA15_2<=EQUALS)||(LA15_2>=GT && LA15_2<=GTEQ)||(LA15_2>=LT && LA15_2<=LTEQ)||(LA15_2>=MINUS && LA15_2<=MOD)||LA15_2==MULT||(LA15_2>=NOTEQUALS && LA15_2<=OR)||LA15_2==PLUS||(LA15_2>=64 && LA15_2<=65)||LA15_2==69))
+				{
+					alt15 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 				}
 				break;
 			case STRING:
 				{
-				alt6 = 3;
+				alt15 = 3;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 6, 0, input);
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(6); }
-			switch (alt6)
+			} finally { DebugExitDecision(15); }
+			switch (alt15)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// mccarthy.g3:147:4: x= INT
+				// mccarthy.g3:225:4: x= INT
 				{
-				DebugLocation(147, 5);
-				x=(CommonToken)Match(input,INT,Follow._INT_in_value931);  
-				stream_INT.Add(x);
+				DebugLocation(225, 5);
+				x=(CommonToken)Match(input,INT,Follow._INT_in_value1569); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_INT.Add(x);
 
 
 
@@ -1691,21 +3385,22 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleITokenStream stream_x=new RewriteRuleITokenStream(adaptor,"token x",x);
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 147:10: -> ^( VALINT $x)
+				// 225:10: -> ^( VALINT $x)
 				{
-					DebugLocation(147, 13);
-					// mccarthy.g3:147:13: ^( VALINT $x)
+					DebugLocation(225, 13);
+					// mccarthy.g3:225:13: ^( VALINT $x)
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(147, 15);
+					DebugLocation(225, 15);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VALINT, "VALINT"), root_1);
 
-					DebugLocation(147, 23);
+					DebugLocation(225, 23);
 					adaptor.AddChild(root_1, stream_x.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -1714,17 +3409,18 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				}
 
 				retval.Tree = root_0;
+				}
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// mccarthy.g3:148:4: x= ID
+				// mccarthy.g3:226:4: x= ID
 				{
-				DebugLocation(148, 5);
-				x=(CommonToken)Match(input,ID,Follow._ID_in_value947);  
-				stream_ID.Add(x);
+				DebugLocation(226, 5);
+				x=(CommonToken)Match(input,ID,Follow._ID_in_value1585); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_ID.Add(x);
 
 
 
@@ -1736,21 +3432,22 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleITokenStream stream_x=new RewriteRuleITokenStream(adaptor,"token x",x);
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 148:9: -> ^( VARREF $x)
+				// 226:9: -> ^( VARREF $x)
 				{
-					DebugLocation(148, 12);
-					// mccarthy.g3:148:12: ^( VARREF $x)
+					DebugLocation(226, 12);
+					// mccarthy.g3:226:12: ^( VARREF $x)
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(148, 14);
+					DebugLocation(226, 14);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VARREF, "VARREF"), root_1);
 
-					DebugLocation(148, 22);
+					DebugLocation(226, 22);
 					adaptor.AddChild(root_1, stream_x.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -1759,17 +3456,18 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				}
 
 				retval.Tree = root_0;
+				}
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// mccarthy.g3:149:4: x= STRING
+				// mccarthy.g3:227:4: x= STRING
 				{
-				DebugLocation(149, 5);
-				x=(CommonToken)Match(input,STRING,Follow._STRING_in_value963);  
-				stream_STRING.Add(x);
+				DebugLocation(227, 5);
+				x=(CommonToken)Match(input,STRING,Follow._STRING_in_value1601); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_STRING.Add(x);
 
 
 
@@ -1781,21 +3479,22 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleITokenStream stream_x=new RewriteRuleITokenStream(adaptor,"token x",x);
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 149:13: -> ^( VALSTR $x)
+				// 227:13: -> ^( VALSTR $x)
 				{
-					DebugLocation(149, 16);
-					// mccarthy.g3:149:16: ^( VALSTR $x)
+					DebugLocation(227, 16);
+					// mccarthy.g3:227:16: ^( VALSTR $x)
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(149, 18);
+					DebugLocation(227, 18);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VALSTR, "VALSTR"), root_1);
 
-					DebugLocation(149, 26);
+					DebugLocation(227, 26);
 					adaptor.AddChild(root_1, stream_x.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -1805,6 +3504,22 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				retval.Tree = root_0;
 				}
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// mccarthy.g3:228:7: functionInvocation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(228, 7);
+				PushFollow(Follow._functionInvocation_in_value1618);
+				functionInvocation76=functionInvocation();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, functionInvocation76.Tree);
 
 				}
 				break;
@@ -1812,9 +3527,10 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			}
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1825,11 +3541,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("value", 11);
-			LeaveRule("value", 11);
+			TraceOut("value", 22);
+			LeaveRule("value", 22);
 			LeaveRule_value();
 		}
-		DebugLocation(150, 1);
+		DebugLocation(229, 1);
 		} finally { DebugExitRule(GrammarFileName, "value"); }
 		return retval;
 
@@ -1849,59 +3565,62 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_assignment();
 
 	// $ANTLR start "assignment"
-	// mccarthy.g3:152:1: assignment : id= ID '=' value ;
+	// mccarthy.g3:231:1: assignment : id= ID '=' value ;
 	[GrammarRule("assignment")]
 	private mccarthyParser.assignment_return assignment()
 	{
 		EnterRule_assignment();
-		EnterRule("assignment", 12);
-		TraceIn("assignment", 12);
+		EnterRule("assignment", 23);
+		TraceIn("assignment", 23);
 		mccarthyParser.assignment_return retval = new mccarthyParser.assignment_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
 		CommonToken id = default(CommonToken);
-		CommonToken char_literal29 = default(CommonToken);
-		mccarthyParser.value_return value30 = default(mccarthyParser.value_return);
+		CommonToken char_literal77 = default(CommonToken);
+		mccarthyParser.value_return value78 = default(mccarthyParser.value_return);
 
 		CommonTree id_tree = default(CommonTree);
-		CommonTree char_literal29_tree = default(CommonTree);
+		CommonTree char_literal77_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "assignment");
-		DebugLocation(152, 1);
+		DebugLocation(231, 1);
 		try
 		{
-			// mccarthy.g3:153:2: (id= ID '=' value )
+			// mccarthy.g3:232:2: (id= ID '=' value )
 			DebugEnterAlt(1);
-			// mccarthy.g3:154:2: id= ID '=' value
+			// mccarthy.g3:233:2: id= ID '=' value
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(154, 4);
-			id=(CommonToken)Match(input,ID,Follow._ID_in_assignment986); 
+			DebugLocation(233, 4);
+			id=(CommonToken)Match(input,ID,Follow._ID_in_assignment1632); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			id_tree = (CommonTree)adaptor.Create(id);
 			adaptor.AddChild(root_0, id_tree);
-
-			DebugLocation(154, 8);
-			char_literal29=(CommonToken)Match(input,54,Follow._54_in_assignment988); 
-			char_literal29_tree = (CommonTree)adaptor.Create(char_literal29);
-			adaptor.AddChild(root_0, char_literal29_tree);
-
-			DebugLocation(154, 12);
-			PushFollow(Follow._value_in_assignment990);
-			value30=value();
+			}
+			DebugLocation(233, 8);
+			char_literal77=(CommonToken)Match(input,71,Follow._71_in_assignment1634); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			char_literal77_tree = (CommonTree)adaptor.Create(char_literal77);
+			adaptor.AddChild(root_0, char_literal77_tree);
+			}
+			DebugLocation(233, 12);
+			PushFollow(Follow._value_in_assignment1636);
+			value78=value();
 			PopFollow();
-
-			adaptor.AddChild(root_0, value30.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, value78.Tree);
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -1912,11 +3631,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("assignment", 12);
-			LeaveRule("assignment", 12);
+			TraceOut("assignment", 23);
+			LeaveRule("assignment", 23);
 			LeaveRule_assignment();
 		}
-		DebugLocation(155, 1);
+		DebugLocation(234, 1);
 		} finally { DebugExitRule(GrammarFileName, "assignment"); }
 		return retval;
 
@@ -1936,50 +3655,50 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_replaceOperation();
 
 	// $ANTLR start "replaceOperation"
-	// mccarthy.g3:156:1: replaceOperation : pe= pathExpression '==' val= value -> ^( REPLACE $pe $val) ;
+	// mccarthy.g3:235:1: replaceOperation : pe= pathExpression '==' val= value -> ^( REPLACE $pe $val) ;
 	[GrammarRule("replaceOperation")]
 	private mccarthyParser.replaceOperation_return replaceOperation()
 	{
 		EnterRule_replaceOperation();
-		EnterRule("replaceOperation", 13);
-		TraceIn("replaceOperation", 13);
+		EnterRule("replaceOperation", 24);
+		TraceIn("replaceOperation", 24);
 		mccarthyParser.replaceOperation_return retval = new mccarthyParser.replaceOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal31 = default(CommonToken);
+		CommonToken string_literal79 = default(CommonToken);
 		mccarthyParser.pathExpression_return pe = default(mccarthyParser.pathExpression_return);
 		mccarthyParser.value_return val = default(mccarthyParser.value_return);
 
-		CommonTree string_literal31_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_56=new RewriteRuleITokenStream(adaptor,"token 56");
+		CommonTree string_literal79_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_73=new RewriteRuleITokenStream(adaptor,"token 73");
 		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
 		RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
 		try { DebugEnterRule(GrammarFileName, "replaceOperation");
-		DebugLocation(156, 1);
+		DebugLocation(235, 1);
 		try
 		{
-			// mccarthy.g3:157:2: (pe= pathExpression '==' val= value -> ^( REPLACE $pe $val) )
+			// mccarthy.g3:236:2: (pe= pathExpression '==' val= value -> ^( REPLACE $pe $val) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:158:2: pe= pathExpression '==' val= value
+			// mccarthy.g3:237:2: pe= pathExpression '==' val= value
 			{
-			DebugLocation(158, 4);
-			PushFollow(Follow._pathExpression_in_replaceOperation1004);
+			DebugLocation(237, 4);
+			PushFollow(Follow._pathExpression_in_replaceOperation1650);
 			pe=pathExpression();
 			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_pathExpression.Add(pe.Tree);
+			DebugLocation(237, 20);
+			string_literal79=(CommonToken)Match(input,73,Follow._73_in_replaceOperation1652); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_73.Add(string_literal79);
 
-			stream_pathExpression.Add(pe.Tree);
-			DebugLocation(158, 20);
-			string_literal31=(CommonToken)Match(input,56,Follow._56_in_replaceOperation1006);  
-			stream_56.Add(string_literal31);
-
-			DebugLocation(158, 28);
-			PushFollow(Follow._value_in_replaceOperation1010);
+			DebugLocation(237, 28);
+			PushFollow(Follow._value_in_replaceOperation1656);
 			val=value();
 			PopFollow();
-
-			stream_value.Add(val.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_value.Add(val.Tree);
 
 
 			{
@@ -1990,24 +3709,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_pe=new RewriteRuleSubtreeStream(adaptor,"rule pe",pe!=null?pe.Tree:null);
 			RewriteRuleSubtreeStream stream_val=new RewriteRuleSubtreeStream(adaptor,"rule val",val!=null?val.Tree:null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 159:3: -> ^( REPLACE $pe $val)
+			// 238:3: -> ^( REPLACE $pe $val)
 			{
-				DebugLocation(159, 6);
-				// mccarthy.g3:159:6: ^( REPLACE $pe $val)
+				DebugLocation(238, 6);
+				// mccarthy.g3:238:6: ^( REPLACE $pe $val)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(159, 8);
+				DebugLocation(238, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(REPLACE, "REPLACE"), root_1);
 
-				DebugLocation(159, 17);
+				DebugLocation(238, 17);
 				adaptor.AddChild(root_1, stream_pe.NextTree());
-				DebugLocation(159, 21);
+				DebugLocation(238, 21);
 				adaptor.AddChild(root_1, stream_val.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2017,14 +3737,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2035,11 +3757,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("replaceOperation", 13);
-			LeaveRule("replaceOperation", 13);
+			TraceOut("replaceOperation", 24);
+			LeaveRule("replaceOperation", 24);
 			LeaveRule_replaceOperation();
 		}
-		DebugLocation(160, 1);
+		DebugLocation(239, 1);
 		} finally { DebugExitRule(GrammarFileName, "replaceOperation"); }
 		return retval;
 
@@ -2059,49 +3781,49 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_pathExpression();
 
 	// $ANTLR start "pathExpression"
-	// mccarthy.g3:161:1: pathExpression : '$' ctx= ID segs= xpathSegments -> ^( PATH ^( PATHCTX $ctx) $segs) ;
+	// mccarthy.g3:240:1: pathExpression : '$' ctx= ID segs= xpathSegments -> ^( PATH ^( PATHCTX $ctx) $segs) ;
 	[GrammarRule("pathExpression")]
 	private mccarthyParser.pathExpression_return pathExpression()
 	{
 		EnterRule_pathExpression();
-		EnterRule("pathExpression", 14);
-		TraceIn("pathExpression", 14);
+		EnterRule("pathExpression", 25);
+		TraceIn("pathExpression", 25);
 		mccarthyParser.pathExpression_return retval = new mccarthyParser.pathExpression_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
 		CommonToken ctx = default(CommonToken);
-		CommonToken char_literal32 = default(CommonToken);
+		CommonToken char_literal80 = default(CommonToken);
 		mccarthyParser.xpathSegments_return segs = default(mccarthyParser.xpathSegments_return);
 
 		CommonTree ctx_tree = default(CommonTree);
-		CommonTree char_literal32_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
+		CommonTree char_literal80_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleSubtreeStream stream_xpathSegments=new RewriteRuleSubtreeStream(adaptor,"rule xpathSegments");
 		try { DebugEnterRule(GrammarFileName, "pathExpression");
-		DebugLocation(161, 1);
+		DebugLocation(240, 1);
 		try
 		{
-			// mccarthy.g3:162:2: ( '$' ctx= ID segs= xpathSegments -> ^( PATH ^( PATHCTX $ctx) $segs) )
+			// mccarthy.g3:241:2: ( '$' ctx= ID segs= xpathSegments -> ^( PATH ^( PATHCTX $ctx) $segs) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:163:2: '$' ctx= ID segs= xpathSegments
+			// mccarthy.g3:242:2: '$' ctx= ID segs= xpathSegments
 			{
-			DebugLocation(163, 2);
-			char_literal32=(CommonToken)Match(input,43,Follow._43_in_pathExpression1035);  
-			stream_43.Add(char_literal32);
+			DebugLocation(242, 2);
+			char_literal80=(CommonToken)Match(input,62,Follow._62_in_pathExpression1681); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_62.Add(char_literal80);
 
-			DebugLocation(163, 9);
-			ctx=(CommonToken)Match(input,ID,Follow._ID_in_pathExpression1039);  
-			stream_ID.Add(ctx);
+			DebugLocation(242, 9);
+			ctx=(CommonToken)Match(input,ID,Follow._ID_in_pathExpression1685); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(ctx);
 
-			DebugLocation(163, 17);
-			PushFollow(Follow._xpathSegments_in_pathExpression1043);
+			DebugLocation(242, 17);
+			PushFollow(Follow._xpathSegments_in_pathExpression1689);
 			segs=xpathSegments();
 			PopFollow();
-
-			stream_xpathSegments.Add(segs.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_xpathSegments.Add(segs.Tree);
 
 
 			{
@@ -2112,34 +3834,35 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleITokenStream stream_ctx=new RewriteRuleITokenStream(adaptor,"token ctx",ctx);
 			RewriteRuleSubtreeStream stream_segs=new RewriteRuleSubtreeStream(adaptor,"rule segs",segs!=null?segs.Tree:null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 164:3: -> ^( PATH ^( PATHCTX $ctx) $segs)
+			// 243:3: -> ^( PATH ^( PATHCTX $ctx) $segs)
 			{
-				DebugLocation(164, 6);
-				// mccarthy.g3:164:6: ^( PATH ^( PATHCTX $ctx) $segs)
+				DebugLocation(243, 6);
+				// mccarthy.g3:243:6: ^( PATH ^( PATHCTX $ctx) $segs)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(164, 8);
+				DebugLocation(243, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PATH, "PATH"), root_1);
 
-				DebugLocation(164, 13);
-				// mccarthy.g3:164:13: ^( PATHCTX $ctx)
+				DebugLocation(243, 13);
+				// mccarthy.g3:243:13: ^( PATHCTX $ctx)
 				{
 				CommonTree root_2 = (CommonTree)adaptor.Nil();
-				DebugLocation(164, 15);
+				DebugLocation(243, 15);
 				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PATHCTX, "PATHCTX"), root_2);
 
-				DebugLocation(164, 24);
+				DebugLocation(243, 24);
 				adaptor.AddChild(root_2, stream_ctx.NextNode());
 
 				adaptor.AddChild(root_1, root_2);
 				}
-				DebugLocation(164, 30);
+				DebugLocation(243, 30);
 				adaptor.AddChild(root_1, stream_segs.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2149,14 +3872,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2167,11 +3892,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("pathExpression", 14);
-			LeaveRule("pathExpression", 14);
+			TraceOut("pathExpression", 25);
+			LeaveRule("pathExpression", 25);
 			LeaveRule_pathExpression();
 		}
-		DebugLocation(165, 1);
+		DebugLocation(244, 1);
 		} finally { DebugExitRule(GrammarFileName, "pathExpression"); }
 		return retval;
 
@@ -2191,77 +3916,77 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_xpathSegments();
 
 	// $ANTLR start "xpathSegments"
-	// mccarthy.g3:166:1: xpathSegments : ( '/' ID )* -> ( ^( SEG ID ) )* ;
+	// mccarthy.g3:245:1: xpathSegments : ( '/' ID )* -> ( ^( SEG ID ) )* ;
 	[GrammarRule("xpathSegments")]
 	private mccarthyParser.xpathSegments_return xpathSegments()
 	{
 		EnterRule_xpathSegments();
-		EnterRule("xpathSegments", 15);
-		TraceIn("xpathSegments", 15);
+		EnterRule("xpathSegments", 26);
+		TraceIn("xpathSegments", 26);
 		mccarthyParser.xpathSegments_return retval = new mccarthyParser.xpathSegments_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal33 = default(CommonToken);
-		CommonToken ID34 = default(CommonToken);
+		CommonToken char_literal81 = default(CommonToken);
+		CommonToken ID82 = default(CommonToken);
 
-		CommonTree char_literal33_tree = default(CommonTree);
-		CommonTree ID34_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_48=new RewriteRuleITokenStream(adaptor,"token 48");
+		CommonTree char_literal81_tree = default(CommonTree);
+		CommonTree ID82_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_DIV=new RewriteRuleITokenStream(adaptor,"token DIV");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 
 		try { DebugEnterRule(GrammarFileName, "xpathSegments");
-		DebugLocation(166, 1);
+		DebugLocation(245, 1);
 		try
 		{
-			// mccarthy.g3:167:2: ( ( '/' ID )* -> ( ^( SEG ID ) )* )
+			// mccarthy.g3:246:2: ( ( '/' ID )* -> ( ^( SEG ID ) )* )
 			DebugEnterAlt(1);
-			// mccarthy.g3:167:4: ( '/' ID )*
+			// mccarthy.g3:246:4: ( '/' ID )*
 			{
-			DebugLocation(167, 4);
-			// mccarthy.g3:167:4: ( '/' ID )*
-			try { DebugEnterSubRule(7);
+			DebugLocation(246, 4);
+			// mccarthy.g3:246:4: ( '/' ID )*
+			try { DebugEnterSubRule(16);
 			while (true)
 			{
-				int alt7=2;
-				try { DebugEnterDecision(7, false);
-				int LA7_0 = input.LA(1);
+				int alt16=2;
+				try { DebugEnterDecision(16, false);
+				int LA16_0 = input.LA(1);
 
-				if ((LA7_0==48))
+				if ((LA16_0==DIV))
 				{
-					alt7 = 1;
+					alt16 = 1;
 				}
 
 
-				} finally { DebugExitDecision(7); }
-				switch ( alt7 )
+				} finally { DebugExitDecision(16); }
+				switch ( alt16 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:167:5: '/' ID
+					// mccarthy.g3:246:5: '/' ID
 					{
-					DebugLocation(167, 5);
-					char_literal33=(CommonToken)Match(input,48,Follow._48_in_xpathSegments1072);  
-					stream_48.Add(char_literal33);
+					DebugLocation(246, 5);
+					char_literal81=(CommonToken)Match(input,DIV,Follow._DIV_in_xpathSegments1718); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_DIV.Add(char_literal81);
 
-					DebugLocation(167, 9);
-					ID34=(CommonToken)Match(input,ID,Follow._ID_in_xpathSegments1074);  
-					stream_ID.Add(ID34);
+					DebugLocation(246, 9);
+					ID82=(CommonToken)Match(input,ID,Follow._ID_in_xpathSegments1720); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_ID.Add(ID82);
 
 
 					}
 					break;
 
 				default:
-					goto loop7;
+					goto loop16;
 				}
 			}
 
-			loop7:
+			loop16:
 				;
 
-			} finally { DebugExitSubRule(7); }
+			} finally { DebugExitSubRule(16); }
 
 
 
@@ -2273,24 +3998,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 167:14: -> ( ^( SEG ID ) )*
+			// 246:14: -> ( ^( SEG ID ) )*
 			{
-				DebugLocation(167, 17);
-				// mccarthy.g3:167:17: ( ^( SEG ID ) )*
+				DebugLocation(246, 17);
+				// mccarthy.g3:246:17: ( ^( SEG ID ) )*
 				while ( stream_ID.HasNext )
 				{
-					DebugLocation(167, 17);
-					// mccarthy.g3:167:17: ^( SEG ID )
+					DebugLocation(246, 17);
+					// mccarthy.g3:246:17: ^( SEG ID )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(167, 19);
+					DebugLocation(246, 19);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(SEG, "SEG"), root_1);
 
-					DebugLocation(167, 23);
+					DebugLocation(246, 23);
 					adaptor.AddChild(root_1, stream_ID.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -2303,14 +4029,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2321,11 +4049,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("xpathSegments", 15);
-			LeaveRule("xpathSegments", 15);
+			TraceOut("xpathSegments", 26);
+			LeaveRule("xpathSegments", 26);
 			LeaveRule_xpathSegments();
 		}
-		DebugLocation(168, 1);
+		DebugLocation(247, 1);
 		} finally { DebugExitRule(GrammarFileName, "xpathSegments"); }
 		return retval;
 
@@ -2345,50 +4073,50 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_appendOperation();
 
 	// $ANTLR start "appendOperation"
-	// mccarthy.g3:169:1: appendOperation : pe= pathExpression '=>' val= value -> ^( APPEND $pe $val) ;
+	// mccarthy.g3:248:1: appendOperation : pe= pathExpression '=>' val= value -> ^( APPEND $pe $val) ;
 	[GrammarRule("appendOperation")]
 	private mccarthyParser.appendOperation_return appendOperation()
 	{
 		EnterRule_appendOperation();
-		EnterRule("appendOperation", 16);
-		TraceIn("appendOperation", 16);
+		EnterRule("appendOperation", 27);
+		TraceIn("appendOperation", 27);
 		mccarthyParser.appendOperation_return retval = new mccarthyParser.appendOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal35 = default(CommonToken);
+		CommonToken string_literal83 = default(CommonToken);
 		mccarthyParser.pathExpression_return pe = default(mccarthyParser.pathExpression_return);
 		mccarthyParser.value_return val = default(mccarthyParser.value_return);
 
-		CommonTree string_literal35_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_57=new RewriteRuleITokenStream(adaptor,"token 57");
+		CommonTree string_literal83_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_74=new RewriteRuleITokenStream(adaptor,"token 74");
 		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
 		RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
 		try { DebugEnterRule(GrammarFileName, "appendOperation");
-		DebugLocation(169, 1);
+		DebugLocation(248, 1);
 		try
 		{
-			// mccarthy.g3:170:2: (pe= pathExpression '=>' val= value -> ^( APPEND $pe $val) )
+			// mccarthy.g3:249:2: (pe= pathExpression '=>' val= value -> ^( APPEND $pe $val) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:171:2: pe= pathExpression '=>' val= value
+			// mccarthy.g3:250:2: pe= pathExpression '=>' val= value
 			{
-			DebugLocation(171, 4);
-			PushFollow(Follow._pathExpression_in_appendOperation1098);
+			DebugLocation(250, 4);
+			PushFollow(Follow._pathExpression_in_appendOperation1744);
 			pe=pathExpression();
 			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_pathExpression.Add(pe.Tree);
+			DebugLocation(250, 20);
+			string_literal83=(CommonToken)Match(input,74,Follow._74_in_appendOperation1746); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_74.Add(string_literal83);
 
-			stream_pathExpression.Add(pe.Tree);
-			DebugLocation(171, 20);
-			string_literal35=(CommonToken)Match(input,57,Follow._57_in_appendOperation1100);  
-			stream_57.Add(string_literal35);
-
-			DebugLocation(171, 28);
-			PushFollow(Follow._value_in_appendOperation1104);
+			DebugLocation(250, 28);
+			PushFollow(Follow._value_in_appendOperation1750);
 			val=value();
 			PopFollow();
-
-			stream_value.Add(val.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_value.Add(val.Tree);
 
 
 			{
@@ -2399,24 +4127,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_pe=new RewriteRuleSubtreeStream(adaptor,"rule pe",pe!=null?pe.Tree:null);
 			RewriteRuleSubtreeStream stream_val=new RewriteRuleSubtreeStream(adaptor,"rule val",val!=null?val.Tree:null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 172:3: -> ^( APPEND $pe $val)
+			// 251:3: -> ^( APPEND $pe $val)
 			{
-				DebugLocation(172, 6);
-				// mccarthy.g3:172:6: ^( APPEND $pe $val)
+				DebugLocation(251, 6);
+				// mccarthy.g3:251:6: ^( APPEND $pe $val)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(172, 8);
+				DebugLocation(251, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(APPEND, "APPEND"), root_1);
 
-				DebugLocation(172, 16);
+				DebugLocation(251, 16);
 				adaptor.AddChild(root_1, stream_pe.NextTree());
-				DebugLocation(172, 20);
+				DebugLocation(251, 20);
 				adaptor.AddChild(root_1, stream_val.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2426,14 +4155,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2444,11 +4175,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("appendOperation", 16);
-			LeaveRule("appendOperation", 16);
+			TraceOut("appendOperation", 27);
+			LeaveRule("appendOperation", 27);
 			LeaveRule_appendOperation();
 		}
-		DebugLocation(173, 1);
+		DebugLocation(252, 1);
 		} finally { DebugExitRule(GrammarFileName, "appendOperation"); }
 		return retval;
 
@@ -2468,50 +4199,50 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_prependOperation();
 
 	// $ANTLR start "prependOperation"
-	// mccarthy.g3:174:1: prependOperation : pe= pathExpression '=<' val= value -> ^( PREPEND $pe $val) ;
+	// mccarthy.g3:253:1: prependOperation : pe= pathExpression '=<' val= value -> ^( PREPEND $pe $val) ;
 	[GrammarRule("prependOperation")]
 	private mccarthyParser.prependOperation_return prependOperation()
 	{
 		EnterRule_prependOperation();
-		EnterRule("prependOperation", 17);
-		TraceIn("prependOperation", 17);
+		EnterRule("prependOperation", 28);
+		TraceIn("prependOperation", 28);
 		mccarthyParser.prependOperation_return retval = new mccarthyParser.prependOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal36 = default(CommonToken);
+		CommonToken string_literal84 = default(CommonToken);
 		mccarthyParser.pathExpression_return pe = default(mccarthyParser.pathExpression_return);
 		mccarthyParser.value_return val = default(mccarthyParser.value_return);
 
-		CommonTree string_literal36_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_55=new RewriteRuleITokenStream(adaptor,"token 55");
+		CommonTree string_literal84_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
 		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
 		RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
 		try { DebugEnterRule(GrammarFileName, "prependOperation");
-		DebugLocation(174, 1);
+		DebugLocation(253, 1);
 		try
 		{
-			// mccarthy.g3:175:2: (pe= pathExpression '=<' val= value -> ^( PREPEND $pe $val) )
+			// mccarthy.g3:254:2: (pe= pathExpression '=<' val= value -> ^( PREPEND $pe $val) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:176:2: pe= pathExpression '=<' val= value
+			// mccarthy.g3:255:2: pe= pathExpression '=<' val= value
 			{
-			DebugLocation(176, 4);
-			PushFollow(Follow._pathExpression_in_prependOperation1131);
+			DebugLocation(255, 4);
+			PushFollow(Follow._pathExpression_in_prependOperation1777);
 			pe=pathExpression();
 			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_pathExpression.Add(pe.Tree);
+			DebugLocation(255, 20);
+			string_literal84=(CommonToken)Match(input,72,Follow._72_in_prependOperation1779); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_72.Add(string_literal84);
 
-			stream_pathExpression.Add(pe.Tree);
-			DebugLocation(176, 20);
-			string_literal36=(CommonToken)Match(input,55,Follow._55_in_prependOperation1133);  
-			stream_55.Add(string_literal36);
-
-			DebugLocation(176, 28);
-			PushFollow(Follow._value_in_prependOperation1137);
+			DebugLocation(255, 28);
+			PushFollow(Follow._value_in_prependOperation1783);
 			val=value();
 			PopFollow();
-
-			stream_value.Add(val.Tree);
+			if (state.failed) return retval;
+			if (state.backtracking == 0) stream_value.Add(val.Tree);
 
 
 			{
@@ -2522,24 +4253,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_pe=new RewriteRuleSubtreeStream(adaptor,"rule pe",pe!=null?pe.Tree:null);
 			RewriteRuleSubtreeStream stream_val=new RewriteRuleSubtreeStream(adaptor,"rule val",val!=null?val.Tree:null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 177:3: -> ^( PREPEND $pe $val)
+			// 256:3: -> ^( PREPEND $pe $val)
 			{
-				DebugLocation(177, 6);
-				// mccarthy.g3:177:6: ^( PREPEND $pe $val)
+				DebugLocation(256, 6);
+				// mccarthy.g3:256:6: ^( PREPEND $pe $val)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(177, 8);
+				DebugLocation(256, 8);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PREPEND, "PREPEND"), root_1);
 
-				DebugLocation(177, 17);
+				DebugLocation(256, 17);
 				adaptor.AddChild(root_1, stream_pe.NextTree());
-				DebugLocation(177, 21);
+				DebugLocation(256, 21);
 				adaptor.AddChild(root_1, stream_val.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2549,14 +4281,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2567,11 +4301,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("prependOperation", 17);
-			LeaveRule("prependOperation", 17);
+			TraceOut("prependOperation", 28);
+			LeaveRule("prependOperation", 28);
 			LeaveRule_prependOperation();
 		}
-		DebugLocation(178, 1);
+		DebugLocation(257, 1);
 		} finally { DebugExitRule(GrammarFileName, "prependOperation"); }
 		return retval;
 
@@ -2591,77 +4325,78 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_matchOperation();
 
 	// $ANTLR start "matchOperation"
-	// mccarthy.g3:179:8: public matchOperation : ( ID MATCHOP content -> ^( MATCH ^( VARREF ID ) content ) | pathExpression MATCHOP content -> ^( MATCH pathExpression content ) );
+	// mccarthy.g3:258:8: public matchOperation : ( ID MATCHOP content -> ^( MATCH ^( VARREF ID ) content ) | pathExpression MATCHOP content -> ^( MATCH pathExpression content ) );
 	[GrammarRule("matchOperation")]
 	public mccarthyParser.matchOperation_return matchOperation()
 	{
 		EnterRule_matchOperation();
-		EnterRule("matchOperation", 18);
-		TraceIn("matchOperation", 18);
+		EnterRule("matchOperation", 29);
+		TraceIn("matchOperation", 29);
 		mccarthyParser.matchOperation_return retval = new mccarthyParser.matchOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken ID37 = default(CommonToken);
-		CommonToken MATCHOP38 = default(CommonToken);
-		CommonToken MATCHOP41 = default(CommonToken);
-		mccarthyParser.content_return content39 = default(mccarthyParser.content_return);
-		mccarthyParser.pathExpression_return pathExpression40 = default(mccarthyParser.pathExpression_return);
-		mccarthyParser.content_return content42 = default(mccarthyParser.content_return);
+		CommonToken ID85 = default(CommonToken);
+		CommonToken MATCHOP86 = default(CommonToken);
+		CommonToken MATCHOP89 = default(CommonToken);
+		mccarthyParser.content_return content87 = default(mccarthyParser.content_return);
+		mccarthyParser.pathExpression_return pathExpression88 = default(mccarthyParser.pathExpression_return);
+		mccarthyParser.content_return content90 = default(mccarthyParser.content_return);
 
-		CommonTree ID37_tree = default(CommonTree);
-		CommonTree MATCHOP38_tree = default(CommonTree);
-		CommonTree MATCHOP41_tree = default(CommonTree);
+		CommonTree ID85_tree = default(CommonTree);
+		CommonTree MATCHOP86_tree = default(CommonTree);
+		CommonTree MATCHOP89_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleITokenStream stream_MATCHOP=new RewriteRuleITokenStream(adaptor,"token MATCHOP");
 		RewriteRuleSubtreeStream stream_content=new RewriteRuleSubtreeStream(adaptor,"rule content");
 		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
 		expectingXml = true;
 		try { DebugEnterRule(GrammarFileName, "matchOperation");
-		DebugLocation(179, 1);
+		DebugLocation(258, 1);
 		try
 		{
-			// mccarthy.g3:182:2: ( ID MATCHOP content -> ^( MATCH ^( VARREF ID ) content ) | pathExpression MATCHOP content -> ^( MATCH pathExpression content ) )
-			int alt8=2;
-			try { DebugEnterDecision(8, false);
-			int LA8_0 = input.LA(1);
+			// mccarthy.g3:261:2: ( ID MATCHOP content -> ^( MATCH ^( VARREF ID ) content ) | pathExpression MATCHOP content -> ^( MATCH pathExpression content ) )
+			int alt17=2;
+			try { DebugEnterDecision(17, false);
+			int LA17_0 = input.LA(1);
 
-			if ((LA8_0==ID))
+			if ((LA17_0==ID))
 			{
-				alt8 = 1;
+				alt17 = 1;
 			}
-			else if ((LA8_0==43))
+			else if ((LA17_0==62))
 			{
-				alt8 = 2;
+				alt17 = 2;
 			}
 			else
 			{
-				NoViableAltException nvae = new NoViableAltException("", 8, 0, input);
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 17, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(8); }
-			switch (alt8)
+			} finally { DebugExitDecision(17); }
+			switch (alt17)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// mccarthy.g3:183:9: ID MATCHOP content
+				// mccarthy.g3:262:9: ID MATCHOP content
 				{
-				DebugLocation(183, 9);
-				ID37=(CommonToken)Match(input,ID,Follow._ID_in_matchOperation1181);  
-				stream_ID.Add(ID37);
+				DebugLocation(262, 9);
+				ID85=(CommonToken)Match(input,ID,Follow._ID_in_matchOperation1827); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_ID.Add(ID85);
 
-				DebugLocation(183, 12);
-				MATCHOP38=(CommonToken)Match(input,MATCHOP,Follow._MATCHOP_in_matchOperation1183);  
-				stream_MATCHOP.Add(MATCHOP38);
+				DebugLocation(262, 12);
+				MATCHOP86=(CommonToken)Match(input,MATCHOP,Follow._MATCHOP_in_matchOperation1829); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_MATCHOP.Add(MATCHOP86);
 
-				DebugLocation(183, 20);
-				PushFollow(Follow._content_in_matchOperation1185);
-				content39=content();
+				DebugLocation(262, 20);
+				PushFollow(Follow._content_in_matchOperation1831);
+				content87=content();
 				PopFollow();
-
-				stream_content.Add(content39.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) stream_content.Add(content87.Tree);
 
 
 				{
@@ -2672,32 +4407,33 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 183:28: -> ^( MATCH ^( VARREF ID ) content )
+				// 262:28: -> ^( MATCH ^( VARREF ID ) content )
 				{
-					DebugLocation(183, 31);
-					// mccarthy.g3:183:31: ^( MATCH ^( VARREF ID ) content )
+					DebugLocation(262, 31);
+					// mccarthy.g3:262:31: ^( MATCH ^( VARREF ID ) content )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(183, 33);
+					DebugLocation(262, 33);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MATCH, "MATCH"), root_1);
 
-					DebugLocation(183, 39);
-					// mccarthy.g3:183:39: ^( VARREF ID )
+					DebugLocation(262, 39);
+					// mccarthy.g3:262:39: ^( VARREF ID )
 					{
 					CommonTree root_2 = (CommonTree)adaptor.Nil();
-					DebugLocation(183, 41);
+					DebugLocation(262, 41);
 					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VARREF, "VARREF"), root_2);
 
-					DebugLocation(183, 48);
+					DebugLocation(262, 48);
 					adaptor.AddChild(root_2, stream_ID.NextNode());
 
 					adaptor.AddChild(root_1, root_2);
 					}
-					DebugLocation(183, 52);
+					DebugLocation(262, 52);
 					adaptor.AddChild(root_1, stream_content.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
@@ -2707,29 +4443,30 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				retval.Tree = root_0;
 				}
+				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// mccarthy.g3:184:3: pathExpression MATCHOP content
+				// mccarthy.g3:263:3: pathExpression MATCHOP content
 				{
-				DebugLocation(184, 3);
-				PushFollow(Follow._pathExpression_in_matchOperation1203);
-				pathExpression40=pathExpression();
+				DebugLocation(263, 3);
+				PushFollow(Follow._pathExpression_in_matchOperation1849);
+				pathExpression88=pathExpression();
 				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) stream_pathExpression.Add(pathExpression88.Tree);
+				DebugLocation(263, 18);
+				MATCHOP89=(CommonToken)Match(input,MATCHOP,Follow._MATCHOP_in_matchOperation1851); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_MATCHOP.Add(MATCHOP89);
 
-				stream_pathExpression.Add(pathExpression40.Tree);
-				DebugLocation(184, 18);
-				MATCHOP41=(CommonToken)Match(input,MATCHOP,Follow._MATCHOP_in_matchOperation1205);  
-				stream_MATCHOP.Add(MATCHOP41);
-
-				DebugLocation(184, 26);
-				PushFollow(Follow._content_in_matchOperation1207);
-				content42=content();
+				DebugLocation(263, 26);
+				PushFollow(Follow._content_in_matchOperation1853);
+				content90=content();
 				PopFollow();
-
-				stream_content.Add(content42.Tree);
+				if (state.failed) return retval;
+				if (state.backtracking == 0) stream_content.Add(content90.Tree);
 
 
 				{
@@ -2740,22 +4477,23 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 184:34: -> ^( MATCH pathExpression content )
+				// 263:34: -> ^( MATCH pathExpression content )
 				{
-					DebugLocation(184, 37);
-					// mccarthy.g3:184:37: ^( MATCH pathExpression content )
+					DebugLocation(263, 37);
+					// mccarthy.g3:263:37: ^( MATCH pathExpression content )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(184, 39);
+					DebugLocation(263, 39);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MATCH, "MATCH"), root_1);
 
-					DebugLocation(184, 45);
+					DebugLocation(263, 45);
 					adaptor.AddChild(root_1, stream_pathExpression.NextTree());
-					DebugLocation(184, 60);
+					DebugLocation(263, 60);
 					adaptor.AddChild(root_1, stream_content.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
@@ -2765,6 +4503,7 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				retval.Tree = root_0;
 				}
+				}
 
 				}
 				break;
@@ -2772,10 +4511,14 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			}
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
-			expectingXml = false;
+			}
+			if (state.backtracking == 0)
+			{
+				expectingXml = false;
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2786,11 +4529,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("matchOperation", 18);
-			LeaveRule("matchOperation", 18);
+			TraceOut("matchOperation", 29);
+			LeaveRule("matchOperation", 29);
 			LeaveRule_matchOperation();
 		}
-		DebugLocation(185, 1);
+		DebugLocation(264, 1);
 		} finally { DebugExitRule(GrammarFileName, "matchOperation"); }
 		return retval;
 
@@ -2810,13 +4553,13 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_moveOperation();
 
 	// $ANTLR start "moveOperation"
-	// mccarthy.g3:186:1: moveOperation : var= ID '->' val= ID ;
+	// mccarthy.g3:265:1: moveOperation : var= ID '->' val= ID ;
 	[GrammarRule("moveOperation")]
 	private mccarthyParser.moveOperation_return moveOperation()
 	{
 		EnterRule_moveOperation();
-		EnterRule("moveOperation", 19);
-		TraceIn("moveOperation", 19);
+		EnterRule("moveOperation", 30);
+		TraceIn("moveOperation", 30);
 		mccarthyParser.moveOperation_return retval = new mccarthyParser.moveOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
@@ -2824,45 +4567,49 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 		CommonToken var = default(CommonToken);
 		CommonToken val = default(CommonToken);
-		CommonToken string_literal43 = default(CommonToken);
+		CommonToken string_literal91 = default(CommonToken);
 
 		CommonTree var_tree = default(CommonTree);
 		CommonTree val_tree = default(CommonTree);
-		CommonTree string_literal43_tree = default(CommonTree);
+		CommonTree string_literal91_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "moveOperation");
-		DebugLocation(186, 1);
+		DebugLocation(265, 1);
 		try
 		{
-			// mccarthy.g3:187:2: (var= ID '->' val= ID )
+			// mccarthy.g3:266:2: (var= ID '->' val= ID )
 			DebugEnterAlt(1);
-			// mccarthy.g3:188:2: var= ID '->' val= ID
+			// mccarthy.g3:267:2: var= ID '->' val= ID
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(188, 5);
-			var=(CommonToken)Match(input,ID,Follow._ID_in_moveOperation1230); 
+			DebugLocation(267, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_moveOperation1876); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			var_tree = (CommonTree)adaptor.Create(var);
 			adaptor.AddChild(root_0, var_tree);
-
-			DebugLocation(188, 13);
-			string_literal43=(CommonToken)Match(input,47,Follow._47_in_moveOperation1232); 
-			string_literal43_tree = (CommonTree)adaptor.Create(string_literal43);
-			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal43_tree, root_0);
-
-			DebugLocation(188, 18);
-			val=(CommonToken)Match(input,ID,Follow._ID_in_moveOperation1237); 
+			}
+			DebugLocation(267, 13);
+			string_literal91=(CommonToken)Match(input,66,Follow._66_in_moveOperation1878); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal91_tree = (CommonTree)adaptor.Create(string_literal91);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal91_tree, root_0);
+			}
+			DebugLocation(267, 18);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_moveOperation1883); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			val_tree = (CommonTree)adaptor.Create(val);
 			adaptor.AddChild(root_0, val_tree);
-
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2873,11 +4620,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("moveOperation", 19);
-			LeaveRule("moveOperation", 19);
+			TraceOut("moveOperation", 30);
+			LeaveRule("moveOperation", 30);
 			LeaveRule_moveOperation();
 		}
-		DebugLocation(189, 1);
+		DebugLocation(268, 1);
 		} finally { DebugExitRule(GrammarFileName, "moveOperation"); }
 		return retval;
 
@@ -2897,13 +4644,13 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_moveFrontOperation();
 
 	// $ANTLR start "moveFrontOperation"
-	// mccarthy.g3:191:1: moveFrontOperation : var= ID '=><' val= ID ;
+	// mccarthy.g3:270:1: moveFrontOperation : var= ID '=><' val= ID ;
 	[GrammarRule("moveFrontOperation")]
 	private mccarthyParser.moveFrontOperation_return moveFrontOperation()
 	{
 		EnterRule_moveFrontOperation();
-		EnterRule("moveFrontOperation", 20);
-		TraceIn("moveFrontOperation", 20);
+		EnterRule("moveFrontOperation", 31);
+		TraceIn("moveFrontOperation", 31);
 		mccarthyParser.moveFrontOperation_return retval = new mccarthyParser.moveFrontOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
@@ -2911,45 +4658,49 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 		CommonToken var = default(CommonToken);
 		CommonToken val = default(CommonToken);
-		CommonToken string_literal44 = default(CommonToken);
+		CommonToken string_literal92 = default(CommonToken);
 
 		CommonTree var_tree = default(CommonTree);
 		CommonTree val_tree = default(CommonTree);
-		CommonTree string_literal44_tree = default(CommonTree);
+		CommonTree string_literal92_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "moveFrontOperation");
-		DebugLocation(191, 1);
+		DebugLocation(270, 1);
 		try
 		{
-			// mccarthy.g3:192:2: (var= ID '=><' val= ID )
+			// mccarthy.g3:271:2: (var= ID '=><' val= ID )
 			DebugEnterAlt(1);
-			// mccarthy.g3:193:2: var= ID '=><' val= ID
+			// mccarthy.g3:272:2: var= ID '=><' val= ID
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(193, 5);
-			var=(CommonToken)Match(input,ID,Follow._ID_in_moveFrontOperation1251); 
+			DebugLocation(272, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_moveFrontOperation1897); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			var_tree = (CommonTree)adaptor.Create(var);
 			adaptor.AddChild(root_0, var_tree);
-
-			DebugLocation(193, 14);
-			string_literal44=(CommonToken)Match(input,58,Follow._58_in_moveFrontOperation1253); 
-			string_literal44_tree = (CommonTree)adaptor.Create(string_literal44);
-			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal44_tree, root_0);
-
-			DebugLocation(193, 19);
-			val=(CommonToken)Match(input,ID,Follow._ID_in_moveFrontOperation1258); 
+			}
+			DebugLocation(272, 14);
+			string_literal92=(CommonToken)Match(input,75,Follow._75_in_moveFrontOperation1899); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal92_tree = (CommonTree)adaptor.Create(string_literal92);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal92_tree, root_0);
+			}
+			DebugLocation(272, 19);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_moveFrontOperation1904); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			val_tree = (CommonTree)adaptor.Create(val);
 			adaptor.AddChild(root_0, val_tree);
-
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -2960,11 +4711,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("moveFrontOperation", 20);
-			LeaveRule("moveFrontOperation", 20);
+			TraceOut("moveFrontOperation", 31);
+			LeaveRule("moveFrontOperation", 31);
 			LeaveRule_moveFrontOperation();
 		}
-		DebugLocation(194, 1);
+		DebugLocation(273, 1);
 		} finally { DebugExitRule(GrammarFileName, "moveFrontOperation"); }
 		return retval;
 
@@ -2984,13 +4735,13 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_moveBackOperation();
 
 	// $ANTLR start "moveBackOperation"
-	// mccarthy.g3:195:1: moveBackOperation : var= ID '=>>' val= ID ;
+	// mccarthy.g3:274:1: moveBackOperation : var= ID '=>>' val= ID ;
 	[GrammarRule("moveBackOperation")]
 	private mccarthyParser.moveBackOperation_return moveBackOperation()
 	{
 		EnterRule_moveBackOperation();
-		EnterRule("moveBackOperation", 21);
-		TraceIn("moveBackOperation", 21);
+		EnterRule("moveBackOperation", 32);
+		TraceIn("moveBackOperation", 32);
 		mccarthyParser.moveBackOperation_return retval = new mccarthyParser.moveBackOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
@@ -2998,45 +4749,49 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 		CommonToken var = default(CommonToken);
 		CommonToken val = default(CommonToken);
-		CommonToken string_literal45 = default(CommonToken);
+		CommonToken string_literal93 = default(CommonToken);
 
 		CommonTree var_tree = default(CommonTree);
 		CommonTree val_tree = default(CommonTree);
-		CommonTree string_literal45_tree = default(CommonTree);
+		CommonTree string_literal93_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "moveBackOperation");
-		DebugLocation(195, 1);
+		DebugLocation(274, 1);
 		try
 		{
-			// mccarthy.g3:196:2: (var= ID '=>>' val= ID )
+			// mccarthy.g3:275:2: (var= ID '=>>' val= ID )
 			DebugEnterAlt(1);
-			// mccarthy.g3:197:2: var= ID '=>>' val= ID
+			// mccarthy.g3:276:2: var= ID '=>>' val= ID
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(197, 5);
-			var=(CommonToken)Match(input,ID,Follow._ID_in_moveBackOperation1271); 
+			DebugLocation(276, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_moveBackOperation1917); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			var_tree = (CommonTree)adaptor.Create(var);
 			adaptor.AddChild(root_0, var_tree);
-
-			DebugLocation(197, 14);
-			string_literal45=(CommonToken)Match(input,59,Follow._59_in_moveBackOperation1273); 
-			string_literal45_tree = (CommonTree)adaptor.Create(string_literal45);
-			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal45_tree, root_0);
-
-			DebugLocation(197, 19);
-			val=(CommonToken)Match(input,ID,Follow._ID_in_moveBackOperation1278); 
+			}
+			DebugLocation(276, 14);
+			string_literal93=(CommonToken)Match(input,76,Follow._76_in_moveBackOperation1919); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal93_tree = (CommonTree)adaptor.Create(string_literal93);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal93_tree, root_0);
+			}
+			DebugLocation(276, 19);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_moveBackOperation1924); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			val_tree = (CommonTree)adaptor.Create(val);
 			adaptor.AddChild(root_0, val_tree);
-
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3047,11 +4802,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("moveBackOperation", 21);
-			LeaveRule("moveBackOperation", 21);
+			TraceOut("moveBackOperation", 32);
+			LeaveRule("moveBackOperation", 32);
 			LeaveRule_moveBackOperation();
 		}
-		DebugLocation(198, 1);
+		DebugLocation(277, 1);
 		} finally { DebugExitRule(GrammarFileName, "moveBackOperation"); }
 		return retval;
 
@@ -3071,13 +4826,13 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_deleteOperation();
 
 	// $ANTLR start "deleteOperation"
-	// mccarthy.g3:199:1: deleteOperation : var= ID '!=' val= ID ;
+	// mccarthy.g3:278:1: deleteOperation : var= ID '!=' val= ID ;
 	[GrammarRule("deleteOperation")]
 	private mccarthyParser.deleteOperation_return deleteOperation()
 	{
 		EnterRule_deleteOperation();
-		EnterRule("deleteOperation", 22);
-		TraceIn("deleteOperation", 22);
+		EnterRule("deleteOperation", 33);
+		TraceIn("deleteOperation", 33);
 		mccarthyParser.deleteOperation_return retval = new mccarthyParser.deleteOperation_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
@@ -3085,45 +4840,49 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 		CommonToken var = default(CommonToken);
 		CommonToken val = default(CommonToken);
-		CommonToken string_literal46 = default(CommonToken);
+		CommonToken string_literal94 = default(CommonToken);
 
 		CommonTree var_tree = default(CommonTree);
 		CommonTree val_tree = default(CommonTree);
-		CommonTree string_literal46_tree = default(CommonTree);
+		CommonTree string_literal94_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "deleteOperation");
-		DebugLocation(199, 1);
+		DebugLocation(278, 1);
 		try
 		{
-			// mccarthy.g3:200:2: (var= ID '!=' val= ID )
+			// mccarthy.g3:279:2: (var= ID '!=' val= ID )
 			DebugEnterAlt(1);
-			// mccarthy.g3:201:2: var= ID '!=' val= ID
+			// mccarthy.g3:280:2: var= ID '!=' val= ID
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(201, 5);
-			var=(CommonToken)Match(input,ID,Follow._ID_in_deleteOperation1291); 
+			DebugLocation(280, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_deleteOperation1937); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			var_tree = (CommonTree)adaptor.Create(var);
 			adaptor.AddChild(root_0, var_tree);
-
-			DebugLocation(201, 13);
-			string_literal46=(CommonToken)Match(input,42,Follow._42_in_deleteOperation1293); 
-			string_literal46_tree = (CommonTree)adaptor.Create(string_literal46);
-			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal46_tree, root_0);
-
-			DebugLocation(201, 18);
-			val=(CommonToken)Match(input,ID,Follow._ID_in_deleteOperation1298); 
+			}
+			DebugLocation(280, 13);
+			string_literal94=(CommonToken)Match(input,61,Follow._61_in_deleteOperation1939); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal94_tree = (CommonTree)adaptor.Create(string_literal94);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal94_tree, root_0);
+			}
+			DebugLocation(280, 18);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_deleteOperation1944); if (state.failed) return retval;
+			if (state.backtracking == 0) {
 			val_tree = (CommonTree)adaptor.Create(val);
 			adaptor.AddChild(root_0, val_tree);
-
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3134,11 +4893,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("deleteOperation", 22);
-			LeaveRule("deleteOperation", 22);
+			TraceOut("deleteOperation", 33);
+			LeaveRule("deleteOperation", 33);
 			LeaveRule_deleteOperation();
 		}
-		DebugLocation(202, 1);
+		DebugLocation(281, 1);
 		} finally { DebugExitRule(GrammarFileName, "deleteOperation"); }
 		return retval;
 
@@ -3158,52 +4917,55 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_pattern();
 
 	// $ANTLR start "pattern"
-	// mccarthy.g3:204:1: pattern : '?' ID ;
+	// mccarthy.g3:283:1: pattern : '?' ID ;
 	[GrammarRule("pattern")]
 	private mccarthyParser.pattern_return pattern()
 	{
 		EnterRule_pattern();
-		EnterRule("pattern", 23);
-		TraceIn("pattern", 23);
+		EnterRule("pattern", 34);
+		TraceIn("pattern", 34);
 		mccarthyParser.pattern_return retval = new mccarthyParser.pattern_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal47 = default(CommonToken);
-		CommonToken ID48 = default(CommonToken);
+		CommonToken char_literal95 = default(CommonToken);
+		CommonToken ID96 = default(CommonToken);
 
-		CommonTree char_literal47_tree = default(CommonTree);
-		CommonTree ID48_tree = default(CommonTree);
+		CommonTree char_literal95_tree = default(CommonTree);
+		CommonTree ID96_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "pattern");
-		DebugLocation(204, 4);
+		DebugLocation(283, 4);
 		try
 		{
-			// mccarthy.g3:204:9: ( '?' ID )
+			// mccarthy.g3:283:9: ( '?' ID )
 			DebugEnterAlt(1);
-			// mccarthy.g3:204:11: '?' ID
+			// mccarthy.g3:283:11: '?' ID
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(204, 11);
-			char_literal47=(CommonToken)Match(input,61,Follow._61_in_pattern1308); 
-			char_literal47_tree = (CommonTree)adaptor.Create(char_literal47);
-			adaptor.AddChild(root_0, char_literal47_tree);
-
-			DebugLocation(204, 15);
-			ID48=(CommonToken)Match(input,ID,Follow._ID_in_pattern1310); 
-			ID48_tree = (CommonTree)adaptor.Create(ID48);
-			adaptor.AddChild(root_0, ID48_tree);
-
+			DebugLocation(283, 11);
+			char_literal95=(CommonToken)Match(input,77,Follow._77_in_pattern1954); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			char_literal95_tree = (CommonTree)adaptor.Create(char_literal95);
+			adaptor.AddChild(root_0, char_literal95_tree);
+			}
+			DebugLocation(283, 15);
+			ID96=(CommonToken)Match(input,ID,Follow._ID_in_pattern1956); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			ID96_tree = (CommonTree)adaptor.Create(ID96);
+			adaptor.AddChild(root_0, ID96_tree);
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3214,11 +4976,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("pattern", 23);
-			LeaveRule("pattern", 23);
+			TraceOut("pattern", 34);
+			LeaveRule("pattern", 34);
 			LeaveRule_pattern();
 		}
-		DebugLocation(205, 4);
+		DebugLocation(284, 4);
 		} finally { DebugExitRule(GrammarFileName, "pattern"); }
 		return retval;
 
@@ -3238,52 +5000,55 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_valueOf();
 
 	// $ANTLR start "valueOf"
-	// mccarthy.g3:207:1: valueOf : '!' ID ;
+	// mccarthy.g3:286:1: valueOf : '!' ID ;
 	[GrammarRule("valueOf")]
 	private mccarthyParser.valueOf_return valueOf()
 	{
 		EnterRule_valueOf();
-		EnterRule("valueOf", 24);
-		TraceIn("valueOf", 24);
+		EnterRule("valueOf", 35);
+		TraceIn("valueOf", 35);
 		mccarthyParser.valueOf_return retval = new mccarthyParser.valueOf_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal49 = default(CommonToken);
-		CommonToken ID50 = default(CommonToken);
+		CommonToken char_literal97 = default(CommonToken);
+		CommonToken ID98 = default(CommonToken);
 
-		CommonTree char_literal49_tree = default(CommonTree);
-		CommonTree ID50_tree = default(CommonTree);
+		CommonTree char_literal97_tree = default(CommonTree);
+		CommonTree ID98_tree = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "valueOf");
-		DebugLocation(207, 4);
+		DebugLocation(286, 4);
 		try
 		{
-			// mccarthy.g3:208:2: ( '!' ID )
+			// mccarthy.g3:287:2: ( '!' ID )
 			DebugEnterAlt(1);
-			// mccarthy.g3:208:4: '!' ID
+			// mccarthy.g3:287:4: '!' ID
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(208, 4);
-			char_literal49=(CommonToken)Match(input,41,Follow._41_in_valueOf1325); 
-			char_literal49_tree = (CommonTree)adaptor.Create(char_literal49);
-			adaptor.AddChild(root_0, char_literal49_tree);
-
-			DebugLocation(208, 8);
-			ID50=(CommonToken)Match(input,ID,Follow._ID_in_valueOf1327); 
-			ID50_tree = (CommonTree)adaptor.Create(ID50);
-			adaptor.AddChild(root_0, ID50_tree);
-
+			DebugLocation(287, 4);
+			char_literal97=(CommonToken)Match(input,60,Follow._60_in_valueOf1971); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			char_literal97_tree = (CommonTree)adaptor.Create(char_literal97);
+			adaptor.AddChild(root_0, char_literal97_tree);
+			}
+			DebugLocation(287, 8);
+			ID98=(CommonToken)Match(input,ID,Follow._ID_in_valueOf1973); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			ID98_tree = (CommonTree)adaptor.Create(ID98);
+			adaptor.AddChild(root_0, ID98_tree);
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3294,11 +5059,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("valueOf", 24);
-			LeaveRule("valueOf", 24);
+			TraceOut("valueOf", 35);
+			LeaveRule("valueOf", 35);
 			LeaveRule_valueOf();
 		}
-		DebugLocation(209, 4);
+		DebugLocation(288, 4);
 		} finally { DebugExitRule(GrammarFileName, "valueOf"); }
 		return retval;
 
@@ -3318,70 +5083,70 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_content();
 
 	// $ANTLR start "content"
-	// mccarthy.g3:214:8: public content : ( element )* -> ^( XML ( element )* ) ;
+	// mccarthy.g3:293:8: public content : ( element )* -> ^( XML ( element )* ) ;
 	[GrammarRule("content")]
 	public mccarthyParser.content_return content()
 	{
 		EnterRule_content();
-		EnterRule("content", 25);
-		TraceIn("content", 25);
+		EnterRule("content", 36);
+		TraceIn("content", 36);
 		mccarthyParser.content_return retval = new mccarthyParser.content_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		mccarthyParser.element_return element51 = default(mccarthyParser.element_return);
+		mccarthyParser.element_return element99 = default(mccarthyParser.element_return);
 
 		RewriteRuleSubtreeStream stream_element=new RewriteRuleSubtreeStream(adaptor,"rule element");
 		try { DebugEnterRule(GrammarFileName, "content");
-		DebugLocation(214, 51);
+		DebugLocation(293, 51);
 		try
 		{
-			// mccarthy.g3:214:20: ( ( element )* -> ^( XML ( element )* ) )
+			// mccarthy.g3:293:20: ( ( element )* -> ^( XML ( element )* ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:214:23: ( element )*
+			// mccarthy.g3:293:23: ( element )*
 			{
-			DebugLocation(214, 23);
-			// mccarthy.g3:214:23: ( element )*
-			try { DebugEnterSubRule(9);
+			DebugLocation(293, 23);
+			// mccarthy.g3:293:23: ( element )*
+			try { DebugEnterSubRule(18);
 			while (true)
 			{
-				int alt9=2;
-				try { DebugEnterDecision(9, false);
-				int LA9_0 = input.LA(1);
+				int alt18=2;
+				try { DebugEnterDecision(18, false);
+				int LA18_0 = input.LA(1);
 
-				if (((LA9_0>=52 && LA9_0<=53)))
+				if ((LA18_0==LT||LA18_0==70))
 				{
-					alt9 = 1;
+					alt18 = 1;
 				}
 
 
-				} finally { DebugExitDecision(9); }
-				switch ( alt9 )
+				} finally { DebugExitDecision(18); }
+				switch ( alt18 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// mccarthy.g3:214:24: element
+					// mccarthy.g3:293:24: element
 					{
-					DebugLocation(214, 24);
-					PushFollow(Follow._element_in_content1356);
-					element51=element();
+					DebugLocation(293, 24);
+					PushFollow(Follow._element_in_content2002);
+					element99=element();
 					PopFollow();
-
-					stream_element.Add(element51.Tree);
+					if (state.failed) return retval;
+					if (state.backtracking == 0) stream_element.Add(element99.Tree);
 
 					}
 					break;
 
 				default:
-					goto loop9;
+					goto loop18;
 				}
 			}
 
-			loop9:
+			loop18:
 				;
 
-			} finally { DebugExitSubRule(9); }
+			} finally { DebugExitSubRule(18); }
 
 
 
@@ -3393,24 +5158,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 214:34: -> ^( XML ( element )* )
+			// 293:34: -> ^( XML ( element )* )
 			{
-				DebugLocation(214, 37);
-				// mccarthy.g3:214:37: ^( XML ( element )* )
+				DebugLocation(293, 37);
+				// mccarthy.g3:293:37: ^( XML ( element )* )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(214, 39);
+				DebugLocation(293, 39);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XML, "XML"), root_1);
 
-				DebugLocation(214, 43);
-				// mccarthy.g3:214:43: ( element )*
+				DebugLocation(293, 43);
+				// mccarthy.g3:293:43: ( element )*
 				while ( stream_element.HasNext )
 				{
-					DebugLocation(214, 43);
+					DebugLocation(293, 43);
 					adaptor.AddChild(root_1, stream_element.NextTree());
 
 				}
@@ -3423,14 +5189,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3441,11 +5209,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("content", 25);
-			LeaveRule("content", 25);
+			TraceOut("content", 36);
+			LeaveRule("content", 36);
 			LeaveRule_content();
 		}
-		DebugLocation(214, 51);
+		DebugLocation(293, 51);
 		} finally { DebugExitRule(GrammarFileName, "content"); }
 		return retval;
 
@@ -3465,129 +5233,129 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_element();
 
 	// $ANTLR start "element"
-	// mccarthy.g3:215:8: public element : ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' );
+	// mccarthy.g3:294:8: public element : ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' );
 	[GrammarRule("element")]
 	public mccarthyParser.element_return element()
 	{
 		EnterRule_element();
-		EnterRule("element", 26);
-		TraceIn("element", 26);
+		EnterRule("element", 37);
+		TraceIn("element", 37);
 		mccarthyParser.element_return retval = new mccarthyParser.element_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken char_literal52 = default(CommonToken);
-		CommonToken ID53 = default(CommonToken);
-		CommonToken char_literal55 = default(CommonToken);
-		CommonToken string_literal56 = default(CommonToken);
-		CommonToken ID57 = default(CommonToken);
-		CommonToken string_literal59 = default(CommonToken);
-		CommonToken char_literal60 = default(CommonToken);
-		CommonToken char_literal61 = default(CommonToken);
-		CommonToken ID62 = default(CommonToken);
-		CommonToken char_literal63 = default(CommonToken);
-		CommonToken char_literal64 = default(CommonToken);
-		CommonToken ID65 = default(CommonToken);
-		CommonToken string_literal67 = default(CommonToken);
-		mccarthyParser.attribute_return attribute54 = default(mccarthyParser.attribute_return);
-		mccarthyParser.attribute_return attribute58 = default(mccarthyParser.attribute_return);
-		mccarthyParser.attribute_return attribute66 = default(mccarthyParser.attribute_return);
+		CommonToken char_literal100 = default(CommonToken);
+		CommonToken ID101 = default(CommonToken);
+		CommonToken char_literal103 = default(CommonToken);
+		CommonToken string_literal104 = default(CommonToken);
+		CommonToken ID105 = default(CommonToken);
+		CommonToken string_literal107 = default(CommonToken);
+		CommonToken char_literal108 = default(CommonToken);
+		CommonToken char_literal109 = default(CommonToken);
+		CommonToken ID110 = default(CommonToken);
+		CommonToken char_literal111 = default(CommonToken);
+		CommonToken char_literal112 = default(CommonToken);
+		CommonToken ID113 = default(CommonToken);
+		CommonToken string_literal115 = default(CommonToken);
+		mccarthyParser.attribute_return attribute102 = default(mccarthyParser.attribute_return);
+		mccarthyParser.attribute_return attribute106 = default(mccarthyParser.attribute_return);
+		mccarthyParser.attribute_return attribute114 = default(mccarthyParser.attribute_return);
 
-		CommonTree char_literal52_tree = default(CommonTree);
-		CommonTree ID53_tree = default(CommonTree);
-		CommonTree char_literal55_tree = default(CommonTree);
-		CommonTree string_literal56_tree = default(CommonTree);
-		CommonTree ID57_tree = default(CommonTree);
-		CommonTree string_literal59_tree = default(CommonTree);
-		CommonTree char_literal60_tree = default(CommonTree);
-		CommonTree char_literal61_tree = default(CommonTree);
-		CommonTree ID62_tree = default(CommonTree);
-		CommonTree char_literal63_tree = default(CommonTree);
-		CommonTree char_literal64_tree = default(CommonTree);
-		CommonTree ID65_tree = default(CommonTree);
-		CommonTree string_literal67_tree = default(CommonTree);
-		RewriteRuleITokenStream stream_52=new RewriteRuleITokenStream(adaptor,"token 52");
+		CommonTree char_literal100_tree = default(CommonTree);
+		CommonTree ID101_tree = default(CommonTree);
+		CommonTree char_literal103_tree = default(CommonTree);
+		CommonTree string_literal104_tree = default(CommonTree);
+		CommonTree ID105_tree = default(CommonTree);
+		CommonTree string_literal107_tree = default(CommonTree);
+		CommonTree char_literal108_tree = default(CommonTree);
+		CommonTree char_literal109_tree = default(CommonTree);
+		CommonTree ID110_tree = default(CommonTree);
+		CommonTree char_literal111_tree = default(CommonTree);
+		CommonTree char_literal112_tree = default(CommonTree);
+		CommonTree ID113_tree = default(CommonTree);
+		CommonTree string_literal115_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_LT=new RewriteRuleITokenStream(adaptor,"token LT");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
-		RewriteRuleITokenStream stream_48=new RewriteRuleITokenStream(adaptor,"token 48");
+		RewriteRuleITokenStream stream_GT=new RewriteRuleITokenStream(adaptor,"token GT");
+		RewriteRuleITokenStream stream_DIV=new RewriteRuleITokenStream(adaptor,"token DIV");
 		RewriteRuleSubtreeStream stream_attribute=new RewriteRuleSubtreeStream(adaptor,"rule attribute");
 		try { DebugEnterRule(GrammarFileName, "element");
-		DebugLocation(215, 12);
+		DebugLocation(294, 12);
 		try
 		{
-			// mccarthy.g3:215:20: ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' )
-			int alt13=4;
-			try { DebugEnterDecision(13, false);
+			// mccarthy.g3:294:20: ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' )
+			int alt22=4;
+			try { DebugEnterDecision(22, false);
 			try
 			{
-				alt13 = dfa13.Predict(input);
+				alt22 = dfa22.Predict(input);
 			}
 			catch (NoViableAltException nvae)
 			{
 				DebugRecognitionException(nvae);
 				throw;
 			}
-			} finally { DebugExitDecision(13); }
-			switch (alt13)
+			} finally { DebugExitDecision(22); }
+			switch (alt22)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// mccarthy.g3:215:24: '<' ID ( attribute )* '>'
+				// mccarthy.g3:294:24: '<' ID ( attribute )* '>'
 				{
-				DebugLocation(215, 24);
-				char_literal52=(CommonToken)Match(input,52,Follow._52_in_element1382);  
-				stream_52.Add(char_literal52);
+				DebugLocation(294, 24);
+				char_literal100=(CommonToken)Match(input,LT,Follow._LT_in_element2028); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_LT.Add(char_literal100);
 
-				DebugLocation(215, 28);
-				ID53=(CommonToken)Match(input,ID,Follow._ID_in_element1384);  
-				stream_ID.Add(ID53);
+				DebugLocation(294, 28);
+				ID101=(CommonToken)Match(input,ID,Follow._ID_in_element2030); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_ID.Add(ID101);
 
-				DebugLocation(215, 31);
-				// mccarthy.g3:215:31: ( attribute )*
-				try { DebugEnterSubRule(10);
+				DebugLocation(294, 31);
+				// mccarthy.g3:294:31: ( attribute )*
+				try { DebugEnterSubRule(19);
 				while (true)
 				{
-					int alt10=2;
-					try { DebugEnterDecision(10, false);
-					int LA10_0 = input.LA(1);
+					int alt19=2;
+					try { DebugEnterDecision(19, false);
+					int LA19_0 = input.LA(1);
 
-					if ((LA10_0==ID))
+					if ((LA19_0==ID))
 					{
-						alt10 = 1;
+						alt19 = 1;
 					}
 
 
-					} finally { DebugExitDecision(10); }
-					switch ( alt10 )
+					} finally { DebugExitDecision(19); }
+					switch ( alt19 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// mccarthy.g3:215:31: attribute
+						// mccarthy.g3:294:31: attribute
 						{
-						DebugLocation(215, 31);
-						PushFollow(Follow._attribute_in_element1386);
-						attribute54=attribute();
+						DebugLocation(294, 31);
+						PushFollow(Follow._attribute_in_element2032);
+						attribute102=attribute();
 						PopFollow();
-
-						stream_attribute.Add(attribute54.Tree);
+						if (state.failed) return retval;
+						if (state.backtracking == 0) stream_attribute.Add(attribute102.Tree);
 
 						}
 						break;
 
 					default:
-						goto loop10;
+						goto loop19;
 					}
 				}
 
-				loop10:
+				loop19:
 					;
 
-				} finally { DebugExitSubRule(10); }
+				} finally { DebugExitSubRule(19); }
 
-				DebugLocation(215, 42);
-				char_literal55=(CommonToken)Match(input,60,Follow._60_in_element1389);  
-				stream_60.Add(char_literal55);
+				DebugLocation(294, 42);
+				char_literal103=(CommonToken)Match(input,GT,Follow._GT_in_element2035); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_GT.Add(char_literal103);
 
 
 
@@ -3599,33 +5367,34 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 215:46: -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) )
+				// 294:46: -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) )
 				{
-					DebugLocation(215, 49);
-					// mccarthy.g3:215:49: ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) )
+					DebugLocation(294, 49);
+					// mccarthy.g3:294:49: ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(215, 51);
+					DebugLocation(294, 51);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLOPENELEM, "XMLOPENELEM"), root_1);
 
-					DebugLocation(215, 63);
+					DebugLocation(294, 63);
 					adaptor.AddChild(root_1, stream_ID.NextNode());
-					DebugLocation(215, 66);
-					// mccarthy.g3:215:66: ^( XMLATTRS ( attribute )* )
+					DebugLocation(294, 66);
+					// mccarthy.g3:294:66: ^( XMLATTRS ( attribute )* )
 					{
 					CommonTree root_2 = (CommonTree)adaptor.Nil();
-					DebugLocation(215, 68);
+					DebugLocation(294, 68);
 					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLATTRS, "XMLATTRS"), root_2);
 
-					DebugLocation(215, 77);
-					// mccarthy.g3:215:77: ( attribute )*
+					DebugLocation(294, 77);
+					// mccarthy.g3:294:77: ( attribute )*
 					while ( stream_attribute.HasNext )
 					{
-						DebugLocation(215, 77);
+						DebugLocation(294, 77);
 						adaptor.AddChild(root_2, stream_attribute.NextTree());
 
 					}
@@ -3641,94 +5410,98 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				retval.Tree = root_0;
 				}
+				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// mccarthy.g3:216:17: '<?' ID ( attribute )* '?>'
+				// mccarthy.g3:295:17: '<?' ID ( attribute )* '?>'
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(216, 17);
-				string_literal56=(CommonToken)Match(input,53,Follow._53_in_element1422); 
-				string_literal56_tree = (CommonTree)adaptor.Create(string_literal56);
-				adaptor.AddChild(root_0, string_literal56_tree);
-
-				DebugLocation(216, 22);
-				ID57=(CommonToken)Match(input,ID,Follow._ID_in_element1424); 
-				ID57_tree = (CommonTree)adaptor.Create(ID57);
-				adaptor.AddChild(root_0, ID57_tree);
-
-				DebugLocation(216, 25);
-				// mccarthy.g3:216:25: ( attribute )*
-				try { DebugEnterSubRule(11);
+				DebugLocation(295, 17);
+				string_literal104=(CommonToken)Match(input,70,Follow._70_in_element2068); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal104_tree = (CommonTree)adaptor.Create(string_literal104);
+				adaptor.AddChild(root_0, string_literal104_tree);
+				}
+				DebugLocation(295, 22);
+				ID105=(CommonToken)Match(input,ID,Follow._ID_in_element2070); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				ID105_tree = (CommonTree)adaptor.Create(ID105);
+				adaptor.AddChild(root_0, ID105_tree);
+				}
+				DebugLocation(295, 25);
+				// mccarthy.g3:295:25: ( attribute )*
+				try { DebugEnterSubRule(20);
 				while (true)
 				{
-					int alt11=2;
-					try { DebugEnterDecision(11, false);
-					int LA11_0 = input.LA(1);
+					int alt20=2;
+					try { DebugEnterDecision(20, false);
+					int LA20_0 = input.LA(1);
 
-					if ((LA11_0==ID))
+					if ((LA20_0==ID))
 					{
-						alt11 = 1;
+						alt20 = 1;
 					}
 
 
-					} finally { DebugExitDecision(11); }
-					switch ( alt11 )
+					} finally { DebugExitDecision(20); }
+					switch ( alt20 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// mccarthy.g3:216:25: attribute
+						// mccarthy.g3:295:25: attribute
 						{
-						DebugLocation(216, 25);
-						PushFollow(Follow._attribute_in_element1426);
-						attribute58=attribute();
+						DebugLocation(295, 25);
+						PushFollow(Follow._attribute_in_element2072);
+						attribute106=attribute();
 						PopFollow();
-
-						adaptor.AddChild(root_0, attribute58.Tree);
+						if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, attribute106.Tree);
 
 						}
 						break;
 
 					default:
-						goto loop11;
+						goto loop20;
 					}
 				}
 
-				loop11:
+				loop20:
 					;
 
-				} finally { DebugExitSubRule(11); }
+				} finally { DebugExitSubRule(20); }
 
-				DebugLocation(216, 36);
-				string_literal59=(CommonToken)Match(input,62,Follow._62_in_element1429); 
-				string_literal59_tree = (CommonTree)adaptor.Create(string_literal59);
-				adaptor.AddChild(root_0, string_literal59_tree);
-
+				DebugLocation(295, 36);
+				string_literal107=(CommonToken)Match(input,78,Follow._78_in_element2075); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal107_tree = (CommonTree)adaptor.Create(string_literal107);
+				adaptor.AddChild(root_0, string_literal107_tree);
+				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// mccarthy.g3:217:17: '<' '/' ID '>'
+				// mccarthy.g3:296:17: '<' '/' ID '>'
 				{
-				DebugLocation(217, 17);
-				char_literal60=(CommonToken)Match(input,52,Follow._52_in_element1448);  
-				stream_52.Add(char_literal60);
+				DebugLocation(296, 17);
+				char_literal108=(CommonToken)Match(input,LT,Follow._LT_in_element2094); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_LT.Add(char_literal108);
 
-				DebugLocation(217, 21);
-				char_literal61=(CommonToken)Match(input,48,Follow._48_in_element1450);  
-				stream_48.Add(char_literal61);
+				DebugLocation(296, 21);
+				char_literal109=(CommonToken)Match(input,DIV,Follow._DIV_in_element2096); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_DIV.Add(char_literal109);
 
-				DebugLocation(217, 25);
-				ID62=(CommonToken)Match(input,ID,Follow._ID_in_element1452);  
-				stream_ID.Add(ID62);
+				DebugLocation(296, 25);
+				ID110=(CommonToken)Match(input,ID,Follow._ID_in_element2098); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_ID.Add(ID110);
 
-				DebugLocation(217, 28);
-				char_literal63=(CommonToken)Match(input,60,Follow._60_in_element1454);  
-				stream_60.Add(char_literal63);
+				DebugLocation(296, 28);
+				char_literal111=(CommonToken)Match(input,GT,Follow._GT_in_element2100); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_GT.Add(char_literal111);
 
 
 
@@ -3740,20 +5513,21 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				// token list labels: 
 				// rule list labels: 
 				// wildcard labels: 
+				if (state.backtracking == 0) {
 				retval.Tree = root_0;
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (CommonTree)adaptor.Nil();
-				// 217:32: -> ^( XMLCLOSEELEM ID )
+				// 296:32: -> ^( XMLCLOSEELEM ID )
 				{
-					DebugLocation(217, 34);
-					// mccarthy.g3:217:34: ^( XMLCLOSEELEM ID )
+					DebugLocation(296, 34);
+					// mccarthy.g3:296:34: ^( XMLCLOSEELEM ID )
 					{
 					CommonTree root_1 = (CommonTree)adaptor.Nil();
-					DebugLocation(217, 36);
+					DebugLocation(296, 36);
 					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLCLOSEELEM, "XMLCLOSEELEM"), root_1);
 
-					DebugLocation(217, 49);
+					DebugLocation(296, 49);
 					adaptor.AddChild(root_1, stream_ID.NextNode());
 
 					adaptor.AddChild(root_0, root_1);
@@ -3763,72 +5537,76 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 				retval.Tree = root_0;
 				}
+				}
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// mccarthy.g3:218:17: '<' ID ( attribute )* '/>'
+				// mccarthy.g3:297:17: '<' ID ( attribute )* '/>'
 				{
 				root_0 = (CommonTree)adaptor.Nil();
 
-				DebugLocation(218, 17);
-				char_literal64=(CommonToken)Match(input,52,Follow._52_in_element1479); 
-				char_literal64_tree = (CommonTree)adaptor.Create(char_literal64);
-				adaptor.AddChild(root_0, char_literal64_tree);
-
-				DebugLocation(218, 21);
-				ID65=(CommonToken)Match(input,ID,Follow._ID_in_element1481); 
-				ID65_tree = (CommonTree)adaptor.Create(ID65);
-				adaptor.AddChild(root_0, ID65_tree);
-
-				DebugLocation(218, 24);
-				// mccarthy.g3:218:24: ( attribute )*
-				try { DebugEnterSubRule(12);
+				DebugLocation(297, 17);
+				char_literal112=(CommonToken)Match(input,LT,Follow._LT_in_element2125); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal112_tree = (CommonTree)adaptor.Create(char_literal112);
+				adaptor.AddChild(root_0, char_literal112_tree);
+				}
+				DebugLocation(297, 21);
+				ID113=(CommonToken)Match(input,ID,Follow._ID_in_element2127); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				ID113_tree = (CommonTree)adaptor.Create(ID113);
+				adaptor.AddChild(root_0, ID113_tree);
+				}
+				DebugLocation(297, 24);
+				// mccarthy.g3:297:24: ( attribute )*
+				try { DebugEnterSubRule(21);
 				while (true)
 				{
-					int alt12=2;
-					try { DebugEnterDecision(12, false);
-					int LA12_0 = input.LA(1);
+					int alt21=2;
+					try { DebugEnterDecision(21, false);
+					int LA21_0 = input.LA(1);
 
-					if ((LA12_0==ID))
+					if ((LA21_0==ID))
 					{
-						alt12 = 1;
+						alt21 = 1;
 					}
 
 
-					} finally { DebugExitDecision(12); }
-					switch ( alt12 )
+					} finally { DebugExitDecision(21); }
+					switch ( alt21 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// mccarthy.g3:218:24: attribute
+						// mccarthy.g3:297:24: attribute
 						{
-						DebugLocation(218, 24);
-						PushFollow(Follow._attribute_in_element1483);
-						attribute66=attribute();
+						DebugLocation(297, 24);
+						PushFollow(Follow._attribute_in_element2129);
+						attribute114=attribute();
 						PopFollow();
-
-						adaptor.AddChild(root_0, attribute66.Tree);
+						if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, attribute114.Tree);
 
 						}
 						break;
 
 					default:
-						goto loop12;
+						goto loop21;
 					}
 				}
 
-				loop12:
+				loop21:
 					;
 
-				} finally { DebugExitSubRule(12); }
+				} finally { DebugExitSubRule(21); }
 
-				DebugLocation(218, 35);
-				string_literal67=(CommonToken)Match(input,49,Follow._49_in_element1486); 
-				string_literal67_tree = (CommonTree)adaptor.Create(string_literal67);
-				adaptor.AddChild(root_0, string_literal67_tree);
-
+				DebugLocation(297, 35);
+				string_literal115=(CommonToken)Match(input,67,Follow._67_in_element2132); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal115_tree = (CommonTree)adaptor.Create(string_literal115);
+				adaptor.AddChild(root_0, string_literal115_tree);
+				}
 
 				}
 				break;
@@ -3836,9 +5614,10 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			}
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3849,11 +5628,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("element", 26);
-			LeaveRule("element", 26);
+			TraceOut("element", 37);
+			LeaveRule("element", 37);
 			LeaveRule_element();
 		}
-		DebugLocation(219, 12);
+		DebugLocation(298, 12);
 		} finally { DebugExitRule(GrammarFileName, "element"); }
 		return retval;
 
@@ -3873,48 +5652,48 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_attribute();
 
 	// $ANTLR start "attribute"
-	// mccarthy.g3:220:8: public attribute : ID '=' STRING -> ^( XMLATTR ID ^( VALSTR STRING ) ) ;
+	// mccarthy.g3:299:8: public attribute : ID '=' STRING -> ^( XMLATTR ID ^( VALSTR STRING ) ) ;
 	[GrammarRule("attribute")]
 	public mccarthyParser.attribute_return attribute()
 	{
 		EnterRule_attribute();
-		EnterRule("attribute", 27);
-		TraceIn("attribute", 27);
+		EnterRule("attribute", 38);
+		TraceIn("attribute", 38);
 		mccarthyParser.attribute_return retval = new mccarthyParser.attribute_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken ID68 = default(CommonToken);
-		CommonToken char_literal69 = default(CommonToken);
-		CommonToken STRING70 = default(CommonToken);
+		CommonToken ID116 = default(CommonToken);
+		CommonToken char_literal117 = default(CommonToken);
+		CommonToken STRING118 = default(CommonToken);
 
-		CommonTree ID68_tree = default(CommonTree);
-		CommonTree char_literal69_tree = default(CommonTree);
-		CommonTree STRING70_tree = default(CommonTree);
+		CommonTree ID116_tree = default(CommonTree);
+		CommonTree char_literal117_tree = default(CommonTree);
+		CommonTree STRING118_tree = default(CommonTree);
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_54=new RewriteRuleITokenStream(adaptor,"token 54");
+		RewriteRuleITokenStream stream_71=new RewriteRuleITokenStream(adaptor,"token 71");
 		RewriteRuleITokenStream stream_STRING=new RewriteRuleITokenStream(adaptor,"token STRING");
 
 		try { DebugEnterRule(GrammarFileName, "attribute");
-		DebugLocation(220, 69);
+		DebugLocation(299, 69);
 		try
 		{
-			// mccarthy.g3:220:20: ( ID '=' STRING -> ^( XMLATTR ID ^( VALSTR STRING ) ) )
+			// mccarthy.g3:299:20: ( ID '=' STRING -> ^( XMLATTR ID ^( VALSTR STRING ) ) )
 			DebugEnterAlt(1);
-			// mccarthy.g3:220:23: ID '=' STRING
+			// mccarthy.g3:299:23: ID '=' STRING
 			{
-			DebugLocation(220, 23);
-			ID68=(CommonToken)Match(input,ID,Follow._ID_in_attribute1511);  
-			stream_ID.Add(ID68);
+			DebugLocation(299, 23);
+			ID116=(CommonToken)Match(input,ID,Follow._ID_in_attribute2157); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_ID.Add(ID116);
 
-			DebugLocation(220, 26);
-			char_literal69=(CommonToken)Match(input,54,Follow._54_in_attribute1513);  
-			stream_54.Add(char_literal69);
+			DebugLocation(299, 26);
+			char_literal117=(CommonToken)Match(input,71,Follow._71_in_attribute2159); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_71.Add(char_literal117);
 
-			DebugLocation(220, 30);
-			STRING70=(CommonToken)Match(input,STRING,Follow._STRING_in_attribute1515);  
-			stream_STRING.Add(STRING70);
+			DebugLocation(299, 30);
+			STRING118=(CommonToken)Match(input,STRING,Follow._STRING_in_attribute2161); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_STRING.Add(STRING118);
 
 
 
@@ -3926,29 +5705,30 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
+			if (state.backtracking == 0) {
 			retval.Tree = root_0;
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (CommonTree)adaptor.Nil();
-			// 220:37: -> ^( XMLATTR ID ^( VALSTR STRING ) )
+			// 299:37: -> ^( XMLATTR ID ^( VALSTR STRING ) )
 			{
-				DebugLocation(220, 40);
-				// mccarthy.g3:220:40: ^( XMLATTR ID ^( VALSTR STRING ) )
+				DebugLocation(299, 40);
+				// mccarthy.g3:299:40: ^( XMLATTR ID ^( VALSTR STRING ) )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.Nil();
-				DebugLocation(220, 42);
+				DebugLocation(299, 42);
 				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLATTR, "XMLATTR"), root_1);
 
-				DebugLocation(220, 50);
+				DebugLocation(299, 50);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(220, 53);
-				// mccarthy.g3:220:53: ^( VALSTR STRING )
+				DebugLocation(299, 53);
+				// mccarthy.g3:299:53: ^( VALSTR STRING )
 				{
 				CommonTree root_2 = (CommonTree)adaptor.Nil();
-				DebugLocation(220, 55);
+				DebugLocation(299, 55);
 				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VALSTR, "VALSTR"), root_2);
 
-				DebugLocation(220, 62);
+				DebugLocation(299, 62);
 				adaptor.AddChild(root_2, stream_STRING.NextNode());
 
 				adaptor.AddChild(root_1, root_2);
@@ -3961,14 +5741,16 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Tree = root_0;
 			}
+			}
 
 			}
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -3979,11 +5761,11 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("attribute", 27);
-			LeaveRule("attribute", 27);
+			TraceOut("attribute", 38);
+			LeaveRule("attribute", 38);
 			LeaveRule_attribute();
 		}
-		DebugLocation(220, 69);
+		DebugLocation(299, 69);
 		} finally { DebugExitRule(GrammarFileName, "attribute"); }
 		return retval;
 
@@ -4003,25 +5785,25 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	partial void LeaveRule_reference();
 
 	// $ANTLR start "reference"
-	// mccarthy.g3:221:1: reference :;
+	// mccarthy.g3:300:1: reference :;
 	[GrammarRule("reference")]
 	private mccarthyParser.reference_return reference()
 	{
 		EnterRule_reference();
-		EnterRule("reference", 28);
-		TraceIn("reference", 28);
+		EnterRule("reference", 39);
+		TraceIn("reference", 39);
 		mccarthyParser.reference_return retval = new mccarthyParser.reference_return(this);
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
 		try { DebugEnterRule(GrammarFileName, "reference");
-		DebugLocation(221, 3);
+		DebugLocation(300, 3);
 		try
 		{
-			// mccarthy.g3:222:2: ()
+			// mccarthy.g3:301:2: ()
 			DebugEnterAlt(1);
-			// mccarthy.g3:222:4: 
+			// mccarthy.g3:301:4: 
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
@@ -4029,9 +5811,10 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 
 			retval.Stop = (CommonToken)input.LT(-1);
 
+			if (state.backtracking == 0) {
 			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
 			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-
+			}
 		}
 		catch (RecognitionException re)
 		{
@@ -4042,49 +5825,153 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("reference", 28);
-			LeaveRule("reference", 28);
+			TraceOut("reference", 39);
+			LeaveRule("reference", 39);
 			LeaveRule_reference();
 		}
-		DebugLocation(222, 3);
+		DebugLocation(301, 3);
 		} finally { DebugExitRule(GrammarFileName, "reference"); }
 		return retval;
 
 	}
 	// $ANTLR end "reference"
+
+	partial void EnterRule_synpred14_mccarthy_fragment();
+	partial void LeaveRule_synpred14_mccarthy_fragment();
+
+	// $ANTLR start synpred14_mccarthy
+	public void synpred14_mccarthy_fragment()
+	{
+		EnterRule_synpred14_mccarthy_fragment();
+		EnterRule("synpred14_mccarthy_fragment", 53);
+		TraceIn("synpred14_mccarthy_fragment", 53);
+		try
+		{
+			// mccarthy.g3:190:10: ( multiplicativeExpression PLUS multiplicativeExpression )
+			DebugEnterAlt(1);
+			// mccarthy.g3:190:10: multiplicativeExpression PLUS multiplicativeExpression
+			{
+			DebugLocation(190, 10);
+			PushFollow(Follow._multiplicativeExpression_in_synpred14_mccarthy1354);
+			multiplicativeExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(190, 36);
+			Match(input,PLUS,Follow._PLUS_in_synpred14_mccarthy1357); if (state.failed) return;
+			DebugLocation(190, 42);
+			PushFollow(Follow._multiplicativeExpression_in_synpred14_mccarthy1360);
+			multiplicativeExpression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred14_mccarthy_fragment", 53);
+			LeaveRule("synpred14_mccarthy_fragment", 53);
+			LeaveRule_synpred14_mccarthy_fragment();
+		}
+	}
+	// $ANTLR end synpred14_mccarthy
+
+	partial void EnterRule_synpred15_mccarthy_fragment();
+	partial void LeaveRule_synpred15_mccarthy_fragment();
+
+	// $ANTLR start synpred15_mccarthy
+	public void synpred15_mccarthy_fragment()
+	{
+		EnterRule_synpred15_mccarthy_fragment();
+		EnterRule("synpred15_mccarthy_fragment", 54);
+		TraceIn("synpred15_mccarthy_fragment", 54);
+		try
+		{
+			// mccarthy.g3:191:5: ( multiplicativeExpression MINUS multiplicativeExpression )
+			DebugEnterAlt(1);
+			// mccarthy.g3:191:5: multiplicativeExpression MINUS multiplicativeExpression
+			{
+			DebugLocation(191, 5);
+			PushFollow(Follow._multiplicativeExpression_in_synpred15_mccarthy1366);
+			multiplicativeExpression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(191, 30);
+			Match(input,MINUS,Follow._MINUS_in_synpred15_mccarthy1368); if (state.failed) return;
+			DebugLocation(191, 37);
+			PushFollow(Follow._multiplicativeExpression_in_synpred15_mccarthy1371);
+			multiplicativeExpression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred15_mccarthy_fragment", 54);
+			LeaveRule("synpred15_mccarthy_fragment", 54);
+			LeaveRule_synpred15_mccarthy_fragment();
+		}
+	}
+	// $ANTLR end synpred15_mccarthy
 	#endregion Rules
+
+	#region Synpreds
+	private bool EvaluatePredicate(System.Action fragment)
+	{
+		bool success = false;
+		state.backtracking++;
+		try { DebugBeginBacktrack(state.backtracking);
+		int start = input.Mark();
+		try
+		{
+			fragment();
+		}
+		catch ( RecognitionException re )
+		{
+			System.Console.Error.WriteLine("impossible: "+re);
+		}
+		success = !state.failed;
+		input.Rewind(start);
+		} finally { DebugEndBacktrack(state.backtracking, success); }
+		state.backtracking--;
+		state.failed=false;
+		return success;
+	}
+	#endregion Synpreds
 
 
 	#region DFA
-	private DFA5 dfa5;
-	private DFA13 dfa13;
+	private DFA14 dfa14;
+	private DFA22 dfa22;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa5 = new DFA5( this );
-		dfa13 = new DFA13( this );
+		dfa14 = new DFA14( this );
+		dfa22 = new DFA22( this );
 	}
 
-	private class DFA5 : DFA
+	private class DFA14 : DFA
 	{
-		private const string DFA5_eotS =
+		private const string DFA14_eotS =
 			"\xF\xFFFF";
-		private const string DFA5_eofS =
+		private const string DFA14_eofS =
 			"\xF\xFFFF";
-		private const string DFA5_minS =
-			"\x1\xF\x1\x14\x1\xF\x6\xFFFF\x1\x14\x1\xF\x3\xFFFF\x1\x14";
-		private const string DFA5_maxS =
-			"\x1\x2B\x1\x3B\x1\xF\x6\xFFFF\x1\x39\x1\xF\x3\xFFFF\x1\x39";
-		private const string DFA5_acceptS =
+		private const string DFA14_minS =
+			"\x1\x14\x1\x1D\x1\x14\x6\xFFFF\x1\xC\x1\x14\x3\xFFFF\x1\xC";
+		private const string DFA14_maxS =
+			"\x1\x3E\x1\x4C\x1\x14\x6\xFFFF\x1\x4A\x1\x14\x3\xFFFF\x1\x4A";
+		private const string DFA14_acceptS =
 			"\x3\xFFFF\x1\x1\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9\x2\xFFFF\x1\x2\x1\x3\x1"+
 			"\x4\x1\xFFFF";
-		private const string DFA5_specialS =
+		private const string DFA14_specialS =
 			"\xF\xFFFF}>";
-		private static readonly string[] DFA5_transitionS =
+		private static readonly string[] DFA14_transitionS =
 			{
-				"\x1\x1\x1B\xFFFF\x1\x2",
-				"\x1\x4\x15\xFFFF\x1\x8\x4\xFFFF\x1\x5\x6\xFFFF\x1\x3\x3\xFFFF\x1\x6"+
+				"\x1\x1\x29\xFFFF\x1\x2",
+				"\x1\x4\x1F\xFFFF\x1\x8\x4\xFFFF\x1\x5\x4\xFFFF\x1\x3\x3\xFFFF\x1\x6"+
 				"\x1\x7",
 				"\x1\x9",
 				"",
@@ -4093,46 +5980,46 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 				"",
 				"",
 				"",
-				"\x1\x4\x1B\xFFFF\x1\xA\x6\xFFFF\x1\xD\x1\xB\x1\xC",
+				"\x1\xA\x10\xFFFF\x1\x4\x2A\xFFFF\x1\xD\x1\xB\x1\xC",
 				"\x1\xE",
 				"",
 				"",
 				"",
-				"\x1\x4\x1B\xFFFF\x1\xA\x6\xFFFF\x1\xD\x1\xB\x1\xC"
+				"\x1\xA\x10\xFFFF\x1\x4\x2A\xFFFF\x1\xD\x1\xB\x1\xC"
 			};
 
-		private static readonly short[] DFA5_eot = DFA.UnpackEncodedString(DFA5_eotS);
-		private static readonly short[] DFA5_eof = DFA.UnpackEncodedString(DFA5_eofS);
-		private static readonly char[] DFA5_min = DFA.UnpackEncodedStringToUnsignedChars(DFA5_minS);
-		private static readonly char[] DFA5_max = DFA.UnpackEncodedStringToUnsignedChars(DFA5_maxS);
-		private static readonly short[] DFA5_accept = DFA.UnpackEncodedString(DFA5_acceptS);
-		private static readonly short[] DFA5_special = DFA.UnpackEncodedString(DFA5_specialS);
-		private static readonly short[][] DFA5_transition;
+		private static readonly short[] DFA14_eot = DFA.UnpackEncodedString(DFA14_eotS);
+		private static readonly short[] DFA14_eof = DFA.UnpackEncodedString(DFA14_eofS);
+		private static readonly char[] DFA14_min = DFA.UnpackEncodedStringToUnsignedChars(DFA14_minS);
+		private static readonly char[] DFA14_max = DFA.UnpackEncodedStringToUnsignedChars(DFA14_maxS);
+		private static readonly short[] DFA14_accept = DFA.UnpackEncodedString(DFA14_acceptS);
+		private static readonly short[] DFA14_special = DFA.UnpackEncodedString(DFA14_specialS);
+		private static readonly short[][] DFA14_transition;
 
-		static DFA5()
+		static DFA14()
 		{
-			int numStates = DFA5_transitionS.Length;
-			DFA5_transition = new short[numStates][];
+			int numStates = DFA14_transitionS.Length;
+			DFA14_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA5_transition[i] = DFA.UnpackEncodedString(DFA5_transitionS[i]);
+				DFA14_transition[i] = DFA.UnpackEncodedString(DFA14_transitionS[i]);
 			}
 		}
 
-		public DFA5( BaseRecognizer recognizer )
+		public DFA14( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 5;
-			this.eot = DFA5_eot;
-			this.eof = DFA5_eof;
-			this.min = DFA5_min;
-			this.max = DFA5_max;
-			this.accept = DFA5_accept;
-			this.special = DFA5_special;
-			this.transition = DFA5_transition;
+			this.decisionNumber = 14;
+			this.eot = DFA14_eot;
+			this.eof = DFA14_eof;
+			this.min = DFA14_min;
+			this.max = DFA14_max;
+			this.accept = DFA14_accept;
+			this.special = DFA14_special;
+			this.transition = DFA14_transition;
 		}
 
-		public override string Description { get { return "134:8: public statement : ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation );"; } }
+		public override string Description { get { return "211:8: public statement : ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -4140,66 +6027,66 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 		}
 	}
 
-	private class DFA13 : DFA
+	private class DFA22 : DFA
 	{
-		private const string DFA13_eotS =
+		private const string DFA22_eotS =
 			"\xA\xFFFF";
-		private const string DFA13_eofS =
+		private const string DFA22_eofS =
 			"\xA\xFFFF";
-		private const string DFA13_minS =
-			"\x1\x34\x1\xF\x1\xFFFF\x1\xF\x1\xFFFF\x1\x36\x2\xFFFF\x1\x1C\x1\xF";
-		private const string DFA13_maxS =
-			"\x1\x35\x1\x30\x1\xFFFF\x1\x3C\x1\xFFFF\x1\x36\x2\xFFFF\x1\x1C\x1\x3C";
-		private const string DFA13_acceptS =
+		private const string DFA22_minS =
+			"\x1\x1A\x1\xC\x1\xFFFF\x1\x12\x1\xFFFF\x1\x47\x2\xFFFF\x1\x2F\x1\x12";
+		private const string DFA22_maxS =
+			"\x1\x46\x1\x14\x1\xFFFF\x1\x43\x1\xFFFF\x1\x47\x2\xFFFF\x1\x2F\x1\x43";
+		private const string DFA22_acceptS =
 			"\x2\xFFFF\x1\x2\x1\xFFFF\x1\x3\x1\xFFFF\x1\x1\x1\x4\x2\xFFFF";
-		private const string DFA13_specialS =
+		private const string DFA22_specialS =
 			"\xA\xFFFF}>";
-		private static readonly string[] DFA13_transitionS =
+		private static readonly string[] DFA22_transitionS =
 			{
-				"\x1\x1\x1\x2",
-				"\x1\x3\x20\xFFFF\x1\x4",
+				"\x1\x1\x2B\xFFFF\x1\x2",
+				"\x1\x4\x7\xFFFF\x1\x3",
 				"",
-				"\x1\x5\x21\xFFFF\x1\x7\xA\xFFFF\x1\x6",
+				"\x1\x6\x1\xFFFF\x1\x5\x2E\xFFFF\x1\x7",
 				"",
 				"\x1\x8",
 				"",
 				"",
 				"\x1\x9",
-				"\x1\x5\x21\xFFFF\x1\x7\xA\xFFFF\x1\x6"
+				"\x1\x6\x1\xFFFF\x1\x5\x2E\xFFFF\x1\x7"
 			};
 
-		private static readonly short[] DFA13_eot = DFA.UnpackEncodedString(DFA13_eotS);
-		private static readonly short[] DFA13_eof = DFA.UnpackEncodedString(DFA13_eofS);
-		private static readonly char[] DFA13_min = DFA.UnpackEncodedStringToUnsignedChars(DFA13_minS);
-		private static readonly char[] DFA13_max = DFA.UnpackEncodedStringToUnsignedChars(DFA13_maxS);
-		private static readonly short[] DFA13_accept = DFA.UnpackEncodedString(DFA13_acceptS);
-		private static readonly short[] DFA13_special = DFA.UnpackEncodedString(DFA13_specialS);
-		private static readonly short[][] DFA13_transition;
+		private static readonly short[] DFA22_eot = DFA.UnpackEncodedString(DFA22_eotS);
+		private static readonly short[] DFA22_eof = DFA.UnpackEncodedString(DFA22_eofS);
+		private static readonly char[] DFA22_min = DFA.UnpackEncodedStringToUnsignedChars(DFA22_minS);
+		private static readonly char[] DFA22_max = DFA.UnpackEncodedStringToUnsignedChars(DFA22_maxS);
+		private static readonly short[] DFA22_accept = DFA.UnpackEncodedString(DFA22_acceptS);
+		private static readonly short[] DFA22_special = DFA.UnpackEncodedString(DFA22_specialS);
+		private static readonly short[][] DFA22_transition;
 
-		static DFA13()
+		static DFA22()
 		{
-			int numStates = DFA13_transitionS.Length;
-			DFA13_transition = new short[numStates][];
+			int numStates = DFA22_transitionS.Length;
+			DFA22_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA13_transition[i] = DFA.UnpackEncodedString(DFA13_transitionS[i]);
+				DFA22_transition[i] = DFA.UnpackEncodedString(DFA22_transitionS[i]);
 			}
 		}
 
-		public DFA13( BaseRecognizer recognizer )
+		public DFA22( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 13;
-			this.eot = DFA13_eot;
-			this.eof = DFA13_eof;
-			this.min = DFA13_min;
-			this.max = DFA13_max;
-			this.accept = DFA13_accept;
-			this.special = DFA13_special;
-			this.transition = DFA13_transition;
+			this.decisionNumber = 22;
+			this.eot = DFA22_eot;
+			this.eof = DFA22_eof;
+			this.min = DFA22_min;
+			this.max = DFA22_max;
+			this.accept = DFA22_accept;
+			this.special = DFA22_special;
+			this.transition = DFA22_transition;
 		}
 
-		public override string Description { get { return "215:8: public element : ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' );"; } }
+		public override string Description { get { return "294:8: public element : ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -4213,104 +6100,159 @@ public partial class mccarthyParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _moduleDeclaration_in_module578 = new BitSet(new ulong[]{0x8000000000008000UL});
-		public static readonly BitSet _importDeclarations_in_module588 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _functionDeclarations_in_module597 = new BitSet(new ulong[]{0x0UL});
-		public static readonly BitSet _EOF_in_module604 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _importDeclaration_in_importDeclarations660 = new BitSet(new ulong[]{0x8000000000000002UL});
-		public static readonly BitSet _63_in_importDeclaration673 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_importDeclaration675 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_importDeclaration677 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _64_in_moduleDeclaration695 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_moduleDeclaration697 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_moduleDeclaration699 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _functionDeclaration_in_functionDeclarations719 = new BitSet(new ulong[]{0x8002UL});
-		public static readonly BitSet _ID_in_functionDeclaration734 = new BitSet(new ulong[]{0x100000000000UL});
-		public static readonly BitSet _44_in_functionDeclaration736 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _argList_in_functionDeclaration740 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_functionDeclaration742 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _65_in_functionDeclaration744 = new BitSet(new ulong[]{0x80000008000UL,0x4UL});
-		public static readonly BitSet _statements_in_functionDeclaration748 = new BitSet(new ulong[]{0x0UL,0x4UL});
-		public static readonly BitSet _66_in_functionDeclaration750 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arg_in_argList788 = new BitSet(new ulong[]{0x400000000002UL});
-		public static readonly BitSet _46_in_argList791 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _arg_in_argList793 = new BitSet(new ulong[]{0x400000000002UL});
-		public static readonly BitSet _ID_in_arg815 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _50_in_arg817 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_arg821 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_statements849 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_statements851 = new BitSet(new ulong[]{0x80000008002UL});
-		public static readonly BitSet _assignment_in_statement876 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _replaceOperation_in_statement881 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _appendOperation_in_statement886 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _prependOperation_in_statement891 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _matchOperation_in_statement896 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _moveOperation_in_statement901 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _moveFrontOperation_in_statement906 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _moveBackOperation_in_statement911 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _deleteOperation_in_statement916 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _INT_in_value931 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_value947 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STRING_in_value963 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_assignment986 = new BitSet(new ulong[]{0x40000000000000UL});
-		public static readonly BitSet _54_in_assignment988 = new BitSet(new ulong[]{0x10018000UL});
-		public static readonly BitSet _value_in_assignment990 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pathExpression_in_replaceOperation1004 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _56_in_replaceOperation1006 = new BitSet(new ulong[]{0x10018000UL});
-		public static readonly BitSet _value_in_replaceOperation1010 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _43_in_pathExpression1035 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_pathExpression1039 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _xpathSegments_in_pathExpression1043 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _48_in_xpathSegments1072 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_xpathSegments1074 = new BitSet(new ulong[]{0x1000000000002UL});
-		public static readonly BitSet _pathExpression_in_appendOperation1098 = new BitSet(new ulong[]{0x200000000000000UL});
-		public static readonly BitSet _57_in_appendOperation1100 = new BitSet(new ulong[]{0x10018000UL});
-		public static readonly BitSet _value_in_appendOperation1104 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pathExpression_in_prependOperation1131 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _55_in_prependOperation1133 = new BitSet(new ulong[]{0x10018000UL});
-		public static readonly BitSet _value_in_prependOperation1137 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_matchOperation1181 = new BitSet(new ulong[]{0x100000UL});
-		public static readonly BitSet _MATCHOP_in_matchOperation1183 = new BitSet(new ulong[]{0x30000000000000UL});
-		public static readonly BitSet _content_in_matchOperation1185 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pathExpression_in_matchOperation1203 = new BitSet(new ulong[]{0x100000UL});
-		public static readonly BitSet _MATCHOP_in_matchOperation1205 = new BitSet(new ulong[]{0x30000000000000UL});
-		public static readonly BitSet _content_in_matchOperation1207 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_moveOperation1230 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_moveOperation1232 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_moveOperation1237 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_moveFrontOperation1251 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _58_in_moveFrontOperation1253 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_moveFrontOperation1258 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_moveBackOperation1271 = new BitSet(new ulong[]{0x800000000000000UL});
-		public static readonly BitSet _59_in_moveBackOperation1273 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_moveBackOperation1278 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_deleteOperation1291 = new BitSet(new ulong[]{0x40000000000UL});
-		public static readonly BitSet _42_in_deleteOperation1293 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_deleteOperation1298 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _61_in_pattern1308 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_pattern1310 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _41_in_valueOf1325 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_valueOf1327 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _element_in_content1356 = new BitSet(new ulong[]{0x30000000000002UL});
-		public static readonly BitSet _52_in_element1382 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_element1384 = new BitSet(new ulong[]{0x1000000000008000UL});
-		public static readonly BitSet _attribute_in_element1386 = new BitSet(new ulong[]{0x1000000000008000UL});
-		public static readonly BitSet _60_in_element1389 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _53_in_element1422 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_element1424 = new BitSet(new ulong[]{0x4000000000008000UL});
-		public static readonly BitSet _attribute_in_element1426 = new BitSet(new ulong[]{0x4000000000008000UL});
-		public static readonly BitSet _62_in_element1429 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _52_in_element1448 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_element1450 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_element1452 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_element1454 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _52_in_element1479 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _ID_in_element1481 = new BitSet(new ulong[]{0x2000000008000UL});
-		public static readonly BitSet _attribute_in_element1483 = new BitSet(new ulong[]{0x2000000008000UL});
-		public static readonly BitSet _49_in_element1486 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_attribute1511 = new BitSet(new ulong[]{0x40000000000000UL});
-		public static readonly BitSet _54_in_attribute1513 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _STRING_in_attribute1515 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moduleDeclaration_in_module787 = new BitSet(new ulong[]{0x100000UL,0x8000UL});
+		public static readonly BitSet _importDeclarations_in_module797 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _functionDeclarations_in_module806 = new BitSet(new ulong[]{0x0UL});
+		public static readonly BitSet _EOF_in_module813 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _importDeclaration_in_importDeclarations871 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_importDeclaration886 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_importDeclaration888 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_importDeclaration890 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _80_in_moduleDeclaration910 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moduleDeclaration912 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_moduleDeclaration914 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functionDeclaration_in_functionDeclarations934 = new BitSet(new ulong[]{0x100002UL});
+		public static readonly BitSet _ID_in_functionDeclaration949 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_functionDeclaration951 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _argList_in_functionDeclaration955 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_functionDeclaration957 = new BitSet(new ulong[]{0x0UL,0x20000UL});
+		public static readonly BitSet _81_in_functionDeclaration959 = new BitSet(new ulong[]{0x4000000000100000UL,0x40000UL});
+		public static readonly BitSet _statements_in_functionDeclaration963 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _82_in_functionDeclaration965 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_functionInvocation1010 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_functionInvocation1012 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _parameterList_in_functionInvocation1014 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_functionInvocation1016 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _param_in_parameterList1048 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _65_in_parameterList1051 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _param_in_parameterList1054 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _value_in_param1074 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arg_in_argList1088 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _65_in_argList1091 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _arg_in_argList1093 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _ID_in_arg1115 = new BitSet(new ulong[]{0x0UL,0x10UL});
+		public static readonly BitSet _68_in_arg1117 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_arg1121 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_statements1150 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_statements1152 = new BitSet(new ulong[]{0x4000000000100002UL});
+		public static readonly BitSet _booleanAndExpression_in_logicalExpression1183 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _OR_in_logicalExpression1187 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _booleanAndExpression_in_logicalExpression1190 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _equalityExpression_in_booleanAndExpression1215 = new BitSet(new ulong[]{0x12UL});
+		public static readonly BitSet _AND_in_booleanAndExpression1219 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _equalityExpression_in_booleanAndExpression1222 = new BitSet(new ulong[]{0x12UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression1247 = new BitSet(new ulong[]{0x1000002002UL});
+		public static readonly BitSet _EQUALS_in_equalityExpression1254 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression1257 = new BitSet(new ulong[]{0x1000002002UL});
+		public static readonly BitSet _NOTEQUALS_in_equalityExpression1263 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression1266 = new BitSet(new ulong[]{0x1000002002UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1290 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _LT_in_relationalExpression1297 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1300 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _LTEQ_in_relationalExpression1307 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1310 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _GT_in_relationalExpression1317 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1320 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _GTEQ_in_relationalExpression1327 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1330 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1354 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _PLUS_in_additiveExpression1357 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1360 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1366 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _MINUS_in_additiveExpression1368 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1371 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1377 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression1399 = new BitSet(new ulong[]{0x280001002UL});
+		public static readonly BitSet _MULT_in_multiplicativeExpression1405 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression1408 = new BitSet(new ulong[]{0x280001002UL});
+		public static readonly BitSet _DIV_in_multiplicativeExpression1415 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression1418 = new BitSet(new ulong[]{0x280001002UL});
+		public static readonly BitSet _MOD_in_multiplicativeExpression1425 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression1428 = new BitSet(new ulong[]{0x280001002UL});
+		public static readonly BitSet _NOT_in_unaryExpression1452 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _primaryExpression_in_unaryExpression1455 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_primaryExpression1480 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _logicalExpression_in_primaryExpression1483 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_primaryExpression1485 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _value_in_primaryExpression1497 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_in_statement1513 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _replaceOperation_in_statement1518 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _appendOperation_in_statement1523 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _prependOperation_in_statement1528 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _matchOperation_in_statement1533 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moveOperation_in_statement1538 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moveFrontOperation_in_statement1543 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moveBackOperation_in_statement1548 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _deleteOperation_in_statement1553 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _INT_in_value1569 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_value1585 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STRING_in_value1601 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functionInvocation_in_value1618 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_assignment1632 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _71_in_assignment1634 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_assignment1636 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pathExpression_in_replaceOperation1650 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_replaceOperation1652 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_replaceOperation1656 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _62_in_pathExpression1681 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_pathExpression1685 = new BitSet(new ulong[]{0x1000UL});
+		public static readonly BitSet _xpathSegments_in_pathExpression1689 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DIV_in_xpathSegments1718 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_xpathSegments1720 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _pathExpression_in_appendOperation1744 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_appendOperation1746 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_appendOperation1750 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pathExpression_in_prependOperation1777 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_prependOperation1779 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_prependOperation1783 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_matchOperation1827 = new BitSet(new ulong[]{0x20000000UL});
+		public static readonly BitSet _MATCHOP_in_matchOperation1829 = new BitSet(new ulong[]{0x4000000UL,0x40UL});
+		public static readonly BitSet _content_in_matchOperation1831 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pathExpression_in_matchOperation1849 = new BitSet(new ulong[]{0x20000000UL});
+		public static readonly BitSet _MATCHOP_in_matchOperation1851 = new BitSet(new ulong[]{0x4000000UL,0x40UL});
+		public static readonly BitSet _content_in_matchOperation1853 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_moveOperation1876 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _66_in_moveOperation1878 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moveOperation1883 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_moveFrontOperation1897 = new BitSet(new ulong[]{0x0UL,0x800UL});
+		public static readonly BitSet _75_in_moveFrontOperation1899 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moveFrontOperation1904 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_moveBackOperation1917 = new BitSet(new ulong[]{0x0UL,0x1000UL});
+		public static readonly BitSet _76_in_moveBackOperation1919 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moveBackOperation1924 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_deleteOperation1937 = new BitSet(new ulong[]{0x2000000000000000UL});
+		public static readonly BitSet _61_in_deleteOperation1939 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_deleteOperation1944 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _77_in_pattern1954 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_pattern1956 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _60_in_valueOf1971 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_valueOf1973 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _element_in_content2002 = new BitSet(new ulong[]{0x4000002UL,0x40UL});
+		public static readonly BitSet _LT_in_element2028 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2030 = new BitSet(new ulong[]{0x140000UL});
+		public static readonly BitSet _attribute_in_element2032 = new BitSet(new ulong[]{0x140000UL});
+		public static readonly BitSet _GT_in_element2035 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_element2068 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2070 = new BitSet(new ulong[]{0x100000UL,0x4000UL});
+		public static readonly BitSet _attribute_in_element2072 = new BitSet(new ulong[]{0x100000UL,0x4000UL});
+		public static readonly BitSet _78_in_element2075 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_element2094 = new BitSet(new ulong[]{0x1000UL});
+		public static readonly BitSet _DIV_in_element2096 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2098 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _GT_in_element2100 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_element2125 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2127 = new BitSet(new ulong[]{0x100000UL,0x8UL});
+		public static readonly BitSet _attribute_in_element2129 = new BitSet(new ulong[]{0x100000UL,0x8UL});
+		public static readonly BitSet _67_in_element2132 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_attribute2157 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _71_in_attribute2159 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _STRING_in_attribute2161 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multiplicativeExpression_in_synpred14_mccarthy1354 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _PLUS_in_synpred14_mccarthy1357 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _multiplicativeExpression_in_synpred14_mccarthy1360 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multiplicativeExpression_in_synpred15_mccarthy1366 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _MINUS_in_synpred15_mccarthy1368 = new BitSet(new ulong[]{0x8000800800500000UL});
+		public static readonly BitSet _multiplicativeExpression_in_synpred15_mccarthy1371 = new BitSet(new ulong[]{0x2UL});
 
 	}
 	#endregion Follow sets

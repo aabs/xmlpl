@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3 2012-03-12 10:22:01
+// $ANTLR 3.4 C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3 2012-03-24 15:29:20
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -18,6 +18,9 @@
 #pragma warning disable 1591
 // CLS compliance checking will not be performed on 'type' because it is not visible from outside this assembly.
 #pragma warning disable 3019
+
+
+using System;
 
 
 using System.Collections.Generic;
@@ -37,28 +40,101 @@ namespace xmlpl_parser
 public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHAR", "COMMENT", "ESC_SEQ", "EXPONENT", "FLOAT", "HEX_DIGIT", "ID", "INT", "OCTAL_ESC", "STRING", "UNICODE_ESC", "WS", "';'", "'module'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "APPEND", "ARG", "ARGLIST", "BINDING", "BLOCK", "COMMENT", "DIGIT", "DIV", "EQUALS", "FUNCBODY", "FUNCDEC", "FUNCDECLIST", "GENERIC_ID", "GT", "GTEQ", "ID", "IMPORTDECL", "INT", "INVOCATION", "Imports", "LETTER", "LT", "LTEQ", "MATCH", "MATCHOP", "MINUS", "MOD", "MODULEDECL", "MULT", "NAMECHAR", "NOT", "NOTEQUALS", "OR", "PARAMETER", "PARAMETERS", "PATH", "PATHCTX", "PLUS", "PREPEND", "REPLACE", "ROOT", "SEG", "STRING", "TEXT", "VALINT", "VALSTR", "VARREF", "WS", "XML", "XMLATTR", "XMLATTRS", "XMLCHILDREN", "XMLCLOSEELEM", "XMLOPENELEM", "XMLTEXT", "'!'", "'!='", "'$'", "'('", "')'", "','", "'->'", "'/>'", "':'", "';'", "'<?'", "'='", "'=<'", "'=='", "'=>'", "'=><'", "'=>>'", "'?'", "'?>'", "'import'", "'module'", "'{'", "'}'"
 	};
 	public const int EOF=-1;
-	public const int T__16=16;
-	public const int T__17=17;
-	public const int CHAR=4;
-	public const int COMMENT=5;
-	public const int ESC_SEQ=6;
-	public const int EXPONENT=7;
-	public const int FLOAT=8;
-	public const int HEX_DIGIT=9;
-	public const int ID=10;
-	public const int INT=11;
-	public const int OCTAL_ESC=12;
-	public const int STRING=13;
-	public const int UNICODE_ESC=14;
-	public const int WS=15;
+	public const int T__60=60;
+	public const int T__61=61;
+	public const int T__62=62;
+	public const int T__63=63;
+	public const int T__64=64;
+	public const int T__65=65;
+	public const int T__66=66;
+	public const int T__67=67;
+	public const int T__68=68;
+	public const int T__69=69;
+	public const int T__70=70;
+	public const int T__71=71;
+	public const int T__72=72;
+	public const int T__73=73;
+	public const int T__74=74;
+	public const int T__75=75;
+	public const int T__76=76;
+	public const int T__77=77;
+	public const int T__78=78;
+	public const int T__79=79;
+	public const int T__80=80;
+	public const int T__81=81;
+	public const int T__82=82;
+	public const int AND=4;
+	public const int APPEND=5;
+	public const int ARG=6;
+	public const int ARGLIST=7;
+	public const int BINDING=8;
+	public const int BLOCK=9;
+	public const int COMMENT=10;
+	public const int DIGIT=11;
+	public const int DIV=12;
+	public const int EQUALS=13;
+	public const int FUNCBODY=14;
+	public const int FUNCDEC=15;
+	public const int FUNCDECLIST=16;
+	public const int GENERIC_ID=17;
+	public const int GT=18;
+	public const int GTEQ=19;
+	public const int ID=20;
+	public const int IMPORTDECL=21;
+	public const int INT=22;
+	public const int INVOCATION=23;
+	public const int Imports=24;
+	public const int LETTER=25;
+	public const int LT=26;
+	public const int LTEQ=27;
+	public const int MATCH=28;
+	public const int MATCHOP=29;
+	public const int MINUS=30;
+	public const int MOD=31;
+	public const int MODULEDECL=32;
+	public const int MULT=33;
+	public const int NAMECHAR=34;
+	public const int NOT=35;
+	public const int NOTEQUALS=36;
+	public const int OR=37;
+	public const int PARAMETER=38;
+	public const int PARAMETERS=39;
+	public const int PATH=40;
+	public const int PATHCTX=41;
+	public const int PLUS=42;
+	public const int PREPEND=43;
+	public const int REPLACE=44;
+	public const int ROOT=45;
+	public const int SEG=46;
+	public const int STRING=47;
+	public const int TEXT=48;
+	public const int VALINT=49;
+	public const int VALSTR=50;
+	public const int VARREF=51;
+	public const int WS=52;
+	public const int XML=53;
+	public const int XMLATTR=54;
+	public const int XMLATTRS=55;
+	public const int XMLCHILDREN=56;
+	public const int XMLCLOSEELEM=57;
+	public const int XMLOPENELEM=58;
+	public const int XMLTEXT=59;
 
 	public static readonly string[] ruleNames =
 		new string[]
 		{
-			"invalidRule", "moduleDeclaration", "module"
+			"invalidRule", "additiveExpression", "valueOf", "moveOperation", "statement", 
+		"parameterList", "primaryExpression", "arg", "pathExpression", "assignment", 
+		"booleanAndExpression", "moveBackOperation", "attribute", "matchOperation", 
+		"logicalExpression", "reference", "importDeclaration", "functionDeclaration", 
+		"moduleDeclaration", "deleteOperation", "appendOperation", "functionInvocation", 
+		"moveFrontOperation", "prependOperation", "param", "pattern", "argList", 
+		"element", "content", "module", "importDeclarations", "statements", "value", 
+		"relationalExpression", "unaryExpression", "xpathSegments", "equalityExpression", 
+		"multiplicativeExpression", "replaceOperation", "functionDeclarations"
 		};
 
 		int ruleLevel = 0;
@@ -132,6 +208,9 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 	public override string GrammarFileName { get { return "C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3"; } }
 
 
+	public bool expectingXml = false;
+
+
 	partial void OnCreated();
 	partial void EnterRule(string ruleName, int ruleIndex);
 	partial void LeaveRule(string ruleName, int ruleIndex);
@@ -141,7 +220,7 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 	partial void LeaveRule_module();
 
 	// $ANTLR start "module"
-	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:79:1: public module : moduleDeclaration EOF ;
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:110:8: public module : md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? ) ;
 	[GrammarRule("module")]
 	public AstParserRuleReturnScope<CommonTree, CommonToken> module()
 	{
@@ -153,33 +232,123 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken EOF2 = default(CommonToken);
-		AstParserRuleReturnScope<CommonTree, CommonToken> moduleDeclaration1 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		CommonToken EOF1 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> md = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> id = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> fd = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree EOF2_tree = default(CommonTree);
+		CommonTree EOF1_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_EOF=new RewriteRuleITokenStream(adaptor,"token EOF");
+		RewriteRuleSubtreeStream stream_functionDeclarations=new RewriteRuleSubtreeStream(adaptor,"rule functionDeclarations");
+		RewriteRuleSubtreeStream stream_importDeclarations=new RewriteRuleSubtreeStream(adaptor,"rule importDeclarations");
+		RewriteRuleSubtreeStream stream_moduleDeclaration=new RewriteRuleSubtreeStream(adaptor,"rule moduleDeclaration");
 		try { DebugEnterRule(GrammarFileName, "module");
-		DebugLocation(79, 4);
+		DebugLocation(110, 4);
 		if (RuleLevel == 0)
 			DebugListener.Commence();
 		IncRuleLevel();
 		try
 		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:80:5: ( moduleDeclaration EOF )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:111:5: (md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? ) )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:80:9: moduleDeclaration EOF
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:111:9: md= moduleDeclaration id= importDeclarations fd= functionDeclarations EOF
 			{
-			root_0 = (CommonTree)adaptor.Nil();
-
-			DebugLocation(80, 9);
-			PushFollow(Follow._moduleDeclaration_in_module626);
-			moduleDeclaration1=moduleDeclaration();
+			DebugLocation(111, 11);
+			PushFollow(Follow._moduleDeclaration_in_module781);
+			md=moduleDeclaration();
 			PopFollow();
 
-			adaptor.AddChild(root_0, moduleDeclaration1.Tree);
-			DebugLocation(81, 6);
-			EOF2=(CommonToken)Match(input,EOF,Follow._EOF_in_module634); 
-			EOF2_tree = (CommonTree)adaptor.Create(EOF2);
-			adaptor.AddChild(root_0, EOF2_tree);
+			stream_moduleDeclaration.Add(md.Tree);
+			DebugLocation(112, 8);
+			PushFollow(Follow._importDeclarations_in_module791);
+			id=importDeclarations();
+			PopFollow();
+
+			stream_importDeclarations.Add(id.Tree);
+			DebugLocation(113, 8);
+			PushFollow(Follow._functionDeclarations_in_module800);
+			fd=functionDeclarations();
+			PopFollow();
+
+			stream_functionDeclarations.Add(fd.Tree);
+			DebugLocation(114, 6);
+			EOF1=(CommonToken)Match(input,EOF,Follow._EOF_in_module807);  
+			stream_EOF.Add(EOF1);
+
+
+
+			{
+			// AST REWRITE
+			// elements: md, fd, id
+			// token labels: 
+			// rule labels: id, retval, md, fd
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_id=new RewriteRuleSubtreeStream(adaptor,"rule id",id!=null?id.Tree:null);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+			RewriteRuleSubtreeStream stream_md=new RewriteRuleSubtreeStream(adaptor,"rule md",md!=null?md.Tree:null);
+			RewriteRuleSubtreeStream stream_fd=new RewriteRuleSubtreeStream(adaptor,"rule fd",fd!=null?fd.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 114:10: -> ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? )
+			{
+				DebugLocation(114, 13);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:114:13: ^( ROOT $md ( ^( Imports $id) )? ( ^( FUNCDECLIST $fd) )? )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(114, 15);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ROOT, "ROOT"), root_1);
+
+				DebugLocation(114, 21);
+				adaptor.AddChild(root_1, stream_md.NextTree());
+				DebugLocation(115, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:115:6: ( ^( Imports $id) )?
+				if (stream_id.HasNext)
+				{
+					DebugLocation(115, 6);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:115:6: ^( Imports $id)
+					{
+					CommonTree root_2 = (CommonTree)adaptor.Nil();
+					DebugLocation(115, 8);
+					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(Imports, "Imports"), root_2);
+
+					DebugLocation(115, 17);
+					adaptor.AddChild(root_2, stream_id.NextTree());
+
+					adaptor.AddChild(root_1, root_2);
+					}
+
+				}
+				stream_id.Reset();
+				DebugLocation(116, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:116:6: ( ^( FUNCDECLIST $fd) )?
+				if (stream_fd.HasNext)
+				{
+					DebugLocation(116, 6);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:116:6: ^( FUNCDECLIST $fd)
+					{
+					CommonTree root_2 = (CommonTree)adaptor.Nil();
+					DebugLocation(116, 8);
+					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(FUNCDECLIST, "FUNCDECLIST"), root_2);
+
+					DebugLocation(116, 21);
+					adaptor.AddChild(root_2, stream_fd.NextTree());
+
+					adaptor.AddChild(root_1, root_2);
+					}
+
+				}
+				stream_fd.Reset();
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
 
 			}
 
@@ -202,7 +371,7 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 			LeaveRule("module", 1);
 			LeaveRule_module();
 		}
-		DebugLocation(82, 4);
+		DebugLocation(118, 4);
 		} finally { DebugExitRule(GrammarFileName, "module"); }
 		DecRuleLevel();
 		if (RuleLevel == 0)
@@ -212,54 +381,79 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 	}
 	// $ANTLR end "module"
 
-	partial void EnterRule_moduleDeclaration();
-	partial void LeaveRule_moduleDeclaration();
+	partial void EnterRule_importDeclarations();
+	partial void LeaveRule_importDeclarations();
 
-	// $ANTLR start "moduleDeclaration"
-	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:84:1: moduleDeclaration : 'module' ID ';' ;
-	[GrammarRule("moduleDeclaration")]
-	private AstParserRuleReturnScope<CommonTree, CommonToken> moduleDeclaration()
+	// $ANTLR start "importDeclarations"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:119:8: public importDeclarations : ( importDeclaration )* ;
+	[GrammarRule("importDeclarations")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> importDeclarations()
 	{
-		EnterRule_moduleDeclaration();
-		EnterRule("moduleDeclaration", 2);
-		TraceIn("moduleDeclaration", 2);
+		EnterRule_importDeclarations();
+		EnterRule("importDeclarations", 2);
+		TraceIn("importDeclarations", 2);
 		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
 		retval.Start = (CommonToken)input.LT(1);
 
 		CommonTree root_0 = default(CommonTree);
 
-		CommonToken string_literal3 = default(CommonToken);
-		CommonToken ID4 = default(CommonToken);
-		CommonToken char_literal5 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> importDeclaration2 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
 
-		CommonTree string_literal3_tree = default(CommonTree);
-		CommonTree ID4_tree = default(CommonTree);
-		CommonTree char_literal5_tree = default(CommonTree);
-		try { DebugEnterRule(GrammarFileName, "moduleDeclaration");
-		DebugLocation(84, 1);
+		try { DebugEnterRule(GrammarFileName, "importDeclarations");
+		DebugLocation(119, 1);
 		if (RuleLevel == 0)
 			DebugListener.Commence();
 		IncRuleLevel();
 		try
 		{
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:85:2: ( 'module' ID ';' )
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:120:2: ( ( importDeclaration )* )
 			DebugEnterAlt(1);
-			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:85:4: 'module' ID ';'
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:120:4: ( importDeclaration )*
 			{
 			root_0 = (CommonTree)adaptor.Nil();
 
-			DebugLocation(85, 4);
-			string_literal3=(CommonToken)Match(input,17,Follow._17_in_moduleDeclaration648); 
-			string_literal3_tree = (CommonTree)adaptor.Create(string_literal3);
-			adaptor.AddChild(root_0, string_literal3_tree);
-			DebugLocation(85, 13);
-			ID4=(CommonToken)Match(input,ID,Follow._ID_in_moduleDeclaration650); 
-			ID4_tree = (CommonTree)adaptor.Create(ID4);
-			adaptor.AddChild(root_0, ID4_tree);
-			DebugLocation(85, 16);
-			char_literal5=(CommonToken)Match(input,16,Follow._16_in_moduleDeclaration652); 
-			char_literal5_tree = (CommonTree)adaptor.Create(char_literal5);
-			adaptor.AddChild(root_0, char_literal5_tree);
+			DebugLocation(120, 4);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:120:4: ( importDeclaration )*
+			try { DebugEnterSubRule(1);
+			while (true)
+			{
+				int alt1=2;
+				try { DebugEnterDecision(1, false);
+				int LA1_0 = input.LA(1);
+
+				if ((LA1_0==79))
+				{
+					alt1 = 1;
+				}
+
+
+				} finally { DebugExitDecision(1); }
+				switch ( alt1 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:120:5: importDeclaration
+					{
+					DebugLocation(120, 5);
+					PushFollow(Follow._importDeclaration_in_importDeclarations865);
+					importDeclaration2=importDeclaration();
+					PopFollow();
+
+					adaptor.AddChild(root_0, importDeclaration2.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop1;
+				}
+			}
+
+			loop1:
+				;
+
+			} finally { DebugExitSubRule(1); }
+
 
 			}
 
@@ -278,11 +472,239 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("moduleDeclaration", 2);
-			LeaveRule("moduleDeclaration", 2);
+			TraceOut("importDeclarations", 2);
+			LeaveRule("importDeclarations", 2);
+			LeaveRule_importDeclarations();
+		}
+		DebugLocation(121, 1);
+		} finally { DebugExitRule(GrammarFileName, "importDeclarations"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "importDeclarations"
+
+	partial void EnterRule_importDeclaration();
+	partial void LeaveRule_importDeclaration();
+
+	// $ANTLR start "importDeclaration"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:123:8: public importDeclaration : 'import' ID ';' -> ^( IMPORTDECL ID ) ;
+	[GrammarRule("importDeclaration")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> importDeclaration()
+	{
+		EnterRule_importDeclaration();
+		EnterRule("importDeclaration", 3);
+		TraceIn("importDeclaration", 3);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken string_literal3 = default(CommonToken);
+		CommonToken ID4 = default(CommonToken);
+		CommonToken char_literal5 = default(CommonToken);
+
+		CommonTree string_literal3_tree = default(CommonTree);
+		CommonTree ID4_tree = default(CommonTree);
+		CommonTree char_literal5_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_79=new RewriteRuleITokenStream(adaptor,"token 79");
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		try { DebugEnterRule(GrammarFileName, "importDeclaration");
+		DebugLocation(123, 39);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:124:2: ( 'import' ID ';' -> ^( IMPORTDECL ID ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:124:4: 'import' ID ';'
+			{
+			DebugLocation(124, 4);
+			string_literal3=(CommonToken)Match(input,79,Follow._79_in_importDeclaration880);  
+			stream_79.Add(string_literal3);
+
+			DebugLocation(124, 13);
+			ID4=(CommonToken)Match(input,ID,Follow._ID_in_importDeclaration882);  
+			stream_ID.Add(ID4);
+
+			DebugLocation(124, 16);
+			char_literal5=(CommonToken)Match(input,69,Follow._69_in_importDeclaration884);  
+			stream_69.Add(char_literal5);
+
+
+
+			{
+			// AST REWRITE
+			// elements: ID
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 124:20: -> ^( IMPORTDECL ID )
+			{
+				DebugLocation(124, 23);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:124:23: ^( IMPORTDECL ID )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(124, 25);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(IMPORTDECL, "IMPORTDECL"), root_1);
+
+				DebugLocation(124, 36);
+				adaptor.AddChild(root_1, stream_ID.NextNode());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("importDeclaration", 3);
+			LeaveRule("importDeclaration", 3);
+			LeaveRule_importDeclaration();
+		}
+		DebugLocation(124, 39);
+		} finally { DebugExitRule(GrammarFileName, "importDeclaration"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "importDeclaration"
+
+	partial void EnterRule_moduleDeclaration();
+	partial void LeaveRule_moduleDeclaration();
+
+	// $ANTLR start "moduleDeclaration"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:126:8: public moduleDeclaration : 'module' ID ';' -> ^( MODULEDECL ID ) ;
+	[GrammarRule("moduleDeclaration")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> moduleDeclaration()
+	{
+		EnterRule_moduleDeclaration();
+		EnterRule("moduleDeclaration", 4);
+		TraceIn("moduleDeclaration", 4);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken string_literal6 = default(CommonToken);
+		CommonToken ID7 = default(CommonToken);
+		CommonToken char_literal8 = default(CommonToken);
+
+		CommonTree string_literal6_tree = default(CommonTree);
+		CommonTree ID7_tree = default(CommonTree);
+		CommonTree char_literal8_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_80=new RewriteRuleITokenStream(adaptor,"token 80");
+		try { DebugEnterRule(GrammarFileName, "moduleDeclaration");
+		DebugLocation(126, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:127:2: ( 'module' ID ';' -> ^( MODULEDECL ID ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:127:4: 'module' ID ';'
+			{
+			DebugLocation(127, 4);
+			string_literal6=(CommonToken)Match(input,80,Follow._80_in_moduleDeclaration904);  
+			stream_80.Add(string_literal6);
+
+			DebugLocation(127, 13);
+			ID7=(CommonToken)Match(input,ID,Follow._ID_in_moduleDeclaration906);  
+			stream_ID.Add(ID7);
+
+			DebugLocation(127, 16);
+			char_literal8=(CommonToken)Match(input,69,Follow._69_in_moduleDeclaration908);  
+			stream_69.Add(char_literal8);
+
+
+
+			{
+			// AST REWRITE
+			// elements: ID
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 127:20: -> ^( MODULEDECL ID )
+			{
+				DebugLocation(127, 23);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:127:23: ^( MODULEDECL ID )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(127, 25);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MODULEDECL, "MODULEDECL"), root_1);
+
+				DebugLocation(127, 36);
+				adaptor.AddChild(root_1, stream_ID.NextNode());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("moduleDeclaration", 4);
+			LeaveRule("moduleDeclaration", 4);
 			LeaveRule_moduleDeclaration();
 		}
-		DebugLocation(86, 1);
+		DebugLocation(128, 1);
 		} finally { DebugExitRule(GrammarFileName, "moduleDeclaration"); }
 		DecRuleLevel();
 		if (RuleLevel == 0)
@@ -291,17 +713,4870 @@ public partial class mccarthyParser : DebugAntlr.Runtime.Parser
 
 	}
 	// $ANTLR end "moduleDeclaration"
+
+	partial void EnterRule_functionDeclarations();
+	partial void LeaveRule_functionDeclarations();
+
+	// $ANTLR start "functionDeclarations"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:130:1: functionDeclarations : ( functionDeclaration )* ;
+	[GrammarRule("functionDeclarations")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> functionDeclarations()
+	{
+		EnterRule_functionDeclarations();
+		EnterRule("functionDeclarations", 5);
+		TraceIn("functionDeclarations", 5);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		AstParserRuleReturnScope<CommonTree, CommonToken> functionDeclaration9 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		try { DebugEnterRule(GrammarFileName, "functionDeclarations");
+		DebugLocation(130, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:131:2: ( ( functionDeclaration )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:131:4: ( functionDeclaration )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(131, 4);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:131:4: ( functionDeclaration )*
+			try { DebugEnterSubRule(2);
+			while (true)
+			{
+				int alt2=2;
+				try { DebugEnterDecision(2, false);
+				int LA2_0 = input.LA(1);
+
+				if ((LA2_0==ID))
+				{
+					alt2 = 1;
+				}
+
+
+				} finally { DebugExitDecision(2); }
+				switch ( alt2 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:131:5: functionDeclaration
+					{
+					DebugLocation(131, 5);
+					PushFollow(Follow._functionDeclaration_in_functionDeclarations928);
+					functionDeclaration9=functionDeclaration();
+					PopFollow();
+
+					adaptor.AddChild(root_0, functionDeclaration9.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop2;
+				}
+			}
+
+			loop2:
+				;
+
+			} finally { DebugExitSubRule(2); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("functionDeclarations", 5);
+			LeaveRule("functionDeclarations", 5);
+			LeaveRule_functionDeclarations();
+		}
+		DebugLocation(132, 1);
+		} finally { DebugExitRule(GrammarFileName, "functionDeclarations"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "functionDeclarations"
+
+	partial void EnterRule_functionDeclaration();
+	partial void LeaveRule_functionDeclaration();
+
+	// $ANTLR start "functionDeclaration"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:134:1: functionDeclaration : functionName= ID '(' al= argList ')' '{' sl= statements '}' -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? ) ;
+	[GrammarRule("functionDeclaration")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> functionDeclaration()
+	{
+		EnterRule_functionDeclaration();
+		EnterRule("functionDeclaration", 6);
+		TraceIn("functionDeclaration", 6);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken functionName = default(CommonToken);
+		CommonToken char_literal10 = default(CommonToken);
+		CommonToken char_literal11 = default(CommonToken);
+		CommonToken char_literal12 = default(CommonToken);
+		CommonToken char_literal13 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> al = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> sl = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree functionName_tree = default(CommonTree);
+		CommonTree char_literal10_tree = default(CommonTree);
+		CommonTree char_literal11_tree = default(CommonTree);
+		CommonTree char_literal12_tree = default(CommonTree);
+		CommonTree char_literal13_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_82=new RewriteRuleITokenStream(adaptor,"token 82");
+		RewriteRuleITokenStream stream_81=new RewriteRuleITokenStream(adaptor,"token 81");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleSubtreeStream stream_argList=new RewriteRuleSubtreeStream(adaptor,"rule argList");
+		RewriteRuleSubtreeStream stream_statements=new RewriteRuleSubtreeStream(adaptor,"rule statements");
+		try { DebugEnterRule(GrammarFileName, "functionDeclaration");
+		DebugLocation(134, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:135:2: (functionName= ID '(' al= argList ')' '{' sl= statements '}' -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:135:4: functionName= ID '(' al= argList ')' '{' sl= statements '}'
+			{
+			DebugLocation(135, 16);
+			functionName=(CommonToken)Match(input,ID,Follow._ID_in_functionDeclaration943);  
+			stream_ID.Add(functionName);
+
+			DebugLocation(135, 20);
+			char_literal10=(CommonToken)Match(input,63,Follow._63_in_functionDeclaration945);  
+			stream_63.Add(char_literal10);
+
+			DebugLocation(135, 26);
+			PushFollow(Follow._argList_in_functionDeclaration949);
+			al=argList();
+			PopFollow();
+
+			stream_argList.Add(al.Tree);
+			DebugLocation(135, 35);
+			char_literal11=(CommonToken)Match(input,64,Follow._64_in_functionDeclaration951);  
+			stream_64.Add(char_literal11);
+
+			DebugLocation(135, 39);
+			char_literal12=(CommonToken)Match(input,81,Follow._81_in_functionDeclaration953);  
+			stream_81.Add(char_literal12);
+
+			DebugLocation(135, 45);
+			PushFollow(Follow._statements_in_functionDeclaration957);
+			sl=statements();
+			PopFollow();
+
+			stream_statements.Add(sl.Tree);
+			DebugLocation(135, 57);
+			char_literal13=(CommonToken)Match(input,82,Follow._82_in_functionDeclaration959);  
+			stream_82.Add(char_literal13);
+
+
+
+			{
+			// AST REWRITE
+			// elements: sl, al, functionName
+			// token labels: functionName
+			// rule labels: sl, al, retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleITokenStream stream_functionName=new RewriteRuleITokenStream(adaptor,"token functionName",functionName);
+			RewriteRuleSubtreeStream stream_sl=new RewriteRuleSubtreeStream(adaptor,"rule sl",sl!=null?sl.Tree:null);
+			RewriteRuleSubtreeStream stream_al=new RewriteRuleSubtreeStream(adaptor,"rule al",al!=null?al.Tree:null);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 136:3: -> ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? )
+			{
+				DebugLocation(136, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:136:6: ^( FUNCDEC $functionName ( ^( ARGLIST $al) )? ( ^( FUNCBODY $sl) )? )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(136, 8);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(FUNCDEC, "FUNCDEC"), root_1);
+
+				DebugLocation(136, 17);
+				adaptor.AddChild(root_1, stream_functionName.NextNode());
+				DebugLocation(136, 30);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:136:30: ( ^( ARGLIST $al) )?
+				if (stream_al.HasNext)
+				{
+					DebugLocation(136, 30);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:136:30: ^( ARGLIST $al)
+					{
+					CommonTree root_2 = (CommonTree)adaptor.Nil();
+					DebugLocation(136, 32);
+					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ARGLIST, "ARGLIST"), root_2);
+
+					DebugLocation(136, 41);
+					adaptor.AddChild(root_2, stream_al.NextTree());
+
+					adaptor.AddChild(root_1, root_2);
+					}
+
+				}
+				stream_al.Reset();
+				DebugLocation(136, 46);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:136:46: ( ^( FUNCBODY $sl) )?
+				if (stream_sl.HasNext)
+				{
+					DebugLocation(136, 46);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:136:46: ^( FUNCBODY $sl)
+					{
+					CommonTree root_2 = (CommonTree)adaptor.Nil();
+					DebugLocation(136, 48);
+					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(FUNCBODY, "FUNCBODY"), root_2);
+
+					DebugLocation(136, 58);
+					adaptor.AddChild(root_2, stream_sl.NextTree());
+
+					adaptor.AddChild(root_1, root_2);
+					}
+
+				}
+				stream_sl.Reset();
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("functionDeclaration", 6);
+			LeaveRule("functionDeclaration", 6);
+			LeaveRule_functionDeclaration();
+		}
+		DebugLocation(137, 1);
+		} finally { DebugExitRule(GrammarFileName, "functionDeclaration"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "functionDeclaration"
+
+	partial void EnterRule_functionInvocation();
+	partial void LeaveRule_functionInvocation();
+
+	// $ANTLR start "functionInvocation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:139:8: public functionInvocation : funcName= ID '(' parameterList ')' -> ^( INVOCATION $funcName ^( PARAMETERS parameterList ) ) ;
+	[GrammarRule("functionInvocation")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> functionInvocation()
+	{
+		EnterRule_functionInvocation();
+		EnterRule("functionInvocation", 7);
+		TraceIn("functionInvocation", 7);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken funcName = default(CommonToken);
+		CommonToken char_literal14 = default(CommonToken);
+		CommonToken char_literal16 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> parameterList15 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree funcName_tree = default(CommonTree);
+		CommonTree char_literal14_tree = default(CommonTree);
+		CommonTree char_literal16_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleSubtreeStream stream_parameterList=new RewriteRuleSubtreeStream(adaptor,"rule parameterList");
+		try { DebugEnterRule(GrammarFileName, "functionInvocation");
+		DebugLocation(139, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:140:5: (funcName= ID '(' parameterList ')' -> ^( INVOCATION $funcName ^( PARAMETERS parameterList ) ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:140:7: funcName= ID '(' parameterList ')'
+			{
+			DebugLocation(140, 15);
+			funcName=(CommonToken)Match(input,ID,Follow._ID_in_functionInvocation1004);  
+			stream_ID.Add(funcName);
+
+			DebugLocation(140, 19);
+			char_literal14=(CommonToken)Match(input,63,Follow._63_in_functionInvocation1006);  
+			stream_63.Add(char_literal14);
+
+			DebugLocation(140, 23);
+			PushFollow(Follow._parameterList_in_functionInvocation1008);
+			parameterList15=parameterList();
+			PopFollow();
+
+			stream_parameterList.Add(parameterList15.Tree);
+			DebugLocation(140, 37);
+			char_literal16=(CommonToken)Match(input,64,Follow._64_in_functionInvocation1010);  
+			stream_64.Add(char_literal16);
+
+
+
+			{
+			// AST REWRITE
+			// elements: funcName, parameterList
+			// token labels: funcName
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleITokenStream stream_funcName=new RewriteRuleITokenStream(adaptor,"token funcName",funcName);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 140:41: -> ^( INVOCATION $funcName ^( PARAMETERS parameterList ) )
+			{
+				DebugLocation(140, 44);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:140:44: ^( INVOCATION $funcName ^( PARAMETERS parameterList ) )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(140, 46);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(INVOCATION, "INVOCATION"), root_1);
+
+				DebugLocation(140, 58);
+				adaptor.AddChild(root_1, stream_funcName.NextNode());
+				DebugLocation(140, 67);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:140:67: ^( PARAMETERS parameterList )
+				{
+				CommonTree root_2 = (CommonTree)adaptor.Nil();
+				DebugLocation(140, 69);
+				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PARAMETERS, "PARAMETERS"), root_2);
+
+				DebugLocation(140, 80);
+				adaptor.AddChild(root_2, stream_parameterList.NextTree());
+
+				adaptor.AddChild(root_1, root_2);
+				}
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("functionInvocation", 7);
+			LeaveRule("functionInvocation", 7);
+			LeaveRule_functionInvocation();
+		}
+		DebugLocation(141, 4);
+		} finally { DebugExitRule(GrammarFileName, "functionInvocation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "functionInvocation"
+
+	partial void EnterRule_parameterList();
+	partial void LeaveRule_parameterList();
+
+	// $ANTLR start "parameterList"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:143:1: parameterList : param ( ',' ! param )* ;
+	[GrammarRule("parameterList")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> parameterList()
+	{
+		EnterRule_parameterList();
+		EnterRule("parameterList", 8);
+		TraceIn("parameterList", 8);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal18 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> param17 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> param19 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree char_literal18_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "parameterList");
+		DebugLocation(143, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:144:5: ( param ( ',' ! param )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:144:7: param ( ',' ! param )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(144, 7);
+			PushFollow(Follow._param_in_parameterList1042);
+			param17=param();
+			PopFollow();
+
+			adaptor.AddChild(root_0, param17.Tree);
+			DebugLocation(144, 13);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:144:13: ( ',' ! param )*
+			try { DebugEnterSubRule(3);
+			while (true)
+			{
+				int alt3=2;
+				try { DebugEnterDecision(3, false);
+				int LA3_0 = input.LA(1);
+
+				if ((LA3_0==65))
+				{
+					alt3 = 1;
+				}
+
+
+				} finally { DebugExitDecision(3); }
+				switch ( alt3 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:144:14: ',' ! param
+					{
+					DebugLocation(144, 17);
+					char_literal18=(CommonToken)Match(input,65,Follow._65_in_parameterList1045); 
+					DebugLocation(144, 19);
+					PushFollow(Follow._param_in_parameterList1048);
+					param19=param();
+					PopFollow();
+
+					adaptor.AddChild(root_0, param19.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop3;
+				}
+			}
+
+			loop3:
+				;
+
+			} finally { DebugExitSubRule(3); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("parameterList", 8);
+			LeaveRule("parameterList", 8);
+			LeaveRule_parameterList();
+		}
+		DebugLocation(145, 4);
+		} finally { DebugExitRule(GrammarFileName, "parameterList"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "parameterList"
+
+	partial void EnterRule_param();
+	partial void LeaveRule_param();
+
+	// $ANTLR start "param"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:147:1: param : value ;
+	[GrammarRule("param")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> param()
+	{
+		EnterRule_param();
+		EnterRule("param", 9);
+		TraceIn("param", 9);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		AstParserRuleReturnScope<CommonTree, CommonToken> value20 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		try { DebugEnterRule(GrammarFileName, "param");
+		DebugLocation(147, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:148:5: ( value )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:148:7: value
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(148, 7);
+			PushFollow(Follow._value_in_param1068);
+			value20=value();
+			PopFollow();
+
+			adaptor.AddChild(root_0, value20.Tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("param", 9);
+			LeaveRule("param", 9);
+			LeaveRule_param();
+		}
+		DebugLocation(149, 4);
+		} finally { DebugExitRule(GrammarFileName, "param"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "param"
+
+	partial void EnterRule_argList();
+	partial void LeaveRule_argList();
+
+	// $ANTLR start "argList"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:151:1: argList : arg ( ',' arg )* -> ( arg )+ ;
+	[GrammarRule("argList")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> argList()
+	{
+		EnterRule_argList();
+		EnterRule("argList", 10);
+		TraceIn("argList", 10);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal22 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> arg21 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> arg23 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree char_literal22_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
+		RewriteRuleSubtreeStream stream_arg=new RewriteRuleSubtreeStream(adaptor,"rule arg");
+		try { DebugEnterRule(GrammarFileName, "argList");
+		DebugLocation(151, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:152:2: ( arg ( ',' arg )* -> ( arg )+ )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:152:4: arg ( ',' arg )*
+			{
+			DebugLocation(152, 4);
+			PushFollow(Follow._arg_in_argList1082);
+			arg21=arg();
+			PopFollow();
+
+			stream_arg.Add(arg21.Tree);
+			DebugLocation(152, 8);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:152:8: ( ',' arg )*
+			try { DebugEnterSubRule(4);
+			while (true)
+			{
+				int alt4=2;
+				try { DebugEnterDecision(4, false);
+				int LA4_0 = input.LA(1);
+
+				if ((LA4_0==65))
+				{
+					alt4 = 1;
+				}
+
+
+				} finally { DebugExitDecision(4); }
+				switch ( alt4 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:152:9: ',' arg
+					{
+					DebugLocation(152, 9);
+					char_literal22=(CommonToken)Match(input,65,Follow._65_in_argList1085);  
+					stream_65.Add(char_literal22);
+
+					DebugLocation(152, 13);
+					PushFollow(Follow._arg_in_argList1087);
+					arg23=arg();
+					PopFollow();
+
+					stream_arg.Add(arg23.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop4;
+				}
+			}
+
+			loop4:
+				;
+
+			} finally { DebugExitSubRule(4); }
+
+
+
+			{
+			// AST REWRITE
+			// elements: arg
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 153:3: -> ( arg )+
+			{
+				DebugLocation(153, 6);
+				if (!(stream_arg.HasNext))
+				{
+					throw new RewriteEarlyExitException();
+				}
+				while ( stream_arg.HasNext )
+				{
+					DebugLocation(153, 6);
+					adaptor.AddChild(root_0, stream_arg.NextTree());
+
+				}
+				stream_arg.Reset();
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("argList", 10);
+			LeaveRule("argList", 10);
+			LeaveRule_argList();
+		}
+		DebugLocation(154, 1);
+		} finally { DebugExitRule(GrammarFileName, "argList"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "argList"
+
+	partial void EnterRule_arg();
+	partial void LeaveRule_arg();
+
+	// $ANTLR start "arg"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:156:1: arg : argName= ID ':' type= ID -> ^( ARG $argName $type) ;
+	[GrammarRule("arg")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> arg()
+	{
+		EnterRule_arg();
+		EnterRule("arg", 11);
+		TraceIn("arg", 11);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken argName = default(CommonToken);
+		CommonToken type = default(CommonToken);
+		CommonToken char_literal24 = default(CommonToken);
+
+		CommonTree argName_tree = default(CommonTree);
+		CommonTree type_tree = default(CommonTree);
+		CommonTree char_literal24_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		try { DebugEnterRule(GrammarFileName, "arg");
+		DebugLocation(156, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:157:2: (argName= ID ':' type= ID -> ^( ARG $argName $type) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:157:4: argName= ID ':' type= ID
+			{
+			DebugLocation(157, 11);
+			argName=(CommonToken)Match(input,ID,Follow._ID_in_arg1109);  
+			stream_ID.Add(argName);
+
+			DebugLocation(157, 15);
+			char_literal24=(CommonToken)Match(input,68,Follow._68_in_arg1111);  
+			stream_68.Add(char_literal24);
+
+			DebugLocation(157, 23);
+			type=(CommonToken)Match(input,ID,Follow._ID_in_arg1115);  
+			stream_ID.Add(type);
+
+
+
+			{
+			// AST REWRITE
+			// elements: argName, type
+			// token labels: type, argName
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleITokenStream stream_type=new RewriteRuleITokenStream(adaptor,"token type",type);
+			RewriteRuleITokenStream stream_argName=new RewriteRuleITokenStream(adaptor,"token argName",argName);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 158:3: -> ^( ARG $argName $type)
+			{
+				DebugLocation(158, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:158:6: ^( ARG $argName $type)
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(158, 8);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(ARG, "ARG"), root_1);
+
+				DebugLocation(158, 13);
+				adaptor.AddChild(root_1, stream_argName.NextNode());
+				DebugLocation(158, 22);
+				adaptor.AddChild(root_1, stream_type.NextNode());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("arg", 11);
+			LeaveRule("arg", 11);
+			LeaveRule_arg();
+		}
+		DebugLocation(159, 1);
+		} finally { DebugExitRule(GrammarFileName, "arg"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "arg"
+
+	partial void EnterRule_statements();
+	partial void LeaveRule_statements();
+
+	// $ANTLR start "statements"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:161:1: statements : ( statement ';' )* -> ^( BLOCK ( statement )* ) ;
+	[GrammarRule("statements")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> statements()
+	{
+		EnterRule_statements();
+		EnterRule("statements", 12);
+		TraceIn("statements", 12);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal26 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> statement25 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree char_literal26_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
+		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
+		try { DebugEnterRule(GrammarFileName, "statements");
+		DebugLocation(161, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:162:2: ( ( statement ';' )* -> ^( BLOCK ( statement )* ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:163:2: ( statement ';' )*
+			{
+			DebugLocation(163, 2);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:163:2: ( statement ';' )*
+			try { DebugEnterSubRule(5);
+			while (true)
+			{
+				int alt5=2;
+				try { DebugEnterDecision(5, false);
+				int LA5_0 = input.LA(1);
+
+				if ((LA5_0==ID||LA5_0==62))
+				{
+					alt5 = 1;
+				}
+
+
+				} finally { DebugExitDecision(5); }
+				switch ( alt5 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:163:3: statement ';'
+					{
+					DebugLocation(163, 3);
+					PushFollow(Follow._statement_in_statements1144);
+					statement25=statement();
+					PopFollow();
+
+					stream_statement.Add(statement25.Tree);
+					DebugLocation(163, 13);
+					char_literal26=(CommonToken)Match(input,69,Follow._69_in_statements1146);  
+					stream_69.Add(char_literal26);
+
+
+					}
+					break;
+
+				default:
+					goto loop5;
+				}
+			}
+
+			loop5:
+				;
+
+			} finally { DebugExitSubRule(5); }
+
+
+
+			{
+			// AST REWRITE
+			// elements: statement
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 163:19: -> ^( BLOCK ( statement )* )
+			{
+				DebugLocation(163, 22);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:163:22: ^( BLOCK ( statement )* )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(163, 24);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(BLOCK, "BLOCK"), root_1);
+
+				DebugLocation(163, 30);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:163:30: ( statement )*
+				while ( stream_statement.HasNext )
+				{
+					DebugLocation(163, 30);
+					adaptor.AddChild(root_1, stream_statement.NextTree());
+
+				}
+				stream_statement.Reset();
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("statements", 12);
+			LeaveRule("statements", 12);
+			LeaveRule_statements();
+		}
+		DebugLocation(164, 1);
+		} finally { DebugExitRule(GrammarFileName, "statements"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "statements"
+
+	partial void EnterRule_logicalExpression();
+	partial void LeaveRule_logicalExpression();
+
+	// $ANTLR start "logicalExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:166:8: public logicalExpression : booleanAndExpression ( OR booleanAndExpression )* ;
+	[GrammarRule("logicalExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> logicalExpression()
+	{
+		EnterRule_logicalExpression();
+		EnterRule("logicalExpression", 13);
+		TraceIn("logicalExpression", 13);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken OR28 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> booleanAndExpression27 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> booleanAndExpression29 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree OR28_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "logicalExpression");
+		DebugLocation(166, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:167:5: ( booleanAndExpression ( OR booleanAndExpression )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:167:10: booleanAndExpression ( OR booleanAndExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(167, 10);
+			PushFollow(Follow._booleanAndExpression_in_logicalExpression1177);
+			booleanAndExpression27=booleanAndExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, booleanAndExpression27.Tree);
+			DebugLocation(167, 31);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:167:31: ( OR booleanAndExpression )*
+			try { DebugEnterSubRule(6);
+			while (true)
+			{
+				int alt6=2;
+				try { DebugEnterDecision(6, false);
+				int LA6_0 = input.LA(1);
+
+				if ((LA6_0==OR))
+				{
+					alt6 = 1;
+				}
+
+
+				} finally { DebugExitDecision(6); }
+				switch ( alt6 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:167:33: OR booleanAndExpression
+					{
+					DebugLocation(167, 33);
+					OR28=(CommonToken)Match(input,OR,Follow._OR_in_logicalExpression1181); 
+					OR28_tree = (CommonTree)adaptor.Create(OR28);
+					adaptor.AddChild(root_0, OR28_tree);
+					DebugLocation(167, 36);
+					PushFollow(Follow._booleanAndExpression_in_logicalExpression1183);
+					booleanAndExpression29=booleanAndExpression();
+					PopFollow();
+
+					adaptor.AddChild(root_0, booleanAndExpression29.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop6;
+				}
+			}
+
+			loop6:
+				;
+
+			} finally { DebugExitSubRule(6); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("logicalExpression", 13);
+			LeaveRule("logicalExpression", 13);
+			LeaveRule_logicalExpression();
+		}
+		DebugLocation(168, 4);
+		} finally { DebugExitRule(GrammarFileName, "logicalExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "logicalExpression"
+
+	partial void EnterRule_booleanAndExpression();
+	partial void LeaveRule_booleanAndExpression();
+
+	// $ANTLR start "booleanAndExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:170:8: public booleanAndExpression : equalityExpression ( AND equalityExpression )* ;
+	[GrammarRule("booleanAndExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> booleanAndExpression()
+	{
+		EnterRule_booleanAndExpression();
+		EnterRule("booleanAndExpression", 14);
+		TraceIn("booleanAndExpression", 14);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken AND31 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> equalityExpression30 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> equalityExpression32 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree AND31_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "booleanAndExpression");
+		DebugLocation(170, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:171:5: ( equalityExpression ( AND equalityExpression )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:171:10: equalityExpression ( AND equalityExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(171, 10);
+			PushFollow(Follow._equalityExpression_in_booleanAndExpression1208);
+			equalityExpression30=equalityExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, equalityExpression30.Tree);
+			DebugLocation(171, 29);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:171:29: ( AND equalityExpression )*
+			try { DebugEnterSubRule(7);
+			while (true)
+			{
+				int alt7=2;
+				try { DebugEnterDecision(7, false);
+				int LA7_0 = input.LA(1);
+
+				if ((LA7_0==AND))
+				{
+					alt7 = 1;
+				}
+
+
+				} finally { DebugExitDecision(7); }
+				switch ( alt7 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:171:31: AND equalityExpression
+					{
+					DebugLocation(171, 31);
+					AND31=(CommonToken)Match(input,AND,Follow._AND_in_booleanAndExpression1212); 
+					AND31_tree = (CommonTree)adaptor.Create(AND31);
+					adaptor.AddChild(root_0, AND31_tree);
+					DebugLocation(171, 35);
+					PushFollow(Follow._equalityExpression_in_booleanAndExpression1214);
+					equalityExpression32=equalityExpression();
+					PopFollow();
+
+					adaptor.AddChild(root_0, equalityExpression32.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop7;
+				}
+			}
+
+			loop7:
+				;
+
+			} finally { DebugExitSubRule(7); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("booleanAndExpression", 14);
+			LeaveRule("booleanAndExpression", 14);
+			LeaveRule_booleanAndExpression();
+		}
+		DebugLocation(172, 4);
+		} finally { DebugExitRule(GrammarFileName, "booleanAndExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "booleanAndExpression"
+
+	partial void EnterRule_equalityExpression();
+	partial void LeaveRule_equalityExpression();
+
+	// $ANTLR start "equalityExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:174:8: public equalityExpression : relationalExpression ( ( EQUALS | NOTEQUALS ) relationalExpression )* ;
+	[GrammarRule("equalityExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> equalityExpression()
+	{
+		EnterRule_equalityExpression();
+		EnterRule("equalityExpression", 15);
+		TraceIn("equalityExpression", 15);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken set34 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> relationalExpression33 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> relationalExpression35 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree set34_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "equalityExpression");
+		DebugLocation(174, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:175:5: ( relationalExpression ( ( EQUALS | NOTEQUALS ) relationalExpression )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:175:10: relationalExpression ( ( EQUALS | NOTEQUALS ) relationalExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(175, 10);
+			PushFollow(Follow._relationalExpression_in_equalityExpression1239);
+			relationalExpression33=relationalExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, relationalExpression33.Tree);
+			DebugLocation(175, 31);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:175:31: ( ( EQUALS | NOTEQUALS ) relationalExpression )*
+			try { DebugEnterSubRule(8);
+			while (true)
+			{
+				int alt8=2;
+				try { DebugEnterDecision(8, false);
+				int LA8_0 = input.LA(1);
+
+				if ((LA8_0==EQUALS||LA8_0==NOTEQUALS))
+				{
+					alt8 = 1;
+				}
+
+
+				} finally { DebugExitDecision(8); }
+				switch ( alt8 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:175:33: ( EQUALS | NOTEQUALS ) relationalExpression
+					{
+					DebugLocation(175, 33);
+
+					set34=(CommonToken)input.LT(1);
+					if (input.LA(1)==EQUALS||input.LA(1)==NOTEQUALS)
+					{
+						input.Consume();
+						adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set34));
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(175, 54);
+					PushFollow(Follow._relationalExpression_in_equalityExpression1251);
+					relationalExpression35=relationalExpression();
+					PopFollow();
+
+					adaptor.AddChild(root_0, relationalExpression35.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop8;
+				}
+			}
+
+			loop8:
+				;
+
+			} finally { DebugExitSubRule(8); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("equalityExpression", 15);
+			LeaveRule("equalityExpression", 15);
+			LeaveRule_equalityExpression();
+		}
+		DebugLocation(176, 4);
+		} finally { DebugExitRule(GrammarFileName, "equalityExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "equalityExpression"
+
+	partial void EnterRule_relationalExpression();
+	partial void LeaveRule_relationalExpression();
+
+	// $ANTLR start "relationalExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:178:8: public relationalExpression : additiveExpression ( ( LT | LTEQ | GT | GTEQ ) additiveExpression )* ;
+	[GrammarRule("relationalExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> relationalExpression()
+	{
+		EnterRule_relationalExpression();
+		EnterRule("relationalExpression", 16);
+		TraceIn("relationalExpression", 16);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken set37 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> additiveExpression36 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> additiveExpression38 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree set37_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "relationalExpression");
+		DebugLocation(178, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:179:5: ( additiveExpression ( ( LT | LTEQ | GT | GTEQ ) additiveExpression )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:179:10: additiveExpression ( ( LT | LTEQ | GT | GTEQ ) additiveExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(179, 10);
+			PushFollow(Follow._additiveExpression_in_relationalExpression1275);
+			additiveExpression36=additiveExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, additiveExpression36.Tree);
+			DebugLocation(179, 29);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:179:29: ( ( LT | LTEQ | GT | GTEQ ) additiveExpression )*
+			try { DebugEnterSubRule(9);
+			while (true)
+			{
+				int alt9=2;
+				try { DebugEnterDecision(9, false);
+				int LA9_0 = input.LA(1);
+
+				if (((LA9_0>=GT && LA9_0<=GTEQ)||(LA9_0>=LT && LA9_0<=LTEQ)))
+				{
+					alt9 = 1;
+				}
+
+
+				} finally { DebugExitDecision(9); }
+				switch ( alt9 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:179:31: ( LT | LTEQ | GT | GTEQ ) additiveExpression
+					{
+					DebugLocation(179, 31);
+
+					set37=(CommonToken)input.LT(1);
+					if ((input.LA(1)>=GT && input.LA(1)<=GTEQ)||(input.LA(1)>=LT && input.LA(1)<=LTEQ))
+					{
+						input.Consume();
+						adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set37));
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(179, 55);
+					PushFollow(Follow._additiveExpression_in_relationalExpression1295);
+					additiveExpression38=additiveExpression();
+					PopFollow();
+
+					adaptor.AddChild(root_0, additiveExpression38.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop9;
+				}
+			}
+
+			loop9:
+				;
+
+			} finally { DebugExitSubRule(9); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("relationalExpression", 16);
+			LeaveRule("relationalExpression", 16);
+			LeaveRule_relationalExpression();
+		}
+		DebugLocation(180, 4);
+		} finally { DebugExitRule(GrammarFileName, "relationalExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "relationalExpression"
+
+	partial void EnterRule_additiveExpression();
+	partial void LeaveRule_additiveExpression();
+
+	// $ANTLR start "additiveExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:182:8: public additiveExpression : multiplicativeExpression ( ( PLUS | MINUS ) multiplicativeExpression )* ;
+	[GrammarRule("additiveExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> additiveExpression()
+	{
+		EnterRule_additiveExpression();
+		EnterRule("additiveExpression", 17);
+		TraceIn("additiveExpression", 17);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken set40 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> multiplicativeExpression39 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> multiplicativeExpression41 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree set40_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "additiveExpression");
+		DebugLocation(182, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:183:5: ( multiplicativeExpression ( ( PLUS | MINUS ) multiplicativeExpression )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:183:10: multiplicativeExpression ( ( PLUS | MINUS ) multiplicativeExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(183, 10);
+			PushFollow(Follow._multiplicativeExpression_in_additiveExpression1319);
+			multiplicativeExpression39=multiplicativeExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, multiplicativeExpression39.Tree);
+			DebugLocation(183, 35);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:183:35: ( ( PLUS | MINUS ) multiplicativeExpression )*
+			try { DebugEnterSubRule(10);
+			while (true)
+			{
+				int alt10=2;
+				try { DebugEnterDecision(10, false);
+				int LA10_0 = input.LA(1);
+
+				if ((LA10_0==MINUS||LA10_0==PLUS))
+				{
+					alt10 = 1;
+				}
+
+
+				} finally { DebugExitDecision(10); }
+				switch ( alt10 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:183:37: ( PLUS | MINUS ) multiplicativeExpression
+					{
+					DebugLocation(183, 37);
+
+					set40=(CommonToken)input.LT(1);
+					if (input.LA(1)==MINUS||input.LA(1)==PLUS)
+					{
+						input.Consume();
+						adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set40));
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(183, 52);
+					PushFollow(Follow._multiplicativeExpression_in_additiveExpression1331);
+					multiplicativeExpression41=multiplicativeExpression();
+					PopFollow();
+
+					adaptor.AddChild(root_0, multiplicativeExpression41.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop10;
+				}
+			}
+
+			loop10:
+				;
+
+			} finally { DebugExitSubRule(10); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("additiveExpression", 17);
+			LeaveRule("additiveExpression", 17);
+			LeaveRule_additiveExpression();
+		}
+		DebugLocation(184, 4);
+		} finally { DebugExitRule(GrammarFileName, "additiveExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "additiveExpression"
+
+	partial void EnterRule_multiplicativeExpression();
+	partial void LeaveRule_multiplicativeExpression();
+
+	// $ANTLR start "multiplicativeExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:186:8: public multiplicativeExpression : unaryExpression ( ( MULT | DIV | MOD ) unaryExpression )* ;
+	[GrammarRule("multiplicativeExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> multiplicativeExpression()
+	{
+		EnterRule_multiplicativeExpression();
+		EnterRule("multiplicativeExpression", 18);
+		TraceIn("multiplicativeExpression", 18);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken set43 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> unaryExpression42 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> unaryExpression44 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree set43_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "multiplicativeExpression");
+		DebugLocation(186, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:187:5: ( unaryExpression ( ( MULT | DIV | MOD ) unaryExpression )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:187:10: unaryExpression ( ( MULT | DIV | MOD ) unaryExpression )*
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(187, 10);
+			PushFollow(Follow._unaryExpression_in_multiplicativeExpression1356);
+			unaryExpression42=unaryExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, unaryExpression42.Tree);
+			DebugLocation(187, 26);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:187:26: ( ( MULT | DIV | MOD ) unaryExpression )*
+			try { DebugEnterSubRule(11);
+			while (true)
+			{
+				int alt11=2;
+				try { DebugEnterDecision(11, false);
+				int LA11_0 = input.LA(1);
+
+				if ((LA11_0==DIV||LA11_0==MOD||LA11_0==MULT))
+				{
+					alt11 = 1;
+				}
+
+
+				} finally { DebugExitDecision(11); }
+				switch ( alt11 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:187:27: ( MULT | DIV | MOD ) unaryExpression
+					{
+					DebugLocation(187, 27);
+
+					set43=(CommonToken)input.LT(1);
+					if (input.LA(1)==DIV||input.LA(1)==MOD||input.LA(1)==MULT)
+					{
+						input.Consume();
+						adaptor.AddChild(root_0, (CommonTree)adaptor.Create(set43));
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(187, 48);
+					PushFollow(Follow._unaryExpression_in_multiplicativeExpression1373);
+					unaryExpression44=unaryExpression();
+					PopFollow();
+
+					adaptor.AddChild(root_0, unaryExpression44.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop11;
+				}
+			}
+
+			loop11:
+				;
+
+			} finally { DebugExitSubRule(11); }
+
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("multiplicativeExpression", 18);
+			LeaveRule("multiplicativeExpression", 18);
+			LeaveRule_multiplicativeExpression();
+		}
+		DebugLocation(188, 4);
+		} finally { DebugExitRule(GrammarFileName, "multiplicativeExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "multiplicativeExpression"
+
+	partial void EnterRule_unaryExpression();
+	partial void LeaveRule_unaryExpression();
+
+	// $ANTLR start "unaryExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:190:8: public unaryExpression : NOT !pe= primaryExpression ;
+	[GrammarRule("unaryExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> unaryExpression()
+	{
+		EnterRule_unaryExpression();
+		EnterRule("unaryExpression", 19);
+		TraceIn("unaryExpression", 19);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken NOT45 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> pe = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree NOT45_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "unaryExpression");
+		DebugLocation(190, 7);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:191:5: ( NOT !pe= primaryExpression )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:191:10: NOT !pe= primaryExpression
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(191, 13);
+			NOT45=(CommonToken)Match(input,NOT,Follow._NOT_in_unaryExpression1397); 
+			DebugLocation(191, 17);
+			PushFollow(Follow._primaryExpression_in_unaryExpression1402);
+			pe=primaryExpression();
+			PopFollow();
+
+			adaptor.AddChild(root_0, pe.Tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("unaryExpression", 19);
+			LeaveRule("unaryExpression", 19);
+			LeaveRule_unaryExpression();
+		}
+		DebugLocation(192, 7);
+		} finally { DebugExitRule(GrammarFileName, "unaryExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "unaryExpression"
+
+	partial void EnterRule_primaryExpression();
+	partial void LeaveRule_primaryExpression();
+
+	// $ANTLR start "primaryExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:194:8: public primaryExpression : ( '(' !le= logicalExpression ')' !| value );
+	[GrammarRule("primaryExpression")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> primaryExpression()
+	{
+		EnterRule_primaryExpression();
+		EnterRule("primaryExpression", 20);
+		TraceIn("primaryExpression", 20);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal46 = default(CommonToken);
+		CommonToken char_literal47 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> le = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> value48 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree char_literal46_tree = default(CommonTree);
+		CommonTree char_literal47_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "primaryExpression");
+		DebugLocation(194, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:195:5: ( '(' !le= logicalExpression ')' !| value )
+			int alt12=2;
+			try { DebugEnterDecision(12, false);
+			int LA12_0 = input.LA(1);
+
+			if ((LA12_0==63))
+			{
+				alt12 = 1;
+			}
+			else if ((LA12_0==ID||LA12_0==INT||LA12_0==STRING))
+			{
+				alt12 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 12, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(12); }
+			switch (alt12)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:195:10: '(' !le= logicalExpression ')' !
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(195, 13);
+				char_literal46=(CommonToken)Match(input,63,Follow._63_in_primaryExpression1427); 
+				DebugLocation(195, 17);
+				PushFollow(Follow._logicalExpression_in_primaryExpression1432);
+				le=logicalExpression();
+				PopFollow();
+
+				adaptor.AddChild(root_0, le.Tree);
+				DebugLocation(195, 39);
+				char_literal47=(CommonToken)Match(input,64,Follow._64_in_primaryExpression1434); 
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:196:10: value
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(196, 10);
+				PushFollow(Follow._value_in_primaryExpression1446);
+				value48=value();
+				PopFollow();
+
+				adaptor.AddChild(root_0, value48.Tree);
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("primaryExpression", 20);
+			LeaveRule("primaryExpression", 20);
+			LeaveRule_primaryExpression();
+		}
+		DebugLocation(197, 4);
+		} finally { DebugExitRule(GrammarFileName, "primaryExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "primaryExpression"
+
+	partial void EnterRule_statement();
+	partial void LeaveRule_statement();
+
+	// $ANTLR start "statement"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:199:8: public statement : ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation );
+	[GrammarRule("statement")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> statement()
+	{
+		EnterRule_statement();
+		EnterRule("statement", 21);
+		TraceIn("statement", 21);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		AstParserRuleReturnScope<CommonTree, CommonToken> assignment49 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> replaceOperation50 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> appendOperation51 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> prependOperation52 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> matchOperation53 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> moveOperation54 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> moveFrontOperation55 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> moveBackOperation56 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> deleteOperation57 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		try { DebugEnterRule(GrammarFileName, "statement");
+		DebugLocation(199, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:200:2: ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation )
+			int alt13=9;
+			try { DebugEnterDecision(13, false);
+			try
+			{
+				alt13 = dfa13.Predict(input);
+			}
+			catch (NoViableAltException nvae)
+			{
+				DebugRecognitionException(nvae);
+				throw;
+			}
+			} finally { DebugExitDecision(13); }
+			switch (alt13)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:200:4: assignment
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(200, 4);
+				PushFollow(Follow._assignment_in_statement1462);
+				assignment49=assignment();
+				PopFollow();
+
+				adaptor.AddChild(root_0, assignment49.Tree);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:201:4: replaceOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(201, 4);
+				PushFollow(Follow._replaceOperation_in_statement1467);
+				replaceOperation50=replaceOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, replaceOperation50.Tree);
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:202:4: appendOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(202, 4);
+				PushFollow(Follow._appendOperation_in_statement1472);
+				appendOperation51=appendOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, appendOperation51.Tree);
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:203:4: prependOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(203, 4);
+				PushFollow(Follow._prependOperation_in_statement1477);
+				prependOperation52=prependOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, prependOperation52.Tree);
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:204:4: matchOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(204, 4);
+				PushFollow(Follow._matchOperation_in_statement1482);
+				matchOperation53=matchOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, matchOperation53.Tree);
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:205:4: moveOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(205, 4);
+				PushFollow(Follow._moveOperation_in_statement1487);
+				moveOperation54=moveOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, moveOperation54.Tree);
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:206:4: moveFrontOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(206, 4);
+				PushFollow(Follow._moveFrontOperation_in_statement1492);
+				moveFrontOperation55=moveFrontOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, moveFrontOperation55.Tree);
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:207:4: moveBackOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(207, 4);
+				PushFollow(Follow._moveBackOperation_in_statement1497);
+				moveBackOperation56=moveBackOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, moveBackOperation56.Tree);
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:208:4: deleteOperation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(208, 4);
+				PushFollow(Follow._deleteOperation_in_statement1502);
+				deleteOperation57=deleteOperation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, deleteOperation57.Tree);
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("statement", 21);
+			LeaveRule("statement", 21);
+			LeaveRule_statement();
+		}
+		DebugLocation(209, 1);
+		} finally { DebugExitRule(GrammarFileName, "statement"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "statement"
+
+	partial void EnterRule_value();
+	partial void LeaveRule_value();
+
+	// $ANTLR start "value"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:210:1: value : (x= INT -> ^( VALINT $x) |x= ID -> ^( VARREF $x) |x= STRING -> ^( VALSTR $x) | functionInvocation );
+	[GrammarRule("value")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> value()
+	{
+		EnterRule_value();
+		EnterRule("value", 22);
+		TraceIn("value", 22);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken x = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> functionInvocation58 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree x_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_INT=new RewriteRuleITokenStream(adaptor,"token INT");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_STRING=new RewriteRuleITokenStream(adaptor,"token STRING");
+		try { DebugEnterRule(GrammarFileName, "value");
+		DebugLocation(210, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:211:2: (x= INT -> ^( VALINT $x) |x= ID -> ^( VARREF $x) |x= STRING -> ^( VALSTR $x) | functionInvocation )
+			int alt14=4;
+			try { DebugEnterDecision(14, false);
+			switch (input.LA(1))
+			{
+			case INT:
+				{
+				alt14 = 1;
+				}
+				break;
+			case ID:
+				{
+				int LA14_2 = input.LA(2);
+
+				if ((LA14_2==63))
+				{
+					alt14 = 4;
+				}
+				else if ((LA14_2==AND||(LA14_2>=DIV && LA14_2<=EQUALS)||(LA14_2>=GT && LA14_2<=GTEQ)||(LA14_2>=LT && LA14_2<=LTEQ)||(LA14_2>=MINUS && LA14_2<=MOD)||LA14_2==MULT||(LA14_2>=NOTEQUALS && LA14_2<=OR)||LA14_2==PLUS||(LA14_2>=64 && LA14_2<=65)||LA14_2==69))
+				{
+					alt14 = 2;
+				}
+				else
+				{
+					NoViableAltException nvae = new NoViableAltException("", 14, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case STRING:
+				{
+				alt14 = 3;
+				}
+				break;
+			default:
+				{
+					NoViableAltException nvae = new NoViableAltException("", 14, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(14); }
+			switch (alt14)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:212:4: x= INT
+				{
+				DebugLocation(212, 5);
+				x=(CommonToken)Match(input,INT,Follow._INT_in_value1517);  
+				stream_INT.Add(x);
+
+
+
+				{
+				// AST REWRITE
+				// elements: x
+				// token labels: x
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleITokenStream stream_x=new RewriteRuleITokenStream(adaptor,"token x",x);
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 212:10: -> ^( VALINT $x)
+				{
+					DebugLocation(212, 13);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:212:13: ^( VALINT $x)
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(212, 15);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VALINT, "VALINT"), root_1);
+
+					DebugLocation(212, 23);
+					adaptor.AddChild(root_1, stream_x.NextNode());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:213:4: x= ID
+				{
+				DebugLocation(213, 5);
+				x=(CommonToken)Match(input,ID,Follow._ID_in_value1533);  
+				stream_ID.Add(x);
+
+
+
+				{
+				// AST REWRITE
+				// elements: x
+				// token labels: x
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleITokenStream stream_x=new RewriteRuleITokenStream(adaptor,"token x",x);
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 213:9: -> ^( VARREF $x)
+				{
+					DebugLocation(213, 12);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:213:12: ^( VARREF $x)
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(213, 14);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VARREF, "VARREF"), root_1);
+
+					DebugLocation(213, 22);
+					adaptor.AddChild(root_1, stream_x.NextNode());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:214:4: x= STRING
+				{
+				DebugLocation(214, 5);
+				x=(CommonToken)Match(input,STRING,Follow._STRING_in_value1549);  
+				stream_STRING.Add(x);
+
+
+
+				{
+				// AST REWRITE
+				// elements: x
+				// token labels: x
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleITokenStream stream_x=new RewriteRuleITokenStream(adaptor,"token x",x);
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 214:13: -> ^( VALSTR $x)
+				{
+					DebugLocation(214, 16);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:214:16: ^( VALSTR $x)
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(214, 18);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VALSTR, "VALSTR"), root_1);
+
+					DebugLocation(214, 26);
+					adaptor.AddChild(root_1, stream_x.NextNode());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:215:7: functionInvocation
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(215, 7);
+				PushFollow(Follow._functionInvocation_in_value1566);
+				functionInvocation58=functionInvocation();
+				PopFollow();
+
+				adaptor.AddChild(root_0, functionInvocation58.Tree);
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("value", 22);
+			LeaveRule("value", 22);
+			LeaveRule_value();
+		}
+		DebugLocation(216, 1);
+		} finally { DebugExitRule(GrammarFileName, "value"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "value"
+
+	partial void EnterRule_assignment();
+	partial void LeaveRule_assignment();
+
+	// $ANTLR start "assignment"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:218:1: assignment : id= ID '=' value ;
+	[GrammarRule("assignment")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> assignment()
+	{
+		EnterRule_assignment();
+		EnterRule("assignment", 23);
+		TraceIn("assignment", 23);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken id = default(CommonToken);
+		CommonToken char_literal59 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> value60 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree id_tree = default(CommonTree);
+		CommonTree char_literal59_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "assignment");
+		DebugLocation(218, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:219:2: (id= ID '=' value )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:220:2: id= ID '=' value
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(220, 4);
+			id=(CommonToken)Match(input,ID,Follow._ID_in_assignment1580); 
+			id_tree = (CommonTree)adaptor.Create(id);
+			adaptor.AddChild(root_0, id_tree);
+			DebugLocation(220, 8);
+			char_literal59=(CommonToken)Match(input,71,Follow._71_in_assignment1582); 
+			char_literal59_tree = (CommonTree)adaptor.Create(char_literal59);
+			adaptor.AddChild(root_0, char_literal59_tree);
+			DebugLocation(220, 12);
+			PushFollow(Follow._value_in_assignment1584);
+			value60=value();
+			PopFollow();
+
+			adaptor.AddChild(root_0, value60.Tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("assignment", 23);
+			LeaveRule("assignment", 23);
+			LeaveRule_assignment();
+		}
+		DebugLocation(221, 1);
+		} finally { DebugExitRule(GrammarFileName, "assignment"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "assignment"
+
+	partial void EnterRule_replaceOperation();
+	partial void LeaveRule_replaceOperation();
+
+	// $ANTLR start "replaceOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:222:1: replaceOperation : pe= pathExpression '==' val= value -> ^( REPLACE $pe $val) ;
+	[GrammarRule("replaceOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> replaceOperation()
+	{
+		EnterRule_replaceOperation();
+		EnterRule("replaceOperation", 24);
+		TraceIn("replaceOperation", 24);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken string_literal61 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> pe = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> val = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree string_literal61_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_73=new RewriteRuleITokenStream(adaptor,"token 73");
+		RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
+		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
+		try { DebugEnterRule(GrammarFileName, "replaceOperation");
+		DebugLocation(222, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:223:2: (pe= pathExpression '==' val= value -> ^( REPLACE $pe $val) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:224:2: pe= pathExpression '==' val= value
+			{
+			DebugLocation(224, 4);
+			PushFollow(Follow._pathExpression_in_replaceOperation1598);
+			pe=pathExpression();
+			PopFollow();
+
+			stream_pathExpression.Add(pe.Tree);
+			DebugLocation(224, 20);
+			string_literal61=(CommonToken)Match(input,73,Follow._73_in_replaceOperation1600);  
+			stream_73.Add(string_literal61);
+
+			DebugLocation(224, 28);
+			PushFollow(Follow._value_in_replaceOperation1604);
+			val=value();
+			PopFollow();
+
+			stream_value.Add(val.Tree);
+
+
+			{
+			// AST REWRITE
+			// elements: pe, val
+			// token labels: 
+			// rule labels: val, pe, retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_val=new RewriteRuleSubtreeStream(adaptor,"rule val",val!=null?val.Tree:null);
+			RewriteRuleSubtreeStream stream_pe=new RewriteRuleSubtreeStream(adaptor,"rule pe",pe!=null?pe.Tree:null);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 225:3: -> ^( REPLACE $pe $val)
+			{
+				DebugLocation(225, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:225:6: ^( REPLACE $pe $val)
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(225, 8);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(REPLACE, "REPLACE"), root_1);
+
+				DebugLocation(225, 17);
+				adaptor.AddChild(root_1, stream_pe.NextTree());
+				DebugLocation(225, 21);
+				adaptor.AddChild(root_1, stream_val.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("replaceOperation", 24);
+			LeaveRule("replaceOperation", 24);
+			LeaveRule_replaceOperation();
+		}
+		DebugLocation(226, 1);
+		} finally { DebugExitRule(GrammarFileName, "replaceOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "replaceOperation"
+
+	partial void EnterRule_pathExpression();
+	partial void LeaveRule_pathExpression();
+
+	// $ANTLR start "pathExpression"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:227:1: pathExpression : '$' ctx= ID segs= xpathSegments -> ^( PATH ^( PATHCTX $ctx) $segs) ;
+	[GrammarRule("pathExpression")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> pathExpression()
+	{
+		EnterRule_pathExpression();
+		EnterRule("pathExpression", 25);
+		TraceIn("pathExpression", 25);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken ctx = default(CommonToken);
+		CommonToken char_literal62 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> segs = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree ctx_tree = default(CommonTree);
+		CommonTree char_literal62_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleSubtreeStream stream_xpathSegments=new RewriteRuleSubtreeStream(adaptor,"rule xpathSegments");
+		try { DebugEnterRule(GrammarFileName, "pathExpression");
+		DebugLocation(227, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:228:2: ( '$' ctx= ID segs= xpathSegments -> ^( PATH ^( PATHCTX $ctx) $segs) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:229:2: '$' ctx= ID segs= xpathSegments
+			{
+			DebugLocation(229, 2);
+			char_literal62=(CommonToken)Match(input,62,Follow._62_in_pathExpression1629);  
+			stream_62.Add(char_literal62);
+
+			DebugLocation(229, 9);
+			ctx=(CommonToken)Match(input,ID,Follow._ID_in_pathExpression1633);  
+			stream_ID.Add(ctx);
+
+			DebugLocation(229, 17);
+			PushFollow(Follow._xpathSegments_in_pathExpression1637);
+			segs=xpathSegments();
+			PopFollow();
+
+			stream_xpathSegments.Add(segs.Tree);
+
+
+			{
+			// AST REWRITE
+			// elements: ctx, segs
+			// token labels: ctx
+			// rule labels: retval, segs
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleITokenStream stream_ctx=new RewriteRuleITokenStream(adaptor,"token ctx",ctx);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+			RewriteRuleSubtreeStream stream_segs=new RewriteRuleSubtreeStream(adaptor,"rule segs",segs!=null?segs.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 230:3: -> ^( PATH ^( PATHCTX $ctx) $segs)
+			{
+				DebugLocation(230, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:230:6: ^( PATH ^( PATHCTX $ctx) $segs)
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(230, 8);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PATH, "PATH"), root_1);
+
+				DebugLocation(230, 13);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:230:13: ^( PATHCTX $ctx)
+				{
+				CommonTree root_2 = (CommonTree)adaptor.Nil();
+				DebugLocation(230, 15);
+				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PATHCTX, "PATHCTX"), root_2);
+
+				DebugLocation(230, 24);
+				adaptor.AddChild(root_2, stream_ctx.NextNode());
+
+				adaptor.AddChild(root_1, root_2);
+				}
+				DebugLocation(230, 30);
+				adaptor.AddChild(root_1, stream_segs.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("pathExpression", 25);
+			LeaveRule("pathExpression", 25);
+			LeaveRule_pathExpression();
+		}
+		DebugLocation(231, 1);
+		} finally { DebugExitRule(GrammarFileName, "pathExpression"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "pathExpression"
+
+	partial void EnterRule_xpathSegments();
+	partial void LeaveRule_xpathSegments();
+
+	// $ANTLR start "xpathSegments"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:232:1: xpathSegments : ( '/' ID )* -> ( ^( SEG ID ) )* ;
+	[GrammarRule("xpathSegments")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> xpathSegments()
+	{
+		EnterRule_xpathSegments();
+		EnterRule("xpathSegments", 26);
+		TraceIn("xpathSegments", 26);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal63 = default(CommonToken);
+		CommonToken ID64 = default(CommonToken);
+
+		CommonTree char_literal63_tree = default(CommonTree);
+		CommonTree ID64_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_DIV=new RewriteRuleITokenStream(adaptor,"token DIV");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		try { DebugEnterRule(GrammarFileName, "xpathSegments");
+		DebugLocation(232, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:233:2: ( ( '/' ID )* -> ( ^( SEG ID ) )* )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:233:4: ( '/' ID )*
+			{
+			DebugLocation(233, 4);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:233:4: ( '/' ID )*
+			try { DebugEnterSubRule(15);
+			while (true)
+			{
+				int alt15=2;
+				try { DebugEnterDecision(15, false);
+				int LA15_0 = input.LA(1);
+
+				if ((LA15_0==DIV))
+				{
+					alt15 = 1;
+				}
+
+
+				} finally { DebugExitDecision(15); }
+				switch ( alt15 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:233:5: '/' ID
+					{
+					DebugLocation(233, 5);
+					char_literal63=(CommonToken)Match(input,DIV,Follow._DIV_in_xpathSegments1666);  
+					stream_DIV.Add(char_literal63);
+
+					DebugLocation(233, 9);
+					ID64=(CommonToken)Match(input,ID,Follow._ID_in_xpathSegments1668);  
+					stream_ID.Add(ID64);
+
+
+					}
+					break;
+
+				default:
+					goto loop15;
+				}
+			}
+
+			loop15:
+				;
+
+			} finally { DebugExitSubRule(15); }
+
+
+
+			{
+			// AST REWRITE
+			// elements: ID
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 233:14: -> ( ^( SEG ID ) )*
+			{
+				DebugLocation(233, 17);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:233:17: ( ^( SEG ID ) )*
+				while ( stream_ID.HasNext )
+				{
+					DebugLocation(233, 17);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:233:17: ^( SEG ID )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(233, 19);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(SEG, "SEG"), root_1);
+
+					DebugLocation(233, 23);
+					adaptor.AddChild(root_1, stream_ID.NextNode());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+				stream_ID.Reset();
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("xpathSegments", 26);
+			LeaveRule("xpathSegments", 26);
+			LeaveRule_xpathSegments();
+		}
+		DebugLocation(234, 1);
+		} finally { DebugExitRule(GrammarFileName, "xpathSegments"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "xpathSegments"
+
+	partial void EnterRule_appendOperation();
+	partial void LeaveRule_appendOperation();
+
+	// $ANTLR start "appendOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:235:1: appendOperation : pe= pathExpression '=>' val= value -> ^( APPEND $pe $val) ;
+	[GrammarRule("appendOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> appendOperation()
+	{
+		EnterRule_appendOperation();
+		EnterRule("appendOperation", 27);
+		TraceIn("appendOperation", 27);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken string_literal65 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> pe = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> val = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree string_literal65_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_74=new RewriteRuleITokenStream(adaptor,"token 74");
+		RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
+		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
+		try { DebugEnterRule(GrammarFileName, "appendOperation");
+		DebugLocation(235, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:236:2: (pe= pathExpression '=>' val= value -> ^( APPEND $pe $val) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:237:2: pe= pathExpression '=>' val= value
+			{
+			DebugLocation(237, 4);
+			PushFollow(Follow._pathExpression_in_appendOperation1692);
+			pe=pathExpression();
+			PopFollow();
+
+			stream_pathExpression.Add(pe.Tree);
+			DebugLocation(237, 20);
+			string_literal65=(CommonToken)Match(input,74,Follow._74_in_appendOperation1694);  
+			stream_74.Add(string_literal65);
+
+			DebugLocation(237, 28);
+			PushFollow(Follow._value_in_appendOperation1698);
+			val=value();
+			PopFollow();
+
+			stream_value.Add(val.Tree);
+
+
+			{
+			// AST REWRITE
+			// elements: pe, val
+			// token labels: 
+			// rule labels: val, pe, retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_val=new RewriteRuleSubtreeStream(adaptor,"rule val",val!=null?val.Tree:null);
+			RewriteRuleSubtreeStream stream_pe=new RewriteRuleSubtreeStream(adaptor,"rule pe",pe!=null?pe.Tree:null);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 238:3: -> ^( APPEND $pe $val)
+			{
+				DebugLocation(238, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:238:6: ^( APPEND $pe $val)
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(238, 8);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(APPEND, "APPEND"), root_1);
+
+				DebugLocation(238, 16);
+				adaptor.AddChild(root_1, stream_pe.NextTree());
+				DebugLocation(238, 20);
+				adaptor.AddChild(root_1, stream_val.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("appendOperation", 27);
+			LeaveRule("appendOperation", 27);
+			LeaveRule_appendOperation();
+		}
+		DebugLocation(239, 1);
+		} finally { DebugExitRule(GrammarFileName, "appendOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "appendOperation"
+
+	partial void EnterRule_prependOperation();
+	partial void LeaveRule_prependOperation();
+
+	// $ANTLR start "prependOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:240:1: prependOperation : pe= pathExpression '=<' val= value -> ^( PREPEND $pe $val) ;
+	[GrammarRule("prependOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> prependOperation()
+	{
+		EnterRule_prependOperation();
+		EnterRule("prependOperation", 28);
+		TraceIn("prependOperation", 28);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken string_literal66 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> pe = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> val = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree string_literal66_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
+		RewriteRuleSubtreeStream stream_value=new RewriteRuleSubtreeStream(adaptor,"rule value");
+		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
+		try { DebugEnterRule(GrammarFileName, "prependOperation");
+		DebugLocation(240, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:241:2: (pe= pathExpression '=<' val= value -> ^( PREPEND $pe $val) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:242:2: pe= pathExpression '=<' val= value
+			{
+			DebugLocation(242, 4);
+			PushFollow(Follow._pathExpression_in_prependOperation1725);
+			pe=pathExpression();
+			PopFollow();
+
+			stream_pathExpression.Add(pe.Tree);
+			DebugLocation(242, 20);
+			string_literal66=(CommonToken)Match(input,72,Follow._72_in_prependOperation1727);  
+			stream_72.Add(string_literal66);
+
+			DebugLocation(242, 28);
+			PushFollow(Follow._value_in_prependOperation1731);
+			val=value();
+			PopFollow();
+
+			stream_value.Add(val.Tree);
+
+
+			{
+			// AST REWRITE
+			// elements: pe, val
+			// token labels: 
+			// rule labels: val, pe, retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_val=new RewriteRuleSubtreeStream(adaptor,"rule val",val!=null?val.Tree:null);
+			RewriteRuleSubtreeStream stream_pe=new RewriteRuleSubtreeStream(adaptor,"rule pe",pe!=null?pe.Tree:null);
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 243:3: -> ^( PREPEND $pe $val)
+			{
+				DebugLocation(243, 6);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:243:6: ^( PREPEND $pe $val)
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(243, 8);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(PREPEND, "PREPEND"), root_1);
+
+				DebugLocation(243, 17);
+				adaptor.AddChild(root_1, stream_pe.NextTree());
+				DebugLocation(243, 21);
+				adaptor.AddChild(root_1, stream_val.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("prependOperation", 28);
+			LeaveRule("prependOperation", 28);
+			LeaveRule_prependOperation();
+		}
+		DebugLocation(244, 1);
+		} finally { DebugExitRule(GrammarFileName, "prependOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "prependOperation"
+
+	partial void EnterRule_matchOperation();
+	partial void LeaveRule_matchOperation();
+
+	// $ANTLR start "matchOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:245:8: public matchOperation : ( ID MATCHOP content -> ^( MATCH ^( VARREF ID ) content ) | pathExpression MATCHOP content -> ^( MATCH pathExpression content ) );
+	[GrammarRule("matchOperation")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> matchOperation()
+	{
+		EnterRule_matchOperation();
+		EnterRule("matchOperation", 29);
+		TraceIn("matchOperation", 29);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken ID67 = default(CommonToken);
+		CommonToken MATCHOP68 = default(CommonToken);
+		CommonToken MATCHOP71 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> content69 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> pathExpression70 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> content72 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree ID67_tree = default(CommonTree);
+		CommonTree MATCHOP68_tree = default(CommonTree);
+		CommonTree MATCHOP71_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_MATCHOP=new RewriteRuleITokenStream(adaptor,"token MATCHOP");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleSubtreeStream stream_content=new RewriteRuleSubtreeStream(adaptor,"rule content");
+		RewriteRuleSubtreeStream stream_pathExpression=new RewriteRuleSubtreeStream(adaptor,"rule pathExpression");
+		expectingXml = true;
+		try { DebugEnterRule(GrammarFileName, "matchOperation");
+		DebugLocation(245, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:248:2: ( ID MATCHOP content -> ^( MATCH ^( VARREF ID ) content ) | pathExpression MATCHOP content -> ^( MATCH pathExpression content ) )
+			int alt16=2;
+			try { DebugEnterDecision(16, false);
+			int LA16_0 = input.LA(1);
+
+			if ((LA16_0==ID))
+			{
+				alt16 = 1;
+			}
+			else if ((LA16_0==62))
+			{
+				alt16 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 16, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(16); }
+			switch (alt16)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:249:9: ID MATCHOP content
+				{
+				DebugLocation(249, 9);
+				ID67=(CommonToken)Match(input,ID,Follow._ID_in_matchOperation1775);  
+				stream_ID.Add(ID67);
+
+				DebugLocation(249, 12);
+				MATCHOP68=(CommonToken)Match(input,MATCHOP,Follow._MATCHOP_in_matchOperation1777);  
+				stream_MATCHOP.Add(MATCHOP68);
+
+				DebugLocation(249, 20);
+				PushFollow(Follow._content_in_matchOperation1779);
+				content69=content();
+				PopFollow();
+
+				stream_content.Add(content69.Tree);
+
+
+				{
+				// AST REWRITE
+				// elements: ID, content
+				// token labels: 
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 249:28: -> ^( MATCH ^( VARREF ID ) content )
+				{
+					DebugLocation(249, 31);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:249:31: ^( MATCH ^( VARREF ID ) content )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(249, 33);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MATCH, "MATCH"), root_1);
+
+					DebugLocation(249, 39);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:249:39: ^( VARREF ID )
+					{
+					CommonTree root_2 = (CommonTree)adaptor.Nil();
+					DebugLocation(249, 41);
+					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VARREF, "VARREF"), root_2);
+
+					DebugLocation(249, 48);
+					adaptor.AddChild(root_2, stream_ID.NextNode());
+
+					adaptor.AddChild(root_1, root_2);
+					}
+					DebugLocation(249, 52);
+					adaptor.AddChild(root_1, stream_content.NextTree());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:250:3: pathExpression MATCHOP content
+				{
+				DebugLocation(250, 3);
+				PushFollow(Follow._pathExpression_in_matchOperation1797);
+				pathExpression70=pathExpression();
+				PopFollow();
+
+				stream_pathExpression.Add(pathExpression70.Tree);
+				DebugLocation(250, 18);
+				MATCHOP71=(CommonToken)Match(input,MATCHOP,Follow._MATCHOP_in_matchOperation1799);  
+				stream_MATCHOP.Add(MATCHOP71);
+
+				DebugLocation(250, 26);
+				PushFollow(Follow._content_in_matchOperation1801);
+				content72=content();
+				PopFollow();
+
+				stream_content.Add(content72.Tree);
+
+
+				{
+				// AST REWRITE
+				// elements: content, pathExpression
+				// token labels: 
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 250:34: -> ^( MATCH pathExpression content )
+				{
+					DebugLocation(250, 37);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:250:37: ^( MATCH pathExpression content )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(250, 39);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(MATCH, "MATCH"), root_1);
+
+					DebugLocation(250, 45);
+					adaptor.AddChild(root_1, stream_pathExpression.NextTree());
+					DebugLocation(250, 60);
+					adaptor.AddChild(root_1, stream_content.NextTree());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+			expectingXml = false;
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("matchOperation", 29);
+			LeaveRule("matchOperation", 29);
+			LeaveRule_matchOperation();
+		}
+		DebugLocation(251, 1);
+		} finally { DebugExitRule(GrammarFileName, "matchOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "matchOperation"
+
+	partial void EnterRule_moveOperation();
+	partial void LeaveRule_moveOperation();
+
+	// $ANTLR start "moveOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:252:1: moveOperation : var= ID '->' ^val= ID ;
+	[GrammarRule("moveOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> moveOperation()
+	{
+		EnterRule_moveOperation();
+		EnterRule("moveOperation", 30);
+		TraceIn("moveOperation", 30);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken var = default(CommonToken);
+		CommonToken val = default(CommonToken);
+		CommonToken string_literal73 = default(CommonToken);
+
+		CommonTree var_tree = default(CommonTree);
+		CommonTree val_tree = default(CommonTree);
+		CommonTree string_literal73_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "moveOperation");
+		DebugLocation(252, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:253:2: (var= ID '->' ^val= ID )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:254:2: var= ID '->' ^val= ID
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(254, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_moveOperation1824); 
+			var_tree = (CommonTree)adaptor.Create(var);
+			adaptor.AddChild(root_0, var_tree);
+			DebugLocation(254, 13);
+			string_literal73=(CommonToken)Match(input,66,Follow._66_in_moveOperation1826); 
+			string_literal73_tree = (CommonTree)adaptor.Create(string_literal73);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal73_tree, root_0);
+			DebugLocation(254, 18);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_moveOperation1831); 
+			val_tree = (CommonTree)adaptor.Create(val);
+			adaptor.AddChild(root_0, val_tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("moveOperation", 30);
+			LeaveRule("moveOperation", 30);
+			LeaveRule_moveOperation();
+		}
+		DebugLocation(255, 1);
+		} finally { DebugExitRule(GrammarFileName, "moveOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "moveOperation"
+
+	partial void EnterRule_moveFrontOperation();
+	partial void LeaveRule_moveFrontOperation();
+
+	// $ANTLR start "moveFrontOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:257:1: moveFrontOperation : var= ID '=><' ^val= ID ;
+	[GrammarRule("moveFrontOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> moveFrontOperation()
+	{
+		EnterRule_moveFrontOperation();
+		EnterRule("moveFrontOperation", 31);
+		TraceIn("moveFrontOperation", 31);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken var = default(CommonToken);
+		CommonToken val = default(CommonToken);
+		CommonToken string_literal74 = default(CommonToken);
+
+		CommonTree var_tree = default(CommonTree);
+		CommonTree val_tree = default(CommonTree);
+		CommonTree string_literal74_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "moveFrontOperation");
+		DebugLocation(257, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:258:2: (var= ID '=><' ^val= ID )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:259:2: var= ID '=><' ^val= ID
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(259, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_moveFrontOperation1845); 
+			var_tree = (CommonTree)adaptor.Create(var);
+			adaptor.AddChild(root_0, var_tree);
+			DebugLocation(259, 14);
+			string_literal74=(CommonToken)Match(input,75,Follow._75_in_moveFrontOperation1847); 
+			string_literal74_tree = (CommonTree)adaptor.Create(string_literal74);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal74_tree, root_0);
+			DebugLocation(259, 19);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_moveFrontOperation1852); 
+			val_tree = (CommonTree)adaptor.Create(val);
+			adaptor.AddChild(root_0, val_tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("moveFrontOperation", 31);
+			LeaveRule("moveFrontOperation", 31);
+			LeaveRule_moveFrontOperation();
+		}
+		DebugLocation(260, 1);
+		} finally { DebugExitRule(GrammarFileName, "moveFrontOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "moveFrontOperation"
+
+	partial void EnterRule_moveBackOperation();
+	partial void LeaveRule_moveBackOperation();
+
+	// $ANTLR start "moveBackOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:261:1: moveBackOperation : var= ID '=>>' ^val= ID ;
+	[GrammarRule("moveBackOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> moveBackOperation()
+	{
+		EnterRule_moveBackOperation();
+		EnterRule("moveBackOperation", 32);
+		TraceIn("moveBackOperation", 32);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken var = default(CommonToken);
+		CommonToken val = default(CommonToken);
+		CommonToken string_literal75 = default(CommonToken);
+
+		CommonTree var_tree = default(CommonTree);
+		CommonTree val_tree = default(CommonTree);
+		CommonTree string_literal75_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "moveBackOperation");
+		DebugLocation(261, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:262:2: (var= ID '=>>' ^val= ID )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:263:2: var= ID '=>>' ^val= ID
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(263, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_moveBackOperation1865); 
+			var_tree = (CommonTree)adaptor.Create(var);
+			adaptor.AddChild(root_0, var_tree);
+			DebugLocation(263, 14);
+			string_literal75=(CommonToken)Match(input,76,Follow._76_in_moveBackOperation1867); 
+			string_literal75_tree = (CommonTree)adaptor.Create(string_literal75);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal75_tree, root_0);
+			DebugLocation(263, 19);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_moveBackOperation1872); 
+			val_tree = (CommonTree)adaptor.Create(val);
+			adaptor.AddChild(root_0, val_tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("moveBackOperation", 32);
+			LeaveRule("moveBackOperation", 32);
+			LeaveRule_moveBackOperation();
+		}
+		DebugLocation(264, 1);
+		} finally { DebugExitRule(GrammarFileName, "moveBackOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "moveBackOperation"
+
+	partial void EnterRule_deleteOperation();
+	partial void LeaveRule_deleteOperation();
+
+	// $ANTLR start "deleteOperation"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:265:1: deleteOperation : var= ID '!=' ^val= ID ;
+	[GrammarRule("deleteOperation")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> deleteOperation()
+	{
+		EnterRule_deleteOperation();
+		EnterRule("deleteOperation", 33);
+		TraceIn("deleteOperation", 33);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken var = default(CommonToken);
+		CommonToken val = default(CommonToken);
+		CommonToken string_literal76 = default(CommonToken);
+
+		CommonTree var_tree = default(CommonTree);
+		CommonTree val_tree = default(CommonTree);
+		CommonTree string_literal76_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "deleteOperation");
+		DebugLocation(265, 1);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:266:2: (var= ID '!=' ^val= ID )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:267:2: var= ID '!=' ^val= ID
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(267, 5);
+			var=(CommonToken)Match(input,ID,Follow._ID_in_deleteOperation1885); 
+			var_tree = (CommonTree)adaptor.Create(var);
+			adaptor.AddChild(root_0, var_tree);
+			DebugLocation(267, 13);
+			string_literal76=(CommonToken)Match(input,61,Follow._61_in_deleteOperation1887); 
+			string_literal76_tree = (CommonTree)adaptor.Create(string_literal76);
+			root_0 = (CommonTree)adaptor.BecomeRoot(string_literal76_tree, root_0);
+			DebugLocation(267, 18);
+			val=(CommonToken)Match(input,ID,Follow._ID_in_deleteOperation1892); 
+			val_tree = (CommonTree)adaptor.Create(val);
+			adaptor.AddChild(root_0, val_tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("deleteOperation", 33);
+			LeaveRule("deleteOperation", 33);
+			LeaveRule_deleteOperation();
+		}
+		DebugLocation(268, 1);
+		} finally { DebugExitRule(GrammarFileName, "deleteOperation"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "deleteOperation"
+
+	partial void EnterRule_pattern();
+	partial void LeaveRule_pattern();
+
+	// $ANTLR start "pattern"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:270:1: pattern : '?' ID ;
+	[GrammarRule("pattern")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> pattern()
+	{
+		EnterRule_pattern();
+		EnterRule("pattern", 34);
+		TraceIn("pattern", 34);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal77 = default(CommonToken);
+		CommonToken ID78 = default(CommonToken);
+
+		CommonTree char_literal77_tree = default(CommonTree);
+		CommonTree ID78_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "pattern");
+		DebugLocation(270, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:270:9: ( '?' ID )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:270:11: '?' ID
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(270, 11);
+			char_literal77=(CommonToken)Match(input,77,Follow._77_in_pattern1902); 
+			char_literal77_tree = (CommonTree)adaptor.Create(char_literal77);
+			adaptor.AddChild(root_0, char_literal77_tree);
+			DebugLocation(270, 15);
+			ID78=(CommonToken)Match(input,ID,Follow._ID_in_pattern1904); 
+			ID78_tree = (CommonTree)adaptor.Create(ID78);
+			adaptor.AddChild(root_0, ID78_tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("pattern", 34);
+			LeaveRule("pattern", 34);
+			LeaveRule_pattern();
+		}
+		DebugLocation(271, 4);
+		} finally { DebugExitRule(GrammarFileName, "pattern"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "pattern"
+
+	partial void EnterRule_valueOf();
+	partial void LeaveRule_valueOf();
+
+	// $ANTLR start "valueOf"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:273:1: valueOf : '!' ID ;
+	[GrammarRule("valueOf")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> valueOf()
+	{
+		EnterRule_valueOf();
+		EnterRule("valueOf", 35);
+		TraceIn("valueOf", 35);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal79 = default(CommonToken);
+		CommonToken ID80 = default(CommonToken);
+
+		CommonTree char_literal79_tree = default(CommonTree);
+		CommonTree ID80_tree = default(CommonTree);
+		try { DebugEnterRule(GrammarFileName, "valueOf");
+		DebugLocation(273, 4);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:274:2: ( '!' ID )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:274:4: '!' ID
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			DebugLocation(274, 4);
+			char_literal79=(CommonToken)Match(input,60,Follow._60_in_valueOf1919); 
+			char_literal79_tree = (CommonTree)adaptor.Create(char_literal79);
+			adaptor.AddChild(root_0, char_literal79_tree);
+			DebugLocation(274, 8);
+			ID80=(CommonToken)Match(input,ID,Follow._ID_in_valueOf1921); 
+			ID80_tree = (CommonTree)adaptor.Create(ID80);
+			adaptor.AddChild(root_0, ID80_tree);
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("valueOf", 35);
+			LeaveRule("valueOf", 35);
+			LeaveRule_valueOf();
+		}
+		DebugLocation(275, 4);
+		} finally { DebugExitRule(GrammarFileName, "valueOf"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "valueOf"
+
+	partial void EnterRule_content();
+	partial void LeaveRule_content();
+
+	// $ANTLR start "content"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:8: public content : ( element )* -> ^( XML ( element )* ) ;
+	[GrammarRule("content")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> content()
+	{
+		EnterRule_content();
+		EnterRule("content", 36);
+		TraceIn("content", 36);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		AstParserRuleReturnScope<CommonTree, CommonToken> element81 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		RewriteRuleSubtreeStream stream_element=new RewriteRuleSubtreeStream(adaptor,"rule element");
+		try { DebugEnterRule(GrammarFileName, "content");
+		DebugLocation(280, 51);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:20: ( ( element )* -> ^( XML ( element )* ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:23: ( element )*
+			{
+			DebugLocation(280, 23);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:23: ( element )*
+			try { DebugEnterSubRule(17);
+			while (true)
+			{
+				int alt17=2;
+				try { DebugEnterDecision(17, false);
+				int LA17_0 = input.LA(1);
+
+				if ((LA17_0==LT||LA17_0==70))
+				{
+					alt17 = 1;
+				}
+
+
+				} finally { DebugExitDecision(17); }
+				switch ( alt17 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:24: element
+					{
+					DebugLocation(280, 24);
+					PushFollow(Follow._element_in_content1950);
+					element81=element();
+					PopFollow();
+
+					stream_element.Add(element81.Tree);
+
+					}
+					break;
+
+				default:
+					goto loop17;
+				}
+			}
+
+			loop17:
+				;
+
+			} finally { DebugExitSubRule(17); }
+
+
+
+			{
+			// AST REWRITE
+			// elements: element
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 280:34: -> ^( XML ( element )* )
+			{
+				DebugLocation(280, 37);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:37: ^( XML ( element )* )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(280, 39);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XML, "XML"), root_1);
+
+				DebugLocation(280, 43);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:280:43: ( element )*
+				while ( stream_element.HasNext )
+				{
+					DebugLocation(280, 43);
+					adaptor.AddChild(root_1, stream_element.NextTree());
+
+				}
+				stream_element.Reset();
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("content", 36);
+			LeaveRule("content", 36);
+			LeaveRule_content();
+		}
+		DebugLocation(280, 51);
+		} finally { DebugExitRule(GrammarFileName, "content"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "content"
+
+	partial void EnterRule_element();
+	partial void LeaveRule_element();
+
+	// $ANTLR start "element"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:8: public element : ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' );
+	[GrammarRule("element")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> element()
+	{
+		EnterRule_element();
+		EnterRule("element", 37);
+		TraceIn("element", 37);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken char_literal82 = default(CommonToken);
+		CommonToken ID83 = default(CommonToken);
+		CommonToken char_literal85 = default(CommonToken);
+		CommonToken string_literal86 = default(CommonToken);
+		CommonToken ID87 = default(CommonToken);
+		CommonToken string_literal89 = default(CommonToken);
+		CommonToken char_literal90 = default(CommonToken);
+		CommonToken char_literal91 = default(CommonToken);
+		CommonToken ID92 = default(CommonToken);
+		CommonToken char_literal93 = default(CommonToken);
+		CommonToken char_literal94 = default(CommonToken);
+		CommonToken ID95 = default(CommonToken);
+		CommonToken string_literal97 = default(CommonToken);
+		AstParserRuleReturnScope<CommonTree, CommonToken> attribute84 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> attribute88 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+		AstParserRuleReturnScope<CommonTree, CommonToken> attribute96 = default(AstParserRuleReturnScope<CommonTree, CommonToken>);
+
+		CommonTree char_literal82_tree = default(CommonTree);
+		CommonTree ID83_tree = default(CommonTree);
+		CommonTree char_literal85_tree = default(CommonTree);
+		CommonTree string_literal86_tree = default(CommonTree);
+		CommonTree ID87_tree = default(CommonTree);
+		CommonTree string_literal89_tree = default(CommonTree);
+		CommonTree char_literal90_tree = default(CommonTree);
+		CommonTree char_literal91_tree = default(CommonTree);
+		CommonTree ID92_tree = default(CommonTree);
+		CommonTree char_literal93_tree = default(CommonTree);
+		CommonTree char_literal94_tree = default(CommonTree);
+		CommonTree ID95_tree = default(CommonTree);
+		CommonTree string_literal97_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_GT=new RewriteRuleITokenStream(adaptor,"token GT");
+		RewriteRuleITokenStream stream_LT=new RewriteRuleITokenStream(adaptor,"token LT");
+		RewriteRuleITokenStream stream_DIV=new RewriteRuleITokenStream(adaptor,"token DIV");
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleSubtreeStream stream_attribute=new RewriteRuleSubtreeStream(adaptor,"rule attribute");
+		try { DebugEnterRule(GrammarFileName, "element");
+		DebugLocation(281, 12);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:20: ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' )
+			int alt21=4;
+			try { DebugEnterDecision(21, false);
+			try
+			{
+				alt21 = dfa21.Predict(input);
+			}
+			catch (NoViableAltException nvae)
+			{
+				DebugRecognitionException(nvae);
+				throw;
+			}
+			} finally { DebugExitDecision(21); }
+			switch (alt21)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:24: '<' ID ( attribute )* '>'
+				{
+				DebugLocation(281, 24);
+				char_literal82=(CommonToken)Match(input,LT,Follow._LT_in_element1976);  
+				stream_LT.Add(char_literal82);
+
+				DebugLocation(281, 28);
+				ID83=(CommonToken)Match(input,ID,Follow._ID_in_element1978);  
+				stream_ID.Add(ID83);
+
+				DebugLocation(281, 31);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:31: ( attribute )*
+				try { DebugEnterSubRule(18);
+				while (true)
+				{
+					int alt18=2;
+					try { DebugEnterDecision(18, false);
+					int LA18_0 = input.LA(1);
+
+					if ((LA18_0==ID))
+					{
+						alt18 = 1;
+					}
+
+
+					} finally { DebugExitDecision(18); }
+					switch ( alt18 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:31: attribute
+						{
+						DebugLocation(281, 31);
+						PushFollow(Follow._attribute_in_element1980);
+						attribute84=attribute();
+						PopFollow();
+
+						stream_attribute.Add(attribute84.Tree);
+
+						}
+						break;
+
+					default:
+						goto loop18;
+					}
+				}
+
+				loop18:
+					;
+
+				} finally { DebugExitSubRule(18); }
+
+				DebugLocation(281, 42);
+				char_literal85=(CommonToken)Match(input,GT,Follow._GT_in_element1983);  
+				stream_GT.Add(char_literal85);
+
+
+
+				{
+				// AST REWRITE
+				// elements: attribute, ID
+				// token labels: 
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 281:46: -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) )
+				{
+					DebugLocation(281, 49);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:49: ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(281, 51);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLOPENELEM, "XMLOPENELEM"), root_1);
+
+					DebugLocation(281, 63);
+					adaptor.AddChild(root_1, stream_ID.NextNode());
+					DebugLocation(281, 66);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:66: ^( XMLATTRS ( attribute )* )
+					{
+					CommonTree root_2 = (CommonTree)adaptor.Nil();
+					DebugLocation(281, 68);
+					root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLATTRS, "XMLATTRS"), root_2);
+
+					DebugLocation(281, 77);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:281:77: ( attribute )*
+					while ( stream_attribute.HasNext )
+					{
+						DebugLocation(281, 77);
+						adaptor.AddChild(root_2, stream_attribute.NextTree());
+
+					}
+					stream_attribute.Reset();
+
+					adaptor.AddChild(root_1, root_2);
+					}
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:282:17: '<?' ID ( attribute )* '?>'
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(282, 17);
+				string_literal86=(CommonToken)Match(input,70,Follow._70_in_element2016); 
+				string_literal86_tree = (CommonTree)adaptor.Create(string_literal86);
+				adaptor.AddChild(root_0, string_literal86_tree);
+				DebugLocation(282, 22);
+				ID87=(CommonToken)Match(input,ID,Follow._ID_in_element2018); 
+				ID87_tree = (CommonTree)adaptor.Create(ID87);
+				adaptor.AddChild(root_0, ID87_tree);
+				DebugLocation(282, 25);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:282:25: ( attribute )*
+				try { DebugEnterSubRule(19);
+				while (true)
+				{
+					int alt19=2;
+					try { DebugEnterDecision(19, false);
+					int LA19_0 = input.LA(1);
+
+					if ((LA19_0==ID))
+					{
+						alt19 = 1;
+					}
+
+
+					} finally { DebugExitDecision(19); }
+					switch ( alt19 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:282:25: attribute
+						{
+						DebugLocation(282, 25);
+						PushFollow(Follow._attribute_in_element2020);
+						attribute88=attribute();
+						PopFollow();
+
+						adaptor.AddChild(root_0, attribute88.Tree);
+
+						}
+						break;
+
+					default:
+						goto loop19;
+					}
+				}
+
+				loop19:
+					;
+
+				} finally { DebugExitSubRule(19); }
+
+				DebugLocation(282, 36);
+				string_literal89=(CommonToken)Match(input,78,Follow._78_in_element2023); 
+				string_literal89_tree = (CommonTree)adaptor.Create(string_literal89);
+				adaptor.AddChild(root_0, string_literal89_tree);
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:283:17: '<' '/' ID '>'
+				{
+				DebugLocation(283, 17);
+				char_literal90=(CommonToken)Match(input,LT,Follow._LT_in_element2042);  
+				stream_LT.Add(char_literal90);
+
+				DebugLocation(283, 21);
+				char_literal91=(CommonToken)Match(input,DIV,Follow._DIV_in_element2044);  
+				stream_DIV.Add(char_literal91);
+
+				DebugLocation(283, 25);
+				ID92=(CommonToken)Match(input,ID,Follow._ID_in_element2046);  
+				stream_ID.Add(ID92);
+
+				DebugLocation(283, 28);
+				char_literal93=(CommonToken)Match(input,GT,Follow._GT_in_element2048);  
+				stream_GT.Add(char_literal93);
+
+
+
+				{
+				// AST REWRITE
+				// elements: ID
+				// token labels: 
+				// rule labels: retval
+				// token list labels: 
+				// rule list labels: 
+				// wildcard labels: 
+				retval.Tree = root_0;
+				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+				root_0 = (CommonTree)adaptor.Nil();
+				// 283:32: -> ^( XMLCLOSEELEM ID )
+				{
+					DebugLocation(283, 34);
+					// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:283:34: ^( XMLCLOSEELEM ID )
+					{
+					CommonTree root_1 = (CommonTree)adaptor.Nil();
+					DebugLocation(283, 36);
+					root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLCLOSEELEM, "XMLCLOSEELEM"), root_1);
+
+					DebugLocation(283, 49);
+					adaptor.AddChild(root_1, stream_ID.NextNode());
+
+					adaptor.AddChild(root_0, root_1);
+					}
+
+				}
+
+				retval.Tree = root_0;
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:284:17: '<' ID ( attribute )* '/>'
+				{
+				root_0 = (CommonTree)adaptor.Nil();
+
+				DebugLocation(284, 17);
+				char_literal94=(CommonToken)Match(input,LT,Follow._LT_in_element2073); 
+				char_literal94_tree = (CommonTree)adaptor.Create(char_literal94);
+				adaptor.AddChild(root_0, char_literal94_tree);
+				DebugLocation(284, 21);
+				ID95=(CommonToken)Match(input,ID,Follow._ID_in_element2075); 
+				ID95_tree = (CommonTree)adaptor.Create(ID95);
+				adaptor.AddChild(root_0, ID95_tree);
+				DebugLocation(284, 24);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:284:24: ( attribute )*
+				try { DebugEnterSubRule(20);
+				while (true)
+				{
+					int alt20=2;
+					try { DebugEnterDecision(20, false);
+					int LA20_0 = input.LA(1);
+
+					if ((LA20_0==ID))
+					{
+						alt20 = 1;
+					}
+
+
+					} finally { DebugExitDecision(20); }
+					switch ( alt20 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:284:24: attribute
+						{
+						DebugLocation(284, 24);
+						PushFollow(Follow._attribute_in_element2077);
+						attribute96=attribute();
+						PopFollow();
+
+						adaptor.AddChild(root_0, attribute96.Tree);
+
+						}
+						break;
+
+					default:
+						goto loop20;
+					}
+				}
+
+				loop20:
+					;
+
+				} finally { DebugExitSubRule(20); }
+
+				DebugLocation(284, 35);
+				string_literal97=(CommonToken)Match(input,67,Follow._67_in_element2080); 
+				string_literal97_tree = (CommonTree)adaptor.Create(string_literal97);
+				adaptor.AddChild(root_0, string_literal97_tree);
+
+				}
+				break;
+
+			}
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("element", 37);
+			LeaveRule("element", 37);
+			LeaveRule_element();
+		}
+		DebugLocation(285, 12);
+		} finally { DebugExitRule(GrammarFileName, "element"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "element"
+
+	partial void EnterRule_attribute();
+	partial void LeaveRule_attribute();
+
+	// $ANTLR start "attribute"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:286:8: public attribute : ID '=' STRING -> ^( XMLATTR ID ^( VALSTR STRING ) ) ;
+	[GrammarRule("attribute")]
+	public AstParserRuleReturnScope<CommonTree, CommonToken> attribute()
+	{
+		EnterRule_attribute();
+		EnterRule("attribute", 38);
+		TraceIn("attribute", 38);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		CommonToken ID98 = default(CommonToken);
+		CommonToken char_literal99 = default(CommonToken);
+		CommonToken STRING100 = default(CommonToken);
+
+		CommonTree ID98_tree = default(CommonTree);
+		CommonTree char_literal99_tree = default(CommonTree);
+		CommonTree STRING100_tree = default(CommonTree);
+		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
+		RewriteRuleITokenStream stream_71=new RewriteRuleITokenStream(adaptor,"token 71");
+		RewriteRuleITokenStream stream_STRING=new RewriteRuleITokenStream(adaptor,"token STRING");
+		try { DebugEnterRule(GrammarFileName, "attribute");
+		DebugLocation(286, 69);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:286:20: ( ID '=' STRING -> ^( XMLATTR ID ^( VALSTR STRING ) ) )
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:286:23: ID '=' STRING
+			{
+			DebugLocation(286, 23);
+			ID98=(CommonToken)Match(input,ID,Follow._ID_in_attribute2105);  
+			stream_ID.Add(ID98);
+
+			DebugLocation(286, 26);
+			char_literal99=(CommonToken)Match(input,71,Follow._71_in_attribute2107);  
+			stream_71.Add(char_literal99);
+
+			DebugLocation(286, 30);
+			STRING100=(CommonToken)Match(input,STRING,Follow._STRING_in_attribute2109);  
+			stream_STRING.Add(STRING100);
+
+
+
+			{
+			// AST REWRITE
+			// elements: STRING, ID
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (CommonTree)adaptor.Nil();
+			// 286:37: -> ^( XMLATTR ID ^( VALSTR STRING ) )
+			{
+				DebugLocation(286, 40);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:286:40: ^( XMLATTR ID ^( VALSTR STRING ) )
+				{
+				CommonTree root_1 = (CommonTree)adaptor.Nil();
+				DebugLocation(286, 42);
+				root_1 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(XMLATTR, "XMLATTR"), root_1);
+
+				DebugLocation(286, 50);
+				adaptor.AddChild(root_1, stream_ID.NextNode());
+				DebugLocation(286, 53);
+				// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:286:53: ^( VALSTR STRING )
+				{
+				CommonTree root_2 = (CommonTree)adaptor.Nil();
+				DebugLocation(286, 55);
+				root_2 = (CommonTree)adaptor.BecomeRoot((CommonTree)adaptor.Create(VALSTR, "VALSTR"), root_2);
+
+				DebugLocation(286, 62);
+				adaptor.AddChild(root_2, stream_STRING.NextNode());
+
+				adaptor.AddChild(root_1, root_2);
+				}
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (CommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("attribute", 38);
+			LeaveRule("attribute", 38);
+			LeaveRule_attribute();
+		}
+		DebugLocation(286, 69);
+		} finally { DebugExitRule(GrammarFileName, "attribute"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "attribute"
+
+	partial void EnterRule_reference();
+	partial void LeaveRule_reference();
+
+	// $ANTLR start "reference"
+	// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:287:1: reference :;
+	[GrammarRule("reference")]
+	private AstParserRuleReturnScope<CommonTree, CommonToken> reference()
+	{
+		EnterRule_reference();
+		EnterRule("reference", 39);
+		TraceIn("reference", 39);
+		AstParserRuleReturnScope<CommonTree, CommonToken> retval = new AstParserRuleReturnScope<CommonTree, CommonToken>();
+		retval.Start = (CommonToken)input.LT(1);
+
+		CommonTree root_0 = default(CommonTree);
+
+		try { DebugEnterRule(GrammarFileName, "reference");
+		DebugLocation(287, 3);
+		if (RuleLevel == 0)
+			DebugListener.Commence();
+		IncRuleLevel();
+		try
+		{
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:288:2: ()
+			DebugEnterAlt(1);
+			// C:\\dat\\repository\\personal\\dev\\projects\\loblang\\src\\xmlpl-parser\\mccarthy.g3:288:4: 
+			{
+			root_0 = (CommonTree)adaptor.Nil();
+
+			}
+
+			retval.Stop = (CommonToken)input.LT(-1);
+
+			retval.Tree = (CommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		finally
+		{
+			TraceOut("reference", 39);
+			LeaveRule("reference", 39);
+			LeaveRule_reference();
+		}
+		DebugLocation(288, 3);
+		} finally { DebugExitRule(GrammarFileName, "reference"); }
+		DecRuleLevel();
+		if (RuleLevel == 0)
+			DebugListener.Terminate();
+		return retval;
+
+	}
+	// $ANTLR end "reference"
 	#endregion Rules
 
+
+	#region DFA
+	private DFA13 dfa13;
+	private DFA21 dfa21;
+
+	protected override void InitDFAs()
+	{
+		base.InitDFAs();
+		dfa13 = new DFA13( this );
+		dfa21 = new DFA21( this );
+	}
+
+	private class DFA13 : DFA
+	{
+		private const string DFA13_eotS =
+			"\xF\xFFFF";
+		private const string DFA13_eofS =
+			"\xF\xFFFF";
+		private const string DFA13_minS =
+			"\x1\x14\x1\x1D\x1\x14\x6\xFFFF\x1\xC\x1\x14\x3\xFFFF\x1\xC";
+		private const string DFA13_maxS =
+			"\x1\x3E\x1\x4C\x1\x14\x6\xFFFF\x1\x4A\x1\x14\x3\xFFFF\x1\x4A";
+		private const string DFA13_acceptS =
+			"\x3\xFFFF\x1\x1\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9\x2\xFFFF\x1\x2\x1\x3\x1"+
+			"\x4\x1\xFFFF";
+		private const string DFA13_specialS =
+			"\xF\xFFFF}>";
+		private static readonly string[] DFA13_transitionS =
+			{
+				"\x1\x1\x29\xFFFF\x1\x2",
+				"\x1\x4\x1F\xFFFF\x1\x8\x4\xFFFF\x1\x5\x4\xFFFF\x1\x3\x3\xFFFF\x1\x6"+
+				"\x1\x7",
+				"\x1\x9",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\xA\x10\xFFFF\x1\x4\x2A\xFFFF\x1\xD\x1\xB\x1\xC",
+				"\x1\xE",
+				"",
+				"",
+				"",
+				"\x1\xA\x10\xFFFF\x1\x4\x2A\xFFFF\x1\xD\x1\xB\x1\xC"
+			};
+
+		private static readonly short[] DFA13_eot = DFA.UnpackEncodedString(DFA13_eotS);
+		private static readonly short[] DFA13_eof = DFA.UnpackEncodedString(DFA13_eofS);
+		private static readonly char[] DFA13_min = DFA.UnpackEncodedStringToUnsignedChars(DFA13_minS);
+		private static readonly char[] DFA13_max = DFA.UnpackEncodedStringToUnsignedChars(DFA13_maxS);
+		private static readonly short[] DFA13_accept = DFA.UnpackEncodedString(DFA13_acceptS);
+		private static readonly short[] DFA13_special = DFA.UnpackEncodedString(DFA13_specialS);
+		private static readonly short[][] DFA13_transition;
+
+		static DFA13()
+		{
+			int numStates = DFA13_transitionS.Length;
+			DFA13_transition = new short[numStates][];
+			for ( int i=0; i < numStates; i++ )
+			{
+				DFA13_transition[i] = DFA.UnpackEncodedString(DFA13_transitionS[i]);
+			}
+		}
+
+		public DFA13( BaseRecognizer recognizer )
+		{
+			this.recognizer = recognizer;
+			this.decisionNumber = 13;
+			this.eot = DFA13_eot;
+			this.eof = DFA13_eof;
+			this.min = DFA13_min;
+			this.max = DFA13_max;
+			this.accept = DFA13_accept;
+			this.special = DFA13_special;
+			this.transition = DFA13_transition;
+		}
+
+		public override string Description { get { return "199:8: public statement : ( assignment | replaceOperation | appendOperation | prependOperation | matchOperation | moveOperation | moveFrontOperation | moveBackOperation | deleteOperation );"; } }
+
+		public override void Error(NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+		}
+	}
+
+	private class DFA21 : DFA
+	{
+		private const string DFA21_eotS =
+			"\xA\xFFFF";
+		private const string DFA21_eofS =
+			"\xA\xFFFF";
+		private const string DFA21_minS =
+			"\x1\x1A\x1\xC\x1\xFFFF\x1\x12\x1\xFFFF\x1\x47\x2\xFFFF\x1\x2F\x1\x12";
+		private const string DFA21_maxS =
+			"\x1\x46\x1\x14\x1\xFFFF\x1\x43\x1\xFFFF\x1\x47\x2\xFFFF\x1\x2F\x1\x43";
+		private const string DFA21_acceptS =
+			"\x2\xFFFF\x1\x2\x1\xFFFF\x1\x3\x1\xFFFF\x1\x1\x1\x4\x2\xFFFF";
+		private const string DFA21_specialS =
+			"\xA\xFFFF}>";
+		private static readonly string[] DFA21_transitionS =
+			{
+				"\x1\x1\x2B\xFFFF\x1\x2",
+				"\x1\x4\x7\xFFFF\x1\x3",
+				"",
+				"\x1\x6\x1\xFFFF\x1\x5\x2E\xFFFF\x1\x7",
+				"",
+				"\x1\x8",
+				"",
+				"",
+				"\x1\x9",
+				"\x1\x6\x1\xFFFF\x1\x5\x2E\xFFFF\x1\x7"
+			};
+
+		private static readonly short[] DFA21_eot = DFA.UnpackEncodedString(DFA21_eotS);
+		private static readonly short[] DFA21_eof = DFA.UnpackEncodedString(DFA21_eofS);
+		private static readonly char[] DFA21_min = DFA.UnpackEncodedStringToUnsignedChars(DFA21_minS);
+		private static readonly char[] DFA21_max = DFA.UnpackEncodedStringToUnsignedChars(DFA21_maxS);
+		private static readonly short[] DFA21_accept = DFA.UnpackEncodedString(DFA21_acceptS);
+		private static readonly short[] DFA21_special = DFA.UnpackEncodedString(DFA21_specialS);
+		private static readonly short[][] DFA21_transition;
+
+		static DFA21()
+		{
+			int numStates = DFA21_transitionS.Length;
+			DFA21_transition = new short[numStates][];
+			for ( int i=0; i < numStates; i++ )
+			{
+				DFA21_transition[i] = DFA.UnpackEncodedString(DFA21_transitionS[i]);
+			}
+		}
+
+		public DFA21( BaseRecognizer recognizer )
+		{
+			this.recognizer = recognizer;
+			this.decisionNumber = 21;
+			this.eot = DFA21_eot;
+			this.eof = DFA21_eof;
+			this.min = DFA21_min;
+			this.max = DFA21_max;
+			this.accept = DFA21_accept;
+			this.special = DFA21_special;
+			this.transition = DFA21_transition;
+		}
+
+		public override string Description { get { return "281:8: public element : ( '<' ID ( attribute )* '>' -> ^( XMLOPENELEM ID ^( XMLATTRS ( attribute )* ) ) | '<?' ID ( attribute )* '?>' | '<' '/' ID '>' -> ^( XMLCLOSEELEM ID ) | '<' ID ( attribute )* '/>' );"; } }
+
+		public override void Error(NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+		}
+	}
+
+
+	#endregion DFA
 
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _moduleDeclaration_in_module626 = new BitSet(new ulong[]{0x0UL});
-		public static readonly BitSet _EOF_in_module634 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _17_in_moduleDeclaration648 = new BitSet(new ulong[]{0x400UL});
-		public static readonly BitSet _ID_in_moduleDeclaration650 = new BitSet(new ulong[]{0x10000UL});
-		public static readonly BitSet _16_in_moduleDeclaration652 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moduleDeclaration_in_module781 = new BitSet(new ulong[]{0x100000UL,0x8000UL});
+		public static readonly BitSet _importDeclarations_in_module791 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _functionDeclarations_in_module800 = new BitSet(new ulong[]{0x0UL});
+		public static readonly BitSet _EOF_in_module807 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _importDeclaration_in_importDeclarations865 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_importDeclaration880 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_importDeclaration882 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_importDeclaration884 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _80_in_moduleDeclaration904 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moduleDeclaration906 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_moduleDeclaration908 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functionDeclaration_in_functionDeclarations928 = new BitSet(new ulong[]{0x100002UL});
+		public static readonly BitSet _ID_in_functionDeclaration943 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_functionDeclaration945 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _argList_in_functionDeclaration949 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_functionDeclaration951 = new BitSet(new ulong[]{0x0UL,0x20000UL});
+		public static readonly BitSet _81_in_functionDeclaration953 = new BitSet(new ulong[]{0x4000000000100000UL,0x40000UL});
+		public static readonly BitSet _statements_in_functionDeclaration957 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _82_in_functionDeclaration959 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_functionInvocation1004 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_functionInvocation1006 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _parameterList_in_functionInvocation1008 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_functionInvocation1010 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _param_in_parameterList1042 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _65_in_parameterList1045 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _param_in_parameterList1048 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _value_in_param1068 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arg_in_argList1082 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _65_in_argList1085 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _arg_in_argList1087 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _ID_in_arg1109 = new BitSet(new ulong[]{0x0UL,0x10UL});
+		public static readonly BitSet _68_in_arg1111 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_arg1115 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_statements1144 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_statements1146 = new BitSet(new ulong[]{0x4000000000100002UL});
+		public static readonly BitSet _booleanAndExpression_in_logicalExpression1177 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _OR_in_logicalExpression1181 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _booleanAndExpression_in_logicalExpression1183 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _equalityExpression_in_booleanAndExpression1208 = new BitSet(new ulong[]{0x12UL});
+		public static readonly BitSet _AND_in_booleanAndExpression1212 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _equalityExpression_in_booleanAndExpression1214 = new BitSet(new ulong[]{0x12UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression1239 = new BitSet(new ulong[]{0x1000002002UL});
+		public static readonly BitSet _set_in_equalityExpression1243 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression1251 = new BitSet(new ulong[]{0x1000002002UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1275 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _set_in_relationalExpression1279 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _additiveExpression_in_relationalExpression1295 = new BitSet(new ulong[]{0xC0C0002UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1319 = new BitSet(new ulong[]{0x40040000002UL});
+		public static readonly BitSet _set_in_additiveExpression1323 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression1331 = new BitSet(new ulong[]{0x40040000002UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression1356 = new BitSet(new ulong[]{0x280001002UL});
+		public static readonly BitSet _set_in_multiplicativeExpression1359 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression1373 = new BitSet(new ulong[]{0x280001002UL});
+		public static readonly BitSet _NOT_in_unaryExpression1397 = new BitSet(new ulong[]{0x8000800000500000UL});
+		public static readonly BitSet _primaryExpression_in_unaryExpression1402 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_primaryExpression1427 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _logicalExpression_in_primaryExpression1432 = new BitSet(new ulong[]{0x0UL,0x1UL});
+		public static readonly BitSet _64_in_primaryExpression1434 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _value_in_primaryExpression1446 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_in_statement1462 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _replaceOperation_in_statement1467 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _appendOperation_in_statement1472 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _prependOperation_in_statement1477 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _matchOperation_in_statement1482 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moveOperation_in_statement1487 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moveFrontOperation_in_statement1492 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _moveBackOperation_in_statement1497 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _deleteOperation_in_statement1502 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _INT_in_value1517 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_value1533 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STRING_in_value1549 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functionInvocation_in_value1566 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_assignment1580 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _71_in_assignment1582 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_assignment1584 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pathExpression_in_replaceOperation1598 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_replaceOperation1600 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_replaceOperation1604 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _62_in_pathExpression1629 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_pathExpression1633 = new BitSet(new ulong[]{0x1000UL});
+		public static readonly BitSet _xpathSegments_in_pathExpression1637 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DIV_in_xpathSegments1666 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_xpathSegments1668 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _pathExpression_in_appendOperation1692 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_appendOperation1694 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_appendOperation1698 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pathExpression_in_prependOperation1725 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_prependOperation1727 = new BitSet(new ulong[]{0x800000500000UL});
+		public static readonly BitSet _value_in_prependOperation1731 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_matchOperation1775 = new BitSet(new ulong[]{0x20000000UL});
+		public static readonly BitSet _MATCHOP_in_matchOperation1777 = new BitSet(new ulong[]{0x4000000UL,0x40UL});
+		public static readonly BitSet _content_in_matchOperation1779 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pathExpression_in_matchOperation1797 = new BitSet(new ulong[]{0x20000000UL});
+		public static readonly BitSet _MATCHOP_in_matchOperation1799 = new BitSet(new ulong[]{0x4000000UL,0x40UL});
+		public static readonly BitSet _content_in_matchOperation1801 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_moveOperation1824 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _66_in_moveOperation1826 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moveOperation1831 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_moveFrontOperation1845 = new BitSet(new ulong[]{0x0UL,0x800UL});
+		public static readonly BitSet _75_in_moveFrontOperation1847 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moveFrontOperation1852 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_moveBackOperation1865 = new BitSet(new ulong[]{0x0UL,0x1000UL});
+		public static readonly BitSet _76_in_moveBackOperation1867 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_moveBackOperation1872 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_deleteOperation1885 = new BitSet(new ulong[]{0x2000000000000000UL});
+		public static readonly BitSet _61_in_deleteOperation1887 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_deleteOperation1892 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _77_in_pattern1902 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_pattern1904 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _60_in_valueOf1919 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_valueOf1921 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _element_in_content1950 = new BitSet(new ulong[]{0x4000002UL,0x40UL});
+		public static readonly BitSet _LT_in_element1976 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element1978 = new BitSet(new ulong[]{0x140000UL});
+		public static readonly BitSet _attribute_in_element1980 = new BitSet(new ulong[]{0x140000UL});
+		public static readonly BitSet _GT_in_element1983 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_element2016 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2018 = new BitSet(new ulong[]{0x100000UL,0x4000UL});
+		public static readonly BitSet _attribute_in_element2020 = new BitSet(new ulong[]{0x100000UL,0x4000UL});
+		public static readonly BitSet _78_in_element2023 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_element2042 = new BitSet(new ulong[]{0x1000UL});
+		public static readonly BitSet _DIV_in_element2044 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2046 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _GT_in_element2048 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_element2073 = new BitSet(new ulong[]{0x100000UL});
+		public static readonly BitSet _ID_in_element2075 = new BitSet(new ulong[]{0x100000UL,0x8UL});
+		public static readonly BitSet _attribute_in_element2077 = new BitSet(new ulong[]{0x100000UL,0x8UL});
+		public static readonly BitSet _67_in_element2080 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_attribute2105 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _71_in_attribute2107 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _STRING_in_attribute2109 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

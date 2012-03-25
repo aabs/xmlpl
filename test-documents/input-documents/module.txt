@@ -1,0 +1,12 @@
+module blah ;
+import std ;
+import xml ;
+EntryPoint(doc:Document, addr:Element){
+    x = y;
+    $doc/eric/ernie == x;
+    $a/x/y => b;
+    $e/f/g =< f;
+    x =? <address />;
+    y =? <address addr1='blah' addr2='blah' region='blah' postcode='blah' country='blah'><landlord name='joe blow' /></address>;
+}
+Helper(elem:Element, val:Int){}
