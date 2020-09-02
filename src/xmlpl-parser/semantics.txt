@@ -1,4 +1,8 @@
-﻿The runtime stack based language is defined independently of the syntax of the language, and to a certain extent the semantics also. This document defines the operations that are defined on the VM. They define how the VM operations affect the stack and the symtab.
+﻿The runtime stack based language is defined independently 
+ of the syntax of the language, and to a certain extent the 
+ semantics also. This document defines the operations that 
+ are defined on the VM. They define how the VM operations 
+ affect the stack and the symtab.
 
 String
 --------------------
